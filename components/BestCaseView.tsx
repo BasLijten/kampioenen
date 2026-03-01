@@ -53,6 +53,7 @@ export default function BestCaseView({
 
   return (
     <section
+      aria-label="Best case scenario overzicht"
       style={{
         padding: "6rem 2rem",
         background: "var(--dark)",

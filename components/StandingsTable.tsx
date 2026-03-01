@@ -9,6 +9,7 @@ export default function StandingsTable({ teams }: { teams: Team[] }) {
 
   return (
     <section
+      aria-label="Eredivisie stand"
       style={{
         padding: "6rem 2rem",
         background: "var(--dark-3)",

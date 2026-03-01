@@ -21,6 +21,7 @@ export default function ChampionshipTimeline({ dates }: { dates: DateProbability
 
   return (
     <section
+      aria-label="Kampioenschap datum verdeling"
       style={{
         padding: "6rem 2rem",
         background: "var(--dark-2)",
