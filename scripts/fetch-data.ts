@@ -3,27 +3,25 @@
  *
  * Haalt live Eredivisie data op en slaat het op als data/eredivisie.json.
  * Vereist:
- * - FOOTBALL_DATA_ORG_KEY (standings)
- * - BZZOIRO_TOKEN (events + predictions)
+ * - FOOTBALL_DATA_ORG_KEY (standings + matches)
+ * Optioneel:
+ * - BZZOIRO_TOKEN (predictions — best-effort, Poisson fallback)
  *
  * Bronnen:
- * - football-data.org: standings
- * - BZZOIRO: upcoming events + upcoming predictions
+ * - football-data.org: standings + scheduled matches
+ * - BZZOIRO: predictions (matched by team pair)
  */
 
 import { writeFileSync, readFileSync, mkdirSync } from "fs";
 import { join } from "path";
 import {
-  ApiFixture,
   ApiPrediction,
 } from "../lib/api-football";
 import {
-  fetchUpcomingEvents,
   fetchUpcomingPredictions,
-  BzzEvent,
   BzzPrediction,
 } from "../lib/bzzoiro";
-import { fetchFootballDataOrgStandings } from "../lib/football-data-org";
+import { fetchFootballDataOrgStandings, fetchFootballDataOrgMatches } from "../lib/football-data-org";
 import { transformStandings, transformFixtures, toTeamId } from "../lib/transform";
 
 // Laad .env.local handmatig (tsx heeft geen Next.js env-loading)
@@ -31,12 +29,29 @@ function loadEnv() {
   try {
     const content = readFileSync(join(process.cwd(), ".env.local"), "utf-8");
     for (const line of content.split("\n")) {
-      const match = line.match(/^([A-Z0-9_]+)=(.+)$/);
+      const trimmed = line.replace(/\r$/, "");
+      const match = trimmed.match(/^([A-Z0-9_]+)=(.+)$/);
       if (match) process.env[match[1]] = match[2].trim();
     }
   } catch {
     // .env.local bestaat niet — vereiste variabelen moeten al in de omgeving staan
   }
+}
+
+function teamPairKey(home: string, away: string): string {
+  return `${toTeamId(home)}:${toTeamId(away)}`;
+}
+
+function toApiPrediction(prediction: BzzPrediction): ApiPrediction {
+  return {
+    predictions: {
+      percent: {
+        home: `${prediction.prob_home_win}%`,
+        draw: `${prediction.prob_draw}%`,
+        away: `${prediction.prob_away_win}%`,
+      },
+    }
+  };
 }
 
 async function main() {
@@ -47,41 +62,40 @@ async function main() {
     process.exit(1);
   }
   if (!process.env.BZZOIRO_TOKEN || process.env.BZZOIRO_TOKEN === "your_token_here") {
-    console.error("❌  Zet BZZOIRO_TOKEN in .env.local");
-    process.exit(1);
+    console.warn("⚠️   BZZOIRO_TOKEN niet gevonden — predictions worden overgeslagen (Poisson fallback)");
   }
 
-  console.log("📡  Standings + events ophalen...");
-  const [standings, rawEvents] = await Promise.all([
+  console.log("📡  Standings + matches ophalen van football-data.org...");
+  const [standings, rawFixtures] = await Promise.all([
     fetchFootballDataOrgStandings(),
-    fetchUpcomingEvents(),
+    fetchFootballDataOrgMatches(),
   ]);
   if (standings.length === 0) {
     throw new Error("Geen standings ontvangen van football-data.org; bestaand databestand blijft ongewijzigd.");
   }
-  const rawFixtures = rawEvents.map(toApiFixture);
   console.log(`   ${standings.length} teams, ${rawFixtures.length} resterende wedstrijden`);
 
-  console.log("📡  Predictions ophalen (best-effort)...");
-  const predictionMap = new Map<number, ApiPrediction>();
-  const fixtureIds = new Set(rawFixtures.map((fixture) => fixture.fixture.id));
-  const predResult = await Promise.allSettled([fetchUpcomingPredictions()]);
-  let predCount = 0;
-  if (predResult[0].status === "fulfilled") {
-    predResult[0].value.forEach((pred) => {
-      const fixtureId = predictionFixtureId(pred);
-      if (fixtureIds.has(fixtureId)) {
-        predictionMap.set(fixtureId, toApiPrediction(pred));
-        predCount++;
-      }
-    });
-  } else {
-    console.warn(`⚠️   Predictions niet beschikbaar: ${predResult[0].reason}`);
+  // Predictions ophalen (best-effort) — match by team pair key
+  const predictionMap = new Map<string, ApiPrediction>();
+  const fixturePairKeys = new Set(
+    rawFixtures.map((f) => teamPairKey(f.teams.home.name, f.teams.away.name))
+  );
+
+  if (process.env.BZZOIRO_TOKEN && process.env.BZZOIRO_TOKEN !== "your_token_here") {
+    console.log("📡  Predictions ophalen van bzzoiro (best-effort)...");
+    const predResult = await Promise.allSettled([fetchUpcomingPredictions()]);
+    if (predResult[0].status === "fulfilled") {
+      predResult[0].value.forEach((pred) => {
+        const key = teamPairKey(pred.event.home_team, pred.event.away_team);
+        if (fixturePairKeys.has(key)) {
+          predictionMap.set(key, toApiPrediction(pred));
+        }
+      });
+    } else {
+      console.warn(`⚠️   Predictions niet beschikbaar: ${predResult[0].reason}`);
+    }
   }
-  if (predictionMap.size < predCount) {
-    predCount = predictionMap.size;
-  }
-  console.log(`   ${predCount}/${rawFixtures.length} predictions ontvangen`);
+  console.log(`   ${predictionMap.size}/${rawFixtures.length} predictions ontvangen`);
 
   const teams = transformStandings(standings);
   const teamIds = new Set(teams.map((team) => team.id));
@@ -111,42 +125,6 @@ async function main() {
     JSON.stringify(output, null, 2)
   );
   console.log("✅  data/eredivisie.json opgeslagen");
-}
-
-function fixtureIdFromEvent(event: BzzEvent): number {
-  return event.api_id ?? event.id;
-}
-
-function predictionFixtureId(prediction: BzzPrediction): number {
-  return prediction.event.api_id ?? prediction.event.id;
-}
-
-function toApiFixture(event: BzzEvent): ApiFixture {
-  return {
-    fixture: {
-      id: fixtureIdFromEvent(event),
-      date: event.event_date,
-    },
-    league: {
-      round: event.league?.round ?? "Regular Season - 0",
-    },
-    teams: {
-      home: { id: 0, name: event.home_team },
-      away: { id: 0, name: event.away_team },
-    },
-  };
-}
-
-function toApiPrediction(prediction: BzzPrediction): ApiPrediction {
-  return {
-    predictions: {
-      percent: {
-        home: `${prediction.prob_home_win}%`,
-        draw: `${prediction.prob_draw}%`,
-        away: `${prediction.prob_away_win}%`,
-      },
-    }
-  };
 }
 
 main().catch((err) => {

@@ -75,7 +75,7 @@ export function transformStandings(standings: ApiStandingEntry[]): Team[] {
 
 export function transformFixtures(
   fixtures: ApiFixture[],
-  predictions: Map<number, ApiPrediction>,
+  predictions: Map<string, ApiPrediction>,
   teams: Team[]
 ): Fixture[] {
   const strengths = computeTeamStrengths(teams);
@@ -85,7 +85,8 @@ export function transformFixtures(
     const homeTeamId = toTeamId(f.teams.home.name);
     const awayTeamId = toTeamId(f.teams.away.name);
 
-    const pred = predictions.get(f.fixture.id);
+    const pairKey = `${homeTeamId}:${awayTeamId}`;
+    const pred = predictions.get(pairKey);
     let homeWinProb: number;
     let drawProb: number;
     let awayWinProb: number;
@@ -105,7 +106,7 @@ export function transformFixtures(
     }
 
     return {
-      id: `api-${f.fixture.id}`,
+      id: f.fixture.id ? `api-${f.fixture.id}` : `match-${pairKey}-r${roundFromString(f.league.round)}`,
       date: f.fixture.date.split("T")[0],
       round: roundFromString(f.league.round),
       homeTeam: homeTeamId,

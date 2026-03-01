@@ -1,4 +1,4 @@
-import type { ApiStandingEntry } from "./api-football";
+import type { ApiStandingEntry, ApiFixture } from "./api-football";
 
 const BASE_URL = "https://api.football-data.org/v4";
 const DEFAULT_COMPETITION_CODE = "DED"; // Eredivisie
@@ -24,6 +24,17 @@ interface FootballDataStandingsResponse {
 
 function headers(): Record<string, string> {
   return { "X-Auth-Token": process.env.FOOTBALL_DATA_ORG_KEY! };
+}
+
+interface FootballDataMatch {
+  matchday: number;
+  utcDate: string;
+  homeTeam: { id: number; name: string };
+  awayTeam: { id: number; name: string };
+}
+
+interface FootballDataMatchesResponse {
+  matches?: FootballDataMatch[];
 }
 
 export async function fetchFootballDataOrgStandings(): Promise<ApiStandingEntry[]> {
@@ -55,6 +66,37 @@ export async function fetchFootballDataOrgStandings(): Promise<ApiStandingEntry[
         for: row.goalsFor,
         against: row.goalsAgainst,
       },
+    },
+  }));
+}
+
+export async function fetchFootballDataOrgMatches(): Promise<ApiFixture[]> {
+  const token = process.env.FOOTBALL_DATA_ORG_KEY;
+  if (!token || token === "your_api_key_here") {
+    throw new Error("FOOTBALL_DATA_ORG_KEY ontbreekt");
+  }
+
+  const competition = process.env.FOOTBALL_DATA_ORG_COMPETITION ?? DEFAULT_COMPETITION_CODE;
+  const res = await fetch(
+    `${BASE_URL}/competitions/${competition}/matches?status=SCHEDULED,TIMED`,
+    { headers: headers(), next: { revalidate: 3600 } }
+  );
+  if (!res.ok) throw new Error(`football-data matches ${res.status}`);
+
+  const json = (await res.json()) as FootballDataMatchesResponse;
+  const matches = json.matches ?? [];
+
+  return matches.map((m) => ({
+    fixture: {
+      id: 0,
+      date: m.utcDate,
+    },
+    league: {
+      round: `Regular Season - ${m.matchday}`,
+    },
+    teams: {
+      home: { id: m.homeTeam.id, name: m.homeTeam.name },
+      away: { id: m.awayTeam.id, name: m.awayTeam.name },
     },
   }));
 }

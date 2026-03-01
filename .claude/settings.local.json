@@ -23,7 +23,8 @@
       "WebFetch(domain:rapidapi.com)",
       "WebFetch(domain:api-sports.io)",
       "WebFetch(domain:docs.sportmonks.com)",
-      "WebFetch(domain:github.com)"
+      "WebFetch(domain:github.com)",
+      "Bash(npm run:*)"
     ]
   }
 }
