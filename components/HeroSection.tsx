@@ -303,6 +303,23 @@ export default function HeroSection({
               )}.
             </p>
 
+            <p style={{ marginBottom: "0.5rem" }}>
+              <strong style={{ color: "#fff" }}>Best Case Scenario</strong> is de vroegst mogelijke
+              kampioensdatum: de ronde waarin PSV wiskundig kampioen is als ze alle resterende
+              wedstrijden winnen en concurrenten de verwachte resultaten behalen.
+            </p>
+
+            <p style={{ marginBottom: "0.5rem" }}>
+              <strong style={{ color: "#fff" }}>Meest Waarschijnlijk</strong> is de datum met de
+              hoogste kans in de simulatie — de piek van de kansverdeling.
+            </p>
+
+            <p style={{ marginBottom: "1rem" }}>
+              Dat deze twee op dezelfde datum vallen is logisch: PSV&apos;s voorsprong is zo groot dat
+              in de meeste simulaties het kampioenschap al in de vroegst mogelijke ronde wordt
+              beslist.
+            </p>
+
             <p style={{ color: "#555", fontSize: "0.75rem", marginTop: "0.75rem" }}>
               Wedstrijdkansen komen van API-Football predictions. Bij ontbrekende predictions wordt een Poisson-model gebruikt
               op basis van de competitiestand.
