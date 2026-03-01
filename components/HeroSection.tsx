@@ -278,6 +278,7 @@ export default function HeroSection({
                   <th style={{ textAlign: "right", padding: "0.4rem 0", color: "#666", fontWeight: 500 }}>Punten</th>
                   <th style={{ textAlign: "right", padding: "0.4rem 0", color: "#666", fontWeight: 500 }}>Max</th>
                   <th style={{ textAlign: "right", padding: "0.4rem 0", color: "#666", fontWeight: 500 }}>Achterstand</th>
+                  <th style={{ textAlign: "right", padding: "0.4rem 0", color: "#666", fontWeight: 500 }}>Pakt max</th>
                 </tr>
               </thead>
               <tbody>
@@ -289,6 +290,7 @@ export default function HeroSection({
                       {r.maxPoints}
                     </td>
                     <td style={{ textAlign: "right", padding: "0.4rem 0" }}>{r.gap}</td>
+                    <td style={{ textAlign: "right", padding: "0.4rem 0", color: "#666" }}>{(r.winAllProb * 100).toFixed(1)}%</td>
                   </tr>
                 ))}
               </tbody>

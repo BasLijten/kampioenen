@@ -12,7 +12,7 @@ export interface Explanation {
   psvPoints: number;
   psvPlayed: number;
   psvRemaining: number;
-  rivals: Array<{ name: string; points: number; maxPoints: number; gap: number }>;
+  rivals: Array<{ name: string; points: number; maxPoints: number; gap: number; winAllProb: number }>;
   iterations: number;
   neverChampionCount: number;
 }

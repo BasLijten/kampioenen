@@ -51,12 +51,22 @@ function main() {
   const psvRemaining = 34 - psv.played;
   const rivals = teams
     .filter((t) => t.id !== "psv")
-    .map((t) => ({
-      name: t.name,
-      points: t.points,
-      maxPoints: t.points + (34 - t.played) * 3,
-      gap: psv.points - t.points,
-    }))
+    .map((t) => {
+      const teamFixtures = fixtures.filter(
+        (f) => f.homeTeam === t.id || f.awayTeam === t.id
+      );
+      const winAllProb = teamFixtures.reduce((p, f) => {
+        const winProb = f.homeTeam === t.id ? f.homeWinProb : f.awayWinProb;
+        return p * winProb;
+      }, 1);
+      return {
+        name: t.name,
+        points: t.points,
+        maxPoints: t.points + (34 - t.played) * 3,
+        gap: psv.points - t.points,
+        winAllProb,
+      };
+    })
     .sort((a, b) => b.maxPoints - a.maxPoints)
     .slice(0, 5);
 

@@ -1,6 +1,6 @@
 {
   "result": {
-    "totalChampionshipProbability": 0.99998,
+    "totalChampionshipProbability": 0.99996,
     "dateProbabilities": [
       {
         "date": "2026-03-07",
@@ -13,64 +13,64 @@
       {
         "date": "2026-03-14",
         "round": 27,
-        "probability": 0.07672,
-        "cumulativeProbability": 0.07672,
+        "probability": 0.07596,
+        "cumulativeProbability": 0.07596,
         "opponent": "nec",
         "isHome": true
       },
       {
         "date": "2026-03-22",
         "round": 28,
-        "probability": 0.403,
-        "cumulativeProbability": 0.47972000000000004,
+        "probability": 0.40166,
+        "cumulativeProbability": 0.47762000000000004,
         "opponent": "sc-telstar",
         "isHome": false
       },
       {
         "date": "2026-04-04",
         "round": 29,
-        "probability": 0.34268,
-        "cumulativeProbability": 0.8224,
+        "probability": 0.34364,
+        "cumulativeProbability": 0.8212600000000001,
         "opponent": "utrecht",
         "isHome": true
       },
       {
         "date": "2026-04-11",
         "round": 30,
-        "probability": 0.14286,
-        "cumulativeProbability": 0.96526,
+        "probability": 0.14598,
+        "cumulativeProbability": 0.9672400000000001,
         "opponent": "sparta-rotterdam",
         "isHome": false
       },
       {
         "date": "2026-04-23",
         "round": 31,
-        "probability": 0.03038,
-        "cumulativeProbability": 0.99564,
+        "probability": 0.02894,
+        "cumulativeProbability": 0.9961800000000001,
         "opponent": "pec-zwolle",
         "isHome": true
       },
       {
         "date": "2026-05-02",
         "round": 32,
-        "probability": 0.0031,
-        "cumulativeProbability": 0.99874,
+        "probability": 0.0029,
+        "cumulativeProbability": 0.9990800000000001,
         "opponent": "ajax",
         "isHome": false
       },
       {
         "date": "2026-05-10",
         "round": 33,
-        "probability": 0.00108,
-        "cumulativeProbability": 0.9998199999999999,
+        "probability": 0.0006,
+        "cumulativeProbability": 0.9996800000000001,
         "opponent": "go-ahead-eagles",
         "isHome": false
       },
       {
         "date": "2026-05-17",
         "round": 34,
-        "probability": 0.00016,
-        "cumulativeProbability": 0.99998,
+        "probability": 0.00028,
+        "cumulativeProbability": 0.9999600000000001,
         "opponent": "twente",
         "isHome": true
       }
@@ -78,9 +78,9 @@
     "bestCaseDate": "2026-03-22",
     "bestCaseRound": 28,
     "expectedDate": "2026-03-22",
-    "neverChampionProbability": 0.00002,
+    "neverChampionProbability": 0.00004,
     "iterations": 50000,
-    "neverChampionCount": 1
+    "neverChampionCount": 2
   },
   "explanation": {
     "psvPoints": 65,
@@ -91,35 +91,40 @@
         "name": "Feyenoord Rotterdam",
         "points": 48,
         "maxPoints": 75,
-        "gap": 17
+        "gap": 17,
+        "winAllProb": 0.0020059742402037868
       },
       {
         "name": "AFC Ajax",
         "points": 44,
         "maxPoints": 71,
-        "gap": 21
+        "gap": 21,
+        "winAllProb": 0.0009944922406573643
       },
       {
         "name": "NEC",
         "points": 43,
         "maxPoints": 70,
-        "gap": 22
+        "gap": 22,
+        "winAllProb": 0.0010837594674986287
       },
       {
         "name": "FC Twente '65",
         "points": 41,
         "maxPoints": 68,
-        "gap": 24
+        "gap": 24,
+        "winAllProb": 0.0007340235771948239
       },
       {
         "name": "AZ",
         "points": 39,
         "maxPoints": 66,
-        "gap": 26
+        "gap": 26,
+        "winAllProb": 0.000300356427407158
       }
     ],
     "iterations": 50000,
-    "neverChampionCount": 1
+    "neverChampionCount": 2
   },
   "teams": [
     {
@@ -1314,5 +1319,5 @@
     }
   ],
   "fetchedAt": "2026-03-01T19:37:12.011Z",
-  "simulatedAt": "2026-03-01T19:56:36.396Z"
+  "simulatedAt": "2026-03-01T20:14:14.341Z"
 }
