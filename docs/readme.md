@@ -134,22 +134,23 @@ isChampion(psv) = voor elke andere team:
 
 | Script | Commando | Beschrijving |
 |--------|----------|-------------|
-| `fetch-data` | `npx tsx scripts/fetch-data.ts` | Haalt standings + fixtures + predictions op via API-Football → `data/eredivisie.json` |
+| `fetch-data` | `npx tsx scripts/fetch-data.ts` | Haalt standings (football-data.org) + events/predictions (BZZOIRO) op → `data/eredivisie.json` |
 | `simulate` | `npx tsx scripts/simulate.ts` | Draait Monte Carlo simulatie → `data/simulation-result.json` |
 | `update-data` | `fetch-data` + `simulate` | Volledige data-refresh |
 | `build` | `prebuild` (simulate) + `next build` | Bouwt statische site met verse simulatieresultaten |
 
-### API-Football
+### Data APIs
 
 - Free tier: 100 requests/dag
-- League ID: 88 (Eredivisie), Season: 2024
-- Predictions zijn best-effort (parallel via `Promise.allSettled`)
-- API key in `.env.local` als `API_FOOTBALL_KEY`
+- football-data.org: standings endpoint (`FOOTBALL_DATA_ORG_KEY` in `.env.local`)
+- BZZOIRO: events + predictions endpoints (`BZZOIRO_TOKEN` in `.env.local`)
+- League filter: Eredivisie (API league ID 88)
+- Predictions blijven best-effort (Poisson fallback als ze ontbreken)
 
 ## Data bestanden
 
 | Bestand | Inhoud |
 |---------|--------|
-| `data/eredivisie.json` | `{ teams, remainingFixtures, fetchedAt }` — live data van API-Football |
+| `data/eredivisie.json` | `{ teams, remainingFixtures, fetchedAt }` — live data van football-data.org + BZZOIRO |
 | `data/simulation-result.json` | `{ result, teams, fixtures, fetchedAt, simulatedAt }` — MC resultaten |
 | `lib/data.ts` | Statische fallback data (top 6, ronde 28) |

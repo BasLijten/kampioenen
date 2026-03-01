@@ -6,30 +6,44 @@ import { computeTeamStrengths, computeLeagueAvgGoals, predictMatch } from "./poi
 const TEAM_ID_MAP: Record<string, string> = {
   "PSV Eindhoven": "psv",
   "PSV": "psv",
+  "AFC Ajax": "ajax",
   "Ajax": "ajax",
+  "Feyenoord Rotterdam": "feyenoord",
   "Feyenoord": "feyenoord",
   "AZ Alkmaar": "az",
   "AZ": "az",
   "FC Utrecht": "utrecht",
   "Utrecht": "utrecht",
+  "FC Twente '65": "twente",
   "FC Twente": "twente",
   "Twente": "twente",
+  "SBV Excelsior": "excelsior",
+  "Excelsior": "excelsior",
+  "Telstar 1963": "sc-telstar",
+  "SC Telstar": "sc-telstar",
 };
 
 const SHORT_NAME_MAP: Record<string, string> = {
   "PSV Eindhoven": "PSV",
   "PSV": "PSV",
+  "AFC Ajax": "Ajax",
   "Ajax": "Ajax",
+  "Feyenoord Rotterdam": "Feyenoord",
   "Feyenoord": "Feyenoord",
   "AZ Alkmaar": "AZ",
   "AZ": "AZ",
   "FC Utrecht": "Utrecht",
   "Utrecht": "Utrecht",
+  "FC Twente '65": "Twente",
   "FC Twente": "Twente",
   "Twente": "Twente",
+  "SBV Excelsior": "Excelsior",
+  "Excelsior": "Excelsior",
+  "Telstar 1963": "SC Telstar",
+  "SC Telstar": "SC Telstar",
 };
 
-function toTeamId(name: string): string {
+export function toTeamId(name: string): string {
   return TEAM_ID_MAP[name] ?? name.toLowerCase().replace(/\s+/g, "-");
 }
 
@@ -41,7 +55,7 @@ function roundFromString(roundStr: string): number {
 
 // "75%" → 0.75
 function parsePct(str: string): number {
-  return parseInt(str.replace("%", ""), 10) / 100;
+  return parseFloat(str.replace("%", "")) / 100;
 }
 
 export function transformStandings(standings: ApiStandingEntry[]): Team[] {
