@@ -1,9 +1,9 @@
 {
   "result": {
-    "totalChampionshipProbability": 0.99994,
+    "totalChampionshipProbability": 0.99998,
     "dateProbabilities": [
       {
-        "date": "2026-03-06",
+        "date": "2026-03-07",
         "round": 26,
         "probability": 0,
         "cumulativeProbability": 0,
@@ -11,76 +11,76 @@
         "isHome": true
       },
       {
-        "date": "2026-03-13",
+        "date": "2026-03-14",
         "round": 27,
-        "probability": 0.0776,
-        "cumulativeProbability": 0.0776,
+        "probability": 0.07672,
+        "cumulativeProbability": 0.07672,
         "opponent": "nec",
         "isHome": true
       },
       {
-        "date": "2026-03-20",
+        "date": "2026-03-22",
         "round": 28,
-        "probability": 0.4015,
-        "cumulativeProbability": 0.4791,
+        "probability": 0.403,
+        "cumulativeProbability": 0.47972000000000004,
         "opponent": "sc-telstar",
         "isHome": false
       },
       {
         "date": "2026-04-04",
         "round": 29,
-        "probability": 0.34098,
-        "cumulativeProbability": 0.82008,
+        "probability": 0.34268,
+        "cumulativeProbability": 0.8224,
         "opponent": "utrecht",
         "isHome": true
       },
       {
-        "date": "2026-04-10",
+        "date": "2026-04-11",
         "round": 30,
-        "probability": 0.14482,
-        "cumulativeProbability": 0.9649000000000001,
+        "probability": 0.14286,
+        "cumulativeProbability": 0.96526,
         "opponent": "sparta-rotterdam",
         "isHome": false
       },
       {
-        "date": "2026-04-22",
+        "date": "2026-04-23",
         "round": 31,
-        "probability": 0.03084,
-        "cumulativeProbability": 0.9957400000000001,
+        "probability": 0.03038,
+        "cumulativeProbability": 0.99564,
         "opponent": "pec-zwolle",
         "isHome": true
       },
       {
         "date": "2026-05-02",
         "round": 32,
-        "probability": 0.0029,
-        "cumulativeProbability": 0.9986400000000001,
+        "probability": 0.0031,
+        "cumulativeProbability": 0.99874,
         "opponent": "ajax",
         "isHome": false
       },
       {
         "date": "2026-05-10",
         "round": 33,
-        "probability": 0.00116,
-        "cumulativeProbability": 0.9998000000000001,
+        "probability": 0.00108,
+        "cumulativeProbability": 0.9998199999999999,
         "opponent": "go-ahead-eagles",
         "isHome": false
       },
       {
         "date": "2026-05-17",
         "round": 34,
-        "probability": 0.00014,
-        "cumulativeProbability": 0.9999400000000002,
+        "probability": 0.00016,
+        "cumulativeProbability": 0.99998,
         "opponent": "twente",
         "isHome": true
       }
     ],
-    "bestCaseDate": "2026-03-20",
+    "bestCaseDate": "2026-03-22",
     "bestCaseRound": 28,
-    "expectedDate": "2026-03-20",
-    "neverChampionProbability": 0.00006,
+    "expectedDate": "2026-03-22",
+    "neverChampionProbability": 0.00002,
     "iterations": 50000,
-    "neverChampionCount": 3
+    "neverChampionCount": 1
   },
   "explanation": {
     "psvPoints": 65,
@@ -119,7 +119,7 @@
       }
     ],
     "iterations": 50000,
-    "neverChampionCount": 3
+    "neverChampionCount": 1
   },
   "teams": [
     {
@@ -1314,5 +1314,5 @@
     }
   ],
   "fetchedAt": "2026-03-01T19:37:12.011Z",
-  "simulatedAt": "2026-03-01T19:45:54.691Z"
+  "simulatedAt": "2026-03-01T19:56:36.396Z"
 }

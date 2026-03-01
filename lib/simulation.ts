@@ -54,7 +54,8 @@ export function runSimulation(
   const rounds = [...new Set(remainingFixtures.map((f) => f.round))].sort((a, b) => a - b);
   const roundDates: Record<number, string> = {};
   rounds.forEach((r) => {
-    const fix = remainingFixtures.find((f) => f.round === r);
+    const psvFix = remainingFixtures.find((f) => f.round === r && f.isPSV);
+    const fix = psvFix || remainingFixtures.find((f) => f.round === r);
     if (fix) roundDates[r] = fix.date;
   });
 
