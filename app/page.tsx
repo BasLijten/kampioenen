@@ -8,8 +8,18 @@ import BestCaseView from "@/components/BestCaseView";
 import StandingsTable from "@/components/StandingsTable";
 import Footer from "@/components/Footer";
 
+export interface Explanation {
+  psvPoints: number;
+  psvPlayed: number;
+  psvRemaining: number;
+  rivals: Array<{ name: string; points: number; maxPoints: number; gap: number }>;
+  iterations: number;
+  neverChampionCount: number;
+}
+
 interface PageData {
   result: SimulationResult;
+  explanation: Explanation;
   teams: Team[];
   fixtures: Fixture[];
   fetchedAt: string | null;
@@ -25,11 +35,11 @@ function loadData(): PageData {
 }
 
 export default function Home() {
-  const { result, teams, fixtures, fetchedAt, simulatedAt } = loadData();
+  const { result, explanation, teams, fixtures, fetchedAt, simulatedAt } = loadData();
 
   return (
     <main>
-      <HeroSection result={result} fetchedAt={fetchedAt} simulatedAt={simulatedAt} />
+      <HeroSection result={result} explanation={explanation} fetchedAt={fetchedAt} simulatedAt={simulatedAt} />
       <BestCaseView
         bestCaseDate={result.bestCaseDate}
         bestCaseRound={result.bestCaseRound}

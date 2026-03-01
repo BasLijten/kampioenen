@@ -46,9 +46,33 @@ function main() {
 
   console.log(`   Klaar in ${elapsed}s — PSV kampioen in ${(result.totalChampionshipProbability * 100).toFixed(1)}% van de scenario's`);
 
+  // Build explanation context
+  const psv = teams.find((t) => t.id === "psv")!;
+  const psvRemaining = 34 - psv.played;
+  const rivals = teams
+    .filter((t) => t.id !== "psv")
+    .map((t) => ({
+      name: t.name,
+      points: t.points,
+      maxPoints: t.points + (34 - t.played) * 3,
+      gap: psv.points - t.points,
+    }))
+    .sort((a, b) => b.maxPoints - a.maxPoints)
+    .slice(0, 5);
+
+  const explanation = {
+    psvPoints: psv.points,
+    psvPlayed: psv.played,
+    psvRemaining,
+    rivals,
+    iterations: result.iterations,
+    neverChampionCount: result.neverChampionCount,
+  };
+
   mkdirSync(join(process.cwd(), "data"), { recursive: true });
   const output = {
     result,
+    explanation,
     teams,
     fixtures,
     fetchedAt,

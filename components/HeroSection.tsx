@@ -1,25 +1,39 @@
 "use client";
 
+import { useState } from "react";
 import { SimulationResult } from "@/lib/simulation";
+import type { Explanation } from "@/app/page";
 
 function formatDate(dateStr: string): string {
   const d = new Date(dateStr);
   return d.toLocaleDateString("nl-NL", { day: "numeric", month: "long", year: "numeric" });
 }
 
+function formatProbability(prob: number): string {
+  const pct = prob * 100;
+  if (pct >= 99.995) return ">99.99%";
+  return `${pct.toFixed(2)}%`;
+}
+
 export default function HeroSection({
   result,
+  explanation,
   fetchedAt,
   simulatedAt,
 }: {
   result: SimulationResult;
+  explanation: Explanation;
   fetchedAt: string | null;
   simulatedAt: string;
 }) {
+  const [showExplanation, setShowExplanation] = useState(false);
+
   const topProb = result.dateProbabilities.reduce((max, dp) =>
     dp.probability > max.probability ? dp : max,
     result.dateProbabilities[0]
   );
+
+  const championCount = explanation.iterations - explanation.neverChampionCount;
 
   return (
     <section
@@ -167,7 +181,7 @@ export default function HeroSection({
         >
           <StatCard
             label="Kans op Kampioenschap"
-            value={`${(result.totalChampionshipProbability * 100).toFixed(1)}%`}
+            value={formatProbability(result.totalChampionshipProbability)}
             highlight
           />
           <StatCard
@@ -179,6 +193,122 @@ export default function HeroSection({
             value={topProb ? formatDate(topProb.date) : "?"}
           />
         </div>
+
+        {/* Explanation button */}
+        <button
+          onClick={() => setShowExplanation(!showExplanation)}
+          style={{
+            marginTop: "1.5rem",
+            background: "none",
+            border: "1px solid #333",
+            borderRadius: "4px",
+            color: "#888",
+            fontFamily: "var(--font-body)",
+            fontSize: "0.8rem",
+            padding: "0.5rem 1.25rem",
+            cursor: "pointer",
+            letterSpacing: "0.05em",
+            transition: "border-color 0.2s, color 0.2s",
+          }}
+          onMouseEnter={(e) => {
+            e.currentTarget.style.borderColor = "var(--psv-red)";
+            e.currentTarget.style.color = "#ccc";
+          }}
+          onMouseLeave={(e) => {
+            e.currentTarget.style.borderColor = "#333";
+            e.currentTarget.style.color = "#888";
+          }}
+        >
+          {showExplanation ? "Sluiten" : "Hoe is dit berekend?"}
+        </button>
+
+        {/* Explanation panel */}
+        {showExplanation && (
+          <div
+            style={{
+              marginTop: "1.5rem",
+              background: "var(--dark-3)",
+              border: "1px solid #222",
+              borderRadius: "6px",
+              padding: "1.5rem 2rem",
+              textAlign: "left",
+              maxWidth: "720px",
+              marginLeft: "auto",
+              marginRight: "auto",
+              fontFamily: "var(--font-body)",
+              fontSize: "0.85rem",
+              color: "#aaa",
+              lineHeight: 1.7,
+            }}
+          >
+            <h3
+              style={{
+                fontFamily: "var(--font-display)",
+                fontSize: "1rem",
+                color: "#fff",
+                marginBottom: "1rem",
+                textTransform: "uppercase",
+                letterSpacing: "0.1em",
+              }}
+            >
+              Hoe is dit berekend?
+            </h3>
+
+            <p style={{ marginBottom: "1rem" }}>
+              PSV staat op <strong style={{ color: "#fff" }}>{explanation.psvPoints} punten</strong> na{" "}
+              <strong style={{ color: "#fff" }}>{explanation.psvPlayed}</strong> wedstrijden
+              (nog <strong style={{ color: "#fff" }}>{explanation.psvRemaining}</strong> te spelen).
+            </p>
+
+            <p style={{ marginBottom: "0.75rem", color: "#777", fontSize: "0.75rem", textTransform: "uppercase", letterSpacing: "0.1em" }}>
+              Concurrenten — maximaal haalbare punten
+            </p>
+
+            <table
+              style={{
+                width: "100%",
+                borderCollapse: "collapse",
+                marginBottom: "1.25rem",
+                fontSize: "0.82rem",
+              }}
+            >
+              <thead>
+                <tr style={{ borderBottom: "1px solid #333" }}>
+                  <th style={{ textAlign: "left", padding: "0.4rem 0", color: "#666", fontWeight: 500 }}>Team</th>
+                  <th style={{ textAlign: "right", padding: "0.4rem 0", color: "#666", fontWeight: 500 }}>Punten</th>
+                  <th style={{ textAlign: "right", padding: "0.4rem 0", color: "#666", fontWeight: 500 }}>Max</th>
+                  <th style={{ textAlign: "right", padding: "0.4rem 0", color: "#666", fontWeight: 500 }}>Achterstand</th>
+                </tr>
+              </thead>
+              <tbody>
+                {explanation.rivals.map((r) => (
+                  <tr key={r.name} style={{ borderBottom: "1px solid #1a1a1a" }}>
+                    <td style={{ padding: "0.4rem 0", color: "#ccc" }}>{r.name}</td>
+                    <td style={{ textAlign: "right", padding: "0.4rem 0" }}>{r.points}</td>
+                    <td style={{ textAlign: "right", padding: "0.4rem 0", color: r.maxPoints >= explanation.psvPoints ? "var(--psv-red)" : "#666" }}>
+                      {r.maxPoints}
+                    </td>
+                    <td style={{ textAlign: "right", padding: "0.4rem 0" }}>{r.gap}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+
+            <p style={{ marginBottom: "0.5rem" }}>
+              De simulatie draaide <strong style={{ color: "#fff" }}>{explanation.iterations.toLocaleString("nl-NL")}</strong>{" "}
+              scenario&apos;s. In <strong style={{ color: "#fff" }}>{championCount.toLocaleString("nl-NL")}</strong>{" "}
+              daarvan werd PSV kampioen
+              {explanation.neverChampionCount > 0 && (
+                <> (in <strong style={{ color: "#fff" }}>{explanation.neverChampionCount.toLocaleString("nl-NL")}</strong> niet)</>
+              )}.
+            </p>
+
+            <p style={{ color: "#555", fontSize: "0.75rem", marginTop: "0.75rem" }}>
+              Wedstrijdkansen komen van API-Football predictions. Bij ontbrekende predictions wordt een Poisson-model gebruikt
+              op basis van de competitiestand.
+            </p>
+          </div>
+        )}
       </div>
 
       {/* Scroll indicator */}

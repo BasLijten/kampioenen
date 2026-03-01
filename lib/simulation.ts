@@ -7,6 +7,8 @@ export interface SimulationResult {
   bestCaseRound: number | null;
   expectedDate: string | null;
   neverChampionProbability: number;
+  iterations: number;
+  neverChampionCount: number;
 }
 
 export interface DateProbability {
@@ -173,5 +175,7 @@ export function runSimulation(
     bestCaseRound,
     expectedDate,
     neverChampionProbability: neverChampion / iterations,
+    iterations,
+    neverChampionCount: neverChampion,
   };
 }
