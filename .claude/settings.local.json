@@ -1,0 +1,29 @@
+{
+  "env": {
+    "CLAUDE_CODE_EXPERIMENTAL_AGENT_TEAMS": "1"
+  },
+  "permissions": {
+    "allow": [
+      "Bash(npx tsc:*)",
+      "Bash(npm install:*)",
+      "Bash(npx tsx:*)",
+      "Bash(node:*)",
+      "Bash(mv:*)",
+      "Bash(test:*)",
+      "WebSearch",
+      "WebFetch(domain:www.football-data.org)",
+      "WebFetch(domain:www.thesportsdb.com)",
+      "WebFetch(domain:apifootball.com)",
+      "WebFetch(domain:docs.football-data.org)",
+      "WebFetch(domain:the-odds-api.com)",
+      "WebFetch(domain:www.predicd.com)",
+      "WebFetch(domain:www.api-football.com)",
+      "WebFetch(domain:oddalerts.com)",
+      "WebFetch(domain:documenter.getpostman.com)",
+      "WebFetch(domain:rapidapi.com)",
+      "WebFetch(domain:api-sports.io)",
+      "WebFetch(domain:docs.sportmonks.com)",
+      "WebFetch(domain:github.com)"
+    ]
+  }
+}
