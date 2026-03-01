@@ -1,4 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=DM+Sans:wght@300;400;500&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -13,8 +12,6 @@
   --dark-3: #181818;
   --dark-4: #222222;
   --gray: #444444;
-  --font-display: 'Oswald', sans-serif;
-  --font-body: 'DM Sans', sans-serif;
 }
 
 *, *::before, *::after { box-sizing: border-box; }

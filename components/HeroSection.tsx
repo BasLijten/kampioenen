@@ -37,6 +37,7 @@ export default function HeroSection({
 
   return (
     <section
+      aria-label="PSV Kampioen statistieken"
       style={{
         position: "relative",
         minHeight: "100vh",
@@ -112,7 +113,7 @@ export default function HeroSection({
             marginBottom: "1.5rem",
           }}
         >
-          Eredivisie 2024/25 &nbsp;·&nbsp; Seizoen Simulatie
+          Eredivisie 2025/26 &nbsp;·&nbsp; Seizoen Simulatie
           <span
             style={{
               marginLeft: "1rem",
@@ -197,6 +198,7 @@ export default function HeroSection({
         {/* Explanation button */}
         <button
           onClick={() => setShowExplanation(!showExplanation)}
+          aria-expanded={showExplanation}
           style={{
             marginTop: "1.5rem",
             background: "none",
@@ -241,7 +243,7 @@ export default function HeroSection({
               lineHeight: 1.7,
             }}
           >
-            <h3
+            <h2
               style={{
                 fontFamily: "var(--font-display)",
                 fontSize: "1rem",
@@ -252,7 +254,7 @@ export default function HeroSection({
               }}
             >
               Hoe is dit berekend?
-            </h3>
+            </h2>
 
             <p style={{ marginBottom: "1rem" }}>
               PSV staat op <strong style={{ color: "#fff" }}>{explanation.psvPoints} punten</strong> na{" "}
@@ -328,6 +330,51 @@ export default function HeroSection({
             </p>
           </div>
         )}
+
+        <p
+          style={{
+            fontFamily: "var(--font-body)",
+            fontSize: "1.15rem",
+            color: "#666",
+            marginTop: "1rem",
+            fontStyle: "italic",
+          }}
+        >
+          Zorg er dus voor dat je de dag erna vrij hebt! 🎉
+        </p>
+
+        <a
+          href="https://ko-fi.com/baslijten"
+          target="_blank"
+          rel="noopener noreferrer"
+          style={{
+            display: "inline-block",
+            marginTop: "1rem",
+            fontFamily: "var(--font-display)",
+            fontSize: "1.1rem",
+            fontWeight: 600,
+            color: "#fff",
+            textDecoration: "none",
+            background: "var(--psv-red)",
+            borderRadius: "6px",
+            padding: "0.75rem 2rem",
+            letterSpacing: "0.05em",
+            textTransform: "uppercase",
+            transition: "transform 0.2s, box-shadow 0.2s",
+            boxShadow: "0 0 20px rgba(232,0,28,0.3)",
+          }}
+          onMouseEnter={(e) => {
+            e.currentTarget.style.transform = "scale(1.05)";
+            e.currentTarget.style.boxShadow = "0 0 30px rgba(232,0,28,0.5)";
+          }}
+          onMouseLeave={(e) => {
+            e.currentTarget.style.transform = "scale(1)";
+            e.currentTarget.style.boxShadow = "0 0 20px rgba(232,0,28,0.3)";
+          }}
+        >
+          🍺 Vind je dit leuk? Koop een biertje voor mij op het kampioenschap!
+        </a>
+
       </div>
 
       {/* Scroll indicator */}
