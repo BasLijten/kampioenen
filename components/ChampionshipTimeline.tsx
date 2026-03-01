@@ -89,8 +89,8 @@ export default function ChampionshipTimeline({ dates }: { dates: DateProbability
                   </p>
                 </div>
 
-                {/* Bar */}
-                <div style={{ position: "relative" }}>
+                {/* Bars */}
+                <div style={{ display: "flex", flexDirection: "column", gap: "4px" }}>
                   <div
                     style={{
                       height: "8px",
@@ -111,13 +111,27 @@ export default function ChampionshipTimeline({ dates }: { dates: DateProbability
                       }}
                     />
                   </div>
-                  {/* Cumulative */}
-                  <p style={{ fontSize: "0.65rem", color: "#444", marginTop: "4px" }}>
-                    Cumulatief: {(dp.cumulativeProbability * 100).toFixed(1)}%
-                  </p>
+                  <div
+                    style={{
+                      height: "4px",
+                      background: "var(--dark-4)",
+                      borderRadius: "2px",
+                      overflow: "hidden",
+                    }}
+                  >
+                    <div
+                      style={{
+                        height: "100%",
+                        width: `${dp.cumulativeProbability * 100}%`,
+                        background: "linear-gradient(90deg, rgba(232,0,28,0.3), rgba(232,0,28,0.5))",
+                        borderRadius: "2px",
+                        transition: "width 0.8s cubic-bezier(0.16, 1, 0.3, 1)",
+                      }}
+                    />
+                  </div>
                 </div>
 
-                {/* Percentage */}
+                {/* Percentages */}
                 <div style={{ textAlign: "right" }}>
                   <p
                     style={{
@@ -128,6 +142,17 @@ export default function ChampionshipTimeline({ dates }: { dates: DateProbability
                     }}
                   >
                     {pct}%
+                  </p>
+                  <p
+                    style={{
+                      fontFamily: "var(--font-display)",
+                      fontSize: "0.95rem",
+                      fontWeight: 600,
+                      color: "#666",
+                      marginTop: "2px",
+                    }}
+                  >
+                    {(dp.cumulativeProbability * 100).toFixed(1)}%
                   </p>
                   {isTop && (
                     <p
