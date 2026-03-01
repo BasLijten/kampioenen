@@ -278,6 +278,7 @@ export default function HeroSection({
                   <th style={{ textAlign: "right", padding: "0.4rem 0", color: "#666", fontWeight: 500 }}>Punten</th>
                   <th style={{ textAlign: "right", padding: "0.4rem 0", color: "#666", fontWeight: 500 }}>Max</th>
                   <th style={{ textAlign: "right", padding: "0.4rem 0", color: "#666", fontWeight: 500 }}>Achterstand</th>
+                  <th style={{ textAlign: "right", padding: "0.4rem 0", color: "#666", fontWeight: 500 }}>Pakt max</th>
                 </tr>
               </thead>
               <tbody>
@@ -289,6 +290,7 @@ export default function HeroSection({
                       {r.maxPoints}
                     </td>
                     <td style={{ textAlign: "right", padding: "0.4rem 0" }}>{r.gap}</td>
+                    <td style={{ textAlign: "right", padding: "0.4rem 0", color: "#666" }}>{(r.winAllProb * 100).toFixed(1)}%</td>
                   </tr>
                 ))}
               </tbody>
@@ -301,6 +303,23 @@ export default function HeroSection({
               {explanation.neverChampionCount > 0 && (
                 <> (in <strong style={{ color: "#fff" }}>{explanation.neverChampionCount.toLocaleString("nl-NL")}</strong> niet)</>
               )}.
+            </p>
+
+            <p style={{ marginBottom: "0.5rem" }}>
+              <strong style={{ color: "#fff" }}>Best Case Scenario</strong> is de vroegst mogelijke
+              kampioensdatum: de ronde waarin PSV wiskundig kampioen is als ze alle resterende
+              wedstrijden winnen en concurrenten de verwachte resultaten behalen.
+            </p>
+
+            <p style={{ marginBottom: "0.5rem" }}>
+              <strong style={{ color: "#fff" }}>Meest Waarschijnlijk</strong> is de datum met de
+              hoogste kans in de simulatie — de piek van de kansverdeling.
+            </p>
+
+            <p style={{ marginBottom: "1rem" }}>
+              Dat deze twee op dezelfde datum vallen is logisch: PSV&apos;s voorsprong is zo groot dat
+              in de meeste simulaties het kampioenschap al in de vroegst mogelijke ronde wordt
+              beslist.
             </p>
 
             <p style={{ color: "#555", fontSize: "0.75rem", marginTop: "0.75rem" }}>
