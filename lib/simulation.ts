@@ -35,6 +35,7 @@ export interface ClubSimulationResult {
   expectedDate: string | null;
   neverChampionProbability: number;
   neverChampionCount: number;
+  positionProbabilities: Record<number, number>;
 }
 
 interface TeamState {
@@ -86,9 +87,11 @@ export function runSimulation(
   // Track championship counts per team per date
   const championshipCounts: Record<string, Record<string, number>> = {};
   const neverChampion: Record<string, number> = {};
+  const positionCounts: Record<string, Record<number, number>> = {};
   teams.forEach((t) => {
     championshipCounts[t.id] = {};
     neverChampion[t.id] = 0;
+    positionCounts[t.id] = {};
   });
 
   for (let i = 0; i < iterations; i++) {
@@ -133,6 +136,18 @@ export function runSimulation(
         neverChampion[team.id]++;
       }
     }
+
+    // Record final positions (sort by points, then initial GD as tiebreaker)
+    const finalRanking = [...teams].sort((a, b) => {
+      const pa = state[a.id].points;
+      const pb = state[b.id].points;
+      if (pb !== pa) return pb - pa;
+      return (b.goalsFor - b.goalsAgainst) - (a.goalsFor - a.goalsAgainst);
+    });
+    finalRanking.forEach((t, idx) => {
+      const pos = idx + 1;
+      positionCounts[t.id][pos] = (positionCounts[t.id][pos] || 0) + 1;
+    });
   }
 
   // Build results per club
@@ -212,6 +227,11 @@ export function runSimulation(
       expectedDate = maxDate || null;
     }
 
+    const positionProbabilities: Record<number, number> = {};
+    for (const [posStr, count] of Object.entries(positionCounts[team.id])) {
+      positionProbabilities[Number(posStr)] = count / iterations;
+    }
+
     clubResults[team.id] = {
       teamId: team.id,
       teamName: team.name,
@@ -222,6 +242,7 @@ export function runSimulation(
       expectedDate,
       neverChampionProbability: neverChampion[team.id] / iterations,
       neverChampionCount: neverChampion[team.id],
+      positionProbabilities,
     };
   }
 

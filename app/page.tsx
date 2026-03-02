@@ -6,7 +6,7 @@ import { resolveConfig, formatTemplate, toClientLeague } from "@/config/env";
 import HeroSection from "@/components/HeroSection";
 import ChampionshipTimeline from "@/components/ChampionshipTimeline";
 import BestCaseView from "@/components/BestCaseView";
-import StandingsTable from "@/components/StandingsTable";
+import EndOfSeasonPrediction from "@/components/EndOfSeasonPrediction";
 import Footer from "@/components/Footer";
 
 export interface Explanation {
@@ -145,7 +145,8 @@ export default function Home() {
         texts={texts}
         teams={teams}
       />
-      <StandingsTable
+      <EndOfSeasonPrediction
+        clubResults={data.clubResults}
         teams={teams}
         club={club}
         league={league}
