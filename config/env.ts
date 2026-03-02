@@ -51,7 +51,9 @@ export function resolveClub(): ClubConfig {
 }
 
 export function getSiteUrl(): string {
-  return process.env.SITE_URL ?? `https://${resolveClub().domain}`;
+  if (process.env.VERCEL_PROJECT_PRODUCTION_URL)
+    return `https://${process.env.VERCEL_PROJECT_PRODUCTION_URL}`;
+  return `https://${resolveClub().domain}`;
 }
 
 export function resolveConfig(): ResolvedConfig {
