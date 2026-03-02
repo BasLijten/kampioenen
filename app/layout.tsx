@@ -1,6 +1,7 @@
 import type { Metadata, Viewport } from "next";
 import { Oswald, DM_Sans } from "next/font/google";
 import { Analytics } from "@vercel/analytics/next";
+import { resolveConfig, formatTemplate } from "@/config/env";
 import "./globals.css";
 
 const oswald = Oswald({
@@ -17,51 +18,64 @@ const dmSans = DM_Sans({
   display: "swap",
 });
 
+const { league, club, texts } = resolveConfig();
+
+const templateVars = {
+  clubName: club.name,
+  clubShortName: club.shortName,
+  leagueName: league.name,
+  season: league.season,
+};
+
 export const viewport: Viewport = {
-  themeColor: "#E8001C",
+  themeColor: club.primaryColor,
 };
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://psvkampioen.nl"),
+  metadataBase: new URL(`https://${club.domain}`),
   alternates: {
     canonical: "/",
   },
-  title: "PSV Kampioen 2025/26 — Wanneer wordt PSV Eredivisie kampioen?",
-  description:
-    "Monte Carlo simulatie met 50.000 scenario's berekent wanneer PSV Eindhoven Eredivisie kampioen 2025/26 wordt. Bekijk kansen per speelronde, best case scenario en de huidige stand.",
-  applicationName: "PSV Kampioen",
+  title: formatTemplate(texts.metaTitleTemplate, templateVars),
+  description: formatTemplate(texts.metaDescriptionTemplate, templateVars),
+  applicationName: formatTemplate(texts.schemaName, templateVars),
   authors: [{ name: "Bas Lijten" }],
   robots: {
     index: true,
     follow: true,
   },
   openGraph: {
-    title: "PSV Kampioen 2025/26 — Wanneer wordt PSV Eredivisie kampioen?",
-    description:
-      "Monte Carlo simulatie met 50.000 scenario's berekent wanneer PSV kampioen wordt. Kansen per speelronde, best case scenario en live stand.",
+    title: formatTemplate(texts.ogTitleTemplate, templateVars),
+    description: formatTemplate(texts.ogDescriptionTemplate, templateVars),
     type: "website",
-    locale: "nl_NL",
+    locale: league.locale.replace("-", "_"),
   },
   twitter: {
     card: "summary_large_image",
-    title: "PSV Kampioen 2025/26 — Wanneer wordt PSV Eredivisie kampioen?",
-    description:
-      "Monte Carlo simulatie met 50.000 scenario's berekent wanneer PSV kampioen wordt.",
+    title: formatTemplate(texts.ogTitleTemplate, templateVars),
+    description: formatTemplate(texts.ogDescriptionTemplate, templateVars),
   },
 };
 
 const jsonLd = {
   "@context": "https://schema.org",
   "@type": "WebSite",
-  name: "PSV Kampioen 2025/26",
-  description:
-    "Monte Carlo simulatie berekent wanneer PSV Eindhoven Eredivisie kampioen 2025/26 wordt.",
-  url: "https://psvkampioen.nl",
+  name: formatTemplate(texts.schemaName, templateVars),
+  description: formatTemplate(texts.schemaDescription, templateVars),
+  url: `https://${club.domain}`,
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="nl" className={`${oswald.variable} ${dmSans.variable}`}>
+    <html
+      lang={league.language}
+      className={`${oswald.variable} ${dmSans.variable}`}
+      style={{
+        '--club-primary': club.primaryColor,
+        '--club-primary-deep': club.primaryColorDeep,
+        '--club-primary-glow': club.primaryColorGlow,
+      } as React.CSSProperties}
+    >
       <body>
         <script
           type="application/ld+json"

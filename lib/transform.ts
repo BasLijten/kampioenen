@@ -2,58 +2,25 @@ import { Team, Fixture } from "./data";
 import { ApiStandingEntry, ApiFixture, ApiPrediction } from "./api-football";
 import { computeTeamStrengths, computeLeagueAvgGoals, predictMatch } from "./poisson";
 
-// Maps API-Football team names → onze interne IDs
-const TEAM_ID_MAP: Record<string, string> = {
-  "PSV Eindhoven": "psv",
-  "PSV": "psv",
-  "AFC Ajax": "ajax",
-  "Ajax": "ajax",
-  "Feyenoord Rotterdam": "feyenoord",
-  "Feyenoord": "feyenoord",
-  "AZ Alkmaar": "az",
-  "AZ": "az",
-  "FC Utrecht": "utrecht",
-  "Utrecht": "utrecht",
-  "FC Twente '65": "twente",
-  "FC Twente": "twente",
-  "Twente": "twente",
-  "SBV Excelsior": "excelsior",
-  "Excelsior": "excelsior",
-  "Telstar 1963": "sc-telstar",
-  "SC Telstar": "sc-telstar",
-};
-
-const SHORT_NAME_MAP: Record<string, string> = {
-  "PSV Eindhoven": "PSV",
-  "PSV": "PSV",
-  "AFC Ajax": "Ajax",
-  "Ajax": "Ajax",
-  "Feyenoord Rotterdam": "Feyenoord",
-  "Feyenoord": "Feyenoord",
-  "AZ Alkmaar": "AZ",
-  "AZ": "AZ",
-  "FC Utrecht": "Utrecht",
-  "Utrecht": "Utrecht",
-  "FC Twente '65": "Twente",
-  "FC Twente": "Twente",
-  "Twente": "Twente",
-  "SBV Excelsior": "Excelsior",
-  "Excelsior": "Excelsior",
-  "Telstar 1963": "SC Telstar",
-  "SC Telstar": "SC Telstar",
-};
-
 export function toTeamId(name: string): string {
-  return TEAM_ID_MAP[name] ?? name.toLowerCase().replace(/\s+/g, "-");
+  return name.toLowerCase().replace(/\s+/g, "-").replace(/[^a-z0-9-]/g, "");
 }
 
-// "Regular Season - 29" → 29
+function deriveShortName(name: string): string {
+  // Remove common prefixes like "FC", "AFC", "SBV"
+  const stripped = name.replace(/^(AFC|FC|SBV|SC)\s+/i, "");
+  // If the name has multiple words, use the first significant one
+  const parts = stripped.split(/\s+/);
+  return parts[0];
+}
+
+// "Regular Season - 29" -> 29
 function roundFromString(roundStr: string): number {
   const match = roundStr.match(/(\d+)$/);
   return match ? parseInt(match[1], 10) : 0;
 }
 
-// "75%" → 0.75
+// "75%" -> 0.75
 function parsePct(str: string): number {
   return parseFloat(str.replace("%", "")) / 100;
 }
@@ -62,7 +29,7 @@ export function transformStandings(standings: ApiStandingEntry[]): Team[] {
   return standings.map((s) => ({
     id: toTeamId(s.team.name),
     name: s.team.name,
-    shortName: SHORT_NAME_MAP[s.team.name] ?? s.team.name,
+    shortName: deriveShortName(s.team.name),
     points: s.points,
     played: s.all.played,
     won: s.all.win,
@@ -114,7 +81,6 @@ export function transformFixtures(
       homeWinProb,
       drawProb,
       awayWinProb,
-      isPSV: homeTeamId === "psv" || awayTeamId === "psv",
       source,
     };
   });

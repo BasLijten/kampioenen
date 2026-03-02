@@ -1,27 +1,48 @@
 "use client";
 
 import { DateProbability } from "@/lib/simulation";
+import type { Team } from "@/lib/data";
+import type { ClubConfig } from "@/config/clubs";
+import type { LeagueClientConfig } from "@/config/env";
+import type { LocaleStrings } from "@/config/locales/nl";
+import { formatTemplate } from "@/config/env";
 
-function formatDate(dateStr: string): string {
+function formatDate(dateStr: string, locale: string): string {
   const d = new Date(dateStr);
-  return d.toLocaleDateString("nl-NL", { day: "numeric", month: "short" });
+  return d.toLocaleDateString(locale, { day: "numeric", month: "short" });
 }
 
-const teamLabels: Record<string, string> = {
-  ajax: "Ajax",
-  feyenoord: "Feyenoord",
-  az: "AZ",
-  utrecht: "Utrecht",
-  twente: "Twente",
-  vrij: "Vrij",
-};
-
-export default function ChampionshipTimeline({ dates }: { dates: DateProbability[] }) {
+export default function ChampionshipTimeline({
+  dates,
+  club,
+  league,
+  texts,
+  teams,
+}: {
+  dates: DateProbability[];
+  club: ClubConfig;
+  league: LeagueClientConfig;
+  texts: LocaleStrings;
+  teams: Team[];
+}) {
   const maxProb = Math.max(...dates.map((d) => d.probability));
+
+  const templateVars = {
+    clubName: club.name,
+    clubShortName: club.shortName,
+    leagueName: league.name,
+    season: league.season,
+  };
+
+  function getOpponentName(opponentId: string): string {
+    if (opponentId === "vrij" || opponentId === "free") return texts.timelineFreeRound;
+    const team = teams.find((t) => t.id === opponentId);
+    return team ? team.shortName : opponentId;
+  }
 
   return (
     <section
-      aria-label="Kampioenschap datum verdeling"
+      aria-label={texts.timelineSectionLabel}
       style={{
         padding: "6rem 2rem",
         background: "var(--dark-2)",
@@ -30,9 +51,9 @@ export default function ChampionshipTimeline({ dates }: { dates: DateProbability
     >
       <div style={{ maxWidth: "900px", margin: "0 auto" }}>
         <SectionHeader
-          label="Datum Verdeling"
-          title="Wanneer wordt PSV kampioen?"
-          subtitle="Per speelronde: kans dat PSV op die datum het kampioenschap veiligstelt"
+          label={texts.timelineSectionLabel}
+          title={formatTemplate(texts.timelineTitle, templateVars)}
+          subtitle={formatTemplate(texts.timelineSubtitle, templateVars)}
         />
 
         <div style={{ display: "flex", flexDirection: "column", gap: "0" }}>
@@ -40,7 +61,7 @@ export default function ChampionshipTimeline({ dates }: { dates: DateProbability
             const barWidth = maxProb > 0 ? (dp.probability / maxProb) * 100 : 0;
             const pct = (dp.probability * 100).toFixed(1);
             const isTop = dp.probability === maxProb;
-            const opponentName = teamLabels[dp.opponent] || dp.opponent;
+            const opponentName = getOpponentName(dp.opponent);
 
             return (
               <div
@@ -52,7 +73,7 @@ export default function ChampionshipTimeline({ dates }: { dates: DateProbability
                   gap: "1.5rem",
                   padding: "1.25rem 1.5rem",
                   borderBottom: i < dates.length - 1 ? "1px solid var(--dark-4)" : "none",
-                  background: isTop ? "rgba(232,0,28,0.07)" : "transparent",
+                  background: isTop ? "var(--club-primary-glow)" : "transparent",
                   transition: "background 0.2s",
                   position: "relative",
                 }}
@@ -65,7 +86,7 @@ export default function ChampionshipTimeline({ dates }: { dates: DateProbability
                       top: 0,
                       bottom: 0,
                       width: "3px",
-                      background: "var(--psv-red)",
+                      background: "var(--club-primary)",
                     }}
                   />
                 )}
@@ -77,16 +98,16 @@ export default function ChampionshipTimeline({ dates }: { dates: DateProbability
                       fontFamily: "var(--font-display)",
                       fontSize: "1rem",
                       fontWeight: 600,
-                      color: isTop ? "var(--psv-red)" : "#fff",
+                      color: isTop ? "var(--club-primary)" : "#fff",
                     }}
                   >
-                    {formatDate(dp.date)}
+                    {formatDate(dp.date, league.locale)}
                   </p>
                   <p style={{ fontSize: "0.72rem", color: "#555", marginTop: "2px" }}>
-                    Ronde {dp.round}
+                    {texts.timelineRound} {dp.round}
                   </p>
                   <p style={{ fontSize: "0.72rem", color: "#666", marginTop: "1px" }}>
-                    {dp.isHome ? "vs " : "@ "}{opponentName}
+                    {dp.isHome ? `${texts.timelineVs} ` : `${texts.timelineAt} `}{opponentName}
                   </p>
                 </div>
 
@@ -105,8 +126,8 @@ export default function ChampionshipTimeline({ dates }: { dates: DateProbability
                         height: "100%",
                         width: `${barWidth}%`,
                         background: isTop
-                          ? "var(--psv-red)"
-                          : "linear-gradient(90deg, #6b0010, #b0001a)",
+                          ? "var(--club-primary)"
+                          : "linear-gradient(90deg, var(--club-primary-deep), var(--club-primary))",
                         borderRadius: "4px",
                         transition: "width 0.8s cubic-bezier(0.16, 1, 0.3, 1)",
                       }}
@@ -124,7 +145,7 @@ export default function ChampionshipTimeline({ dates }: { dates: DateProbability
                       style={{
                         height: "100%",
                         width: `${dp.cumulativeProbability * 100}%`,
-                        background: "linear-gradient(90deg, rgba(232,0,28,0.3), rgba(232,0,28,0.5))",
+                        background: "linear-gradient(90deg, var(--club-primary-glow), var(--club-primary-glow))",
                         borderRadius: "2px",
                         transition: "width 0.8s cubic-bezier(0.16, 1, 0.3, 1)",
                       }}
@@ -139,7 +160,7 @@ export default function ChampionshipTimeline({ dates }: { dates: DateProbability
                       fontFamily: "var(--font-display)",
                       fontSize: "1.3rem",
                       fontWeight: 700,
-                      color: isTop ? "var(--psv-red)" : "#fff",
+                      color: isTop ? "var(--club-primary)" : "#fff",
                     }}
                   >
                     {pct}%
@@ -159,13 +180,13 @@ export default function ChampionshipTimeline({ dates }: { dates: DateProbability
                     <p
                       style={{
                         fontSize: "0.6rem",
-                        color: "var(--psv-red)",
+                        color: "var(--club-primary)",
                         textTransform: "uppercase",
                         letterSpacing: "0.1em",
                         marginTop: "2px",
                       }}
                     >
-                      Meest likely
+                      {texts.timelineMostLikely}
                     </p>
                   )}
                 </div>
@@ -183,7 +204,7 @@ export default function ChampionshipTimeline({ dates }: { dates: DateProbability
             textAlign: "center",
           }}
         >
-          Datums tonen alleen kansen boven 0.1%. Simulatie op basis van 50.000 iteraties.
+          {texts.timelineFootnote}
         </p>
       </div>
     </section>
@@ -206,7 +227,7 @@ export function SectionHeader({
           fontFamily: "var(--font-display)",
           fontSize: "0.75rem",
           letterSpacing: "0.3em",
-          color: "var(--psv-red)",
+          color: "var(--club-primary)",
           textTransform: "uppercase",
           marginBottom: "0.75rem",
         }}

@@ -2,14 +2,39 @@
 
 import { Team } from "@/lib/data";
 import { SectionHeader } from "./ChampionshipTimeline";
+import type { ClubConfig } from "@/config/clubs";
+import type { LeagueClientConfig } from "@/config/env";
+import type { LocaleStrings } from "@/config/locales/nl";
+import { formatTemplate } from "@/config/env";
 
-export default function StandingsTable({ teams }: { teams: Team[] }) {
+export default function StandingsTable({
+  teams,
+  club,
+  league,
+  texts,
+}: {
+  teams: Team[];
+  club: ClubConfig;
+  league: LeagueClientConfig;
+  texts: LocaleStrings;
+}) {
   const sorted = [...teams].sort((a, b) => b.points - a.points).slice(0, 6);
-  const psv = sorted.find((t) => t.id === "psv")!;
+  const clubTeam = sorted.find((t) => t.id === club.id)!;
+
+  const templateVars = {
+    clubName: club.name,
+    clubShortName: club.shortName,
+    leagueName: league.name,
+    season: league.season,
+    count: String(sorted.length),
+    round: String(Math.max(...sorted.map((t) => t.played))),
+  };
+
+  const cols = texts.standingsColumns;
 
   return (
     <section
-      aria-label="Eredivisie stand"
+      aria-label={texts.standingsSectionLabel}
       style={{
         padding: "6rem 2rem",
         background: "var(--dark-3)",
@@ -17,9 +42,9 @@ export default function StandingsTable({ teams }: { teams: Team[] }) {
     >
       <div style={{ maxWidth: "900px", margin: "0 auto" }}>
         <SectionHeader
-          label="Huidige Stand"
-          title={`Eredivisie Top ${sorted.length}`}
-          subtitle={`Stand per speelronde ${Math.max(...sorted.map((t) => t.played))}`}
+          label={texts.standingsSectionLabel}
+          title={formatTemplate(texts.standingsTitle, templateVars)}
+          subtitle={formatTemplate(texts.standingsSubtitle, templateVars)}
         />
 
         <div
@@ -40,7 +65,7 @@ export default function StandingsTable({ teams }: { teams: Team[] }) {
               gap: "0.5rem",
             }}
           >
-            {["#", "Club", "W", "G", "V", "Gsr", "Doel", "Pnt"].map((h) => (
+            {[cols.rank, cols.club, cols.w, cols.d, cols.l, cols.gd, cols.goals, cols.pts].map((h) => (
               <p
                 key={h}
                 style={{
@@ -49,7 +74,7 @@ export default function StandingsTable({ teams }: { teams: Team[] }) {
                   letterSpacing: "0.2em",
                   textTransform: "uppercase",
                   color: "#444",
-                  textAlign: h === "#" || h === "Club" ? "left" : "center",
+                  textAlign: h === cols.rank || h === cols.club ? "left" : "center",
                 }}
               >
                 {h}
@@ -58,8 +83,8 @@ export default function StandingsTable({ teams }: { teams: Team[] }) {
           </div>
 
           {sorted.map((team, i) => {
-            const isPSV = team.id === "psv";
-            const gap = isPSV ? null : psv.points - team.points;
+            const isClub = team.id === club.id;
+            const gap = isClub ? null : clubTeam.points - team.points;
             const gd = team.goalsFor - team.goalsAgainst;
 
             return (
@@ -72,11 +97,11 @@ export default function StandingsTable({ teams }: { teams: Team[] }) {
                   alignItems: "center",
                   gap: "0.5rem",
                   borderBottom: i < sorted.length - 1 ? "1px solid #1a1a1a" : "none",
-                  background: isPSV ? "rgba(232,0,28,0.1)" : "transparent",
+                  background: isClub ? "var(--club-primary-glow)" : "transparent",
                   position: "relative",
                 }}
               >
-                {isPSV && (
+                {isClub && (
                   <div
                     style={{
                       position: "absolute",
@@ -84,7 +109,7 @@ export default function StandingsTable({ teams }: { teams: Team[] }) {
                       top: 0,
                       bottom: 0,
                       width: "3px",
-                      background: "var(--psv-red)",
+                      background: "var(--club-primary)",
                     }}
                   />
                 )}
@@ -92,8 +117,8 @@ export default function StandingsTable({ teams }: { teams: Team[] }) {
                   style={{
                     fontFamily: "var(--font-display)",
                     fontSize: "1rem",
-                    color: isPSV ? "var(--psv-red)" : "#555",
-                    fontWeight: isPSV ? 700 : 400,
+                    color: isClub ? "var(--club-primary)" : "#555",
+                    fontWeight: isClub ? 700 : 400,
                   }}
                 >
                   {i + 1}
@@ -103,14 +128,14 @@ export default function StandingsTable({ teams }: { teams: Team[] }) {
                     style={{
                       fontFamily: "var(--font-display)",
                       fontSize: "1rem",
-                      color: isPSV ? "#fff" : "#bbb",
-                      fontWeight: isPSV ? 600 : 400,
+                      color: isClub ? "#fff" : "#bbb",
+                      fontWeight: isClub ? 600 : 400,
                     }}
                   >
                     {team.shortName}
                   </p>
-                  {!isPSV && (
-                    <p style={{ fontSize: "0.7rem", color: "#444" }}>-{gap} pnt</p>
+                  {!isClub && gap !== null && (
+                    <p style={{ fontSize: "0.7rem", color: "#444" }}>-{gap} {texts.standingsGapSuffix}</p>
                   )}
                 </div>
                 {[team.won, team.drawn, team.lost].map((val, j) => (
@@ -151,7 +176,7 @@ export default function StandingsTable({ teams }: { teams: Team[] }) {
                     fontFamily: "var(--font-display)",
                     fontSize: "1.3rem",
                     fontWeight: 700,
-                    color: isPSV ? "var(--psv-red)" : "#fff",
+                    color: isClub ? "var(--club-primary)" : "#fff",
                     textAlign: "center",
                   }}
                 >

@@ -1,19 +1,15 @@
 /**
- * API-Football v3 client — server-side only (API key stays in process.env)
+ * API-Football v3 client -- server-side only (API key stays in process.env)
  * Docs: https://www.api-football.com/documentation-v3
- *
- * Eredivisie: league=88, season=2025
  */
 
 const BASE_URL = "https://v3.football.api-sports.io";
-export const LEAGUE_ID = 88;
-export const SEASON = 2025;
 
 function headers(): Record<string, string> {
   return { "x-apisports-key": process.env.API_FOOTBALL_KEY! };
 }
 
-// ─── Response types ────────────────────────────────────────────────────────
+// --- Response types ------------------------------------------------------------
 
 export interface ApiStandingEntry {
   rank: number;
@@ -44,11 +40,11 @@ export interface ApiPrediction {
   };
 }
 
-// ─── Fetch functions ───────────────────────────────────────────────────────
+// --- Fetch functions -----------------------------------------------------------
 
-export async function fetchStandings(): Promise<ApiStandingEntry[]> {
+export async function fetchStandings(leagueId: number, season: number): Promise<ApiStandingEntry[]> {
   const res = await fetch(
-    `${BASE_URL}/standings?league=${LEAGUE_ID}&season=${SEASON}`,
+    `${BASE_URL}/standings?league=${leagueId}&season=${season}`,
     { headers: headers(), next: { revalidate: 3600 } }
   );
   if (!res.ok) throw new Error(`standings ${res.status}`);
@@ -56,9 +52,9 @@ export async function fetchStandings(): Promise<ApiStandingEntry[]> {
   return json.response?.[0]?.league?.standings?.[0] ?? [];
 }
 
-export async function fetchRemainingFixtures(): Promise<ApiFixture[]> {
+export async function fetchRemainingFixtures(leagueId: number, season: number): Promise<ApiFixture[]> {
   const res = await fetch(
-    `${BASE_URL}/fixtures?league=${LEAGUE_ID}&season=${SEASON}&status=NS`,
+    `${BASE_URL}/fixtures?league=${leagueId}&season=${season}&status=NS`,
     { headers: headers(), next: { revalidate: 3600 } }
   );
   if (!res.ok) throw new Error(`fixtures ${res.status}`);

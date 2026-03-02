@@ -1,12 +1,16 @@
 "use client";
 
 import { useState } from "react";
-import { SimulationResult } from "@/lib/simulation";
+import type { ClubSimulationResult } from "@/lib/simulation";
 import type { Explanation } from "@/app/page";
+import type { ClubConfig } from "@/config/clubs";
+import type { LeagueClientConfig } from "@/config/env";
+import type { LocaleStrings } from "@/config/locales/nl";
+import { formatTemplate } from "@/config/env";
 
-function formatDate(dateStr: string): string {
+function formatDate(dateStr: string, locale: string): string {
   const d = new Date(dateStr);
-  return d.toLocaleDateString("nl-NL", { day: "numeric", month: "long", year: "numeric" });
+  return d.toLocaleDateString(locale, { day: "numeric", month: "long", year: "numeric" });
 }
 
 function formatProbability(prob: number): string {
@@ -20,11 +24,17 @@ export default function HeroSection({
   explanation,
   fetchedAt,
   simulatedAt,
+  club,
+  league,
+  texts,
 }: {
-  result: SimulationResult;
+  result: ClubSimulationResult;
   explanation: Explanation;
   fetchedAt: string | null;
   simulatedAt: string;
+  club: ClubConfig;
+  league: LeagueClientConfig;
+  texts: LocaleStrings;
 }) {
   const [showExplanation, setShowExplanation] = useState(false);
 
@@ -35,9 +45,16 @@ export default function HeroSection({
 
   const championCount = explanation.iterations - explanation.neverChampionCount;
 
+  const templateVars = {
+    clubName: club.name,
+    clubShortName: club.shortName,
+    leagueName: league.name,
+    season: league.season,
+  };
+
   return (
     <section
-      aria-label="PSV Kampioen statistieken"
+      aria-label={`${club.shortName} ${texts.statChampionshipChance}`}
       style={{
         position: "relative",
         minHeight: "100vh",
@@ -56,13 +73,13 @@ export default function HeroSection({
           position: "absolute",
           inset: 0,
           backgroundImage:
-            "linear-gradient(rgba(232,0,28,0.06) 1px, transparent 1px), linear-gradient(90deg, rgba(232,0,28,0.06) 1px, transparent 1px)",
+            "linear-gradient(var(--club-primary-glow) 1px, transparent 1px), linear-gradient(90deg, var(--club-primary-glow) 1px, transparent 1px)",
           backgroundSize: "60px 60px",
           zIndex: 0,
         }}
       />
 
-      {/* Big red glow */}
+      {/* Big glow */}
       <div
         style={{
           position: "absolute",
@@ -71,7 +88,7 @@ export default function HeroSection({
           transform: "translate(-50%, -60%)",
           width: "700px",
           height: "700px",
-          background: "radial-gradient(circle, rgba(232,0,28,0.2) 0%, transparent 70%)",
+          background: "radial-gradient(circle, var(--club-primary-glow) 0%, transparent 70%)",
           zIndex: 0,
           pointerEvents: "none",
         }}
@@ -85,7 +102,7 @@ export default function HeroSection({
           right: 0,
           width: "40%",
           height: "4px",
-          background: "var(--psv-red)",
+          background: "var(--club-primary)",
           zIndex: 1,
         }}
       />
@@ -96,7 +113,7 @@ export default function HeroSection({
           left: 0,
           width: "40%",
           height: "4px",
-          background: "var(--psv-red)",
+          background: "var(--club-primary)",
           zIndex: 1,
         }}
       />
@@ -108,12 +125,12 @@ export default function HeroSection({
             fontFamily: "var(--font-display)",
             fontSize: "0.85rem",
             letterSpacing: "0.3em",
-            color: "var(--psv-red)",
+            color: "var(--club-primary)",
             textTransform: "uppercase",
             marginBottom: "1.5rem",
           }}
         >
-          Eredivisie 2025/26 &nbsp;·&nbsp; Seizoen Simulatie
+          {formatTemplate(texts.heroSubtitle, templateVars)}
           <span
             style={{
               marginLeft: "1rem",
@@ -125,8 +142,8 @@ export default function HeroSection({
             }}
           >
             {fetchedAt
-              ? `Data: ${new Date(fetchedAt).toLocaleDateString("nl-NL", { day: "numeric", month: "short" })}`
-              : `Sim: ${new Date(simulatedAt).toLocaleDateString("nl-NL", { day: "numeric", month: "short" })}`}
+              ? `Data: ${new Date(fetchedAt).toLocaleDateString(league.locale, { day: "numeric", month: "short" })}`
+              : `Sim: ${new Date(simulatedAt).toLocaleDateString(league.locale, { day: "numeric", month: "short" })}`}
           </span>
         </p>
 
@@ -141,12 +158,12 @@ export default function HeroSection({
             marginBottom: "1rem",
           }}
         >
-          <span style={{ display: "block", color: "#fff" }}>PSV</span>
+          <span style={{ display: "block", color: "#fff" }}>{club.shortName}</span>
           <span
             style={{
               display: "block",
-              color: "var(--psv-red)",
-              WebkitTextStroke: "2px var(--psv-red)",
+              color: "var(--club-primary)",
+              WebkitTextStroke: "2px var(--club-primary)",
             }}
           >
             KAMPIOEN
@@ -163,7 +180,7 @@ export default function HeroSection({
             lineHeight: 1.6,
           }}
         >
-          Monte Carlo simulatie op basis van 50.000 scenario's. Wanneer en hoe waarschijnlijk wordt PSV kampioen?
+          {formatTemplate(texts.heroDescription, templateVars)}
         </p>
 
         {/* Three stat cards */}
@@ -181,17 +198,17 @@ export default function HeroSection({
           }}
         >
           <StatCard
-            label="Kans op Kampioenschap"
+            label={texts.statChampionshipChance}
             value={formatProbability(result.totalChampionshipProbability)}
             highlight
           />
           <StatCard
-            label="Best Case Scenario"
-            value={result.bestCaseDate ? formatDate(result.bestCaseDate) : "?"}
+            label={texts.statBestCase}
+            value={result.bestCaseDate ? formatDate(result.bestCaseDate, league.locale) : "?"}
           />
           <StatCard
-            label="Meest Waarschijnlijk"
-            value={topProb ? formatDate(topProb.date) : "?"}
+            label={texts.statMostLikely}
+            value={topProb ? formatDate(topProb.date, league.locale) : "?"}
           />
         </div>
 
@@ -213,7 +230,7 @@ export default function HeroSection({
             transition: "border-color 0.2s, color 0.2s",
           }}
           onMouseEnter={(e) => {
-            e.currentTarget.style.borderColor = "var(--psv-red)";
+            e.currentTarget.style.borderColor = "var(--club-primary)";
             e.currentTarget.style.color = "#ccc";
           }}
           onMouseLeave={(e) => {
@@ -221,7 +238,7 @@ export default function HeroSection({
             e.currentTarget.style.color = "#888";
           }}
         >
-          {showExplanation ? "Sluiten" : "Hoe is dit berekend?"}
+          {showExplanation ? texts.explanationButtonClose : texts.explanationButton}
         </button>
 
         {/* Explanation panel */}
@@ -253,17 +270,23 @@ export default function HeroSection({
                 letterSpacing: "0.1em",
               }}
             >
-              Hoe is dit berekend?
+              {texts.explanationTitle}
             </h2>
 
-            <p style={{ marginBottom: "1rem" }}>
-              PSV staat op <strong style={{ color: "#fff" }}>{explanation.psvPoints} punten</strong> na{" "}
-              <strong style={{ color: "#fff" }}>{explanation.psvPlayed}</strong> wedstrijden
-              (nog <strong style={{ color: "#fff" }}>{explanation.psvRemaining}</strong> te spelen).
-            </p>
+            <p
+              style={{ marginBottom: "1rem" }}
+              dangerouslySetInnerHTML={{
+                __html: formatTemplate(texts.explanationPointsAfter, {
+                  ...templateVars,
+                  points: String(explanation.clubPoints),
+                  played: String(explanation.clubPlayed),
+                  remaining: String(explanation.clubRemaining),
+                }),
+              }}
+            />
 
             <p style={{ marginBottom: "0.75rem", color: "#777", fontSize: "0.75rem", textTransform: "uppercase", letterSpacing: "0.1em" }}>
-              Concurrenten — maximaal haalbare punten
+              {texts.explanationRivalsLabel}
             </p>
 
             <table
@@ -276,11 +299,11 @@ export default function HeroSection({
             >
               <thead>
                 <tr style={{ borderBottom: "1px solid #333" }}>
-                  <th style={{ textAlign: "left", padding: "0.4rem 0", color: "#666", fontWeight: 500 }}>Team</th>
-                  <th style={{ textAlign: "right", padding: "0.4rem 0", color: "#666", fontWeight: 500 }}>Punten</th>
-                  <th style={{ textAlign: "right", padding: "0.4rem 0", color: "#666", fontWeight: 500 }}>Max</th>
-                  <th style={{ textAlign: "right", padding: "0.4rem 0", color: "#666", fontWeight: 500 }}>Achterstand</th>
-                  <th style={{ textAlign: "right", padding: "0.4rem 0", color: "#666", fontWeight: 500 }}>Pakt max</th>
+                  <th style={{ textAlign: "left", padding: "0.4rem 0", color: "#666", fontWeight: 500 }}>{texts.explanationRivalsColumns.team}</th>
+                  <th style={{ textAlign: "right", padding: "0.4rem 0", color: "#666", fontWeight: 500 }}>{texts.explanationRivalsColumns.points}</th>
+                  <th style={{ textAlign: "right", padding: "0.4rem 0", color: "#666", fontWeight: 500 }}>{texts.explanationRivalsColumns.max}</th>
+                  <th style={{ textAlign: "right", padding: "0.4rem 0", color: "#666", fontWeight: 500 }}>{texts.explanationRivalsColumns.gap}</th>
+                  <th style={{ textAlign: "right", padding: "0.4rem 0", color: "#666", fontWeight: 500 }}>{texts.explanationRivalsColumns.winAll}</th>
                 </tr>
               </thead>
               <tbody>
@@ -288,7 +311,7 @@ export default function HeroSection({
                   <tr key={r.name} style={{ borderBottom: "1px solid #1a1a1a" }}>
                     <td style={{ padding: "0.4rem 0", color: "#ccc" }}>{r.name}</td>
                     <td style={{ textAlign: "right", padding: "0.4rem 0" }}>{r.points}</td>
-                    <td style={{ textAlign: "right", padding: "0.4rem 0", color: r.maxPoints >= explanation.psvPoints ? "var(--psv-red)" : "#666" }}>
+                    <td style={{ textAlign: "right", padding: "0.4rem 0", color: r.maxPoints >= explanation.clubPoints ? "var(--club-primary)" : "#666" }}>
                       {r.maxPoints}
                     </td>
                     <td style={{ textAlign: "right", padding: "0.4rem 0" }}>{r.gap}</td>
@@ -299,34 +322,62 @@ export default function HeroSection({
             </table>
 
             <p style={{ marginBottom: "0.5rem" }}>
-              De simulatie draaide <strong style={{ color: "#fff" }}>{explanation.iterations.toLocaleString("nl-NL")}</strong>{" "}
-              scenario&apos;s. In <strong style={{ color: "#fff" }}>{championCount.toLocaleString("nl-NL")}</strong>{" "}
-              daarvan werd PSV kampioen
+              <span
+                dangerouslySetInnerHTML={{
+                  __html: formatTemplate(texts.explanationSimRan, {
+                    ...templateVars,
+                    iterations: explanation.iterations.toLocaleString(league.locale),
+                  }),
+                }}
+              />
+              {" "}
+              <span
+                dangerouslySetInnerHTML={{
+                  __html: formatTemplate(texts.explanationBecameChampion, {
+                    ...templateVars,
+                    count: championCount.toLocaleString(league.locale),
+                  }),
+                }}
+              />
               {explanation.neverChampionCount > 0 && (
-                <> (in <strong style={{ color: "#fff" }}>{explanation.neverChampionCount.toLocaleString("nl-NL")}</strong> niet)</>
-              )}.
+                <>
+                  {" "}
+                  <span
+                    dangerouslySetInnerHTML={{
+                      __html: formatTemplate(texts.explanationDidNot, {
+                        ...templateVars,
+                        count: explanation.neverChampionCount.toLocaleString(league.locale),
+                      }),
+                    }}
+                  />
+                </>
+              )}
+              .
             </p>
 
-            <p style={{ marginBottom: "0.5rem" }}>
-              <strong style={{ color: "#fff" }}>Best Case Scenario</strong> is de vroegst mogelijke
-              kampioensdatum: de ronde waarin PSV wiskundig kampioen is als ze alle resterende
-              wedstrijden winnen en concurrenten de verwachte resultaten behalen.
-            </p>
+            <p
+              style={{ marginBottom: "0.5rem" }}
+              dangerouslySetInnerHTML={{
+                __html: formatTemplate(texts.explanationBestCaseDesc, templateVars),
+              }}
+            />
 
-            <p style={{ marginBottom: "0.5rem" }}>
-              <strong style={{ color: "#fff" }}>Meest Waarschijnlijk</strong> is de datum met de
-              hoogste kans in de simulatie — de piek van de kansverdeling.
-            </p>
+            <p
+              style={{ marginBottom: "0.5rem" }}
+              dangerouslySetInnerHTML={{
+                __html: formatTemplate(texts.explanationMostLikelyDesc, templateVars),
+              }}
+            />
 
-            <p style={{ marginBottom: "1rem" }}>
-              Dat deze twee op dezelfde datum vallen is logisch: PSV&apos;s voorsprong is zo groot dat
-              in de meeste simulaties het kampioenschap al in de vroegst mogelijke ronde wordt
-              beslist.
-            </p>
+            <p
+              style={{ marginBottom: "1rem" }}
+              dangerouslySetInnerHTML={{
+                __html: formatTemplate(texts.explanationBestCaseMostLikelySame, templateVars),
+              }}
+            />
 
             <p style={{ color: "#555", fontSize: "0.75rem", marginTop: "0.75rem" }}>
-              Wedstrijdkansen komen van API-Football predictions. Bij ontbrekende predictions wordt een Poisson-model gebruikt
-              op basis van de competitiestand.
+              {texts.explanationPredictionSource}
             </p>
           </div>
         )}
@@ -340,40 +391,42 @@ export default function HeroSection({
             fontStyle: "italic",
           }}
         >
-          Zorg er dus voor dat je de dag erna vrij hebt! 🎉
+          {texts.heroCallToAction}
         </p>
 
-        <a
-          href="https://ko-fi.com/baslijten"
-          target="_blank"
-          rel="noopener noreferrer"
-          style={{
-            display: "inline-block",
-            marginTop: "1rem",
-            fontFamily: "var(--font-display)",
-            fontSize: "1.1rem",
-            fontWeight: 600,
-            color: "#fff",
-            textDecoration: "none",
-            background: "var(--psv-red)",
-            borderRadius: "6px",
-            padding: "0.75rem 2rem",
-            letterSpacing: "0.05em",
-            textTransform: "uppercase",
-            transition: "transform 0.2s, box-shadow 0.2s",
-            boxShadow: "0 0 20px rgba(232,0,28,0.3)",
-          }}
-          onMouseEnter={(e) => {
-            e.currentTarget.style.transform = "scale(1.05)";
-            e.currentTarget.style.boxShadow = "0 0 30px rgba(232,0,28,0.5)";
-          }}
-          onMouseLeave={(e) => {
-            e.currentTarget.style.transform = "scale(1)";
-            e.currentTarget.style.boxShadow = "0 0 20px rgba(232,0,28,0.3)";
-          }}
-        >
-          🍺 Vind je dit leuk? Koop een biertje voor mij op het kampioenschap!
-        </a>
+        {club.kofiUrl && (
+          <a
+            href={club.kofiUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{
+              display: "inline-block",
+              marginTop: "1rem",
+              fontFamily: "var(--font-display)",
+              fontSize: "1.1rem",
+              fontWeight: 600,
+              color: "#fff",
+              textDecoration: "none",
+              background: "var(--club-primary)",
+              borderRadius: "6px",
+              padding: "0.75rem 2rem",
+              letterSpacing: "0.05em",
+              textTransform: "uppercase",
+              transition: "transform 0.2s, box-shadow 0.2s",
+              boxShadow: "0 0 20px var(--club-primary-glow)",
+            }}
+            onMouseEnter={(e) => {
+              e.currentTarget.style.transform = "scale(1.05)";
+              e.currentTarget.style.boxShadow = "0 0 30px var(--club-primary-glow)";
+            }}
+            onMouseLeave={(e) => {
+              e.currentTarget.style.transform = "scale(1)";
+              e.currentTarget.style.boxShadow = "0 0 20px var(--club-primary-glow)";
+            }}
+          >
+            {formatTemplate(texts.donateButton, templateVars)}
+          </a>
+        )}
 
       </div>
 
@@ -393,13 +446,13 @@ export default function HeroSection({
         }}
       >
         <span style={{ fontSize: "0.7rem", letterSpacing: "0.2em", textTransform: "uppercase" }}>
-          Scroll
+          {texts.scrollLabel}
         </span>
         <div
           style={{
             width: "1px",
             height: "40px",
-            background: "linear-gradient(to bottom, var(--psv-red), transparent)",
+            background: "linear-gradient(to bottom, var(--club-primary), transparent)",
             animation: "pulse 2s ease-in-out infinite",
           }}
         />
@@ -418,7 +471,7 @@ function StatCard({ label, value, highlight }: { label: string; value: string; h
   return (
     <div
       style={{
-        background: highlight ? "var(--psv-red)" : "var(--dark-3)",
+        background: highlight ? "var(--club-primary)" : "var(--dark-3)",
         padding: "1.75rem 1.5rem",
         display: "flex",
         flexDirection: "column",

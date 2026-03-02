@@ -1,7 +1,8 @@
 import { readFileSync } from "fs";
 import { join } from "path";
-import type { SimulationResult } from "@/lib/simulation";
+import type { ClubSimulationResult, DateProbability } from "@/lib/simulation";
 import type { Team, Fixture } from "@/lib/data";
+import { resolveConfig, formatTemplate, toClientLeague } from "@/config/env";
 import HeroSection from "@/components/HeroSection";
 import ChampionshipTimeline from "@/components/ChampionshipTimeline";
 import BestCaseView from "@/components/BestCaseView";
@@ -9,33 +10,37 @@ import StandingsTable from "@/components/StandingsTable";
 import Footer from "@/components/Footer";
 
 export interface Explanation {
-  psvPoints: number;
-  psvPlayed: number;
-  psvRemaining: number;
+  clubPoints: number;
+  clubPlayed: number;
+  clubRemaining: number;
   rivals: Array<{ name: string; points: number; maxPoints: number; gap: number; winAllProb: number }>;
   iterations: number;
   neverChampionCount: number;
 }
 
 interface PageData {
-  result: SimulationResult;
-  explanation: Explanation;
+  clubResults: Record<string, ClubSimulationResult>;
+  iterations: number;
+  explanation: Record<string, Explanation>;
   teams: Team[];
   fixtures: Fixture[];
   fetchedAt: string | null;
   simulatedAt: string;
 }
 
+const { league: leagueFull, club, texts } = resolveConfig();
+const league = toClientLeague(leagueFull);
+
 function loadData(): PageData {
   const raw = readFileSync(
-    join(process.cwd(), "data/simulation-result.json"),
+    join(process.cwd(), `data/${league.id}/simulation-results.json`),
     "utf-8"
   );
   return JSON.parse(raw) as PageData;
 }
 
-function formatDateNL(dateStr: string): string {
-  return new Date(dateStr).toLocaleDateString("nl-NL", {
+function formatDateLocale(dateStr: string): string {
+  return new Date(dateStr).toLocaleDateString(league.locale, {
     day: "numeric",
     month: "long",
     year: "numeric",
@@ -48,15 +53,26 @@ function formatProbability(prob: number): string {
   return `${pct.toFixed(2).replace(".", ",")}%`;
 }
 
-function buildFaqJsonLd(result: SimulationResult) {
+function buildFaqJsonLd(result: ClubSimulationResult) {
   const topProb = result.dateProbabilities.reduce((max, dp) =>
     dp.probability > max.probability ? dp : max,
     result.dateProbabilities[0]
   );
 
-  const mostLikelyDate = topProb ? formatDateNL(topProb.date) : "onbekend";
-  const bestCaseDate = result.bestCaseDate ? formatDateNL(result.bestCaseDate) : "onbekend";
+  const mostLikelyDate = topProb ? formatDateLocale(topProb.date) : "onbekend";
+  const bestCaseDate = result.bestCaseDate ? formatDateLocale(result.bestCaseDate) : "onbekend";
   const champProb = formatProbability(result.totalChampionshipProbability);
+
+  const templateVars = {
+    clubName: club.name,
+    clubShortName: club.shortName,
+    leagueName: league.name,
+    season: league.season,
+    mostLikelyDate,
+    bestCaseDate,
+    probability: champProb,
+    roundSuffix: result.bestCaseRound ? ` (${texts.timelineRound.toLowerCase()} ${result.bestCaseRound})` : "",
+  };
 
   return {
     "@context": "https://schema.org",
@@ -64,26 +80,26 @@ function buildFaqJsonLd(result: SimulationResult) {
     mainEntity: [
       {
         "@type": "Question",
-        name: "Wanneer wordt PSV kampioen?",
+        name: formatTemplate(texts.faqWhenChampion, templateVars),
         acceptedAnswer: {
           "@type": "Answer",
-          text: `Op basis van een Monte Carlo simulatie met 50.000 scenario's is de meest waarschijnlijke kampioensdatum ${mostLikelyDate}. De vroegst mogelijke datum (best case) is ${bestCaseDate}.`,
+          text: formatTemplate(texts.faqWhenChampionAnswer, templateVars),
         },
       },
       {
         "@type": "Question",
-        name: "Hoe groot is de kans dat PSV kampioen wordt?",
+        name: formatTemplate(texts.faqChanceChampion, templateVars),
         acceptedAnswer: {
           "@type": "Answer",
-          text: `De kans dat PSV Eredivisie kampioen wordt is ${champProb}, berekend op basis van 50.000 gesimuleerde seizoensverloop scenario's.`,
+          text: formatTemplate(texts.faqChanceChampionAnswer, templateVars),
         },
       },
       {
         "@type": "Question",
-        name: "Wanneer kan PSV op zijn vroegst kampioen worden?",
+        name: formatTemplate(texts.faqEarliestChampion, templateVars),
         acceptedAnswer: {
           "@type": "Answer",
-          text: `In het best case scenario — als PSV alle resterende wedstrijden wint — wordt PSV kampioen op ${bestCaseDate}${result.bestCaseRound ? ` (speelronde ${result.bestCaseRound})` : ""}.`,
+          text: formatTemplate(texts.faqEarliestChampionAnswer, templateVars),
         },
       },
     ],
@@ -91,7 +107,11 @@ function buildFaqJsonLd(result: SimulationResult) {
 }
 
 export default function Home() {
-  const { result, explanation, teams, fixtures, fetchedAt, simulatedAt } = loadData();
+  const data = loadData();
+  const result = data.clubResults[club.id];
+  const explanation = data.explanation[club.id];
+  const { teams, fixtures, fetchedAt, simulatedAt } = data;
+
   const faqJsonLd = buildFaqJsonLd(result);
 
   return (
@@ -100,16 +120,43 @@ export default function Home() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
       />
-      <HeroSection result={result} explanation={explanation} fetchedAt={fetchedAt} simulatedAt={simulatedAt} />
+      <HeroSection
+        result={result}
+        explanation={explanation}
+        fetchedAt={fetchedAt}
+        simulatedAt={simulatedAt}
+        club={club}
+        league={league}
+        texts={texts}
+      />
       <BestCaseView
         bestCaseDate={result.bestCaseDate}
         bestCaseRound={result.bestCaseRound}
         teams={teams}
         fixtures={fixtures}
+        club={club}
+        league={league}
+        texts={texts}
       />
-      <ChampionshipTimeline dates={result.dateProbabilities} />
-      <StandingsTable teams={teams} />
-      <Footer simulatedAt={simulatedAt} />
+      <ChampionshipTimeline
+        dates={result.dateProbabilities}
+        club={club}
+        league={league}
+        texts={texts}
+        teams={teams}
+      />
+      <StandingsTable
+        teams={teams}
+        club={club}
+        league={league}
+        texts={texts}
+      />
+      <Footer
+        simulatedAt={simulatedAt}
+        club={club}
+        league={league}
+        texts={texts}
+      />
     </main>
   );
 }

@@ -2,50 +2,65 @@
 
 import { Team, Fixture } from "@/lib/data";
 import { SectionHeader } from "./ChampionshipTimeline";
+import type { ClubConfig } from "@/config/clubs";
+import type { LeagueClientConfig } from "@/config/env";
+import type { LocaleStrings } from "@/config/locales/nl";
+import { formatTemplate } from "@/config/env";
 
-function formatDate(dateStr: string): string {
+function formatDate(dateStr: string, locale: string): string {
   const d = new Date(dateStr);
-  return d.toLocaleDateString("nl-NL", { day: "numeric", month: "long", year: "numeric" });
+  return d.toLocaleDateString(locale, { day: "numeric", month: "long", year: "numeric" });
 }
 
-function formatShortDate(dateStr: string): string {
+function formatShortDate(dateStr: string, locale: string): string {
   const d = new Date(dateStr);
-  return d.toLocaleDateString("nl-NL", { day: "numeric", month: "short" });
+  return d.toLocaleDateString(locale, { day: "numeric", month: "short" });
 }
-
-const teamNames: Record<string, string> = {
-  psv: "PSV",
-  ajax: "Ajax",
-  feyenoord: "Feyenoord",
-  az: "AZ",
-  utrecht: "Utrecht",
-  twente: "Twente",
-};
 
 export default function BestCaseView({
   bestCaseDate,
   bestCaseRound,
   teams,
   fixtures,
+  club,
+  league,
+  texts,
 }: {
   bestCaseDate: string | null;
   bestCaseRound: number | null;
   teams: Team[];
   fixtures: Fixture[];
+  club: ClubConfig;
+  league: LeagueClientConfig;
+  texts: LocaleStrings;
 }) {
-  const psvFixtures = fixtures.filter((f) => f.isPSV).sort((a, b) => a.round - b.round);
-  const psv = teams.find((t) => t.id === "psv")!;
+  const clubFixtures = fixtures
+    .filter((f) => f.homeTeam === club.id || f.awayTeam === club.id)
+    .sort((a, b) => a.round - b.round);
+  const clubTeam = teams.find((t) => t.id === club.id)!;
+
+  const templateVars = {
+    clubName: club.name,
+    clubShortName: club.shortName,
+    leagueName: league.name,
+    season: league.season,
+  };
+
+  function getTeamName(teamId: string): string {
+    const team = teams.find((t) => t.id === teamId);
+    return team ? team.shortName : teamId;
+  }
 
   // Simulate points accumulation in best case
-  let runningPoints = psv.points;
-  const fixtureRows = psvFixtures.map((f) => {
+  let runningPoints = clubTeam.points;
+  const fixtureRows = clubFixtures.map((f) => {
     runningPoints += 3;
     const isChampionMatch = f.round === bestCaseRound;
-    const opponent = f.homeTeam === "psv" ? f.awayTeam : f.homeTeam;
+    const opponent = f.homeTeam === club.id ? f.awayTeam : f.homeTeam;
     return {
       ...f,
-      opponent: teamNames[opponent] || opponent,
-      isHome: f.homeTeam === "psv",
+      opponent: getTeamName(opponent),
+      isHome: f.homeTeam === club.id,
       pointsAfter: runningPoints,
       isChampionMatch,
     };
@@ -53,7 +68,7 @@ export default function BestCaseView({
 
   return (
     <section
-      aria-label="Best case scenario overzicht"
+      aria-label={texts.bestCaseSectionLabel}
       style={{
         padding: "6rem 2rem",
         background: "var(--dark)",
@@ -62,12 +77,16 @@ export default function BestCaseView({
     >
       <div style={{ maxWidth: "900px", margin: "0 auto" }}>
         <SectionHeader
-          label="Best Case Scenario"
-          title="Als PSV alles wint..."
+          label={texts.bestCaseSectionLabel}
+          title={formatTemplate(texts.bestCaseTitle, templateVars)}
           subtitle={
             bestCaseDate
-              ? `PSV wordt kampioen op ${formatDate(bestCaseDate)} in ronde ${bestCaseRound}`
-              : "Berekening nog bezig..."
+              ? formatTemplate(texts.bestCaseSubtitle, {
+                  ...templateVars,
+                  date: formatDate(bestCaseDate, league.locale),
+                  round: String(bestCaseRound),
+                })
+              : undefined
           }
         />
 
@@ -75,7 +94,7 @@ export default function BestCaseView({
         {bestCaseDate && (
           <div
             style={{
-              background: "linear-gradient(135deg, var(--psv-red) 0%, var(--psv-red-deep) 100%)",
+              background: "linear-gradient(135deg, var(--club-primary) 0%, var(--club-primary-deep) 100%)",
               borderRadius: "4px",
               padding: "2.5rem 3rem",
               marginBottom: "3rem",
@@ -104,7 +123,7 @@ export default function BestCaseView({
                 marginBottom: "0.5rem",
               }}
             >
-              Vroegst mogelijke kampioensdatum
+              {texts.bestCaseHighlightLabel}
             </p>
             <p
               style={{
@@ -116,7 +135,7 @@ export default function BestCaseView({
                 lineHeight: 1,
               }}
             >
-              {formatDate(bestCaseDate)}
+              {formatDate(bestCaseDate, league.locale)}
             </p>
             <p
               style={{
@@ -125,7 +144,10 @@ export default function BestCaseView({
                 fontSize: "0.9rem",
               }}
             >
-              Ronde {bestCaseRound} · Als PSV alle resterende wedstrijden wint
+              {formatTemplate(texts.bestCaseHighlightRound, {
+                ...templateVars,
+                round: String(bestCaseRound),
+              })}
             </p>
           </div>
         )}
@@ -148,7 +170,7 @@ export default function BestCaseView({
               borderBottom: "1px solid var(--dark-4)",
             }}
           >
-            {["Ronde", "Wedstrijd", "Resultaat", "Punten"].map((h) => (
+            {[texts.bestCaseColumnRound, texts.bestCaseColumnMatch, texts.bestCaseColumnResult, texts.bestCaseColumnPoints].map((h) => (
               <p
                 key={h}
                 style={{
@@ -173,7 +195,7 @@ export default function BestCaseView({
                 padding: "1rem 1.25rem",
                 alignItems: "center",
                 borderBottom: i < fixtureRows.length - 1 ? "1px solid var(--dark-4)" : "none",
-                background: f.isChampionMatch ? "rgba(232,0,28,0.12)" : "transparent",
+                background: f.isChampionMatch ? "var(--club-primary-glow)" : "transparent",
                 position: "relative",
               }}
             >
@@ -185,7 +207,7 @@ export default function BestCaseView({
                     top: 0,
                     bottom: 0,
                     width: "3px",
-                    background: "var(--psv-red)",
+                    background: "var(--club-primary)",
                   }}
                 />
               )}
@@ -200,22 +222,22 @@ export default function BestCaseView({
                     color: f.isChampionMatch ? "#fff" : "#ccc",
                   }}
                 >
-                  {f.isHome ? `PSV vs ${f.opponent}` : `${f.opponent} vs PSV`}
+                  {f.isHome ? `${club.shortName} vs ${f.opponent}` : `${f.opponent} vs ${club.shortName}`}
                 </p>
                 <p style={{ fontSize: "0.7rem", color: "#444", marginTop: "2px" }}>
-                  {formatShortDate(f.date)} · {f.isHome ? "Thuis" : "Uit"}
+                  {formatShortDate(f.date, league.locale)} · {f.isHome ? texts.bestCaseHome : texts.bestCaseAway}
                   {f.isChampionMatch && (
                     <span
                       style={{
                         marginLeft: "0.5rem",
-                        color: "var(--psv-red)",
+                        color: "var(--club-primary)",
                         fontWeight: 600,
                         textTransform: "uppercase",
                         letterSpacing: "0.1em",
                         fontSize: "0.65rem",
                       }}
                     >
-                      🏆 Kampioen
+                      {texts.bestCaseChampionBadge}
                     </span>
                   )}
                 </p>
@@ -227,14 +249,14 @@ export default function BestCaseView({
                   color: "#2ecc71",
                 }}
               >
-                Winst (+3)
+                {texts.bestCaseWin}
               </p>
               <p
                 style={{
                   fontFamily: "var(--font-display)",
                   fontSize: "1.1rem",
                   fontWeight: 600,
-                  color: f.isChampionMatch ? "var(--psv-red)" : "#fff",
+                  color: f.isChampionMatch ? "var(--club-primary)" : "#fff",
                 }}
               >
                 {f.pointsAfter}
