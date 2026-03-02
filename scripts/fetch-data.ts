@@ -33,7 +33,7 @@ function loadEnv() {
     for (const line of content.split("\n")) {
       const trimmed = line.replace(/\r$/, "");
       const match = trimmed.match(/^([A-Z0-9_]+)=(.+)$/);
-      if (match) process.env[match[1]] = match[2].trim();
+      if (match && !process.env[match[1]]) process.env[match[1]] = match[2].trim();
     }
   } catch {
     // .env.local bestaat niet -- vereiste variabelen moeten al in de omgeving staan

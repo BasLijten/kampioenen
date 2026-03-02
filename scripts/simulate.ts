@@ -14,6 +14,24 @@ import { runSimulation } from "../lib/simulation";
 import { Team, Fixture } from "../lib/data";
 import { resolveLeague } from "../config/env";
 
+// Laad .env.local handmatig (tsx heeft geen Next.js env-loading)
+function loadEnv() {
+  try {
+    const content = readFileSync(join(process.cwd(), ".env.local"), "utf-8");
+    for (const line of content.split("\n")) {
+      const trimmed = line.replace(/\r$/, "");
+      const match = trimmed.match(/^([A-Z_][A-Z0-9_]*)=(.+)$/);
+      if (match && !process.env[match[1]]) {
+        process.env[match[1]] = match[2].trim();
+      }
+    }
+  } catch {
+    // .env.local bestaat niet
+  }
+}
+
+loadEnv();
+
 const ITERATIONS = 50_000;
 
 function loadLeagueData(dataDir: string, leagueId: string): { teams: Team[]; fixtures: Fixture[]; fetchedAt: string | null } {
