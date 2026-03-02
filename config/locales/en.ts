@@ -58,6 +58,12 @@ export const en: LocaleStrings = {
   standingsColumns: { rank: "#", club: "Club", w: "W", d: "D", l: "L", gd: "GD", goals: "Goals", pts: "Pts" },
   standingsGapSuffix: "pts",
 
+  // End of season prediction
+  predictionSectionLabel: "End of Season Prediction",
+  predictionTitle: "{leagueName} final standings prediction",
+  predictionSubtitle: "Based on 50,000 simulations — probability per club per final position",
+  predictionFootnote: "Percentages show the probability of finishing at that position. Values below 0.5% are hidden. Simulation based on 50,000 iterations.",
+
   // Footer
   footerText: "{clubShortName} Champion Countdown \u00b7 Monte Carlo simulation \u00b7 50,000 iterations",
   footerDisclaimer: "Probabilities are indicative \u00b7 Generated on {date}",

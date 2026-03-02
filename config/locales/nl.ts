@@ -56,6 +56,12 @@ export interface LocaleStrings {
   standingsColumns: { rank: string; club: string; w: string; d: string; l: string; gd: string; goals: string; pts: string };
   standingsGapSuffix: string;
 
+  // End of season prediction
+  predictionSectionLabel: string;
+  predictionTitle: string;
+  predictionSubtitle: string;
+  predictionFootnote: string;
+
   // Footer
   footerText: string;
   footerDisclaimer: string;
@@ -134,6 +140,12 @@ export const nl: LocaleStrings = {
   standingsSubtitle: "Stand per speelronde {round}",
   standingsColumns: { rank: "#", club: "Club", w: "W", d: "G", l: "V", gd: "Gsr", goals: "Doel", pts: "Pnt" },
   standingsGapSuffix: "pnt",
+
+  // End of season prediction
+  predictionSectionLabel: "Eindstand Voorspelling",
+  predictionTitle: "{leagueName} eindstand voorspelling",
+  predictionSubtitle: "Op basis van 50.000 simulaties — kans per club per eindpositie",
+  predictionFootnote: "Percentages tonen de kans op die eindpositie. Waarden onder 0,5% zijn verborgen. Simulatie op basis van 50.000 iteraties.",
 
   // Footer
   footerText: "{clubShortName} Kampioen Countdown \u00b7 Monte Carlo simulatie \u00b7 50.000 iteraties",
