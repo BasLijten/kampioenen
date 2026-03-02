@@ -3,6 +3,7 @@ import { join } from "path";
 import type { ClubSimulationResult, DateProbability } from "@/lib/simulation";
 import type { Team, Fixture } from "@/lib/data";
 import { resolveConfig, formatTemplate, toClientLeague } from "@/config/env";
+import { loadWeather } from "@/lib/weather.server";
 import HeroSection from "@/components/HeroSection";
 import ChampionshipTimeline from "@/components/ChampionshipTimeline";
 import BestCaseView from "@/components/BestCaseView";
@@ -106,11 +107,18 @@ function buildFaqJsonLd(result: ClubSimulationResult) {
   };
 }
 
-export default function Home() {
+export default async function Home() {
   const data = loadData();
   const result = data.clubResults[club.id];
   const explanation = data.explanation[club.id];
   const { teams, fixtures, fetchedAt, simulatedAt } = data;
+
+  const weather = await loadWeather(
+    club.id,
+    fixtures,
+    club.coordinates,
+    leagueFull.dataDir
+  );
 
   const faqJsonLd = buildFaqJsonLd(result);
 
@@ -128,6 +136,7 @@ export default function Home() {
         club={club}
         league={league}
         texts={texts}
+        weather={weather}
       />
       <BestCaseView
         bestCaseDate={result.bestCaseDate}
@@ -137,6 +146,7 @@ export default function Home() {
         club={club}
         league={league}
         texts={texts}
+        weather={weather}
       />
       <ChampionshipTimeline
         dates={result.dateProbabilities}
@@ -144,6 +154,7 @@ export default function Home() {
         league={league}
         texts={texts}
         teams={teams}
+        weather={weather}
       />
       <EndOfSeasonPrediction
         clubResults={data.clubResults}

@@ -5,7 +5,9 @@ import { SectionHeader } from "./ChampionshipTimeline";
 import type { ClubConfig } from "@/config/clubs";
 import type { LeagueClientConfig } from "@/config/env";
 import type { LocaleStrings } from "@/config/locales/nl";
+import type { WeatherData } from "@/lib/weather";
 import { formatTemplate } from "@/config/env";
+import WeatherBadge from "./WeatherBadge";
 
 function formatDate(dateStr: string, locale: string): string {
   const d = new Date(dateStr);
@@ -25,6 +27,7 @@ export default function BestCaseView({
   club,
   league,
   texts,
+  weather,
 }: {
   bestCaseDate: string | null;
   bestCaseRound: number | null;
@@ -33,6 +36,7 @@ export default function BestCaseView({
   club: ClubConfig;
   league: LeagueClientConfig;
   texts: LocaleStrings;
+  weather: Record<string, WeatherData>;
 }) {
   const clubFixtures = fixtures
     .filter((f) => f.homeTeam === club.id || f.awayTeam === club.id)
@@ -226,6 +230,11 @@ export default function BestCaseView({
                 </p>
                 <p style={{ fontSize: "0.7rem", color: "#444", marginTop: "2px" }}>
                   {formatShortDate(f.date, league.locale)} · {f.isHome ? texts.bestCaseHome : texts.bestCaseAway}
+                  {" "}
+                  <WeatherBadge
+                    weather={weather[f.date.slice(0, 10)]}
+                    expectedLabel={texts.weatherExpected}
+                  />
                   {f.isChampionMatch && (
                     <span
                       style={{

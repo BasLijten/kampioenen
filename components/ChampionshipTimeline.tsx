@@ -5,7 +5,9 @@ import type { Team } from "@/lib/data";
 import type { ClubConfig } from "@/config/clubs";
 import type { LeagueClientConfig } from "@/config/env";
 import type { LocaleStrings } from "@/config/locales/nl";
+import type { WeatherData } from "@/lib/weather";
 import { formatTemplate } from "@/config/env";
+import WeatherBadge from "./WeatherBadge";
 
 function formatDate(dateStr: string, locale: string): string {
   const d = new Date(dateStr);
@@ -18,12 +20,14 @@ export default function ChampionshipTimeline({
   league,
   texts,
   teams,
+  weather,
 }: {
   dates: DateProbability[];
   club: ClubConfig;
   league: LeagueClientConfig;
   texts: LocaleStrings;
   teams: Team[];
+  weather: Record<string, WeatherData>;
 }) {
   const maxProb = Math.max(...dates.map((d) => d.probability));
 
@@ -109,6 +113,10 @@ export default function ChampionshipTimeline({
                   <p style={{ fontSize: "0.72rem", color: "#666", marginTop: "1px" }}>
                     {dp.isHome ? `${texts.timelineVs} ` : `${texts.timelineAt} `}{opponentName}
                   </p>
+                  <WeatherBadge
+                    weather={weather[dp.date.slice(0, 10)]}
+                    expectedLabel={texts.weatherExpected}
+                  />
                 </div>
 
                 {/* Bars */}
