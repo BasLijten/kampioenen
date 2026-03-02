@@ -1,6 +1,7 @@
 import type { Metadata, Viewport } from "next";
 import { Oswald, DM_Sans } from "next/font/google";
 import { Analytics } from "@vercel/analytics/next";
+import { GoogleAnalytics } from "@next/third-parties/google";
 import { resolveConfig, formatTemplate } from "@/config/env";
 import "./globals.css";
 
@@ -83,6 +84,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         />
         {children}
         <Analytics />
+        {process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID && (
+          <GoogleAnalytics gaId={process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID} />
+        )}
       </body>
     </html>
   );
