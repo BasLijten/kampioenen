@@ -16,70 +16,70 @@
         {
           "date": "2026-03-13",
           "round": 27,
-          "probability": 0.02926,
-          "cumulativeProbability": 0.02926,
+          "probability": 0.0306,
+          "cumulativeProbability": 0.0306,
           "opponent": "nec",
           "isHome": true
         },
         {
           "date": "2026-03-20",
           "round": 28,
-          "probability": 0.42584,
-          "cumulativeProbability": 0.4551,
+          "probability": 0.4251,
+          "cumulativeProbability": 0.4557,
           "opponent": "telstar-1963",
           "isHome": false
         },
         {
           "date": "2026-04-04",
           "round": 29,
-          "probability": 0.36126,
-          "cumulativeProbability": 0.81636,
+          "probability": 0.3613,
+          "cumulativeProbability": 0.817,
           "opponent": "fc-utrecht",
           "isHome": true
         },
         {
           "date": "2026-04-10",
           "round": 30,
-          "probability": 0.15414,
-          "cumulativeProbability": 0.9704999999999999,
+          "probability": 0.15406,
+          "cumulativeProbability": 0.9710599999999999,
           "opponent": "sparta-rotterdam",
           "isHome": false
         },
         {
           "date": "2026-04-22",
           "round": 31,
-          "probability": 0.02672,
-          "cumulativeProbability": 0.9972199999999999,
+          "probability": 0.02532,
+          "cumulativeProbability": 0.9963799999999999,
           "opponent": "pec-zwolle",
           "isHome": true
         },
         {
           "date": "2026-05-02",
           "round": 32,
-          "probability": 0.00218,
-          "cumulativeProbability": 0.9993999999999998,
+          "probability": 0.003,
+          "cumulativeProbability": 0.9993799999999999,
           "opponent": "afc-ajax",
           "isHome": false
         },
         {
           "date": "2026-05-10",
           "round": 33,
-          "probability": 0.00054,
-          "cumulativeProbability": 0.9999399999999998,
+          "probability": 0.00048,
+          "cumulativeProbability": 0.99986,
           "opponent": "go-ahead-eagles",
           "isHome": false
         },
         {
           "date": "2026-05-17",
           "round": 34,
-          "probability": 0.00006,
-          "cumulativeProbability": 0.9999999999999998,
+          "probability": 0.00014,
+          "cumulativeProbability": 1,
           "opponent": "fc-twente-65",
           "isHome": true
         }
       ],
-      "bestCaseDate": "2026-04-04",
-      "bestCaseRound": 29,
+      "bestCaseDate": "2026-03-20",
+      "bestCaseRound": 28,
       "expectedDate": "2026-03-20",
       "neverChampionProbability": 0,
       "neverChampionCount": 0
@@ -162,8 +162,8 @@
           "isHome": false
         }
       ],
-      "bestCaseDate": null,
-      "bestCaseRound": null,
+      "bestCaseDate": "2026-05-17",
+      "bestCaseRound": 34,
       "expectedDate": null,
       "neverChampionProbability": 1,
       "neverChampionCount": 50000
@@ -2672,5 +2672,5 @@
     }
   ],
   "fetchedAt": "2026-03-02T11:52:01.177Z",
-  "simulatedAt": "2026-03-02T11:54:32.795Z"
+  "simulatedAt": "2026-03-02T15:36:02.620Z"
 }

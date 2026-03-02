@@ -160,7 +160,7 @@ export function runSimulation(
       return { date, round, probability: prob, cumulativeProbability: cumulative, opponent, isHome };
     });
 
-    // Best case: this team wins all, others get expected results
+    // Best case: this team wins all, rivals lose all non-team matches
     let bestCaseDate: string | null = null;
     let bestCaseRound: number | null = null;
     const bestState: TeamState = {};
@@ -174,15 +174,9 @@ export function runSimulation(
           // Team wins
           bestState[team.id].points += 3;
         } else {
-          // Other teams: use expected outcome
-          if (fixture.homeWinProb > 0.5) {
-            bestState[fixture.homeTeam].points += 3;
-          } else if (fixture.drawProb > fixture.awayWinProb && fixture.drawProb > fixture.homeWinProb) {
-            bestState[fixture.homeTeam].points += 1;
-            bestState[fixture.awayTeam].points += 1;
-          } else {
-            bestState[fixture.awayTeam].points += 3;
-          }
+          // Both rivals: draw gives fewest total points (1+1=2 vs 3+0=3)
+          bestState[fixture.homeTeam].points += 1;
+          bestState[fixture.awayTeam].points += 1;
         }
         bestState[fixture.homeTeam].played += 1;
         bestState[fixture.awayTeam].played += 1;
