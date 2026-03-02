@@ -1,0 +1,2676 @@
+{
+  "clubResults": {
+    "psv": {
+      "teamId": "psv",
+      "teamName": "PSV",
+      "totalChampionshipProbability": 1,
+      "dateProbabilities": [
+        {
+          "date": "2026-03-06",
+          "round": 26,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "az",
+          "isHome": true
+        },
+        {
+          "date": "2026-03-13",
+          "round": 27,
+          "probability": 0.02926,
+          "cumulativeProbability": 0.02926,
+          "opponent": "nec",
+          "isHome": true
+        },
+        {
+          "date": "2026-03-20",
+          "round": 28,
+          "probability": 0.42584,
+          "cumulativeProbability": 0.4551,
+          "opponent": "telstar-1963",
+          "isHome": false
+        },
+        {
+          "date": "2026-04-04",
+          "round": 29,
+          "probability": 0.36126,
+          "cumulativeProbability": 0.81636,
+          "opponent": "fc-utrecht",
+          "isHome": true
+        },
+        {
+          "date": "2026-04-10",
+          "round": 30,
+          "probability": 0.15414,
+          "cumulativeProbability": 0.9704999999999999,
+          "opponent": "sparta-rotterdam",
+          "isHome": false
+        },
+        {
+          "date": "2026-04-22",
+          "round": 31,
+          "probability": 0.02672,
+          "cumulativeProbability": 0.9972199999999999,
+          "opponent": "pec-zwolle",
+          "isHome": true
+        },
+        {
+          "date": "2026-05-02",
+          "round": 32,
+          "probability": 0.00218,
+          "cumulativeProbability": 0.9993999999999998,
+          "opponent": "afc-ajax",
+          "isHome": false
+        },
+        {
+          "date": "2026-05-10",
+          "round": 33,
+          "probability": 0.00054,
+          "cumulativeProbability": 0.9999399999999998,
+          "opponent": "go-ahead-eagles",
+          "isHome": false
+        },
+        {
+          "date": "2026-05-17",
+          "round": 34,
+          "probability": 0.00006,
+          "cumulativeProbability": 0.9999999999999998,
+          "opponent": "fc-twente-65",
+          "isHome": true
+        }
+      ],
+      "bestCaseDate": "2026-04-04",
+      "bestCaseRound": 29,
+      "expectedDate": "2026-03-20",
+      "neverChampionProbability": 0,
+      "neverChampionCount": 0
+    },
+    "feyenoord-rotterdam": {
+      "teamId": "feyenoord-rotterdam",
+      "teamName": "Feyenoord Rotterdam",
+      "totalChampionshipProbability": 0,
+      "dateProbabilities": [
+        {
+          "date": "2026-03-06",
+          "round": 26,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "nac-breda",
+          "isHome": false
+        },
+        {
+          "date": "2026-03-13",
+          "round": 27,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "sbv-excelsior",
+          "isHome": true
+        },
+        {
+          "date": "2026-03-20",
+          "round": 28,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "afc-ajax",
+          "isHome": true
+        },
+        {
+          "date": "2026-04-04",
+          "round": 29,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "fc-volendam",
+          "isHome": false
+        },
+        {
+          "date": "2026-04-10",
+          "round": 30,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "nec",
+          "isHome": false
+        },
+        {
+          "date": "2026-04-22",
+          "round": 31,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "fc-groningen",
+          "isHome": true
+        },
+        {
+          "date": "2026-05-02",
+          "round": 32,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "fortuna-sittard",
+          "isHome": false
+        },
+        {
+          "date": "2026-05-10",
+          "round": 33,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "az",
+          "isHome": true
+        },
+        {
+          "date": "2026-05-17",
+          "round": 34,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "pec-zwolle",
+          "isHome": false
+        }
+      ],
+      "bestCaseDate": null,
+      "bestCaseRound": null,
+      "expectedDate": null,
+      "neverChampionProbability": 1,
+      "neverChampionCount": 50000
+    },
+    "afc-ajax": {
+      "teamId": "afc-ajax",
+      "teamName": "AFC Ajax",
+      "totalChampionshipProbability": 0,
+      "dateProbabilities": [
+        {
+          "date": "2026-03-06",
+          "round": 26,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "fc-groningen",
+          "isHome": false
+        },
+        {
+          "date": "2026-03-13",
+          "round": 27,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "sparta-rotterdam",
+          "isHome": true
+        },
+        {
+          "date": "2026-03-20",
+          "round": 28,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "feyenoord-rotterdam",
+          "isHome": false
+        },
+        {
+          "date": "2026-04-04",
+          "round": 29,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "fc-twente-65",
+          "isHome": true
+        },
+        {
+          "date": "2026-04-10",
+          "round": 30,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "heracles-almelo",
+          "isHome": false
+        },
+        {
+          "date": "2026-04-22",
+          "round": 31,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "nac-breda",
+          "isHome": false
+        },
+        {
+          "date": "2026-05-02",
+          "round": 32,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "psv",
+          "isHome": true
+        },
+        {
+          "date": "2026-05-10",
+          "round": 33,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "fc-utrecht",
+          "isHome": true
+        },
+        {
+          "date": "2026-05-17",
+          "round": 34,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "sc-heerenveen",
+          "isHome": false
+        }
+      ],
+      "bestCaseDate": null,
+      "bestCaseRound": null,
+      "expectedDate": null,
+      "neverChampionProbability": 1,
+      "neverChampionCount": 50000
+    },
+    "nec": {
+      "teamId": "nec",
+      "teamName": "NEC",
+      "totalChampionshipProbability": 0,
+      "dateProbabilities": [
+        {
+          "date": "2026-03-06",
+          "round": 26,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "fc-volendam",
+          "isHome": true
+        },
+        {
+          "date": "2026-03-13",
+          "round": 27,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "psv",
+          "isHome": false
+        },
+        {
+          "date": "2026-03-20",
+          "round": 28,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "sc-heerenveen",
+          "isHome": true
+        },
+        {
+          "date": "2026-04-04",
+          "round": 29,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "sbv-excelsior",
+          "isHome": false
+        },
+        {
+          "date": "2026-04-10",
+          "round": 30,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "feyenoord-rotterdam",
+          "isHome": true
+        },
+        {
+          "date": "2026-04-22",
+          "round": 31,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "fc-twente-65",
+          "isHome": false
+        },
+        {
+          "date": "2026-05-02",
+          "round": 32,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "telstar-1963",
+          "isHome": true
+        },
+        {
+          "date": "2026-05-10",
+          "round": 33,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "fc-groningen",
+          "isHome": false
+        },
+        {
+          "date": "2026-05-17",
+          "round": 34,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "go-ahead-eagles",
+          "isHome": true
+        }
+      ],
+      "bestCaseDate": null,
+      "bestCaseRound": null,
+      "expectedDate": null,
+      "neverChampionProbability": 1,
+      "neverChampionCount": 50000
+    },
+    "fc-twente-65": {
+      "teamId": "fc-twente-65",
+      "teamName": "FC Twente '65",
+      "totalChampionshipProbability": 0,
+      "dateProbabilities": [
+        {
+          "date": "2026-03-06",
+          "round": 26,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "go-ahead-eagles",
+          "isHome": false
+        },
+        {
+          "date": "2026-03-13",
+          "round": 27,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "fc-utrecht",
+          "isHome": true
+        },
+        {
+          "date": "2026-03-20",
+          "round": 28,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "fortuna-sittard",
+          "isHome": false
+        },
+        {
+          "date": "2026-04-04",
+          "round": 29,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "afc-ajax",
+          "isHome": false
+        },
+        {
+          "date": "2026-04-10",
+          "round": 30,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "fc-volendam",
+          "isHome": true
+        },
+        {
+          "date": "2026-04-22",
+          "round": 31,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "nec",
+          "isHome": true
+        },
+        {
+          "date": "2026-05-02",
+          "round": 32,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "az",
+          "isHome": false
+        },
+        {
+          "date": "2026-05-10",
+          "round": 33,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "sparta-rotterdam",
+          "isHome": true
+        },
+        {
+          "date": "2026-05-17",
+          "round": 34,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "psv",
+          "isHome": false
+        }
+      ],
+      "bestCaseDate": null,
+      "bestCaseRound": null,
+      "expectedDate": null,
+      "neverChampionProbability": 1,
+      "neverChampionCount": 50000
+    },
+    "az": {
+      "teamId": "az",
+      "teamName": "AZ",
+      "totalChampionshipProbability": 0,
+      "dateProbabilities": [
+        {
+          "date": "2026-03-06",
+          "round": 26,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "psv",
+          "isHome": false
+        },
+        {
+          "date": "2026-03-13",
+          "round": 27,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "heracles-almelo",
+          "isHome": true
+        },
+        {
+          "date": "2026-03-20",
+          "round": 28,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "fc-groningen",
+          "isHome": false
+        },
+        {
+          "date": "2026-04-04",
+          "round": 29,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "fortuna-sittard",
+          "isHome": true
+        },
+        {
+          "date": "2026-04-10",
+          "round": 30,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "sc-heerenveen",
+          "isHome": true
+        },
+        {
+          "date": "2026-04-22",
+          "round": 31,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "go-ahead-eagles",
+          "isHome": false
+        },
+        {
+          "date": "2026-05-02",
+          "round": 32,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "fc-twente-65",
+          "isHome": true
+        },
+        {
+          "date": "2026-05-10",
+          "round": 33,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "feyenoord-rotterdam",
+          "isHome": false
+        },
+        {
+          "date": "2026-05-17",
+          "round": 34,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "nac-breda",
+          "isHome": true
+        }
+      ],
+      "bestCaseDate": null,
+      "bestCaseRound": null,
+      "expectedDate": null,
+      "neverChampionProbability": 1,
+      "neverChampionCount": 50000
+    },
+    "sparta-rotterdam": {
+      "teamId": "sparta-rotterdam",
+      "teamName": "Sparta Rotterdam",
+      "totalChampionshipProbability": 0,
+      "dateProbabilities": [
+        {
+          "date": "2026-03-06",
+          "round": 26,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "pec-zwolle",
+          "isHome": true
+        },
+        {
+          "date": "2026-03-13",
+          "round": 27,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "afc-ajax",
+          "isHome": false
+        },
+        {
+          "date": "2026-03-20",
+          "round": 28,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "fc-volendam",
+          "isHome": true
+        },
+        {
+          "date": "2026-04-04",
+          "round": 29,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "nac-breda",
+          "isHome": false
+        },
+        {
+          "date": "2026-04-10",
+          "round": 30,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "psv",
+          "isHome": true
+        },
+        {
+          "date": "2026-04-22",
+          "round": 31,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "telstar-1963",
+          "isHome": false
+        },
+        {
+          "date": "2026-05-02",
+          "round": 32,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "go-ahead-eagles",
+          "isHome": true
+        },
+        {
+          "date": "2026-05-10",
+          "round": 33,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "fc-twente-65",
+          "isHome": false
+        },
+        {
+          "date": "2026-05-17",
+          "round": 34,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "sbv-excelsior",
+          "isHome": true
+        }
+      ],
+      "bestCaseDate": null,
+      "bestCaseRound": null,
+      "expectedDate": null,
+      "neverChampionProbability": 1,
+      "neverChampionCount": 50000
+    },
+    "fc-utrecht": {
+      "teamId": "fc-utrecht",
+      "teamName": "FC Utrecht",
+      "totalChampionshipProbability": 0,
+      "dateProbabilities": [
+        {
+          "date": "2026-03-06",
+          "round": 26,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "heracles-almelo",
+          "isHome": false
+        },
+        {
+          "date": "2026-03-13",
+          "round": 27,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "fc-twente-65",
+          "isHome": false
+        },
+        {
+          "date": "2026-03-20",
+          "round": 28,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "go-ahead-eagles",
+          "isHome": true
+        },
+        {
+          "date": "2026-04-04",
+          "round": 29,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "psv",
+          "isHome": false
+        },
+        {
+          "date": "2026-04-10",
+          "round": 30,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "telstar-1963",
+          "isHome": true
+        },
+        {
+          "date": "2026-04-22",
+          "round": 31,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "sbv-excelsior",
+          "isHome": false
+        },
+        {
+          "date": "2026-05-02",
+          "round": 32,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "nac-breda",
+          "isHome": true
+        },
+        {
+          "date": "2026-05-10",
+          "round": 33,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "afc-ajax",
+          "isHome": false
+        },
+        {
+          "date": "2026-05-17",
+          "round": 34,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "fortuna-sittard",
+          "isHome": true
+        }
+      ],
+      "bestCaseDate": null,
+      "bestCaseRound": null,
+      "expectedDate": null,
+      "neverChampionProbability": 1,
+      "neverChampionCount": 50000
+    },
+    "sc-heerenveen": {
+      "teamId": "sc-heerenveen",
+      "teamName": "SC Heerenveen",
+      "totalChampionshipProbability": 0,
+      "dateProbabilities": [
+        {
+          "date": "2026-03-06",
+          "round": 26,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "sbv-excelsior",
+          "isHome": false
+        },
+        {
+          "date": "2026-03-13",
+          "round": 27,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "telstar-1963",
+          "isHome": true
+        },
+        {
+          "date": "2026-03-20",
+          "round": 28,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "nec",
+          "isHome": false
+        },
+        {
+          "date": "2026-04-04",
+          "round": 29,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "heracles-almelo",
+          "isHome": true
+        },
+        {
+          "date": "2026-04-10",
+          "round": 30,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "az",
+          "isHome": false
+        },
+        {
+          "date": "2026-04-22",
+          "round": 31,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "fortuna-sittard",
+          "isHome": true
+        },
+        {
+          "date": "2026-05-02",
+          "round": 32,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "fc-volendam",
+          "isHome": false
+        },
+        {
+          "date": "2026-05-10",
+          "round": 33,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "nac-breda",
+          "isHome": false
+        },
+        {
+          "date": "2026-05-17",
+          "round": 34,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "afc-ajax",
+          "isHome": true
+        }
+      ],
+      "bestCaseDate": null,
+      "bestCaseRound": null,
+      "expectedDate": null,
+      "neverChampionProbability": 1,
+      "neverChampionCount": 50000
+    },
+    "fortuna-sittard": {
+      "teamId": "fortuna-sittard",
+      "teamName": "Fortuna Sittard",
+      "totalChampionshipProbability": 0,
+      "dateProbabilities": [
+        {
+          "date": "2026-03-06",
+          "round": 26,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "telstar-1963",
+          "isHome": true
+        },
+        {
+          "date": "2026-03-13",
+          "round": 27,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "fc-volendam",
+          "isHome": false
+        },
+        {
+          "date": "2026-03-20",
+          "round": 28,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "fc-twente-65",
+          "isHome": true
+        },
+        {
+          "date": "2026-04-04",
+          "round": 29,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "az",
+          "isHome": false
+        },
+        {
+          "date": "2026-04-10",
+          "round": 30,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "nac-breda",
+          "isHome": true
+        },
+        {
+          "date": "2026-04-22",
+          "round": 31,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "sc-heerenveen",
+          "isHome": false
+        },
+        {
+          "date": "2026-05-02",
+          "round": 32,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "feyenoord-rotterdam",
+          "isHome": true
+        },
+        {
+          "date": "2026-05-10",
+          "round": 33,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "pec-zwolle",
+          "isHome": true
+        },
+        {
+          "date": "2026-05-17",
+          "round": 34,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "fc-utrecht",
+          "isHome": false
+        }
+      ],
+      "bestCaseDate": null,
+      "bestCaseRound": null,
+      "expectedDate": null,
+      "neverChampionProbability": 1,
+      "neverChampionCount": 50000
+    },
+    "fc-groningen": {
+      "teamId": "fc-groningen",
+      "teamName": "FC Groningen",
+      "totalChampionshipProbability": 0,
+      "dateProbabilities": [
+        {
+          "date": "2026-03-06",
+          "round": 26,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "afc-ajax",
+          "isHome": true
+        },
+        {
+          "date": "2026-03-13",
+          "round": 27,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "pec-zwolle",
+          "isHome": false
+        },
+        {
+          "date": "2026-03-20",
+          "round": 28,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "az",
+          "isHome": true
+        },
+        {
+          "date": "2026-04-04",
+          "round": 29,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "telstar-1963",
+          "isHome": false
+        },
+        {
+          "date": "2026-04-10",
+          "round": 30,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "go-ahead-eagles",
+          "isHome": true
+        },
+        {
+          "date": "2026-04-22",
+          "round": 31,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "feyenoord-rotterdam",
+          "isHome": false
+        },
+        {
+          "date": "2026-05-02",
+          "round": 32,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "sbv-excelsior",
+          "isHome": true
+        },
+        {
+          "date": "2026-05-10",
+          "round": 33,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "nec",
+          "isHome": true
+        },
+        {
+          "date": "2026-05-17",
+          "round": 34,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "heracles-almelo",
+          "isHome": false
+        }
+      ],
+      "bestCaseDate": null,
+      "bestCaseRound": null,
+      "expectedDate": null,
+      "neverChampionProbability": 1,
+      "neverChampionCount": 50000
+    },
+    "go-ahead-eagles": {
+      "teamId": "go-ahead-eagles",
+      "teamName": "Go Ahead Eagles",
+      "totalChampionshipProbability": 0,
+      "dateProbabilities": [
+        {
+          "date": "2026-03-06",
+          "round": 26,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "fc-twente-65",
+          "isHome": true
+        },
+        {
+          "date": "2026-03-13",
+          "round": 27,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "nac-breda",
+          "isHome": true
+        },
+        {
+          "date": "2026-03-20",
+          "round": 28,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "fc-utrecht",
+          "isHome": false
+        },
+        {
+          "date": "2026-04-04",
+          "round": 29,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "pec-zwolle",
+          "isHome": true
+        },
+        {
+          "date": "2026-04-10",
+          "round": 30,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "fc-groningen",
+          "isHome": false
+        },
+        {
+          "date": "2026-04-22",
+          "round": 31,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "az",
+          "isHome": true
+        },
+        {
+          "date": "2026-05-02",
+          "round": 32,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "sparta-rotterdam",
+          "isHome": false
+        },
+        {
+          "date": "2026-05-10",
+          "round": 33,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "psv",
+          "isHome": true
+        },
+        {
+          "date": "2026-05-17",
+          "round": 34,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "nec",
+          "isHome": false
+        }
+      ],
+      "bestCaseDate": null,
+      "bestCaseRound": null,
+      "expectedDate": null,
+      "neverChampionProbability": 1,
+      "neverChampionCount": 50000
+    },
+    "pec-zwolle": {
+      "teamId": "pec-zwolle",
+      "teamName": "PEC Zwolle",
+      "totalChampionshipProbability": 0,
+      "dateProbabilities": [
+        {
+          "date": "2026-03-06",
+          "round": 26,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "sparta-rotterdam",
+          "isHome": false
+        },
+        {
+          "date": "2026-03-13",
+          "round": 27,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "fc-groningen",
+          "isHome": true
+        },
+        {
+          "date": "2026-03-20",
+          "round": 28,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "nac-breda",
+          "isHome": true
+        },
+        {
+          "date": "2026-04-04",
+          "round": 29,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "go-ahead-eagles",
+          "isHome": false
+        },
+        {
+          "date": "2026-04-10",
+          "round": 30,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "sbv-excelsior",
+          "isHome": true
+        },
+        {
+          "date": "2026-04-22",
+          "round": 31,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "psv",
+          "isHome": false
+        },
+        {
+          "date": "2026-05-02",
+          "round": 32,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "heracles-almelo",
+          "isHome": true
+        },
+        {
+          "date": "2026-05-10",
+          "round": 33,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "fortuna-sittard",
+          "isHome": false
+        },
+        {
+          "date": "2026-05-17",
+          "round": 34,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "feyenoord-rotterdam",
+          "isHome": true
+        }
+      ],
+      "bestCaseDate": null,
+      "bestCaseRound": null,
+      "expectedDate": null,
+      "neverChampionProbability": 1,
+      "neverChampionCount": 50000
+    },
+    "fc-volendam": {
+      "teamId": "fc-volendam",
+      "teamName": "FC Volendam",
+      "totalChampionshipProbability": 0,
+      "dateProbabilities": [
+        {
+          "date": "2026-03-06",
+          "round": 26,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "nec",
+          "isHome": false
+        },
+        {
+          "date": "2026-03-13",
+          "round": 27,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "fortuna-sittard",
+          "isHome": true
+        },
+        {
+          "date": "2026-03-20",
+          "round": 28,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "sparta-rotterdam",
+          "isHome": false
+        },
+        {
+          "date": "2026-04-04",
+          "round": 29,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "feyenoord-rotterdam",
+          "isHome": true
+        },
+        {
+          "date": "2026-04-10",
+          "round": 30,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "fc-twente-65",
+          "isHome": false
+        },
+        {
+          "date": "2026-04-22",
+          "round": 31,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "heracles-almelo",
+          "isHome": false
+        },
+        {
+          "date": "2026-05-02",
+          "round": 32,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "sc-heerenveen",
+          "isHome": true
+        },
+        {
+          "date": "2026-05-10",
+          "round": 33,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "sbv-excelsior",
+          "isHome": false
+        },
+        {
+          "date": "2026-05-17",
+          "round": 34,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "telstar-1963",
+          "isHome": true
+        }
+      ],
+      "bestCaseDate": null,
+      "bestCaseRound": null,
+      "expectedDate": null,
+      "neverChampionProbability": 1,
+      "neverChampionCount": 50000
+    },
+    "sbv-excelsior": {
+      "teamId": "sbv-excelsior",
+      "teamName": "SBV Excelsior",
+      "totalChampionshipProbability": 0,
+      "dateProbabilities": [
+        {
+          "date": "2026-03-06",
+          "round": 26,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "sc-heerenveen",
+          "isHome": true
+        },
+        {
+          "date": "2026-03-13",
+          "round": 27,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "feyenoord-rotterdam",
+          "isHome": false
+        },
+        {
+          "date": "2026-03-20",
+          "round": 28,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "heracles-almelo",
+          "isHome": false
+        },
+        {
+          "date": "2026-04-04",
+          "round": 29,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "nec",
+          "isHome": true
+        },
+        {
+          "date": "2026-04-10",
+          "round": 30,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "pec-zwolle",
+          "isHome": false
+        },
+        {
+          "date": "2026-04-22",
+          "round": 31,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "fc-utrecht",
+          "isHome": true
+        },
+        {
+          "date": "2026-05-02",
+          "round": 32,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "fc-groningen",
+          "isHome": false
+        },
+        {
+          "date": "2026-05-10",
+          "round": 33,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "fc-volendam",
+          "isHome": true
+        },
+        {
+          "date": "2026-05-17",
+          "round": 34,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "sparta-rotterdam",
+          "isHome": false
+        }
+      ],
+      "bestCaseDate": null,
+      "bestCaseRound": null,
+      "expectedDate": null,
+      "neverChampionProbability": 1,
+      "neverChampionCount": 50000
+    },
+    "nac-breda": {
+      "teamId": "nac-breda",
+      "teamName": "NAC Breda",
+      "totalChampionshipProbability": 0,
+      "dateProbabilities": [
+        {
+          "date": "2026-03-06",
+          "round": 26,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "feyenoord-rotterdam",
+          "isHome": true
+        },
+        {
+          "date": "2026-03-13",
+          "round": 27,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "go-ahead-eagles",
+          "isHome": false
+        },
+        {
+          "date": "2026-03-20",
+          "round": 28,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "pec-zwolle",
+          "isHome": false
+        },
+        {
+          "date": "2026-04-04",
+          "round": 29,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "sparta-rotterdam",
+          "isHome": true
+        },
+        {
+          "date": "2026-04-10",
+          "round": 30,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "fortuna-sittard",
+          "isHome": false
+        },
+        {
+          "date": "2026-04-22",
+          "round": 31,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "afc-ajax",
+          "isHome": true
+        },
+        {
+          "date": "2026-05-02",
+          "round": 32,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "fc-utrecht",
+          "isHome": false
+        },
+        {
+          "date": "2026-05-10",
+          "round": 33,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "sc-heerenveen",
+          "isHome": true
+        },
+        {
+          "date": "2026-05-17",
+          "round": 34,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "az",
+          "isHome": false
+        }
+      ],
+      "bestCaseDate": null,
+      "bestCaseRound": null,
+      "expectedDate": null,
+      "neverChampionProbability": 1,
+      "neverChampionCount": 50000
+    },
+    "telstar-1963": {
+      "teamId": "telstar-1963",
+      "teamName": "Telstar 1963",
+      "totalChampionshipProbability": 0,
+      "dateProbabilities": [
+        {
+          "date": "2026-03-06",
+          "round": 26,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "fortuna-sittard",
+          "isHome": false
+        },
+        {
+          "date": "2026-03-13",
+          "round": 27,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "sc-heerenveen",
+          "isHome": false
+        },
+        {
+          "date": "2026-03-20",
+          "round": 28,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "psv",
+          "isHome": true
+        },
+        {
+          "date": "2026-04-04",
+          "round": 29,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "fc-groningen",
+          "isHome": true
+        },
+        {
+          "date": "2026-04-10",
+          "round": 30,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "fc-utrecht",
+          "isHome": false
+        },
+        {
+          "date": "2026-04-22",
+          "round": 31,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "sparta-rotterdam",
+          "isHome": true
+        },
+        {
+          "date": "2026-05-02",
+          "round": 32,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "nec",
+          "isHome": false
+        },
+        {
+          "date": "2026-05-10",
+          "round": 33,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "heracles-almelo",
+          "isHome": true
+        },
+        {
+          "date": "2026-05-17",
+          "round": 34,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "fc-volendam",
+          "isHome": false
+        }
+      ],
+      "bestCaseDate": null,
+      "bestCaseRound": null,
+      "expectedDate": null,
+      "neverChampionProbability": 1,
+      "neverChampionCount": 50000
+    },
+    "heracles-almelo": {
+      "teamId": "heracles-almelo",
+      "teamName": "Heracles Almelo",
+      "totalChampionshipProbability": 0,
+      "dateProbabilities": [
+        {
+          "date": "2026-03-06",
+          "round": 26,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "fc-utrecht",
+          "isHome": true
+        },
+        {
+          "date": "2026-03-13",
+          "round": 27,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "az",
+          "isHome": false
+        },
+        {
+          "date": "2026-03-20",
+          "round": 28,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "sbv-excelsior",
+          "isHome": true
+        },
+        {
+          "date": "2026-04-04",
+          "round": 29,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "sc-heerenveen",
+          "isHome": false
+        },
+        {
+          "date": "2026-04-10",
+          "round": 30,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "afc-ajax",
+          "isHome": true
+        },
+        {
+          "date": "2026-04-22",
+          "round": 31,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "fc-volendam",
+          "isHome": true
+        },
+        {
+          "date": "2026-05-02",
+          "round": 32,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "pec-zwolle",
+          "isHome": false
+        },
+        {
+          "date": "2026-05-10",
+          "round": 33,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "telstar-1963",
+          "isHome": false
+        },
+        {
+          "date": "2026-05-17",
+          "round": 34,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "fc-groningen",
+          "isHome": true
+        }
+      ],
+      "bestCaseDate": null,
+      "bestCaseRound": null,
+      "expectedDate": null,
+      "neverChampionProbability": 1,
+      "neverChampionCount": 50000
+    }
+  },
+  "iterations": 50000,
+  "explanation": {
+    "psv": {
+      "clubPoints": 65,
+      "clubPlayed": 25,
+      "clubRemaining": 9,
+      "rivals": [
+        {
+          "name": "Feyenoord Rotterdam",
+          "points": 48,
+          "maxPoints": 75,
+          "gap": 17,
+          "winAllProb": 0.007044840244569993
+        },
+        {
+          "name": "AFC Ajax",
+          "points": 44,
+          "maxPoints": 71,
+          "gap": 21,
+          "winAllProb": 0.00075942506988106
+        },
+        {
+          "name": "NEC",
+          "points": 43,
+          "maxPoints": 70,
+          "gap": 22,
+          "winAllProb": 0.0010900397421211452
+        },
+        {
+          "name": "FC Twente '65",
+          "points": 41,
+          "maxPoints": 68,
+          "gap": 24,
+          "winAllProb": 0.0006642046495573618
+        },
+        {
+          "name": "AZ",
+          "points": 39,
+          "maxPoints": 66,
+          "gap": 26,
+          "winAllProb": 0.00006946459731861647
+        }
+      ],
+      "iterations": 50000,
+      "neverChampionCount": 0
+    }
+  },
+  "teams": [
+    {
+      "id": "psv",
+      "name": "PSV",
+      "shortName": "PSV",
+      "points": 65,
+      "played": 25,
+      "won": 21,
+      "drawn": 2,
+      "lost": 2,
+      "goalsFor": 73,
+      "goalsAgainst": 30
+    },
+    {
+      "id": "feyenoord-rotterdam",
+      "name": "Feyenoord Rotterdam",
+      "shortName": "Feyenoord",
+      "points": 48,
+      "played": 25,
+      "won": 15,
+      "drawn": 3,
+      "lost": 7,
+      "goalsFor": 55,
+      "goalsAgainst": 35
+    },
+    {
+      "id": "afc-ajax",
+      "name": "AFC Ajax",
+      "shortName": "Ajax",
+      "points": 44,
+      "played": 25,
+      "won": 11,
+      "drawn": 11,
+      "lost": 3,
+      "goalsFor": 47,
+      "goalsAgainst": 31
+    },
+    {
+      "id": "nec",
+      "name": "NEC",
+      "shortName": "NEC",
+      "points": 43,
+      "played": 25,
+      "won": 12,
+      "drawn": 7,
+      "lost": 6,
+      "goalsFor": 61,
+      "goalsAgainst": 43
+    },
+    {
+      "id": "fc-twente-65",
+      "name": "FC Twente '65",
+      "shortName": "Twente",
+      "points": 41,
+      "played": 25,
+      "won": 10,
+      "drawn": 11,
+      "lost": 4,
+      "goalsFor": 41,
+      "goalsAgainst": 26
+    },
+    {
+      "id": "az",
+      "name": "AZ",
+      "shortName": "AZ",
+      "points": 39,
+      "played": 25,
+      "won": 11,
+      "drawn": 6,
+      "lost": 8,
+      "goalsFor": 42,
+      "goalsAgainst": 40
+    },
+    {
+      "id": "sparta-rotterdam",
+      "name": "Sparta Rotterdam",
+      "shortName": "Sparta",
+      "points": 37,
+      "played": 25,
+      "won": 11,
+      "drawn": 4,
+      "lost": 10,
+      "goalsFor": 32,
+      "goalsAgainst": 42
+    },
+    {
+      "id": "fc-utrecht",
+      "name": "FC Utrecht",
+      "shortName": "Utrecht",
+      "points": 34,
+      "played": 25,
+      "won": 9,
+      "drawn": 7,
+      "lost": 9,
+      "goalsFor": 38,
+      "goalsAgainst": 31
+    },
+    {
+      "id": "sc-heerenveen",
+      "name": "SC Heerenveen",
+      "shortName": "Heerenveen",
+      "points": 34,
+      "played": 25,
+      "won": 9,
+      "drawn": 7,
+      "lost": 9,
+      "goalsFor": 42,
+      "goalsAgainst": 43
+    },
+    {
+      "id": "fortuna-sittard",
+      "name": "Fortuna Sittard",
+      "shortName": "Fortuna",
+      "points": 32,
+      "played": 25,
+      "won": 9,
+      "drawn": 5,
+      "lost": 11,
+      "goalsFor": 39,
+      "goalsAgainst": 45
+    },
+    {
+      "id": "fc-groningen",
+      "name": "FC Groningen",
+      "shortName": "Groningen",
+      "points": 31,
+      "played": 25,
+      "won": 9,
+      "drawn": 4,
+      "lost": 12,
+      "goalsFor": 33,
+      "goalsAgainst": 35
+    },
+    {
+      "id": "go-ahead-eagles",
+      "name": "Go Ahead Eagles",
+      "shortName": "Go",
+      "points": 29,
+      "played": 25,
+      "won": 6,
+      "drawn": 11,
+      "lost": 8,
+      "goalsFor": 38,
+      "goalsAgainst": 39
+    },
+    {
+      "id": "pec-zwolle",
+      "name": "PEC Zwolle",
+      "shortName": "PEC",
+      "points": 28,
+      "played": 25,
+      "won": 7,
+      "drawn": 7,
+      "lost": 11,
+      "goalsFor": 34,
+      "goalsAgainst": 50
+    },
+    {
+      "id": "fc-volendam",
+      "name": "FC Volendam",
+      "shortName": "Volendam",
+      "points": 27,
+      "played": 25,
+      "won": 7,
+      "drawn": 6,
+      "lost": 12,
+      "goalsFor": 29,
+      "goalsAgainst": 41
+    },
+    {
+      "id": "sbv-excelsior",
+      "name": "SBV Excelsior",
+      "shortName": "Excelsior",
+      "points": 26,
+      "played": 25,
+      "won": 7,
+      "drawn": 5,
+      "lost": 13,
+      "goalsFor": 26,
+      "goalsAgainst": 42
+    },
+    {
+      "id": "nac-breda",
+      "name": "NAC Breda",
+      "shortName": "NAC",
+      "points": 22,
+      "played": 25,
+      "won": 5,
+      "drawn": 7,
+      "lost": 13,
+      "goalsFor": 25,
+      "goalsAgainst": 39
+    },
+    {
+      "id": "telstar-1963",
+      "name": "Telstar 1963",
+      "shortName": "Telstar",
+      "points": 21,
+      "played": 25,
+      "won": 4,
+      "drawn": 9,
+      "lost": 12,
+      "goalsFor": 31,
+      "goalsAgainst": 41
+    },
+    {
+      "id": "heracles-almelo",
+      "name": "Heracles Almelo",
+      "shortName": "Heracles",
+      "points": 17,
+      "played": 25,
+      "won": 5,
+      "drawn": 2,
+      "lost": 18,
+      "goalsFor": 32,
+      "goalsAgainst": 65
+    }
+  ],
+  "fixtures": [
+    {
+      "id": "match-heracles-almelo:fc-utrecht-r26",
+      "date": "2026-03-06",
+      "round": 26,
+      "homeTeam": "heracles-almelo",
+      "awayTeam": "fc-utrecht",
+      "homeWinProb": 0.3401166409848502,
+      "drawProb": 0.2483747564966904,
+      "awayWinProb": 0.4115086025184594,
+      "source": "api"
+    },
+    {
+      "id": "match-fc-groningen:afc-ajax-r26",
+      "date": "2026-03-07",
+      "round": 26,
+      "homeTeam": "fc-groningen",
+      "awayTeam": "afc-ajax",
+      "homeWinProb": 0.3543281835527757,
+      "drawProb": 0.2494208542095388,
+      "awayWinProb": 0.39625096223768547,
+      "source": "api"
+    },
+    {
+      "id": "match-psv:az-r26",
+      "date": "2026-03-07",
+      "round": 26,
+      "homeTeam": "psv",
+      "awayTeam": "az",
+      "homeWinProb": 0.8329994758756836,
+      "drawProb": 0.09425121860257855,
+      "awayWinProb": 0.07274930552173785,
+      "source": "poisson"
+    },
+    {
+      "id": "match-sbv-excelsior:sc-heerenveen-r26",
+      "date": "2026-03-07",
+      "round": 26,
+      "homeTeam": "sbv-excelsior",
+      "awayTeam": "sc-heerenveen",
+      "homeWinProb": 0.33168231213585975,
+      "drawProb": 0.22907204129053738,
+      "awayWinProb": 0.439245646573603,
+      "source": "poisson"
+    },
+    {
+      "id": "match-sparta-rotterdam:pec-zwolle-r26",
+      "date": "2026-03-08",
+      "round": 26,
+      "homeTeam": "sparta-rotterdam",
+      "awayTeam": "pec-zwolle",
+      "homeWinProb": 0.4340351172104258,
+      "drawProb": 0.26001107941989426,
+      "awayWinProb": 0.30595380336967976,
+      "source": "api"
+    },
+    {
+      "id": "match-fortuna-sittard:telstar-1963-r26",
+      "date": "2026-03-08",
+      "round": 26,
+      "homeTeam": "fortuna-sittard",
+      "awayTeam": "telstar-1963",
+      "homeWinProb": 0.5496397075178381,
+      "drawProb": 0.20573918215679202,
+      "awayWinProb": 0.24462111032536984,
+      "source": "poisson"
+    },
+    {
+      "id": "match-go-ahead-eagles:fc-twente-65-r26",
+      "date": "2026-03-08",
+      "round": 26,
+      "homeTeam": "go-ahead-eagles",
+      "awayTeam": "fc-twente-65",
+      "homeWinProb": 0.3194657080612425,
+      "drawProb": 0.24341506761236087,
+      "awayWinProb": 0.43711922432639655,
+      "source": "poisson"
+    },
+    {
+      "id": "match-nac-breda:feyenoord-rotterdam-r26",
+      "date": "2026-03-08",
+      "round": 26,
+      "homeTeam": "nac-breda",
+      "awayTeam": "feyenoord-rotterdam",
+      "homeWinProb": 0.2025361816304686,
+      "drawProb": 0.20339138411488616,
+      "awayWinProb": 0.5940724342546453,
+      "source": "poisson"
+    },
+    {
+      "id": "match-nec:fc-volendam-r26",
+      "date": "2026-03-08",
+      "round": 26,
+      "homeTeam": "nec",
+      "awayTeam": "fc-volendam",
+      "homeWinProb": 0.7763521970465809,
+      "drawProb": 0.12204428636129282,
+      "awayWinProb": 0.1016035165921263,
+      "source": "poisson"
+    },
+    {
+      "id": "match-pec-zwolle:fc-groningen-r27",
+      "date": "2026-03-13",
+      "round": 27,
+      "homeTeam": "pec-zwolle",
+      "awayTeam": "fc-groningen",
+      "homeWinProb": 0.37582678431137767,
+      "drawProb": 0.2679717327199433,
+      "awayWinProb": 0.356201482968679,
+      "source": "api"
+    },
+    {
+      "id": "match-fc-volendam:fortuna-sittard-r27",
+      "date": "2026-03-14",
+      "round": 27,
+      "homeTeam": "fc-volendam",
+      "awayTeam": "fortuna-sittard",
+      "homeWinProb": 0.4060660112925344,
+      "drawProb": 0.2587207420417632,
+      "awayWinProb": 0.33521324666570235,
+      "source": "api"
+    },
+    {
+      "id": "match-psv:nec-r27",
+      "date": "2026-03-14",
+      "round": 27,
+      "homeTeam": "psv",
+      "awayTeam": "nec",
+      "homeWinProb": 0.776603843411922,
+      "drawProb": 0.10825782362386245,
+      "awayWinProb": 0.11513833296421551,
+      "source": "poisson"
+    },
+    {
+      "id": "match-sc-heerenveen:telstar-1963-r27",
+      "date": "2026-03-14",
+      "round": 27,
+      "homeTeam": "sc-heerenveen",
+      "awayTeam": "telstar-1963",
+      "homeWinProb": 0.596153125010006,
+      "drawProb": 0.19340635168787992,
+      "awayWinProb": 0.2104405233021141,
+      "source": "poisson"
+    },
+    {
+      "id": "match-afc-ajax:sparta-rotterdam-r27",
+      "date": "2026-03-14",
+      "round": 27,
+      "homeTeam": "afc-ajax",
+      "awayTeam": "sparta-rotterdam",
+      "homeWinProb": 0.45438271871504166,
+      "drawProb": 0.26559477341266735,
+      "awayWinProb": 0.28002250787229105,
+      "source": "api"
+    },
+    {
+      "id": "match-fc-twente-65:fc-utrecht-r27",
+      "date": "2026-03-15",
+      "round": 27,
+      "homeTeam": "fc-twente-65",
+      "awayTeam": "fc-utrecht",
+      "homeWinProb": 0.5450988774789032,
+      "drawProb": 0.23819445752747637,
+      "awayWinProb": 0.2167066649936205,
+      "source": "poisson"
+    },
+    {
+      "id": "match-az:heracles-almelo-r27",
+      "date": "2026-03-15",
+      "round": 27,
+      "homeTeam": "az",
+      "awayTeam": "heracles-almelo",
+      "homeWinProb": 0.8051871046130056,
+      "drawProb": 0.10742955648555272,
+      "awayWinProb": 0.08738333890144165,
+      "source": "poisson"
+    },
+    {
+      "id": "match-feyenoord-rotterdam:sbv-excelsior-r27",
+      "date": "2026-03-15",
+      "round": 27,
+      "homeTeam": "feyenoord-rotterdam",
+      "awayTeam": "sbv-excelsior",
+      "homeWinProb": 0.8061257471888877,
+      "drawProb": 0.11789289747633606,
+      "awayWinProb": 0.07598135533477618,
+      "source": "poisson"
+    },
+    {
+      "id": "match-go-ahead-eagles:nac-breda-r27",
+      "date": "2026-03-15",
+      "round": 27,
+      "homeTeam": "go-ahead-eagles",
+      "awayTeam": "nac-breda",
+      "homeWinProb": 0.40362467334089946,
+      "drawProb": 0.2563508951124119,
+      "awayWinProb": 0.3400244315466886,
+      "source": "api"
+    },
+    {
+      "id": "match-heracles-almelo:sbv-excelsior-r28",
+      "date": "2026-03-20",
+      "round": 28,
+      "homeTeam": "heracles-almelo",
+      "awayTeam": "sbv-excelsior",
+      "homeWinProb": 0.4145396452596754,
+      "drawProb": 0.22193063412551103,
+      "awayWinProb": 0.3635297206148136,
+      "source": "poisson"
+    },
+    {
+      "id": "match-fortuna-sittard:fc-twente-65-r28",
+      "date": "2026-03-21",
+      "round": 28,
+      "homeTeam": "fortuna-sittard",
+      "awayTeam": "fc-twente-65",
+      "homeWinProb": 0.285927060437833,
+      "drawProb": 0.2266266200277781,
+      "awayWinProb": 0.48744631953438894,
+      "source": "poisson"
+    },
+    {
+      "id": "match-sparta-rotterdam:fc-volendam-r28",
+      "date": "2026-03-21",
+      "round": 28,
+      "homeTeam": "sparta-rotterdam",
+      "awayTeam": "fc-volendam",
+      "homeWinProb": 0.5223021337140326,
+      "drawProb": 0.24144046741812664,
+      "awayWinProb": 0.2362573988678408,
+      "source": "api"
+    },
+    {
+      "id": "match-pec-zwolle:nac-breda-r28",
+      "date": "2026-03-21",
+      "round": 28,
+      "homeTeam": "pec-zwolle",
+      "awayTeam": "nac-breda",
+      "homeWinProb": 0.37910704451557625,
+      "drawProb": 0.25390091832722483,
+      "awayWinProb": 0.3669920371571989,
+      "source": "api"
+    },
+    {
+      "id": "match-nec:sc-heerenveen-r28",
+      "date": "2026-03-22",
+      "round": 28,
+      "homeTeam": "nec",
+      "awayTeam": "sc-heerenveen",
+      "homeWinProb": 0.6998037104094633,
+      "drawProb": 0.137776692693943,
+      "awayWinProb": 0.1624195968965936,
+      "source": "poisson"
+    },
+    {
+      "id": "match-fc-utrecht:go-ahead-eagles-r28",
+      "date": "2026-03-22",
+      "round": 28,
+      "homeTeam": "fc-utrecht",
+      "awayTeam": "go-ahead-eagles",
+      "homeWinProb": 0.5891936995620349,
+      "drawProb": 0.20411149997707922,
+      "awayWinProb": 0.2066948004608859,
+      "source": "api"
+    },
+    {
+      "id": "match-feyenoord-rotterdam:afc-ajax-r28",
+      "date": "2026-03-22",
+      "round": 28,
+      "homeTeam": "feyenoord-rotterdam",
+      "awayTeam": "afc-ajax",
+      "homeWinProb": 0.5263265623279368,
+      "drawProb": 0.19869029838897617,
+      "awayWinProb": 0.274983139283087,
+      "source": "poisson"
+    },
+    {
+      "id": "match-fc-groningen:az-r28",
+      "date": "2026-03-22",
+      "round": 28,
+      "homeTeam": "fc-groningen",
+      "awayTeam": "az",
+      "homeWinProb": 0.45152124167576163,
+      "drawProb": 0.2289517230513483,
+      "awayWinProb": 0.31952703527289,
+      "source": "poisson"
+    },
+    {
+      "id": "match-telstar-1963:psv-r28",
+      "date": "2026-03-22",
+      "round": 28,
+      "homeTeam": "telstar-1963",
+      "awayTeam": "psv",
+      "homeWinProb": 0.1300630162019515,
+      "drawProb": 0.14540894545334568,
+      "awayWinProb": 0.7245280383447028,
+      "source": "poisson"
+    },
+    {
+      "id": "match-psv:fc-utrecht-r29",
+      "date": "2026-04-04",
+      "round": 29,
+      "homeTeam": "psv",
+      "awayTeam": "fc-utrecht",
+      "homeWinProb": 0.7552766493676277,
+      "drawProb": 0.135586953601348,
+      "awayWinProb": 0.10913639703102417,
+      "source": "poisson"
+    },
+    {
+      "id": "match-az:fortuna-sittard-r29",
+      "date": "2026-04-04",
+      "round": 29,
+      "homeTeam": "az",
+      "awayTeam": "fortuna-sittard",
+      "homeWinProb": 0.5912181820447673,
+      "drawProb": 0.18350606009492595,
+      "awayWinProb": 0.22527575786030676,
+      "source": "poisson"
+    },
+    {
+      "id": "match-telstar-1963:fc-groningen-r29",
+      "date": "2026-04-04",
+      "round": 29,
+      "homeTeam": "telstar-1963",
+      "awayTeam": "fc-groningen",
+      "homeWinProb": 0.3997688867979114,
+      "drawProb": 0.2510476391277779,
+      "awayWinProb": 0.34918347407431083,
+      "source": "poisson"
+    },
+    {
+      "id": "match-afc-ajax:fc-twente-65-r29",
+      "date": "2026-04-04",
+      "round": 29,
+      "homeTeam": "afc-ajax",
+      "awayTeam": "fc-twente-65",
+      "homeWinProb": 0.4631513324779855,
+      "drawProb": 0.2415250927324826,
+      "awayWinProb": 0.29532357478953186,
+      "source": "poisson"
+    },
+    {
+      "id": "match-sbv-excelsior:nec-r29",
+      "date": "2026-04-04",
+      "round": 29,
+      "homeTeam": "sbv-excelsior",
+      "awayTeam": "nec",
+      "homeWinProb": 0.21471782613242882,
+      "drawProb": 0.18182147649225894,
+      "awayWinProb": 0.6034606973753122,
+      "source": "poisson"
+    },
+    {
+      "id": "match-go-ahead-eagles:pec-zwolle-r29",
+      "date": "2026-04-05",
+      "round": 29,
+      "homeTeam": "go-ahead-eagles",
+      "awayTeam": "pec-zwolle",
+      "homeWinProb": 0.6419620335209756,
+      "drawProb": 0.17661798971091394,
+      "awayWinProb": 0.18141997676811045,
+      "source": "poisson"
+    },
+    {
+      "id": "match-fc-volendam:feyenoord-rotterdam-r29",
+      "date": "2026-04-05",
+      "round": 29,
+      "homeTeam": "fc-volendam",
+      "awayTeam": "feyenoord-rotterdam",
+      "homeWinProb": 0.2266150656642195,
+      "drawProb": 0.19892369583058528,
+      "awayWinProb": 0.5744612385051953,
+      "source": "poisson"
+    },
+    {
+      "id": "match-sc-heerenveen:heracles-almelo-r29",
+      "date": "2026-04-05",
+      "round": 29,
+      "homeTeam": "sc-heerenveen",
+      "awayTeam": "heracles-almelo",
+      "homeWinProb": 0.7897091554270292,
+      "drawProb": 0.11233316807306715,
+      "awayWinProb": 0.0979576764999036,
+      "source": "poisson"
+    },
+    {
+      "id": "match-nac-breda:sparta-rotterdam-r29",
+      "date": "2026-04-05",
+      "round": 29,
+      "homeTeam": "nac-breda",
+      "awayTeam": "sparta-rotterdam",
+      "homeWinProb": 0.40998715664521895,
+      "drawProb": 0.25860531316731966,
+      "awayWinProb": 0.33140753018746144,
+      "source": "poisson"
+    },
+    {
+      "id": "match-fc-twente-65:fc-volendam-r30",
+      "date": "2026-04-10",
+      "round": 30,
+      "homeTeam": "fc-twente-65",
+      "awayTeam": "fc-volendam",
+      "homeWinProb": 0.7171378979467662,
+      "drawProb": 0.17462960606520245,
+      "awayWinProb": 0.10823249598803138,
+      "source": "poisson"
+    },
+    {
+      "id": "match-fc-utrecht:telstar-1963-r30",
+      "date": "2026-04-11",
+      "round": 30,
+      "homeTeam": "fc-utrecht",
+      "awayTeam": "telstar-1963",
+      "homeWinProb": 0.6367122922221348,
+      "drawProb": 0.20054096184402362,
+      "awayWinProb": 0.16274674593384156,
+      "source": "poisson"
+    },
+    {
+      "id": "match-sparta-rotterdam:psv-r30",
+      "date": "2026-04-11",
+      "round": 30,
+      "homeTeam": "sparta-rotterdam",
+      "awayTeam": "psv",
+      "homeWinProb": 0.13010052162777513,
+      "drawProb": 0.14276308322684597,
+      "awayWinProb": 0.7271363951453789,
+      "source": "poisson"
+    },
+    {
+      "id": "match-fc-groningen:go-ahead-eagles-r30",
+      "date": "2026-04-11",
+      "round": 30,
+      "homeTeam": "fc-groningen",
+      "awayTeam": "go-ahead-eagles",
+      "homeWinProb": 0.47109090995975245,
+      "drawProb": 0.23432971306140504,
+      "awayWinProb": 0.2945793769788424,
+      "source": "poisson"
+    },
+    {
+      "id": "match-heracles-almelo:afc-ajax-r30",
+      "date": "2026-04-11",
+      "round": 30,
+      "homeTeam": "heracles-almelo",
+      "awayTeam": "afc-ajax",
+      "homeWinProb": 0.13722893446294437,
+      "drawProb": 0.1454197770698164,
+      "awayWinProb": 0.7173512884672392,
+      "source": "poisson"
+    },
+    {
+      "id": "match-fortuna-sittard:nac-breda-r30",
+      "date": "2026-04-12",
+      "round": 30,
+      "homeTeam": "fortuna-sittard",
+      "awayTeam": "nac-breda",
+      "homeWinProb": 0.5880006107890563,
+      "drawProb": 0.20961971669613708,
+      "awayWinProb": 0.20237967251480668,
+      "source": "poisson"
+    },
+    {
+      "id": "match-nec:feyenoord-rotterdam-r30",
+      "date": "2026-04-12",
+      "round": 30,
+      "homeTeam": "nec",
+      "awayTeam": "feyenoord-rotterdam",
+      "homeWinProb": 0.4989853364194656,
+      "drawProb": 0.1752179155744881,
+      "awayWinProb": 0.3257967480060463,
+      "source": "poisson"
+    },
+    {
+      "id": "match-pec-zwolle:sbv-excelsior-r30",
+      "date": "2026-04-12",
+      "round": 30,
+      "homeTeam": "pec-zwolle",
+      "awayTeam": "sbv-excelsior",
+      "homeWinProb": 0.5211595126041835,
+      "drawProb": 0.2212473554151789,
+      "awayWinProb": 0.2575931319806376,
+      "source": "poisson"
+    },
+    {
+      "id": "match-az:sc-heerenveen-r30",
+      "date": "2026-04-12",
+      "round": 30,
+      "homeTeam": "az",
+      "awayTeam": "sc-heerenveen",
+      "homeWinProb": 0.5458065289851411,
+      "drawProb": 0.19156219005854597,
+      "awayWinProb": 0.262631280956313,
+      "source": "poisson"
+    },
+    {
+      "id": "match-telstar-1963:sparta-rotterdam-r31",
+      "date": "2026-04-22",
+      "round": 31,
+      "homeTeam": "telstar-1963",
+      "awayTeam": "sparta-rotterdam",
+      "homeWinProb": 0.479781403173707,
+      "drawProb": 0.2332131916245203,
+      "awayWinProb": 0.28700540520177276,
+      "source": "poisson"
+    },
+    {
+      "id": "match-sbv-excelsior:fc-utrecht-r31",
+      "date": "2026-04-23",
+      "round": 31,
+      "homeTeam": "sbv-excelsior",
+      "awayTeam": "fc-utrecht",
+      "homeWinProb": 0.2592459580632314,
+      "drawProb": 0.24900958016039662,
+      "awayWinProb": 0.49174446177637193,
+      "source": "poisson"
+    },
+    {
+      "id": "match-feyenoord-rotterdam:fc-groningen-r31",
+      "date": "2026-04-23",
+      "round": 31,
+      "homeTeam": "feyenoord-rotterdam",
+      "awayTeam": "fc-groningen",
+      "homeWinProb": 0.6838061322841243,
+      "drawProb": 0.16771911664093306,
+      "awayWinProb": 0.14847475107494265,
+      "source": "poisson"
+    },
+    {
+      "id": "match-heracles-almelo:fc-volendam-r31",
+      "date": "2026-04-23",
+      "round": 31,
+      "homeTeam": "heracles-almelo",
+      "awayTeam": "fc-volendam",
+      "homeWinProb": 0.3686859432583349,
+      "drawProb": 0.21686897765418528,
+      "awayWinProb": 0.41444507908747985,
+      "source": "poisson"
+    },
+    {
+      "id": "match-nac-breda:afc-ajax-r31",
+      "date": "2026-04-23",
+      "round": 31,
+      "homeTeam": "nac-breda",
+      "awayTeam": "afc-ajax",
+      "homeWinProb": 0.21407226990880546,
+      "drawProb": 0.22759091267580128,
+      "awayWinProb": 0.5583368174153933,
+      "source": "poisson"
+    },
+    {
+      "id": "match-sc-heerenveen:fortuna-sittard-r31",
+      "date": "2026-04-23",
+      "round": 31,
+      "homeTeam": "sc-heerenveen",
+      "awayTeam": "fortuna-sittard",
+      "homeWinProb": 0.5676832007317623,
+      "drawProb": 0.18541369864501425,
+      "awayWinProb": 0.24690310062322346,
+      "source": "poisson"
+    },
+    {
+      "id": "match-fc-twente-65:nec-r31",
+      "date": "2026-04-23",
+      "round": 31,
+      "homeTeam": "fc-twente-65",
+      "awayTeam": "nec",
+      "homeWinProb": 0.5536780384778553,
+      "drawProb": 0.19391130024702397,
+      "awayWinProb": 0.25241066127512063,
+      "source": "poisson"
+    },
+    {
+      "id": "match-go-ahead-eagles:az-r31",
+      "date": "2026-04-23",
+      "round": 31,
+      "homeTeam": "go-ahead-eagles",
+      "awayTeam": "az",
+      "homeWinProb": 0.4765004973007183,
+      "drawProb": 0.211864165226275,
+      "awayWinProb": 0.3116353374730067,
+      "source": "poisson"
+    },
+    {
+      "id": "match-psv:pec-zwolle-r31",
+      "date": "2026-04-23",
+      "round": 31,
+      "homeTeam": "psv",
+      "awayTeam": "pec-zwolle",
+      "homeWinProb": 0.9250517868348976,
+      "drawProb": 0.047846971952514014,
+      "awayWinProb": 0.027101241212588476,
+      "source": "poisson"
+    },
+    {
+      "id": "match-fc-utrecht:nac-breda-r32",
+      "date": "2026-05-02",
+      "round": 32,
+      "homeTeam": "fc-utrecht",
+      "awayTeam": "nac-breda",
+      "homeWinProb": 0.6613144822518628,
+      "drawProb": 0.20303542579133071,
+      "awayWinProb": 0.13565009195680638,
+      "source": "poisson"
+    },
+    {
+      "id": "match-fc-groningen:sbv-excelsior-r32",
+      "date": "2026-05-02",
+      "round": 32,
+      "homeTeam": "fc-groningen",
+      "awayTeam": "sbv-excelsior",
+      "homeWinProb": 0.6000854683668974,
+      "drawProb": 0.22143734814254804,
+      "awayWinProb": 0.1784771834905546,
+      "source": "poisson"
+    },
+    {
+      "id": "match-afc-ajax:psv-r32",
+      "date": "2026-05-02",
+      "round": 32,
+      "homeTeam": "afc-ajax",
+      "awayTeam": "psv",
+      "homeWinProb": 0.3325008526411571,
+      "drawProb": 0.19957916817341767,
+      "awayWinProb": 0.4679199791854252,
+      "source": "poisson"
+    },
+    {
+      "id": "match-nec:telstar-1963-r32",
+      "date": "2026-05-02",
+      "round": 32,
+      "homeTeam": "nec",
+      "awayTeam": "telstar-1963",
+      "homeWinProb": 0.7612683278858308,
+      "drawProb": 0.12641679916821405,
+      "awayWinProb": 0.1123148729459552,
+      "source": "poisson"
+    },
+    {
+      "id": "match-fc-volendam:sc-heerenveen-r32",
+      "date": "2026-05-03",
+      "round": 32,
+      "homeTeam": "fc-volendam",
+      "awayTeam": "sc-heerenveen",
+      "homeWinProb": 0.3790523265329511,
+      "drawProb": 0.22587005744721111,
+      "awayWinProb": 0.3950776160198379,
+      "source": "poisson"
+    },
+    {
+      "id": "match-fortuna-sittard:feyenoord-rotterdam-r32",
+      "date": "2026-05-03",
+      "round": 32,
+      "homeTeam": "fortuna-sittard",
+      "awayTeam": "feyenoord-rotterdam",
+      "homeWinProb": 0.28859766412686405,
+      "drawProb": 0.1905853671371168,
+      "awayWinProb": 0.5208169687360191,
+      "source": "poisson"
+    },
+    {
+      "id": "match-pec-zwolle:heracles-almelo-r32",
+      "date": "2026-05-03",
+      "round": 32,
+      "homeTeam": "pec-zwolle",
+      "awayTeam": "heracles-almelo",
+      "homeWinProb": 0.6566687416505609,
+      "drawProb": 0.15959376288339794,
+      "awayWinProb": 0.18373749546604115,
+      "source": "poisson"
+    },
+    {
+      "id": "match-az:fc-twente-65-r32",
+      "date": "2026-05-03",
+      "round": 32,
+      "homeTeam": "az",
+      "awayTeam": "fc-twente-65",
+      "homeWinProb": 0.3457995980391485,
+      "drawProb": 0.23668071724221465,
+      "awayWinProb": 0.4175196847186368,
+      "source": "poisson"
+    },
+    {
+      "id": "match-sparta-rotterdam:go-ahead-eagles-r32",
+      "date": "2026-05-03",
+      "round": 32,
+      "homeTeam": "sparta-rotterdam",
+      "awayTeam": "go-ahead-eagles",
+      "homeWinProb": 0.4035513106401006,
+      "drawProb": 0.2304388116859007,
+      "awayWinProb": 0.36600987767399884,
+      "source": "poisson"
+    },
+    {
+      "id": "match-afc-ajax:fc-utrecht-r33",
+      "date": "2026-05-10",
+      "round": 33,
+      "homeTeam": "afc-ajax",
+      "awayTeam": "fc-utrecht",
+      "homeWinProb": 0.5573164270010564,
+      "drawProb": 0.21756378266851154,
+      "awayWinProb": 0.22511979033043208,
+      "source": "poisson"
+    },
+    {
+      "id": "match-sbv-excelsior:fc-volendam-r33",
+      "date": "2026-05-10",
+      "round": 33,
+      "homeTeam": "sbv-excelsior",
+      "awayTeam": "fc-volendam",
+      "homeWinProb": 0.42212421911885645,
+      "drawProb": 0.2583076173809822,
+      "awayWinProb": 0.3195681635001613,
+      "source": "poisson"
+    },
+    {
+      "id": "match-fc-groningen:nec-r33",
+      "date": "2026-05-10",
+      "round": 33,
+      "homeTeam": "fc-groningen",
+      "awayTeam": "nec",
+      "homeWinProb": 0.35585501652070073,
+      "drawProb": 0.2043333441643281,
+      "awayWinProb": 0.4398116393149711,
+      "source": "poisson"
+    },
+    {
+      "id": "match-feyenoord-rotterdam:az-r33",
+      "date": "2026-05-10",
+      "round": 33,
+      "homeTeam": "feyenoord-rotterdam",
+      "awayTeam": "az",
+      "homeWinProb": 0.679585845997021,
+      "drawProb": 0.15590887333906442,
+      "awayWinProb": 0.1645052806639145,
+      "source": "poisson"
+    },
+    {
+      "id": "match-fortuna-sittard:pec-zwolle-r33",
+      "date": "2026-05-10",
+      "round": 33,
+      "homeTeam": "fortuna-sittard",
+      "awayTeam": "pec-zwolle",
+      "homeWinProb": 0.6118611677768488,
+      "drawProb": 0.17802620140759093,
+      "awayWinProb": 0.21011263081556023,
+      "source": "poisson"
+    },
+    {
+      "id": "match-go-ahead-eagles:psv-r33",
+      "date": "2026-05-10",
+      "round": 33,
+      "homeTeam": "go-ahead-eagles",
+      "awayTeam": "psv",
+      "homeWinProb": 0.18788678036117254,
+      "drawProb": 0.16551924634243098,
+      "awayWinProb": 0.6465939732963966,
+      "source": "poisson"
+    },
+    {
+      "id": "match-nac-breda:sc-heerenveen-r33",
+      "date": "2026-05-10",
+      "round": 33,
+      "homeTeam": "nac-breda",
+      "awayTeam": "sc-heerenveen",
+      "homeWinProb": 0.34071183082018014,
+      "drawProb": 0.23752300493924638,
+      "awayWinProb": 0.42176516424057336,
+      "source": "poisson"
+    },
+    {
+      "id": "match-telstar-1963:heracles-almelo-r33",
+      "date": "2026-05-10",
+      "round": 33,
+      "homeTeam": "telstar-1963",
+      "awayTeam": "heracles-almelo",
+      "homeWinProb": 0.6712735840452465,
+      "drawProb": 0.1656507401493296,
+      "awayWinProb": 0.16307567580542395,
+      "source": "poisson"
+    },
+    {
+      "id": "match-fc-twente-65:sparta-rotterdam-r33",
+      "date": "2026-05-10",
+      "round": 33,
+      "homeTeam": "fc-twente-65",
+      "awayTeam": "sparta-rotterdam",
+      "homeWinProb": 0.7085462666585043,
+      "drawProb": 0.17403910046939564,
+      "awayWinProb": 0.11741463287210012,
+      "source": "poisson"
+    },
+    {
+      "id": "match-az:nac-breda-r34",
+      "date": "2026-05-17",
+      "round": 34,
+      "homeTeam": "az",
+      "awayTeam": "nac-breda",
+      "homeWinProb": 0.6487729233365231,
+      "drawProb": 0.19229852865443495,
+      "awayWinProb": 0.15892854800904188,
+      "source": "poisson"
+    },
+    {
+      "id": "match-fc-utrecht:fortuna-sittard-r34",
+      "date": "2026-05-17",
+      "round": 34,
+      "homeTeam": "fc-utrecht",
+      "awayTeam": "fortuna-sittard",
+      "homeWinProb": 0.6201173988766376,
+      "drawProb": 0.19143805020952276,
+      "awayWinProb": 0.18844455091383958,
+      "source": "poisson"
+    },
+    {
+      "id": "match-fc-volendam:telstar-1963-r34",
+      "date": "2026-05-17",
+      "round": 34,
+      "homeTeam": "fc-volendam",
+      "awayTeam": "telstar-1963",
+      "homeWinProb": 0.4522964178305596,
+      "drawProb": 0.24469439682907254,
+      "awayWinProb": 0.3030091853403679,
+      "source": "poisson"
+    },
+    {
+      "id": "match-heracles-almelo:fc-groningen-r34",
+      "date": "2026-05-17",
+      "round": 34,
+      "homeTeam": "heracles-almelo",
+      "awayTeam": "fc-groningen",
+      "homeWinProb": 0.2708026966956302,
+      "drawProb": 0.2072468731354433,
+      "awayWinProb": 0.5219504301689265,
+      "source": "poisson"
+    },
+    {
+      "id": "match-nec:go-ahead-eagles-r34",
+      "date": "2026-05-17",
+      "round": 34,
+      "homeTeam": "nec",
+      "awayTeam": "go-ahead-eagles",
+      "homeWinProb": 0.684760057321767,
+      "drawProb": 0.1482612305490057,
+      "awayWinProb": 0.1669787121292273,
+      "source": "poisson"
+    },
+    {
+      "id": "match-pec-zwolle:feyenoord-rotterdam-r34",
+      "date": "2026-05-17",
+      "round": 34,
+      "homeTeam": "pec-zwolle",
+      "awayTeam": "feyenoord-rotterdam",
+      "homeWinProb": 0.20998014948882107,
+      "drawProb": 0.17299344450556856,
+      "awayWinProb": 0.6170264060056104,
+      "source": "poisson"
+    },
+    {
+      "id": "match-psv:fc-twente-65-r34",
+      "date": "2026-05-17",
+      "round": 34,
+      "homeTeam": "psv",
+      "awayTeam": "fc-twente-65",
+      "homeWinProb": 0.6617219892487088,
+      "drawProb": 0.173425083633119,
+      "awayWinProb": 0.16485292711817207,
+      "source": "poisson"
+    },
+    {
+      "id": "match-sc-heerenveen:afc-ajax-r34",
+      "date": "2026-05-17",
+      "round": 34,
+      "homeTeam": "sc-heerenveen",
+      "awayTeam": "afc-ajax",
+      "homeWinProb": 0.34215230932784824,
+      "drawProb": 0.21163588770421954,
+      "awayWinProb": 0.44621180296793234,
+      "source": "poisson"
+    },
+    {
+      "id": "match-sparta-rotterdam:sbv-excelsior-r34",
+      "date": "2026-05-17",
+      "round": 34,
+      "homeTeam": "sparta-rotterdam",
+      "awayTeam": "sbv-excelsior",
+      "homeWinProb": 0.5431975236883332,
+      "drawProb": 0.22965020542276227,
+      "awayWinProb": 0.22715227088890444,
+      "source": "poisson"
+    }
+  ],
+  "fetchedAt": "2026-03-02T11:52:01.177Z",
+  "simulatedAt": "2026-03-02T11:54:32.795Z"
+}
