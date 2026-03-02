@@ -3,10 +3,10 @@
     "psv": {
       "teamId": "psv",
       "teamName": "PSV",
-      "totalChampionshipProbability": 1,
+      "totalChampionshipProbability": 0.99994,
       "dateProbabilities": [
         {
-          "date": "2026-03-06",
+          "date": "2026-03-07",
           "round": 26,
           "probability": 0,
           "cumulativeProbability": 0,
@@ -14,83 +14,83 @@
           "isHome": true
         },
         {
-          "date": "2026-03-13",
+          "date": "2026-03-14",
           "round": 27,
-          "probability": 0.0306,
-          "cumulativeProbability": 0.0306,
+          "probability": 0.02906,
+          "cumulativeProbability": 0.02906,
           "opponent": "nec",
           "isHome": true
         },
         {
-          "date": "2026-03-20",
+          "date": "2026-03-22",
           "round": 28,
-          "probability": 0.4251,
-          "cumulativeProbability": 0.4557,
+          "probability": 0.42504,
+          "cumulativeProbability": 0.45409999999999995,
           "opponent": "telstar-1963",
           "isHome": false
         },
         {
           "date": "2026-04-04",
           "round": 29,
-          "probability": 0.3613,
-          "cumulativeProbability": 0.817,
+          "probability": 0.36396,
+          "cumulativeProbability": 0.81806,
           "opponent": "fc-utrecht",
           "isHome": true
         },
         {
-          "date": "2026-04-10",
+          "date": "2026-04-11",
           "round": 30,
-          "probability": 0.15406,
-          "cumulativeProbability": 0.9710599999999999,
+          "probability": 0.15256,
+          "cumulativeProbability": 0.97062,
           "opponent": "sparta-rotterdam",
           "isHome": false
         },
         {
-          "date": "2026-04-22",
+          "date": "2026-04-23",
           "round": 31,
-          "probability": 0.02532,
-          "cumulativeProbability": 0.9963799999999999,
+          "probability": 0.02624,
+          "cumulativeProbability": 0.9968600000000001,
           "opponent": "pec-zwolle",
           "isHome": true
         },
         {
           "date": "2026-05-02",
           "round": 32,
-          "probability": 0.003,
-          "cumulativeProbability": 0.9993799999999999,
+          "probability": 0.00234,
+          "cumulativeProbability": 0.9992000000000001,
           "opponent": "afc-ajax",
           "isHome": false
         },
         {
           "date": "2026-05-10",
           "round": 33,
-          "probability": 0.00048,
-          "cumulativeProbability": 0.99986,
+          "probability": 0.00058,
+          "cumulativeProbability": 0.9997800000000001,
           "opponent": "go-ahead-eagles",
           "isHome": false
         },
         {
           "date": "2026-05-17",
           "round": 34,
-          "probability": 0.00014,
-          "cumulativeProbability": 1,
+          "probability": 0.00016,
+          "cumulativeProbability": 0.9999400000000002,
           "opponent": "fc-twente-65",
           "isHome": true
         }
       ],
-      "bestCaseDate": "2026-03-20",
+      "bestCaseDate": "2026-03-22",
       "bestCaseRound": 28,
-      "expectedDate": "2026-03-20",
-      "neverChampionProbability": 0,
-      "neverChampionCount": 0
+      "expectedDate": "2026-03-22",
+      "neverChampionProbability": 0.00006,
+      "neverChampionCount": 3
     },
     "feyenoord-rotterdam": {
       "teamId": "feyenoord-rotterdam",
       "teamName": "Feyenoord Rotterdam",
-      "totalChampionshipProbability": 0,
+      "totalChampionshipProbability": 0.00002,
       "dateProbabilities": [
         {
-          "date": "2026-03-06",
+          "date": "2026-03-08",
           "round": 26,
           "probability": 0,
           "cumulativeProbability": 0,
@@ -98,7 +98,7 @@
           "isHome": false
         },
         {
-          "date": "2026-03-13",
+          "date": "2026-03-15",
           "round": 27,
           "probability": 0,
           "cumulativeProbability": 0,
@@ -106,7 +106,7 @@
           "isHome": true
         },
         {
-          "date": "2026-03-20",
+          "date": "2026-03-22",
           "round": 28,
           "probability": 0,
           "cumulativeProbability": 0,
@@ -114,7 +114,7 @@
           "isHome": true
         },
         {
-          "date": "2026-04-04",
+          "date": "2026-04-05",
           "round": 29,
           "probability": 0,
           "cumulativeProbability": 0,
@@ -122,7 +122,7 @@
           "isHome": false
         },
         {
-          "date": "2026-04-10",
+          "date": "2026-04-12",
           "round": 30,
           "probability": 0,
           "cumulativeProbability": 0,
@@ -130,7 +130,7 @@
           "isHome": false
         },
         {
-          "date": "2026-04-22",
+          "date": "2026-04-23",
           "round": 31,
           "probability": 0,
           "cumulativeProbability": 0,
@@ -138,7 +138,7 @@
           "isHome": true
         },
         {
-          "date": "2026-05-02",
+          "date": "2026-05-03",
           "round": 32,
           "probability": 0,
           "cumulativeProbability": 0,
@@ -156,17 +156,17 @@
         {
           "date": "2026-05-17",
           "round": 34,
-          "probability": 0,
-          "cumulativeProbability": 0,
+          "probability": 0.00002,
+          "cumulativeProbability": 0.00002,
           "opponent": "pec-zwolle",
           "isHome": false
         }
       ],
       "bestCaseDate": "2026-05-17",
       "bestCaseRound": 34,
-      "expectedDate": null,
-      "neverChampionProbability": 1,
-      "neverChampionCount": 50000
+      "expectedDate": "2026-05-17",
+      "neverChampionProbability": 0.99998,
+      "neverChampionCount": 49999
     },
     "afc-ajax": {
       "teamId": "afc-ajax",
@@ -174,7 +174,7 @@
       "totalChampionshipProbability": 0,
       "dateProbabilities": [
         {
-          "date": "2026-03-06",
+          "date": "2026-03-07",
           "round": 26,
           "probability": 0,
           "cumulativeProbability": 0,
@@ -182,7 +182,7 @@
           "isHome": false
         },
         {
-          "date": "2026-03-13",
+          "date": "2026-03-14",
           "round": 27,
           "probability": 0,
           "cumulativeProbability": 0,
@@ -190,7 +190,7 @@
           "isHome": true
         },
         {
-          "date": "2026-03-20",
+          "date": "2026-03-22",
           "round": 28,
           "probability": 0,
           "cumulativeProbability": 0,
@@ -206,7 +206,7 @@
           "isHome": true
         },
         {
-          "date": "2026-04-10",
+          "date": "2026-04-11",
           "round": 30,
           "probability": 0,
           "cumulativeProbability": 0,
@@ -214,7 +214,7 @@
           "isHome": false
         },
         {
-          "date": "2026-04-22",
+          "date": "2026-04-23",
           "round": 31,
           "probability": 0,
           "cumulativeProbability": 0,
@@ -258,7 +258,7 @@
       "totalChampionshipProbability": 0,
       "dateProbabilities": [
         {
-          "date": "2026-03-06",
+          "date": "2026-03-08",
           "round": 26,
           "probability": 0,
           "cumulativeProbability": 0,
@@ -266,7 +266,7 @@
           "isHome": true
         },
         {
-          "date": "2026-03-13",
+          "date": "2026-03-14",
           "round": 27,
           "probability": 0,
           "cumulativeProbability": 0,
@@ -274,7 +274,7 @@
           "isHome": false
         },
         {
-          "date": "2026-03-20",
+          "date": "2026-03-22",
           "round": 28,
           "probability": 0,
           "cumulativeProbability": 0,
@@ -290,7 +290,7 @@
           "isHome": false
         },
         {
-          "date": "2026-04-10",
+          "date": "2026-04-12",
           "round": 30,
           "probability": 0,
           "cumulativeProbability": 0,
@@ -298,7 +298,7 @@
           "isHome": true
         },
         {
-          "date": "2026-04-22",
+          "date": "2026-04-23",
           "round": 31,
           "probability": 0,
           "cumulativeProbability": 0,
@@ -342,7 +342,7 @@
       "totalChampionshipProbability": 0,
       "dateProbabilities": [
         {
-          "date": "2026-03-06",
+          "date": "2026-03-08",
           "round": 26,
           "probability": 0,
           "cumulativeProbability": 0,
@@ -350,7 +350,7 @@
           "isHome": false
         },
         {
-          "date": "2026-03-13",
+          "date": "2026-03-15",
           "round": 27,
           "probability": 0,
           "cumulativeProbability": 0,
@@ -358,7 +358,7 @@
           "isHome": true
         },
         {
-          "date": "2026-03-20",
+          "date": "2026-03-21",
           "round": 28,
           "probability": 0,
           "cumulativeProbability": 0,
@@ -382,7 +382,7 @@
           "isHome": true
         },
         {
-          "date": "2026-04-22",
+          "date": "2026-04-23",
           "round": 31,
           "probability": 0,
           "cumulativeProbability": 0,
@@ -390,7 +390,7 @@
           "isHome": true
         },
         {
-          "date": "2026-05-02",
+          "date": "2026-05-03",
           "round": 32,
           "probability": 0,
           "cumulativeProbability": 0,
@@ -426,7 +426,7 @@
       "totalChampionshipProbability": 0,
       "dateProbabilities": [
         {
-          "date": "2026-03-06",
+          "date": "2026-03-07",
           "round": 26,
           "probability": 0,
           "cumulativeProbability": 0,
@@ -434,7 +434,7 @@
           "isHome": false
         },
         {
-          "date": "2026-03-13",
+          "date": "2026-03-15",
           "round": 27,
           "probability": 0,
           "cumulativeProbability": 0,
@@ -442,7 +442,7 @@
           "isHome": true
         },
         {
-          "date": "2026-03-20",
+          "date": "2026-03-22",
           "round": 28,
           "probability": 0,
           "cumulativeProbability": 0,
@@ -458,7 +458,7 @@
           "isHome": true
         },
         {
-          "date": "2026-04-10",
+          "date": "2026-04-12",
           "round": 30,
           "probability": 0,
           "cumulativeProbability": 0,
@@ -466,7 +466,7 @@
           "isHome": true
         },
         {
-          "date": "2026-04-22",
+          "date": "2026-04-23",
           "round": 31,
           "probability": 0,
           "cumulativeProbability": 0,
@@ -474,7 +474,7 @@
           "isHome": false
         },
         {
-          "date": "2026-05-02",
+          "date": "2026-05-03",
           "round": 32,
           "probability": 0,
           "cumulativeProbability": 0,
@@ -510,7 +510,7 @@
       "totalChampionshipProbability": 0,
       "dateProbabilities": [
         {
-          "date": "2026-03-06",
+          "date": "2026-03-08",
           "round": 26,
           "probability": 0,
           "cumulativeProbability": 0,
@@ -518,7 +518,7 @@
           "isHome": true
         },
         {
-          "date": "2026-03-13",
+          "date": "2026-03-14",
           "round": 27,
           "probability": 0,
           "cumulativeProbability": 0,
@@ -526,7 +526,7 @@
           "isHome": false
         },
         {
-          "date": "2026-03-20",
+          "date": "2026-03-21",
           "round": 28,
           "probability": 0,
           "cumulativeProbability": 0,
@@ -534,7 +534,7 @@
           "isHome": true
         },
         {
-          "date": "2026-04-04",
+          "date": "2026-04-05",
           "round": 29,
           "probability": 0,
           "cumulativeProbability": 0,
@@ -542,7 +542,7 @@
           "isHome": false
         },
         {
-          "date": "2026-04-10",
+          "date": "2026-04-11",
           "round": 30,
           "probability": 0,
           "cumulativeProbability": 0,
@@ -558,7 +558,7 @@
           "isHome": false
         },
         {
-          "date": "2026-05-02",
+          "date": "2026-05-03",
           "round": 32,
           "probability": 0,
           "cumulativeProbability": 0,
@@ -602,7 +602,7 @@
           "isHome": false
         },
         {
-          "date": "2026-03-13",
+          "date": "2026-03-15",
           "round": 27,
           "probability": 0,
           "cumulativeProbability": 0,
@@ -610,7 +610,7 @@
           "isHome": false
         },
         {
-          "date": "2026-03-20",
+          "date": "2026-03-22",
           "round": 28,
           "probability": 0,
           "cumulativeProbability": 0,
@@ -626,7 +626,7 @@
           "isHome": false
         },
         {
-          "date": "2026-04-10",
+          "date": "2026-04-11",
           "round": 30,
           "probability": 0,
           "cumulativeProbability": 0,
@@ -634,7 +634,7 @@
           "isHome": true
         },
         {
-          "date": "2026-04-22",
+          "date": "2026-04-23",
           "round": 31,
           "probability": 0,
           "cumulativeProbability": 0,
@@ -678,7 +678,7 @@
       "totalChampionshipProbability": 0,
       "dateProbabilities": [
         {
-          "date": "2026-03-06",
+          "date": "2026-03-07",
           "round": 26,
           "probability": 0,
           "cumulativeProbability": 0,
@@ -686,7 +686,7 @@
           "isHome": false
         },
         {
-          "date": "2026-03-13",
+          "date": "2026-03-14",
           "round": 27,
           "probability": 0,
           "cumulativeProbability": 0,
@@ -694,7 +694,7 @@
           "isHome": true
         },
         {
-          "date": "2026-03-20",
+          "date": "2026-03-22",
           "round": 28,
           "probability": 0,
           "cumulativeProbability": 0,
@@ -702,7 +702,7 @@
           "isHome": false
         },
         {
-          "date": "2026-04-04",
+          "date": "2026-04-05",
           "round": 29,
           "probability": 0,
           "cumulativeProbability": 0,
@@ -710,7 +710,7 @@
           "isHome": true
         },
         {
-          "date": "2026-04-10",
+          "date": "2026-04-12",
           "round": 30,
           "probability": 0,
           "cumulativeProbability": 0,
@@ -718,7 +718,7 @@
           "isHome": false
         },
         {
-          "date": "2026-04-22",
+          "date": "2026-04-23",
           "round": 31,
           "probability": 0,
           "cumulativeProbability": 0,
@@ -726,7 +726,7 @@
           "isHome": true
         },
         {
-          "date": "2026-05-02",
+          "date": "2026-05-03",
           "round": 32,
           "probability": 0,
           "cumulativeProbability": 0,
@@ -762,7 +762,7 @@
       "totalChampionshipProbability": 0,
       "dateProbabilities": [
         {
-          "date": "2026-03-06",
+          "date": "2026-03-08",
           "round": 26,
           "probability": 0,
           "cumulativeProbability": 0,
@@ -770,7 +770,7 @@
           "isHome": true
         },
         {
-          "date": "2026-03-13",
+          "date": "2026-03-14",
           "round": 27,
           "probability": 0,
           "cumulativeProbability": 0,
@@ -778,7 +778,7 @@
           "isHome": false
         },
         {
-          "date": "2026-03-20",
+          "date": "2026-03-21",
           "round": 28,
           "probability": 0,
           "cumulativeProbability": 0,
@@ -794,7 +794,7 @@
           "isHome": false
         },
         {
-          "date": "2026-04-10",
+          "date": "2026-04-12",
           "round": 30,
           "probability": 0,
           "cumulativeProbability": 0,
@@ -802,7 +802,7 @@
           "isHome": true
         },
         {
-          "date": "2026-04-22",
+          "date": "2026-04-23",
           "round": 31,
           "probability": 0,
           "cumulativeProbability": 0,
@@ -810,7 +810,7 @@
           "isHome": false
         },
         {
-          "date": "2026-05-02",
+          "date": "2026-05-03",
           "round": 32,
           "probability": 0,
           "cumulativeProbability": 0,
@@ -846,7 +846,7 @@
       "totalChampionshipProbability": 0,
       "dateProbabilities": [
         {
-          "date": "2026-03-06",
+          "date": "2026-03-07",
           "round": 26,
           "probability": 0,
           "cumulativeProbability": 0,
@@ -862,7 +862,7 @@
           "isHome": false
         },
         {
-          "date": "2026-03-20",
+          "date": "2026-03-22",
           "round": 28,
           "probability": 0,
           "cumulativeProbability": 0,
@@ -878,7 +878,7 @@
           "isHome": false
         },
         {
-          "date": "2026-04-10",
+          "date": "2026-04-11",
           "round": 30,
           "probability": 0,
           "cumulativeProbability": 0,
@@ -886,7 +886,7 @@
           "isHome": true
         },
         {
-          "date": "2026-04-22",
+          "date": "2026-04-23",
           "round": 31,
           "probability": 0,
           "cumulativeProbability": 0,
@@ -930,7 +930,7 @@
       "totalChampionshipProbability": 0,
       "dateProbabilities": [
         {
-          "date": "2026-03-06",
+          "date": "2026-03-08",
           "round": 26,
           "probability": 0,
           "cumulativeProbability": 0,
@@ -938,7 +938,7 @@
           "isHome": true
         },
         {
-          "date": "2026-03-13",
+          "date": "2026-03-15",
           "round": 27,
           "probability": 0,
           "cumulativeProbability": 0,
@@ -946,7 +946,7 @@
           "isHome": true
         },
         {
-          "date": "2026-03-20",
+          "date": "2026-03-22",
           "round": 28,
           "probability": 0,
           "cumulativeProbability": 0,
@@ -954,7 +954,7 @@
           "isHome": false
         },
         {
-          "date": "2026-04-04",
+          "date": "2026-04-05",
           "round": 29,
           "probability": 0,
           "cumulativeProbability": 0,
@@ -962,7 +962,7 @@
           "isHome": true
         },
         {
-          "date": "2026-04-10",
+          "date": "2026-04-11",
           "round": 30,
           "probability": 0,
           "cumulativeProbability": 0,
@@ -970,7 +970,7 @@
           "isHome": false
         },
         {
-          "date": "2026-04-22",
+          "date": "2026-04-23",
           "round": 31,
           "probability": 0,
           "cumulativeProbability": 0,
@@ -978,7 +978,7 @@
           "isHome": true
         },
         {
-          "date": "2026-05-02",
+          "date": "2026-05-03",
           "round": 32,
           "probability": 0,
           "cumulativeProbability": 0,
@@ -1014,7 +1014,7 @@
       "totalChampionshipProbability": 0,
       "dateProbabilities": [
         {
-          "date": "2026-03-06",
+          "date": "2026-03-08",
           "round": 26,
           "probability": 0,
           "cumulativeProbability": 0,
@@ -1030,7 +1030,7 @@
           "isHome": true
         },
         {
-          "date": "2026-03-20",
+          "date": "2026-03-21",
           "round": 28,
           "probability": 0,
           "cumulativeProbability": 0,
@@ -1038,7 +1038,7 @@
           "isHome": true
         },
         {
-          "date": "2026-04-04",
+          "date": "2026-04-05",
           "round": 29,
           "probability": 0,
           "cumulativeProbability": 0,
@@ -1046,7 +1046,7 @@
           "isHome": false
         },
         {
-          "date": "2026-04-10",
+          "date": "2026-04-12",
           "round": 30,
           "probability": 0,
           "cumulativeProbability": 0,
@@ -1054,7 +1054,7 @@
           "isHome": true
         },
         {
-          "date": "2026-04-22",
+          "date": "2026-04-23",
           "round": 31,
           "probability": 0,
           "cumulativeProbability": 0,
@@ -1062,7 +1062,7 @@
           "isHome": false
         },
         {
-          "date": "2026-05-02",
+          "date": "2026-05-03",
           "round": 32,
           "probability": 0,
           "cumulativeProbability": 0,
@@ -1098,7 +1098,7 @@
       "totalChampionshipProbability": 0,
       "dateProbabilities": [
         {
-          "date": "2026-03-06",
+          "date": "2026-03-08",
           "round": 26,
           "probability": 0,
           "cumulativeProbability": 0,
@@ -1106,7 +1106,7 @@
           "isHome": false
         },
         {
-          "date": "2026-03-13",
+          "date": "2026-03-14",
           "round": 27,
           "probability": 0,
           "cumulativeProbability": 0,
@@ -1114,7 +1114,7 @@
           "isHome": true
         },
         {
-          "date": "2026-03-20",
+          "date": "2026-03-21",
           "round": 28,
           "probability": 0,
           "cumulativeProbability": 0,
@@ -1122,7 +1122,7 @@
           "isHome": false
         },
         {
-          "date": "2026-04-04",
+          "date": "2026-04-05",
           "round": 29,
           "probability": 0,
           "cumulativeProbability": 0,
@@ -1138,7 +1138,7 @@
           "isHome": false
         },
         {
-          "date": "2026-04-22",
+          "date": "2026-04-23",
           "round": 31,
           "probability": 0,
           "cumulativeProbability": 0,
@@ -1146,7 +1146,7 @@
           "isHome": false
         },
         {
-          "date": "2026-05-02",
+          "date": "2026-05-03",
           "round": 32,
           "probability": 0,
           "cumulativeProbability": 0,
@@ -1182,7 +1182,7 @@
       "totalChampionshipProbability": 0,
       "dateProbabilities": [
         {
-          "date": "2026-03-06",
+          "date": "2026-03-07",
           "round": 26,
           "probability": 0,
           "cumulativeProbability": 0,
@@ -1190,7 +1190,7 @@
           "isHome": true
         },
         {
-          "date": "2026-03-13",
+          "date": "2026-03-15",
           "round": 27,
           "probability": 0,
           "cumulativeProbability": 0,
@@ -1214,7 +1214,7 @@
           "isHome": true
         },
         {
-          "date": "2026-04-10",
+          "date": "2026-04-12",
           "round": 30,
           "probability": 0,
           "cumulativeProbability": 0,
@@ -1222,7 +1222,7 @@
           "isHome": false
         },
         {
-          "date": "2026-04-22",
+          "date": "2026-04-23",
           "round": 31,
           "probability": 0,
           "cumulativeProbability": 0,
@@ -1266,7 +1266,7 @@
       "totalChampionshipProbability": 0,
       "dateProbabilities": [
         {
-          "date": "2026-03-06",
+          "date": "2026-03-08",
           "round": 26,
           "probability": 0,
           "cumulativeProbability": 0,
@@ -1274,7 +1274,7 @@
           "isHome": true
         },
         {
-          "date": "2026-03-13",
+          "date": "2026-03-15",
           "round": 27,
           "probability": 0,
           "cumulativeProbability": 0,
@@ -1282,7 +1282,7 @@
           "isHome": false
         },
         {
-          "date": "2026-03-20",
+          "date": "2026-03-21",
           "round": 28,
           "probability": 0,
           "cumulativeProbability": 0,
@@ -1290,7 +1290,7 @@
           "isHome": false
         },
         {
-          "date": "2026-04-04",
+          "date": "2026-04-05",
           "round": 29,
           "probability": 0,
           "cumulativeProbability": 0,
@@ -1298,7 +1298,7 @@
           "isHome": true
         },
         {
-          "date": "2026-04-10",
+          "date": "2026-04-12",
           "round": 30,
           "probability": 0,
           "cumulativeProbability": 0,
@@ -1306,7 +1306,7 @@
           "isHome": false
         },
         {
-          "date": "2026-04-22",
+          "date": "2026-04-23",
           "round": 31,
           "probability": 0,
           "cumulativeProbability": 0,
@@ -1350,7 +1350,7 @@
       "totalChampionshipProbability": 0,
       "dateProbabilities": [
         {
-          "date": "2026-03-06",
+          "date": "2026-03-08",
           "round": 26,
           "probability": 0,
           "cumulativeProbability": 0,
@@ -1358,7 +1358,7 @@
           "isHome": false
         },
         {
-          "date": "2026-03-13",
+          "date": "2026-03-14",
           "round": 27,
           "probability": 0,
           "cumulativeProbability": 0,
@@ -1366,7 +1366,7 @@
           "isHome": false
         },
         {
-          "date": "2026-03-20",
+          "date": "2026-03-22",
           "round": 28,
           "probability": 0,
           "cumulativeProbability": 0,
@@ -1382,7 +1382,7 @@
           "isHome": true
         },
         {
-          "date": "2026-04-10",
+          "date": "2026-04-11",
           "round": 30,
           "probability": 0,
           "cumulativeProbability": 0,
@@ -1442,7 +1442,7 @@
           "isHome": true
         },
         {
-          "date": "2026-03-13",
+          "date": "2026-03-15",
           "round": 27,
           "probability": 0,
           "cumulativeProbability": 0,
@@ -1458,7 +1458,7 @@
           "isHome": true
         },
         {
-          "date": "2026-04-04",
+          "date": "2026-04-05",
           "round": 29,
           "probability": 0,
           "cumulativeProbability": 0,
@@ -1466,7 +1466,7 @@
           "isHome": false
         },
         {
-          "date": "2026-04-10",
+          "date": "2026-04-11",
           "round": 30,
           "probability": 0,
           "cumulativeProbability": 0,
@@ -1474,7 +1474,7 @@
           "isHome": true
         },
         {
-          "date": "2026-04-22",
+          "date": "2026-04-23",
           "round": 31,
           "probability": 0,
           "cumulativeProbability": 0,
@@ -1482,7 +1482,7 @@
           "isHome": true
         },
         {
-          "date": "2026-05-02",
+          "date": "2026-05-03",
           "round": 32,
           "probability": 0,
           "cumulativeProbability": 0,
@@ -1557,7 +1557,51 @@
         }
       ],
       "iterations": 50000,
-      "neverChampionCount": 0
+      "neverChampionCount": 3
+    },
+    "feyenoord-rotterdam": {
+      "clubPoints": 48,
+      "clubPlayed": 25,
+      "clubRemaining": 9,
+      "rivals": [
+        {
+          "name": "PSV",
+          "points": 65,
+          "maxPoints": 92,
+          "gap": -17,
+          "winAllProb": 0.047672316491926006
+        },
+        {
+          "name": "AFC Ajax",
+          "points": 44,
+          "maxPoints": 71,
+          "gap": 4,
+          "winAllProb": 0.00075942506988106
+        },
+        {
+          "name": "NEC",
+          "points": 43,
+          "maxPoints": 70,
+          "gap": 5,
+          "winAllProb": 0.0010900397421211452
+        },
+        {
+          "name": "FC Twente '65",
+          "points": 41,
+          "maxPoints": 68,
+          "gap": 7,
+          "winAllProb": 0.0006642046495573618
+        },
+        {
+          "name": "AZ",
+          "points": 39,
+          "maxPoints": 66,
+          "gap": 9,
+          "winAllProb": 0.00006946459731861647
+        }
+      ],
+      "iterations": 50000,
+      "neverChampionCount": 49999
     }
   },
   "teams": [
@@ -2672,5 +2716,5 @@
     }
   ],
   "fetchedAt": "2026-03-02T11:52:01.177Z",
-  "simulatedAt": "2026-03-02T15:36:02.620Z"
+  "simulatedAt": "2026-03-02T15:41:07.497Z"
 }

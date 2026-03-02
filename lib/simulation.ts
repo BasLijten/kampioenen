@@ -70,12 +70,18 @@ export function runSimulation(
 ): LeagueSimulationResult {
   const rounds = [...new Set(remainingFixtures.map((f) => f.round))].sort((a, b) => a - b);
 
-  // Build round dates per team: for each team, find its fixture in each round
-  const roundDates: Record<number, string> = {};
-  rounds.forEach((r) => {
-    const fix = remainingFixtures.find((f) => f.round === r);
-    if (fix) roundDates[r] = fix.date;
-  });
+  // Group fixtures by date (sorted), so we can check clinch after each match day
+  const allDates = [...new Set(remainingFixtures.map((f) => f.date))].sort();
+  const fixturesByDate: Record<string, Fixture[]> = {};
+  for (const date of allDates) {
+    fixturesByDate[date] = remainingFixtures.filter((f) => f.date === date);
+  }
+
+  // Map each date to its round
+  const dateToRound: Record<string, number> = {};
+  for (const f of remainingFixtures) {
+    dateToRound[f.date] = f.round;
+  }
 
   // Track championship counts per team per date
   const championshipCounts: Record<string, Record<string, number>> = {};
@@ -91,14 +97,12 @@ export function runSimulation(
       state[t.id] = { points: t.points, played: t.played };
     });
 
-    // Track which round each team clinched the championship
-    const championRound: Record<string, number | null> = {};
-    teams.forEach((t) => { championRound[t.id] = null; });
+    // Track which date each team clinched the championship
+    const championDate: Record<string, string | null> = {};
+    teams.forEach((t) => { championDate[t.id] = null; });
 
-    for (const round of rounds) {
-      const fixtures = remainingFixtures.filter((f) => f.round === round);
-
-      for (const fixture of fixtures) {
+    for (const date of allDates) {
+      for (const fixture of fixturesByDate[date]) {
         const result = simulateMatch(fixture.homeWinProb, fixture.drawProb);
         if (result === "home") {
           state[fixture.homeTeam].points += 3;
@@ -112,18 +116,18 @@ export function runSimulation(
         state[fixture.awayTeam].played += 1;
       }
 
-      // After this round, check every team that hasn't clinched yet
+      // After this date's matches, check every team that hasn't clinched yet
       for (const team of teams) {
-        if (championRound[team.id] === null && isChampion(team.id, state, teams, totalRounds)) {
-          championRound[team.id] = round;
+        if (championDate[team.id] === null && isChampion(team.id, state, teams, totalRounds)) {
+          championDate[team.id] = date;
         }
       }
     }
 
     // Record results
     for (const team of teams) {
-      if (championRound[team.id] !== null) {
-        const date = roundDates[championRound[team.id]!];
+      if (championDate[team.id] !== null) {
+        const date = championDate[team.id]!;
         championshipCounts[team.id][date] = (championshipCounts[team.id][date] || 0) + 1;
       } else {
         neverChampion[team.id]++;
@@ -138,18 +142,14 @@ export function runSimulation(
     const totalChampion = iterations - neverChampion[team.id];
     const totalProb = totalChampion / iterations;
 
-    // Build date probabilities for this team
+    // Build date probabilities per round (using team's own fixture date per round)
     let cumulative = 0;
     const dateProbabilities: DateProbability[] = rounds.map((round) => {
-      const date = roundDates[round];
-      const count = championshipCounts[team.id][date] || 0;
-      const prob = count / iterations;
-      cumulative += prob;
-
       // Find this team's fixture in the round
       const teamFixture = remainingFixtures.find(
         (f) => f.round === round && (f.homeTeam === team.id || f.awayTeam === team.id)
       );
+      const teamDate = teamFixture?.date;
       const opponent = teamFixture
         ? teamFixture.homeTeam === team.id
           ? teamFixture.awayTeam
@@ -157,18 +157,29 @@ export function runSimulation(
         : "vrij";
       const isHome = teamFixture ? teamFixture.homeTeam === team.id : false;
 
-      return { date, round, probability: prob, cumulativeProbability: cumulative, opponent, isHome };
+      // Sum clinch counts for all dates within this round
+      const roundFixtureDates = [...new Set(
+        remainingFixtures.filter((f) => f.round === round).map((f) => f.date)
+      )];
+      let count = 0;
+      for (const d of roundFixtureDates) {
+        count += championshipCounts[team.id][d] || 0;
+      }
+      const prob = count / iterations;
+      cumulative += prob;
+
+      return { date: teamDate || roundFixtureDates[0], round, probability: prob, cumulativeProbability: cumulative, opponent, isHome };
     });
 
-    // Best case: this team wins all, rivals lose all non-team matches
+    // Best case: this team wins all, rivals draw all non-team matches
+    // Check after each date (team can clinch when rivals play before them)
     let bestCaseDate: string | null = null;
     let bestCaseRound: number | null = null;
     const bestState: TeamState = {};
     teams.forEach((t) => { bestState[t.id] = { points: t.points, played: t.played }; });
 
-    for (const round of rounds) {
-      const fixtures = remainingFixtures.filter((f) => f.round === round);
-      for (const fixture of fixtures) {
+    for (const date of allDates) {
+      for (const fixture of fixturesByDate[date]) {
         const isTeamFixture = fixture.homeTeam === team.id || fixture.awayTeam === team.id;
         if (isTeamFixture) {
           // Team wins
@@ -182,8 +193,8 @@ export function runSimulation(
         bestState[fixture.awayTeam].played += 1;
       }
       if (bestCaseRound === null && isChampion(team.id, bestState, teams, totalRounds)) {
-        bestCaseRound = round;
-        bestCaseDate = roundDates[round];
+        bestCaseRound = dateToRound[date];
+        bestCaseDate = date;
       }
     }
 
