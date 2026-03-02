@@ -1,12 +1,35 @@
 "use client";
 
-export default function Footer({ simulatedAt }: { simulatedAt: string }) {
-  const date = new Date(simulatedAt).toLocaleString("nl-NL", {
+import type { ClubConfig } from "@/config/clubs";
+import type { LeagueClientConfig } from "@/config/env";
+import type { LocaleStrings } from "@/config/locales/nl";
+import { formatTemplate } from "@/config/env";
+
+export default function Footer({
+  simulatedAt,
+  club,
+  league,
+  texts,
+}: {
+  simulatedAt: string;
+  club: ClubConfig;
+  league: LeagueClientConfig;
+  texts: LocaleStrings;
+}) {
+  const date = new Date(simulatedAt).toLocaleString(league.locale, {
     day: "numeric",
     month: "long",
     hour: "2-digit",
     minute: "2-digit",
   });
+
+  const templateVars = {
+    clubName: club.name,
+    clubShortName: club.shortName,
+    leagueName: league.name,
+    season: league.season,
+    date,
+  };
 
   return (
     <footer
@@ -26,7 +49,7 @@ export default function Footer({ simulatedAt }: { simulatedAt: string }) {
           color: "#333",
         }}
       >
-        PSV Kampioen Countdown · Monte Carlo simulatie · 50.000 iteraties
+        {formatTemplate(texts.footerText, templateVars)}
       </p>
       <p
         style={{
@@ -35,7 +58,7 @@ export default function Footer({ simulatedAt }: { simulatedAt: string }) {
           color: "#2a2a2a",
         }}
       >
-        Kansen zijn indicatief · Gegenereerd op {date}
+        {formatTemplate(texts.footerDisclaimer, templateVars)}
       </p>
     </footer>
   );

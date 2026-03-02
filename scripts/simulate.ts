@@ -1,23 +1,42 @@
 /**
  * npm run simulate
  *
- * Leest data/eredivisie.json, voert de Monte Carlo simulatie uit (50.000
- * iteraties) en slaat het resultaat op als data/simulation-result.json.
+ * Leest data/{league}/standings.json, voert de Monte Carlo simulatie uit
+ * (50.000 iteraties) en slaat het resultaat op als data/{league}/simulation-results.json.
  *
- * Als data/eredivisie.json niet bestaat, wordt de ingebakken static data
- * uit lib/data.ts als fallback gebruikt zodat `npm run build` altijd werkt.
+ * Als het standings bestand niet bestaat en de league is eredivisie, wordt de
+ * ingebakken fallback data gebruikt zodat `npm run build` altijd werkt.
  */
 
 import { writeFileSync, readFileSync, mkdirSync } from "fs";
 import { join } from "path";
 import { runSimulation } from "../lib/simulation";
-import { teams as staticTeams, remainingFixtures as staticFixtures, Team, Fixture } from "../lib/data";
+import { Team, Fixture } from "../lib/data";
+import { resolveLeague } from "../config/env";
+
+// Laad .env.local handmatig (tsx heeft geen Next.js env-loading)
+function loadEnv() {
+  try {
+    const content = readFileSync(join(process.cwd(), ".env.local"), "utf-8");
+    for (const line of content.split("\n")) {
+      const trimmed = line.replace(/\r$/, "");
+      const match = trimmed.match(/^([A-Z_][A-Z0-9_]*)=(.+)$/);
+      if (match && !process.env[match[1]]) {
+        process.env[match[1]] = match[2].trim();
+      }
+    }
+  } catch {
+    // .env.local bestaat niet
+  }
+}
+
+loadEnv();
 
 const ITERATIONS = 50_000;
 
-function loadEredivisieData(): { teams: Team[]; fixtures: Fixture[]; fetchedAt: string | null } {
+function loadLeagueData(dataDir: string, leagueId: string): { teams: Team[]; fixtures: Fixture[]; fetchedAt: string | null } {
   try {
-    const raw = readFileSync(join(process.cwd(), "data/eredivisie.json"), "utf-8");
+    const raw = readFileSync(join(process.cwd(), dataDir, "standings.json"), "utf-8");
     const parsed = JSON.parse(raw);
     return {
       teams: parsed.teams as Team[],
@@ -25,63 +44,87 @@ function loadEredivisieData(): { teams: Team[]; fixtures: Fixture[]; fetchedAt: 
       fetchedAt: parsed.fetchedAt ?? null,
     };
   } catch {
-    console.warn("⚠️   data/eredivisie.json niet gevonden — static data wordt gebruikt als fallback");
-    console.warn("     Draai `npm run fetch-data` voor live data.");
-    return { teams: staticTeams, fixtures: staticFixtures, fetchedAt: null };
+    if (leagueId === "eredivisie") {
+      console.warn("standings.json niet gevonden -- eredivisie fallback data wordt gebruikt");
+      console.warn("     Draai `npm run fetch-data` voor live data.");
+      // Dynamic import to avoid bundling fallback when not needed
+      const { fallbackTeams, fallbackFixtures } = require("../config/fallback/eredivisie");
+      return { teams: fallbackTeams, fixtures: fallbackFixtures, fetchedAt: null };
+    }
+    throw new Error(`${dataDir}/standings.json niet gevonden. Draai eerst \`npm run fetch-data\`.`);
   }
 }
 
 function main() {
-  const { teams, fixtures, fetchedAt } = loadEredivisieData();
+  const league = resolveLeague();
+  const { teams, fixtures, fetchedAt } = loadLeagueData(league.dataDir, league.id);
 
-  console.log(`🎲  Monte Carlo simulatie (${ITERATIONS.toLocaleString()} iteraties)...`);
+  console.log(`League: ${league.name} (${league.id})`);
+  console.log(`Monte Carlo simulatie (${ITERATIONS.toLocaleString()} iteraties)...`);
   console.log(`   ${teams.length} teams, ${fixtures.length} resterende wedstrijden`);
   if (fetchedAt) {
-    console.log(`   Data van: ${new Date(fetchedAt).toLocaleString("nl-NL")}`);
+    console.log(`   Data van: ${new Date(fetchedAt).toLocaleString(league.locale)}`);
   }
 
   const start = Date.now();
-  const result = runSimulation(ITERATIONS, teams, fixtures);
+  const result = runSimulation(ITERATIONS, teams, fixtures, league.totalRounds);
   const elapsed = ((Date.now() - start) / 1000).toFixed(1);
 
-  console.log(`   Klaar in ${elapsed}s — PSV kampioen in ${(result.totalChampionshipProbability * 100).toFixed(1)}% van de scenario's`);
+  // Show top clubs' championship probabilities
+  const sorted = Object.values(result.clubResults)
+    .sort((a, b) => b.totalChampionshipProbability - a.totalChampionshipProbability);
 
-  // Build explanation context
-  const psv = teams.find((t) => t.id === "psv")!;
-  const psvRemaining = 34 - psv.played;
-  const rivals = teams
-    .filter((t) => t.id !== "psv")
-    .map((t) => {
-      const teamFixtures = fixtures.filter(
-        (f) => f.homeTeam === t.id || f.awayTeam === t.id
-      );
-      const winAllProb = teamFixtures.reduce((p, f) => {
-        const winProb = f.homeTeam === t.id ? f.homeWinProb : f.awayWinProb;
-        return p * winProb;
-      }, 1);
-      return {
-        name: t.name,
-        points: t.points,
-        maxPoints: t.points + (34 - t.played) * 3,
-        gap: psv.points - t.points,
-        winAllProb,
-      };
-    })
-    .sort((a, b) => b.maxPoints - a.maxPoints)
-    .slice(0, 5);
+  console.log(`   Klaar in ${elapsed}s`);
+  console.log("   Top clubs:");
+  for (const club of sorted.slice(0, 6)) {
+    if (club.totalChampionshipProbability > 0) {
+      console.log(`     ${club.teamName}: ${(club.totalChampionshipProbability * 100).toFixed(1)}%`);
+    }
+  }
 
-  const explanation = {
-    psvPoints: psv.points,
-    psvPlayed: psv.played,
-    psvRemaining,
-    rivals,
-    iterations: result.iterations,
-    neverChampionCount: result.neverChampionCount,
-  };
+  // Build explanation per club (top contenders)
+  const explanation: Record<string, object> = {};
+  for (const club of sorted) {
+    if (club.totalChampionshipProbability <= 0) continue;
 
-  mkdirSync(join(process.cwd(), "data"), { recursive: true });
+    const team = teams.find((t) => t.id === club.teamId)!;
+    const remaining = league.totalRounds - team.played;
+    const rivals = teams
+      .filter((t) => t.id !== club.teamId)
+      .map((t) => {
+        const teamFixtures = fixtures.filter(
+          (f) => f.homeTeam === t.id || f.awayTeam === t.id
+        );
+        const winAllProb = teamFixtures.reduce((p, f) => {
+          const winProb = f.homeTeam === t.id ? f.homeWinProb : f.awayWinProb;
+          return p * winProb;
+        }, 1);
+        return {
+          name: t.name,
+          points: t.points,
+          maxPoints: t.points + (league.totalRounds - t.played) * 3,
+          gap: team.points - t.points,
+          winAllProb,
+        };
+      })
+      .sort((a, b) => b.maxPoints - a.maxPoints)
+      .slice(0, 5);
+
+    explanation[club.teamId] = {
+      clubPoints: team.points,
+      clubPlayed: team.played,
+      clubRemaining: remaining,
+      rivals,
+      iterations: result.iterations,
+      neverChampionCount: club.neverChampionCount,
+    };
+  }
+
+  const dataDir = join(process.cwd(), league.dataDir);
+  mkdirSync(dataDir, { recursive: true });
   const output = {
-    result,
+    clubResults: result.clubResults,
+    iterations: result.iterations,
     explanation,
     teams,
     fixtures,
@@ -89,10 +132,10 @@ function main() {
     simulatedAt: new Date().toISOString(),
   };
   writeFileSync(
-    join(process.cwd(), "data/simulation-result.json"),
+    join(dataDir, "simulation-results.json"),
     JSON.stringify(output, null, 2)
   );
-  console.log("✅  data/simulation-result.json opgeslagen");
+  console.log(`${league.dataDir}/simulation-results.json opgeslagen`);
 }
 
 main();

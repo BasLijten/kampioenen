@@ -1,5 +1,3 @@
-import { LEAGUE_ID } from "./api-football";
-
 const BASE_URL = "https://sports.bzzoiro.com/api";
 
 function headers(): Record<string, string> {
@@ -42,12 +40,6 @@ export interface BzzPrediction {
   prob_away_win: number;
 }
 
-function isEredivisie(league: BzzLeague | undefined): boolean {
-  if (!league) return false;
-  if (league.api_id === LEAGUE_ID) return true;
-  return (league.name ?? "").toLowerCase().includes("eredivisie");
-}
-
 async function fetchAllPages<T>(initialPath: string): Promise<T[]> {
   let nextUrl: string | null = `${BASE_URL}${initialPath}`;
   const all: T[] = [];
@@ -67,12 +59,16 @@ async function fetchAllPages<T>(initialPath: string): Promise<T[]> {
   return all;
 }
 
-export async function fetchUpcomingEvents(): Promise<BzzEvent[]> {
+export async function fetchUpcomingEvents(
+  leagueFilter: (league: { api_id?: number; name?: string }) => boolean
+): Promise<BzzEvent[]> {
   const events = await fetchAllPages<BzzEvent>("/events/?status=notstarted");
-  return events.filter((event) => isEredivisie(event.league));
+  return events.filter((event) => leagueFilter(event.league));
 }
 
-export async function fetchUpcomingPredictions(): Promise<BzzPrediction[]> {
+export async function fetchUpcomingPredictions(
+  leagueFilter: (league: { api_id?: number; name?: string }) => boolean
+): Promise<BzzPrediction[]> {
   const predictions = await fetchAllPages<BzzPrediction>("/predictions/?upcoming=true");
-  return predictions.filter((prediction) => isEredivisie(prediction.event?.league));
+  return predictions.filter((prediction) => leagueFilter(prediction.event?.league));
 }

@@ -3,9 +3,9 @@
 @tailwind utilities;
 
 :root {
-  --psv-red: #E8001C;
-  --psv-red-deep: #b0001a;
-  --psv-red-glow: rgba(232, 0, 28, 0.25);
+  --club-primary: #E8001C;
+  --club-primary-deep: #b0001a;
+  --club-primary-glow: rgba(232, 0, 28, 0.25);
   --white: #ffffff;
   --dark: #080808;
   --dark-2: #101010;
@@ -16,7 +16,7 @@
 
 *, *::before, *::after { box-sizing: border-box; }
 body { background: var(--dark); color: #fff; font-family: var(--font-body); overflow-x: hidden; }
-::selection { background: var(--psv-red); color: #fff; }
+::selection { background: var(--club-primary); color: #fff; }
 ::-webkit-scrollbar { width: 5px; }
 ::-webkit-scrollbar-track { background: var(--dark-2); }
-::-webkit-scrollbar-thumb { background: var(--psv-red); border-radius: 3px; }
+::-webkit-scrollbar-thumb { background: var(--club-primary); border-radius: 3px; }

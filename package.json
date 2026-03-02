@@ -1,5 +1,5 @@
 {
-  "name": "psv-kampioen",
+  "name": "kampioen",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -10,7 +10,8 @@
     "lint": "eslint",
     "fetch-data": "tsx scripts/fetch-data.ts",
     "simulate": "tsx scripts/simulate.ts",
-    "update-data": "npm run fetch-data && npm run simulate"
+    "update-data": "npm run fetch-data && npm run simulate",
+    "build-all": "tsx scripts/build-all.ts"
   },
   "dependencies": {
     "@vercel/analytics": "^1.6.1",
