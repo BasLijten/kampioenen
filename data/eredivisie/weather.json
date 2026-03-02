@@ -1,0 +1,77 @@
+{
+  "fetchedAt": "2026-03-02T20:40:05.280Z",
+  "psv": {
+    "2026-03-22": {
+      "date": "2026-03-22",
+      "weatherCode": 53,
+      "category": "drizzle",
+      "temperatureMax": 17.7,
+      "temperatureMin": 10.8,
+      "precipitationSum": 1.3,
+      "windSpeedMax": 16.5,
+      "source": "historical-estimate"
+    },
+    "2026-04-04": {
+      "date": "2026-04-04",
+      "weatherCode": 0,
+      "category": "sunny",
+      "temperatureMax": 22.3,
+      "temperatureMin": 7.8,
+      "precipitationSum": 0,
+      "windSpeedMax": 13.2,
+      "source": "historical-estimate"
+    },
+    "2026-04-11": {
+      "date": "2026-04-11",
+      "weatherCode": 3,
+      "category": "partly-cloudy",
+      "temperatureMax": 18.6,
+      "temperatureMin": 3,
+      "precipitationSum": 0,
+      "windSpeedMax": 9.5,
+      "source": "historical-estimate"
+    },
+    "2026-04-23": {
+      "date": "2026-04-23",
+      "weatherCode": 61,
+      "category": "rain",
+      "temperatureMax": 15.6,
+      "temperatureMin": 9.4,
+      "precipitationSum": 4.1,
+      "windSpeedMax": 9,
+      "source": "historical-estimate"
+    },
+    "2026-05-02": {
+      "date": "2026-05-02",
+      "weatherCode": 51,
+      "category": "drizzle",
+      "temperatureMax": 27.5,
+      "temperatureMin": 15.4,
+      "precipitationSum": 0.2,
+      "windSpeedMax": 18.3,
+      "source": "historical-estimate"
+    },
+    "2026-05-10": {
+      "date": "2026-05-10",
+      "weatherCode": 1,
+      "category": "partly-cloudy",
+      "temperatureMax": 22.8,
+      "temperatureMin": 8.1,
+      "precipitationSum": 0,
+      "windSpeedMax": 13.9,
+      "source": "historical-estimate"
+    },
+    "2026-05-17": {
+      "date": "2026-05-17",
+      "weatherCode": 3,
+      "category": "partly-cloudy",
+      "temperatureMax": 19.4,
+      "temperatureMin": 8.4,
+      "precipitationSum": 0,
+      "windSpeedMax": 19.1,
+      "source": "historical-estimate"
+    }
+  },
+  "ajax": {},
+  "feyenoord": {}
+}

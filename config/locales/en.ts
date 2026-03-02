@@ -76,6 +76,9 @@ export const en: LocaleStrings = {
   faqEarliestChampion: "When is the earliest {clubName} can become champion?",
   faqEarliestChampionAnswer: "In the best case scenario \u2014 if {clubName} wins all remaining matches \u2014 {clubName} becomes champion on {bestCaseDate}{roundSuffix}.",
 
+  // Weather
+  weatherExpected: "expected",
+
   // Meta
   metaTitleTemplate: "{clubShortName} Champion {season} \u2014 When will {clubShortName} win the {leagueName}?",
   metaDescriptionTemplate: "Monte Carlo simulation with 50,000 scenarios calculates when {clubName} will win the {leagueName} {season}. View probabilities per matchday, best case scenario and current standings.",

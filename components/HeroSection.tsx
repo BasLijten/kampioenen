@@ -6,7 +6,9 @@ import type { Explanation } from "@/app/page";
 import type { ClubConfig } from "@/config/clubs";
 import type { LeagueClientConfig } from "@/config/env";
 import type { LocaleStrings } from "@/config/locales/nl";
+import type { WeatherData } from "@/lib/weather";
 import { formatTemplate } from "@/config/env";
+import WeatherBadge from "./WeatherBadge";
 
 function formatDate(dateStr: string, locale: string): string {
   const d = new Date(dateStr);
@@ -27,6 +29,7 @@ export default function HeroSection({
   club,
   league,
   texts,
+  weather,
 }: {
   result: ClubSimulationResult;
   explanation: Explanation;
@@ -35,6 +38,7 @@ export default function HeroSection({
   club: ClubConfig;
   league: LeagueClientConfig;
   texts: LocaleStrings;
+  weather: Record<string, WeatherData>;
 }) {
   const [showExplanation, setShowExplanation] = useState(false);
 
@@ -205,10 +209,26 @@ export default function HeroSection({
           <StatCard
             label={texts.statBestCase}
             value={result.bestCaseDate ? formatDate(result.bestCaseDate, league.locale) : "?"}
+            weatherBadge={
+              result.bestCaseDate ? (
+                <WeatherBadge
+                  weather={weather[result.bestCaseDate.slice(0, 10)]}
+                  expectedLabel={texts.weatherExpected}
+                />
+              ) : undefined
+            }
           />
           <StatCard
             label={texts.statMostLikely}
             value={topProb ? formatDate(topProb.date, league.locale) : "?"}
+            weatherBadge={
+              topProb ? (
+                <WeatherBadge
+                  weather={weather[topProb.date.slice(0, 10)]}
+                  expectedLabel={texts.weatherExpected}
+                />
+              ) : undefined
+            }
           />
         </div>
 
@@ -467,7 +487,7 @@ export default function HeroSection({
   );
 }
 
-function StatCard({ label, value, highlight }: { label: string; value: string; highlight?: boolean }) {
+function StatCard({ label, value, highlight, weatherBadge }: { label: string; value: string; highlight?: boolean; weatherBadge?: React.ReactNode }) {
   return (
     <div
       style={{
@@ -501,6 +521,7 @@ function StatCard({ label, value, highlight }: { label: string; value: string; h
       >
         {value}
       </p>
+      {weatherBadge}
     </div>
   );
 }

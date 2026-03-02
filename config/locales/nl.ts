@@ -74,6 +74,9 @@ export interface LocaleStrings {
   faqEarliestChampion: string;
   faqEarliestChampionAnswer: string;
 
+  // Weather
+  weatherExpected: string;
+
   // Meta
   metaTitleTemplate: string;
   metaDescriptionTemplate: string;
@@ -158,6 +161,9 @@ export const nl: LocaleStrings = {
   faqChanceChampionAnswer: "De kans dat {clubName} {leagueName} kampioen wordt is {probability}, berekend op basis van 50.000 gesimuleerde seizoensverloop scenario's.",
   faqEarliestChampion: "Wanneer kan {clubName} op zijn vroegst kampioen worden?",
   faqEarliestChampionAnswer: "In het best case scenario \u2014 als {clubName} alle resterende wedstrijden wint \u2014 wordt {clubName} kampioen op {bestCaseDate}{roundSuffix}.",
+
+  // Weather
+  weatherExpected: "verwacht",
 
   // Meta
   metaTitleTemplate: "{clubShortName} Kampioen {season} \u2014 Wanneer wordt {clubShortName} {leagueName} kampioen?",

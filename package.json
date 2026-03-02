@@ -10,7 +10,8 @@
     "lint": "eslint",
     "fetch-data": "tsx scripts/fetch-data.ts",
     "simulate": "tsx scripts/simulate.ts",
-    "update-data": "npm run fetch-data && npm run simulate",
+    "fetch-weather": "tsx scripts/fetch-weather.ts",
+    "update-data": "npm run fetch-data && npm run simulate && npm run fetch-weather",
     "build-all": "tsx scripts/build-all.ts"
   },
   "dependencies": {

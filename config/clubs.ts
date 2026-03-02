@@ -15,6 +15,7 @@ export interface ClubConfig {
   domain: string;
   kofiUrl?: string;
   locale: string;
+  coordinates: { latitude: number; longitude: number };
   textOverrides?: Partial<LocaleStrings>;
 }
 
@@ -36,6 +37,7 @@ export const clubs: Record<string, ClubConfig> = {
     domain: "psvkampioen.nl",
     kofiUrl: "https://ko-fi.com/baslijten",
     locale: "nl",
+    coordinates: { latitude: 51.4416, longitude: 5.4697 },
   },
   ajax: {
     id: "ajax",
@@ -47,6 +49,7 @@ export const clubs: Record<string, ClubConfig> = {
     primaryColorGlow: "rgba(210,18,46,0.25)",
     domain: "ajaxkampioen.nl",
     locale: "nl",
+    coordinates: { latitude: 52.3676, longitude: 4.9041 },
   },
   feyenoord: {
     id: "feyenoord",
@@ -58,5 +61,6 @@ export const clubs: Record<string, ClubConfig> = {
     primaryColorGlow: "rgba(238,28,37,0.25)",
     domain: "feyenoordkampioen.nl",
     locale: "nl",
+    coordinates: { latitude: 51.9244, longitude: 4.4777 },
   },
 };
