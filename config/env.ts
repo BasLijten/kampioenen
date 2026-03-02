@@ -50,6 +50,10 @@ export function resolveClub(): ClubConfig {
   return club;
 }
 
+export function getSiteUrl(): string {
+  return process.env.SITE_URL ?? `https://${resolveClub().domain}`;
+}
+
 export function resolveConfig(): ResolvedConfig {
   const league = resolveLeague();
   const club = resolveClub();

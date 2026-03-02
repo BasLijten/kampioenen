@@ -2,7 +2,7 @@ import type { Metadata, Viewport } from "next";
 import { Oswald, DM_Sans } from "next/font/google";
 import { Analytics } from "@vercel/analytics/next";
 import { GoogleAnalytics } from "@next/third-parties/google";
-import { resolveConfig, formatTemplate } from "@/config/env";
+import { resolveConfig, formatTemplate, getSiteUrl } from "@/config/env";
 import "./globals.css";
 
 const oswald = Oswald({
@@ -33,7 +33,7 @@ export const viewport: Viewport = {
 };
 
 export const metadata: Metadata = {
-  metadataBase: new URL(`https://${club.domain}`),
+  metadataBase: new URL(getSiteUrl()),
   alternates: {
     canonical: "/",
   },
@@ -66,7 +66,7 @@ const jsonLd = {
   "@type": "WebSite",
   name: formatTemplate(texts.schemaName, templateVars),
   description: formatTemplate(texts.schemaDescription, templateVars),
-  url: `https://${club.domain}`,
+  url: getSiteUrl(),
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

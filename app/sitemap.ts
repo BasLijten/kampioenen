@@ -1,11 +1,11 @@
 import type { MetadataRoute } from "next";
-import { resolveConfig } from "@/config/env";
+import { getSiteUrl } from "@/config/env";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const { club } = resolveConfig();
+  const siteUrl = getSiteUrl();
   return [
     {
-      url: `https://${club.domain}`,
+      url: siteUrl,
       lastModified: new Date(),
       changeFrequency: "daily",
       priority: 1,
