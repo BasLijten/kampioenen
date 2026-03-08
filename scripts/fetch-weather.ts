@@ -32,6 +32,19 @@ function sleep(ms: number) {
 }
 
 async function main() {
+  try {
+    const content = readFileSync(join(process.cwd(), ".env.local"), "utf-8");
+    for (const line of content.split("\n")) {
+      const trimmed = line.replace(/\r$/, "");
+      const match = trimmed.match(/^([A-Z_][A-Z0-9_]*)=(.+)$/);
+      if (match && !process.env[match[1]]) {
+        process.env[match[1]] = match[2].trim();
+      }
+    }
+  } catch {
+    // .env.local bestaat niet
+  }
+
   const league = resolveLeague();
   console.log(`League: ${league.name} (${league.id})`);
 
