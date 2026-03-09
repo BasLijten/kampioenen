@@ -4,6 +4,8 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
+    "dev:ajax": "TARGET_CLUB=ajax TARGET_LEAGUE=eredivisie next dev -p 3001",
+    "dev:feyenoord": "TARGET_CLUB=feyenoord TARGET_LEAGUE=eredivisie next dev -p 3002",
     "prebuild": "tsx scripts/simulate.ts",
     "build": "next build",
     "start": "next start",
