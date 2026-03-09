@@ -30,6 +30,7 @@ export default function ChampionshipTimeline({
   weather: Record<string, WeatherData>;
 }) {
   const maxProb = Math.max(...dates.map((d) => d.probability));
+  const hasNonZeroProb = maxProb > 0;
 
   const templateVars = {
     clubName: club.name,
@@ -64,7 +65,7 @@ export default function ChampionshipTimeline({
           {dates.map((dp, i) => {
             const barWidth = maxProb > 0 ? (dp.probability / maxProb) * 100 : 0;
             const pct = (dp.probability * 100).toFixed(1);
-            const isTop = dp.probability === maxProb;
+            const isTop = hasNonZeroProb && dp.probability === maxProb;
             const opponentName = getOpponentName(dp.opponent);
 
             return (
