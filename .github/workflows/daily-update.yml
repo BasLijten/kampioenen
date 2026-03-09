@@ -14,6 +14,7 @@ jobs:
   update-data:
     runs-on: ubuntu-latest
     env:
+      TARGET_LEAGUE: ${{ vars.TARGET_LEAGUE }}
       FOOTBALL_DATA_ORG_KEY: ${{ secrets.FOOTBALL_DATA_ORG_KEY }}
       BZZOIRO_TOKEN: ${{ secrets.BZZOIRO_TOKEN }}
 
