@@ -1,0 +1,88 @@
+name: Daily Data Update
+
+on:
+  schedule:
+    # 21:30 UTC = 22:30 CET / 23:30 CEST — after most Eredivisie games finish
+    - cron: "30 21 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  update-data:
+    runs-on: ubuntu-latest
+    env:
+      FOOTBALL_DATA_ORG_KEY: ${{ secrets.FOOTBALL_DATA_ORG_KEY }}
+      BZZOIRO_TOKEN: ${{ secrets.BZZOIRO_TOKEN }}
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GH_PAT }}
+
+      - name: Setup Node 20
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Fetch latest data
+        run: npm run fetch-data
+
+      - name: Detect changes
+        id: detect
+        run: |
+          # Compare only teams + remainingFixtures, ignoring fetchedAt timestamp
+          git show HEAD:data/eredivisie/standings.json | jq '{teams, remainingFixtures}' > /tmp/old.json
+          jq '{teams, remainingFixtures}' data/eredivisie/standings.json > /tmp/new.json
+
+          if diff -q /tmp/old.json /tmp/new.json > /dev/null 2>&1; then
+            echo "No data changes detected"
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+          else
+            echo "Data changes detected"
+            echo "changed=true" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Run simulation
+        if: steps.detect.outputs.changed == 'true'
+        run: npm run simulate
+
+      - name: Fetch weather
+        if: steps.detect.outputs.changed == 'true'
+        run: npm run fetch-weather
+
+      - name: Create PR and merge
+        if: steps.detect.outputs.changed == 'true'
+        env:
+          GH_TOKEN: ${{ secrets.GH_PAT }}
+        run: |
+          DATE=$(date -u +%Y-%m-%d)
+          BRANCH="data/update-${DATE}"
+
+          # Clean up stale branch from earlier run on same day
+          git push origin --delete "$BRANCH" 2>/dev/null || true
+
+          git checkout -b "$BRANCH"
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/eredivisie/
+          git commit -m "updated data ${DATE}"
+          git push -u origin "$BRANCH"
+
+          PR_URL=$(gh pr create \
+            --title "updated data ${DATE}" \
+            --body "Automated daily data update: standings, simulation results, and weather." \
+            --base main \
+            --head "$BRANCH")
+
+          echo "Created PR: $PR_URL"
+
+          gh pr merge "$PR_URL" --squash --delete-branch
+          echo "PR merged successfully"
