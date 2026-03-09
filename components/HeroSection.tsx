@@ -42,10 +42,9 @@ export default function HeroSection({
 }) {
   const [showExplanation, setShowExplanation] = useState(false);
 
-  const topProb = result.dateProbabilities.reduce((max, dp) =>
-    dp.probability > max.probability ? dp : max,
-    result.dateProbabilities[0]
-  );
+  const topProb = result.expectedDate
+    ? result.dateProbabilities.find((dp) => dp.date === result.expectedDate) ?? null
+    : null;
 
   const championCount = explanation.iterations - explanation.neverChampionCount;
 
@@ -220,7 +219,7 @@ export default function HeroSection({
           />
           <StatCard
             label={texts.statMostLikely}
-            value={topProb ? formatDate(topProb.date, league.locale) : "?"}
+            value={topProb ? formatDate(topProb.date, league.locale) : "—"}
             weatherBadge={
               topProb ? (
                 <WeatherBadge
