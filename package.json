@@ -4,8 +4,8 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "dev:ajax": "TARGET_CLUB=ajax TARGET_LEAGUE=eredivisie next dev -p 3001",
-    "dev:feyenoord": "TARGET_CLUB=feyenoord TARGET_LEAGUE=eredivisie next dev -p 3002",
+    "dev:ajax": "cross-env TARGET_CLUB=ajax TARGET_LEAGUE=eredivisie next dev -p 3001",
+    "dev:feyenoord": "cross-env TARGET_CLUB=feyenoord TARGET_LEAGUE=eredivisie next dev -p 3002",
     "prebuild": "tsx scripts/simulate.ts",
     "build": "next build",
     "start": "next start",
@@ -28,6 +28,7 @@
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
+    "cross-env": "^10.1.0",
     "eslint": "^9",
     "eslint-config-next": "16.1.6",
     "tailwindcss": "^4",
