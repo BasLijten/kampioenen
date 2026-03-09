@@ -82,11 +82,9 @@ function main() {
     }
   }
 
-  // Build explanation per club (top contenders)
+  // Build explanation per club (all clubs)
   const explanation: Record<string, object> = {};
   for (const club of sorted) {
-    if (club.totalChampionshipProbability <= 0) continue;
-
     const team = teams.find((t) => t.id === club.teamId)!;
     const remaining = league.totalRounds - team.played;
     const rivals = teams

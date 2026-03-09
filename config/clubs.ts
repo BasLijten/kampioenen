@@ -40,7 +40,7 @@ export const clubs: Record<string, ClubConfig> = {
     coordinates: { latitude: 51.4416, longitude: 5.4697 },
   },
   ajax: {
-    id: "ajax",
+    id: "afc-ajax",
     leagueId: "eredivisie",
     name: "Ajax",
     shortName: "Ajax",
@@ -52,7 +52,7 @@ export const clubs: Record<string, ClubConfig> = {
     coordinates: { latitude: 52.3676, longitude: 4.9041 },
   },
   feyenoord: {
-    id: "feyenoord",
+    id: "feyenoord-rotterdam",
     leagueId: "eredivisie",
     name: "Feyenoord",
     shortName: "Feyenoord",
