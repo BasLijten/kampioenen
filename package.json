@@ -14,7 +14,9 @@
     "simulate": "tsx scripts/simulate.ts",
     "fetch-weather": "tsx scripts/fetch-weather.ts",
     "update-data": "npm run fetch-data && npm run simulate && npm run fetch-weather",
-    "build-all": "tsx scripts/build-all.ts"
+    "build-all": "tsx scripts/build-all.ts",
+    "test": "vitest",
+    "test:run": "vitest run"
   },
   "dependencies": {
     "@next/third-parties": "^16.1.6",
@@ -33,6 +35,7 @@
     "eslint-config-next": "16.1.6",
     "tailwindcss": "^4",
     "tsx": "^4.21.0",
-    "typescript": "^5"
+    "typescript": "^5",
+    "vitest": "^4.1.0"
   }
 }
