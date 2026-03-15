@@ -51,8 +51,10 @@ function fixture(
 // ─── Best case scenario ──────────────────────────────────────────────────────
 //
 // The best case calculation is fully deterministic (no Math.random):
-//  - the target team wins every fixture
-//  - all other fixtures end in draws
+//  - the target team wins every fixture (+3 pts per game)
+//  - all other fixtures: 0 pts to both teams (competitors "lose everything")
+//    → rivals stay at their current points; only their played count increases,
+//      which correctly shrinks the remaining-games window used in the clinch check.
 //
 // We can therefore assert exact dates/rounds without any iteration noise.
 
@@ -77,13 +79,13 @@ describe("Best case scenario", () => {
     //
     // Setup (totalRounds=30, so only 2 rounds left):
     //   PSV 72 pts, 28 played  → after round 30 win: 75 pts, 30 played
-    //   Ajax 70 pts, 28 played → after round 29 draw: 71 pts, 29 played
-    //                          → after round 30 draw: 72 pts, 30 played
+    //   Ajax 70 pts, 28 played → after round 29 loss: 70 pts, 29 played (0 pts, competitors lose)
+    //                          → after round 30 loss: 70 pts, 30 played
     //
-    // After round 29:
-    //   Ajax 71 pts, remaining = 30-29 = 1, max = 71+3 = 74 > PSV 72 → NOT champion
+    // After round 29 (PSV idle):
+    //   Ajax 70 pts, remaining = 30-29 = 1, max = 70+3 = 73 > PSV 72 → NOT champion
     // After round 30:
-    //   PSV 75 pts. Ajax 72, remaining = 0, max = 72 → 72 < 75 → champion ✓
+    //   PSV 75 pts. Ajax 70, remaining = 0, max = 70 < 75 → champion ✓
     const teams = [
       team("psv", 72, 28),
       team("ajax", 70, 28),
@@ -118,6 +120,37 @@ describe("Best case scenario", () => {
 
     expect(psv.bestCaseDate).toBeNull();
     expect(psv.bestCaseRound).toBeNull();
+  });
+
+  it("uses losses (not draws) for non-target fixtures — clinches one round earlier", () => {
+    // Mirrors the real PSV-2026 situation: PSV 65 pts, Feyenoord 48 pts, 9 rounds left.
+    //
+    // After round 26: PSV 68, Fey 48 (lost), remaining 8 → max 48+24=72 ≥ 68  ❌
+    // After round 27: PSV 71, Fey 48 (lost), remaining 7 → max 48+21=69 < 71  ✓ CLINCH
+    //
+    // With the old "draw" algorithm Feyenoord would gain 1 pt/round:
+    //   After R27: Fey 50, max 50+21=71 = 71  ❌  (tie still possible — no clinch)
+    //   After R28: Fey 51, max 51+18=69 < 74  ✓  (clinch one round later)
+    const teams = [
+      team("psv", 65, 25),
+      team("fey", 48, 25),
+      team("bot1", 10, 25),
+      team("bot2", 10, 25),
+    ];
+    const fixtures = [
+      fixture("psv-r26", 26, "2025-03-08", "psv", "bot1", 1, 0),
+      fixture("fey-r26", 26, "2025-03-08", "fey", "bot2", 1, 0),
+      fixture("psv-r27", 27, "2025-03-15", "psv", "bot1", 1, 0),
+      fixture("fey-r27", 27, "2025-03-15", "fey", "bot2", 1, 0),
+      fixture("psv-r28", 28, "2025-03-22", "psv", "bot1", 1, 0), // only needed if R27 fails
+      fixture("fey-r28", 28, "2025-03-22", "fey", "bot2", 1, 0),
+    ];
+
+    const result = runSimulation(100, teams, fixtures, 34);
+    const psv = result.clubResults["psv"];
+
+    expect(psv.bestCaseRound).toBe(27);
+    expect(psv.bestCaseDate).toBe("2025-03-15");
   });
 
   it("every team in a multi-team league gets independent best-case analysis", () => {
