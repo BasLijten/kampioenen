@@ -73,10 +73,10 @@ export default function ChampionshipTimeline({
                 key={dp.date}
                 style={{
                   display: "grid",
-                  gridTemplateColumns: "110px 1fr 70px",
+                  gridTemplateColumns: "100px 1fr 65px",
                   alignItems: "center",
-                  gap: "1.5rem",
-                  padding: "1.25rem 1.5rem",
+                  gap: "0.75rem",
+                  padding: "1.25rem 1rem",
                   borderBottom: i < dates.length - 1 ? "1px solid var(--dark-4)" : "none",
                   background: isTop ? "var(--club-primary-glow)" : "transparent",
                   transition: "background 0.2s",

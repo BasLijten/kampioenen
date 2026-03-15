@@ -161,9 +161,10 @@ export default function BestCaseView({
           style={{
             border: "1px solid var(--dark-4)",
             borderRadius: "4px",
-            overflow: "hidden",
+            overflowX: "auto",
           }}
         >
+          <div style={{ minWidth: "360px" }}>
           {/* Header row */}
           <div
             style={{
@@ -272,6 +273,7 @@ export default function BestCaseView({
               </p>
             </div>
           ))}
+          </div>
         </div>
       </div>
     </section>

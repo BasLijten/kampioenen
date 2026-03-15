@@ -188,9 +188,9 @@ export default function HeroSection({
 
         {/* Three stat cards */}
         <div
+          className="stat-cards-grid"
           style={{
             display: "grid",
-            gridTemplateColumns: "repeat(3, 1fr)",
             gap: "1px",
             background: "var(--gray)",
             border: "1px solid var(--gray)",
@@ -308,12 +308,14 @@ export default function HeroSection({
               {texts.explanationRivalsLabel}
             </p>
 
+            <div style={{ overflowX: "auto" }}>
             <table
               style={{
                 width: "100%",
                 borderCollapse: "collapse",
                 marginBottom: "1.25rem",
                 fontSize: "0.82rem",
+                minWidth: "300px",
               }}
             >
               <thead>
@@ -339,6 +341,7 @@ export default function HeroSection({
                 ))}
               </tbody>
             </table>
+            </div>
 
             <p style={{ marginBottom: "0.5rem" }}>
               <span
@@ -480,6 +483,14 @@ export default function HeroSection({
         @keyframes pulse {
           0%, 100% { opacity: 1; transform: scaleY(1); }
           50% { opacity: 0.5; transform: scaleY(0.8); }
+        }
+        .stat-cards-grid {
+          grid-template-columns: repeat(3, 1fr);
+        }
+        @media (max-width: 480px) {
+          .stat-cards-grid {
+            grid-template-columns: 1fr;
+          }
         }
       `}</style>
     </section>

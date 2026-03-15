@@ -51,9 +51,10 @@ export default function StandingsTable({
           style={{
             border: "1px solid var(--dark-4)",
             borderRadius: "4px",
-            overflow: "hidden",
+            overflowX: "auto",
           }}
         >
+          <div style={{ minWidth: "480px" }}>
           {/* Header */}
           <div
             style={{
@@ -185,6 +186,7 @@ export default function StandingsTable({
               </div>
             );
           })}
+          </div>
         </div>
       </div>
     </section>
