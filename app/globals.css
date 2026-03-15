@@ -20,3 +20,7 @@ body { background: var(--dark); color: #fff; font-family: var(--font-body); over
 ::-webkit-scrollbar { width: 5px; }
 ::-webkit-scrollbar-track { background: var(--dark-2); }
 ::-webkit-scrollbar-thumb { background: var(--club-primary); border-radius: 3px; }
+
+@media (max-width: 480px) {
+  section { padding-left: 1rem !important; padding-right: 1rem !important; }
+}

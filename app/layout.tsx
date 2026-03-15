@@ -30,6 +30,8 @@ const templateVars = {
 
 export const viewport: Viewport = {
   themeColor: club.primaryColor,
+  width: "device-width",
+  initialScale: 1,
 };
 
 export const metadata: Metadata = {
