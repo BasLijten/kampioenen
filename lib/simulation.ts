@@ -200,9 +200,8 @@ export function runSimulation(
           // Team wins
           bestState[team.id].points += 3;
         } else {
-          // Both rivals: draw gives fewest total points (1+1=2 vs 3+0=3)
-          bestState[fixture.homeTeam].points += 1;
-          bestState[fixture.awayTeam].points += 1;
+          // Competitors lose: award 0 points so rivals stay at their current total.
+          // played still increments below, which correctly shrinks their remaining games.
         }
         bestState[fixture.homeTeam].played += 1;
         bestState[fixture.awayTeam].played += 1;
