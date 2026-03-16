@@ -246,10 +246,10 @@
       "round": 28,
       "homeTeam": "sparta-rotterdam",
       "awayTeam": "fc-volendam",
-      "homeWinProb": 0.5223021337140326,
-      "drawProb": 0.24144046741812664,
-      "awayWinProb": 0.2362573988678408,
-      "source": "api"
+      "homeWinProb": 0.5017256682772347,
+      "drawProb": 0.2353973513370732,
+      "awayWinProb": 0.262876980385692,
+      "source": "poisson"
     },
     {
       "id": "match-pec-zwolle:nac-breda-r28",
@@ -257,10 +257,10 @@
       "round": 28,
       "homeTeam": "pec-zwolle",
       "awayTeam": "nac-breda",
-      "homeWinProb": 0.37910704451557625,
-      "drawProb": 0.25390091832722483,
-      "awayWinProb": 0.3669920371571989,
-      "source": "api"
+      "homeWinProb": 0.5474380204310059,
+      "drawProb": 0.21668862237338748,
+      "awayWinProb": 0.23587335719560665,
+      "source": "poisson"
     },
     {
       "id": "match-nec:sc-heerenveen-r28",
@@ -279,10 +279,10 @@
       "round": 28,
       "homeTeam": "fc-utrecht",
       "awayTeam": "go-ahead-eagles",
-      "homeWinProb": 0.5891936995620349,
-      "drawProb": 0.20411149997707922,
-      "awayWinProb": 0.2066948004608859,
-      "source": "api"
+      "homeWinProb": 0.5572381349868125,
+      "drawProb": 0.21689868116593103,
+      "awayWinProb": 0.2258631838472564,
+      "source": "poisson"
     },
     {
       "id": "match-feyenoord-rotterdam:afc-ajax-r28",
@@ -912,5 +912,5 @@
       "source": "poisson"
     }
   ],
-  "fetchedAt": "2026-03-15T21:41:52.714Z"
+  "fetchedAt": "2026-03-16T21:47:53.664Z"
 }
