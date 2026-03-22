@@ -6,65 +6,57 @@
       "totalChampionshipProbability": 0.99998,
       "dateProbabilities": [
         {
-          "date": "2026-03-22",
-          "round": 28,
-          "probability": 0.19534,
-          "cumulativeProbability": 0.19534,
-          "opponent": "telstar-1963",
-          "isHome": false
-        },
-        {
           "date": "2026-04-04",
           "round": 29,
-          "probability": 0.54486,
-          "cumulativeProbability": 0.7402,
+          "probability": 0.29344,
+          "cumulativeProbability": 0.29344,
           "opponent": "fc-utrecht",
           "isHome": true
         },
         {
           "date": "2026-04-11",
           "round": 30,
-          "probability": 0.22178,
-          "cumulativeProbability": 0.96198,
+          "probability": 0.62334,
+          "cumulativeProbability": 0.9167799999999999,
           "opponent": "sparta-rotterdam",
           "isHome": false
         },
         {
           "date": "2026-04-23",
           "round": 31,
-          "probability": 0.03446,
-          "cumulativeProbability": 0.99644,
+          "probability": 0.07704,
+          "cumulativeProbability": 0.9938199999999999,
           "opponent": "pec-zwolle",
           "isHome": true
         },
         {
           "date": "2026-05-02",
           "round": 32,
-          "probability": 0.00264,
-          "cumulativeProbability": 0.99908,
+          "probability": 0.00462,
+          "cumulativeProbability": 0.9984399999999999,
           "opponent": "afc-ajax",
           "isHome": false
         },
         {
           "date": "2026-05-10",
           "round": 33,
-          "probability": 0.00068,
-          "cumulativeProbability": 0.99976,
+          "probability": 0.00126,
+          "cumulativeProbability": 0.9996999999999999,
           "opponent": "go-ahead-eagles",
           "isHome": false
         },
         {
           "date": "2026-05-17",
           "round": 34,
-          "probability": 0.00022,
-          "cumulativeProbability": 0.99998,
+          "probability": 0.00028,
+          "cumulativeProbability": 0.9999799999999999,
           "opponent": "fc-twente-65",
           "isHome": true
         }
       ],
-      "bestCaseDate": "2026-03-22",
-      "bestCaseRound": 28,
-      "expectedDate": "2026-04-04",
+      "bestCaseDate": "2026-04-05",
+      "bestCaseRound": 29,
+      "expectedDate": "2026-04-11",
       "neverChampionProbability": 0.00002,
       "neverChampionCount": 1,
       "positionProbabilities": {
@@ -76,14 +68,6 @@
       "teamName": "Feyenoord Rotterdam",
       "totalChampionshipProbability": 0,
       "dateProbabilities": [
-        {
-          "date": "2026-03-22",
-          "round": 28,
-          "probability": 0,
-          "cumulativeProbability": 0,
-          "opponent": "afc-ajax",
-          "isHome": true
-        },
         {
           "date": "2026-04-05",
           "round": 29,
@@ -139,13 +123,12 @@
       "neverChampionProbability": 1,
       "neverChampionCount": 50000,
       "positionProbabilities": {
-        "2": 0.63326,
-        "3": 0.2767,
-        "4": 0.07462,
-        "5": 0.01352,
-        "6": 0.0017,
-        "7": 0.00018,
-        "8": 0.00002
+        "2": 0.67066,
+        "3": 0.24282,
+        "4": 0.0725,
+        "5": 0.01256,
+        "6": 0.00126,
+        "7": 0.0002
       }
     },
     "nec": {
@@ -153,14 +136,6 @@
       "teamName": "NEC",
       "totalChampionshipProbability": 0,
       "dateProbabilities": [
-        {
-          "date": "2026-03-22",
-          "round": 28,
-          "probability": 0,
-          "cumulativeProbability": 0,
-          "opponent": "sc-heerenveen",
-          "isHome": true
-        },
         {
           "date": "2026-04-04",
           "round": 29,
@@ -210,19 +185,20 @@
           "isHome": true
         }
       ],
-      "bestCaseDate": "2026-05-17",
-      "bestCaseRound": 34,
+      "bestCaseDate": null,
+      "bestCaseRound": null,
       "expectedDate": null,
       "neverChampionProbability": 1,
       "neverChampionCount": 50000,
       "positionProbabilities": {
-        "2": 0.30948,
-        "3": 0.45678,
-        "4": 0.16786,
-        "5": 0.05382,
-        "6": 0.01004,
-        "7": 0.00172,
-        "8": 0.0003
+        "2": 0.26226,
+        "3": 0.4082,
+        "4": 0.2301,
+        "5": 0.0852,
+        "6": 0.01148,
+        "7": 0.00234,
+        "8": 0.00036,
+        "9": 0.00006
       }
     },
     "afc-ajax": {
@@ -230,14 +206,6 @@
       "teamName": "AFC Ajax",
       "totalChampionshipProbability": 0,
       "dateProbabilities": [
-        {
-          "date": "2026-03-22",
-          "round": 28,
-          "probability": 0,
-          "cumulativeProbability": 0,
-          "opponent": "feyenoord-rotterdam",
-          "isHome": false
-        },
         {
           "date": "2026-04-04",
           "round": 29,
@@ -293,15 +261,15 @@
       "neverChampionProbability": 1,
       "neverChampionCount": 50000,
       "positionProbabilities": {
-        "2": 0.04798,
-        "3": 0.18008,
-        "4": 0.44188,
-        "5": 0.23012,
-        "6": 0.071,
-        "7": 0.02096,
-        "8": 0.00694,
-        "9": 0.00092,
-        "10": 0.00012
+        "2": 0.05054,
+        "3": 0.22908,
+        "4": 0.4081,
+        "5": 0.2271,
+        "6": 0.05896,
+        "7": 0.0193,
+        "8": 0.00556,
+        "9": 0.00122,
+        "10": 0.00014
       }
     },
     "fc-twente-65": {
@@ -309,14 +277,6 @@
       "teamName": "FC Twente '65",
       "totalChampionshipProbability": 0,
       "dateProbabilities": [
-        {
-          "date": "2026-03-22",
-          "round": 28,
-          "probability": 0,
-          "cumulativeProbability": 0,
-          "opponent": "vrij",
-          "isHome": false
-        },
         {
           "date": "2026-04-04",
           "round": 29,
@@ -372,15 +332,15 @@
       "neverChampionProbability": 1,
       "neverChampionCount": 50000,
       "positionProbabilities": {
-        "2": 0.0084,
-        "3": 0.0771,
-        "4": 0.25436,
-        "5": 0.44996,
-        "6": 0.15412,
-        "7": 0.04162,
-        "8": 0.01166,
-        "9": 0.00246,
-        "10": 0.00032
+        "2": 0.01642,
+        "3": 0.1151,
+        "4": 0.24794,
+        "5": 0.4543,
+        "6": 0.11296,
+        "7": 0.03734,
+        "8": 0.01184,
+        "9": 0.00344,
+        "10": 0.00066
       }
     },
     "az": {
@@ -388,14 +348,6 @@
       "teamName": "AZ",
       "totalChampionshipProbability": 0,
       "dateProbabilities": [
-        {
-          "date": "2026-03-22",
-          "round": 28,
-          "probability": 0,
-          "cumulativeProbability": 0,
-          "opponent": "fc-groningen",
-          "isHome": false
-        },
         {
           "date": "2026-04-04",
           "round": 29,
@@ -451,18 +403,165 @@
       "neverChampionProbability": 1,
       "neverChampionCount": 50000,
       "positionProbabilities": {
-        "2": 0.00074,
-        "3": 0.00688,
-        "4": 0.04016,
-        "5": 0.14772,
-        "6": 0.34032,
-        "7": 0.22878,
-        "8": 0.14322,
-        "9": 0.06416,
-        "10": 0.0226,
-        "11": 0.00466,
+        "2": 0.0001,
+        "3": 0.0018,
+        "4": 0.0132,
+        "5": 0.06802,
+        "6": 0.21,
+        "7": 0.23048,
+        "8": 0.23466,
+        "9": 0.15418,
+        "10": 0.07302,
+        "11": 0.01308,
+        "12": 0.00146
+      }
+    },
+    "fc-utrecht": {
+      "teamId": "fc-utrecht",
+      "teamName": "FC Utrecht",
+      "totalChampionshipProbability": 0,
+      "dateProbabilities": [
+        {
+          "date": "2026-04-04",
+          "round": 29,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "psv",
+          "isHome": false
+        },
+        {
+          "date": "2026-04-11",
+          "round": 30,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "telstar-1963",
+          "isHome": true
+        },
+        {
+          "date": "2026-04-23",
+          "round": 31,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "sbv-excelsior",
+          "isHome": false
+        },
+        {
+          "date": "2026-05-02",
+          "round": 32,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "nac-breda",
+          "isHome": true
+        },
+        {
+          "date": "2026-05-10",
+          "round": 33,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "afc-ajax",
+          "isHome": false
+        },
+        {
+          "date": "2026-05-17",
+          "round": 34,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "fortuna-sittard",
+          "isHome": true
+        }
+      ],
+      "bestCaseDate": null,
+      "bestCaseRound": null,
+      "expectedDate": null,
+      "neverChampionProbability": 1,
+      "neverChampionCount": 50000,
+      "positionProbabilities": {
+        "3": 0.00104,
+        "4": 0.0114,
+        "5": 0.06356,
+        "6": 0.26652,
+        "7": 0.2894,
+        "8": 0.19882,
+        "9": 0.11172,
+        "10": 0.04706,
+        "11": 0.0097,
         "12": 0.00074,
-        "13": 0.00002
+        "13": 0.00002,
+        "14": 0.00002
+      }
+    },
+    "sc-heerenveen": {
+      "teamId": "sc-heerenveen",
+      "teamName": "SC Heerenveen",
+      "totalChampionshipProbability": 0,
+      "dateProbabilities": [
+        {
+          "date": "2026-04-05",
+          "round": 29,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "heracles-almelo",
+          "isHome": true
+        },
+        {
+          "date": "2026-04-12",
+          "round": 30,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "az",
+          "isHome": false
+        },
+        {
+          "date": "2026-04-23",
+          "round": 31,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "fortuna-sittard",
+          "isHome": true
+        },
+        {
+          "date": "2026-05-03",
+          "round": 32,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "fc-volendam",
+          "isHome": false
+        },
+        {
+          "date": "2026-05-10",
+          "round": 33,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "nac-breda",
+          "isHome": false
+        },
+        {
+          "date": "2026-05-17",
+          "round": 34,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "afc-ajax",
+          "isHome": true
+        }
+      ],
+      "bestCaseDate": null,
+      "bestCaseRound": null,
+      "expectedDate": null,
+      "neverChampionProbability": 1,
+      "neverChampionCount": 50000,
+      "positionProbabilities": {
+        "2": 0.00002,
+        "3": 0.00186,
+        "4": 0.0157,
+        "5": 0.0772,
+        "6": 0.2671,
+        "7": 0.2503,
+        "8": 0.20796,
+        "9": 0.11814,
+        "10": 0.05112,
+        "11": 0.0099,
+        "12": 0.00064,
+        "13": 0.00006
       }
     },
     "sparta-rotterdam": {
@@ -470,14 +569,6 @@
       "teamName": "Sparta Rotterdam",
       "totalChampionshipProbability": 0,
       "dateProbabilities": [
-        {
-          "date": "2026-03-22",
-          "round": 28,
-          "probability": 0,
-          "cumulativeProbability": 0,
-          "opponent": "vrij",
-          "isHome": false
-        },
         {
           "date": "2026-04-05",
           "round": 29,
@@ -533,181 +624,18 @@
       "neverChampionProbability": 1,
       "neverChampionCount": 50000,
       "positionProbabilities": {
-        "4": 0.00088,
-        "5": 0.00684,
-        "6": 0.03496,
-        "7": 0.09624,
-        "8": 0.1873,
-        "9": 0.31786,
-        "10": 0.23934,
-        "11": 0.08828,
-        "12": 0.02618,
+        "3": 0.00008,
+        "4": 0.00082,
+        "5": 0.00778,
+        "6": 0.0337,
+        "7": 0.07814,
+        "8": 0.15184,
+        "9": 0.2701,
+        "10": 0.32976,
+        "11": 0.10116,
+        "12": 0.02444,
         "13": 0.00208,
-        "14": 0.00004
-      }
-    },
-    "sc-heerenveen": {
-      "teamId": "sc-heerenveen",
-      "teamName": "SC Heerenveen",
-      "totalChampionshipProbability": 0,
-      "dateProbabilities": [
-        {
-          "date": "2026-03-22",
-          "round": 28,
-          "probability": 0,
-          "cumulativeProbability": 0,
-          "opponent": "nec",
-          "isHome": false
-        },
-        {
-          "date": "2026-04-05",
-          "round": 29,
-          "probability": 0,
-          "cumulativeProbability": 0,
-          "opponent": "heracles-almelo",
-          "isHome": true
-        },
-        {
-          "date": "2026-04-12",
-          "round": 30,
-          "probability": 0,
-          "cumulativeProbability": 0,
-          "opponent": "az",
-          "isHome": false
-        },
-        {
-          "date": "2026-04-23",
-          "round": 31,
-          "probability": 0,
-          "cumulativeProbability": 0,
-          "opponent": "fortuna-sittard",
-          "isHome": true
-        },
-        {
-          "date": "2026-05-03",
-          "round": 32,
-          "probability": 0,
-          "cumulativeProbability": 0,
-          "opponent": "fc-volendam",
-          "isHome": false
-        },
-        {
-          "date": "2026-05-10",
-          "round": 33,
-          "probability": 0,
-          "cumulativeProbability": 0,
-          "opponent": "nac-breda",
-          "isHome": false
-        },
-        {
-          "date": "2026-05-17",
-          "round": 34,
-          "probability": 0,
-          "cumulativeProbability": 0,
-          "opponent": "afc-ajax",
-          "isHome": true
-        }
-      ],
-      "bestCaseDate": null,
-      "bestCaseRound": null,
-      "expectedDate": null,
-      "neverChampionProbability": 1,
-      "neverChampionCount": 50000,
-      "positionProbabilities": {
-        "2": 0.00014,
-        "3": 0.00222,
-        "4": 0.01508,
-        "5": 0.0629,
-        "6": 0.20736,
-        "7": 0.27406,
-        "8": 0.24912,
-        "9": 0.12832,
-        "10": 0.0462,
-        "11": 0.01276,
-        "12": 0.0018,
-        "13": 0.00004
-      }
-    },
-    "fc-utrecht": {
-      "teamId": "fc-utrecht",
-      "teamName": "FC Utrecht",
-      "totalChampionshipProbability": 0,
-      "dateProbabilities": [
-        {
-          "date": "2026-03-22",
-          "round": 28,
-          "probability": 0,
-          "cumulativeProbability": 0,
-          "opponent": "go-ahead-eagles",
-          "isHome": true
-        },
-        {
-          "date": "2026-04-04",
-          "round": 29,
-          "probability": 0,
-          "cumulativeProbability": 0,
-          "opponent": "psv",
-          "isHome": false
-        },
-        {
-          "date": "2026-04-11",
-          "round": 30,
-          "probability": 0,
-          "cumulativeProbability": 0,
-          "opponent": "telstar-1963",
-          "isHome": true
-        },
-        {
-          "date": "2026-04-23",
-          "round": 31,
-          "probability": 0,
-          "cumulativeProbability": 0,
-          "opponent": "sbv-excelsior",
-          "isHome": false
-        },
-        {
-          "date": "2026-05-02",
-          "round": 32,
-          "probability": 0,
-          "cumulativeProbability": 0,
-          "opponent": "nac-breda",
-          "isHome": true
-        },
-        {
-          "date": "2026-05-10",
-          "round": 33,
-          "probability": 0,
-          "cumulativeProbability": 0,
-          "opponent": "afc-ajax",
-          "isHome": false
-        },
-        {
-          "date": "2026-05-17",
-          "round": 34,
-          "probability": 0,
-          "cumulativeProbability": 0,
-          "opponent": "fortuna-sittard",
-          "isHome": true
-        }
-      ],
-      "bestCaseDate": null,
-      "bestCaseRound": null,
-      "expectedDate": null,
-      "neverChampionProbability": 1,
-      "neverChampionCount": 50000,
-      "positionProbabilities": {
-        "3": 0.00024,
-        "4": 0.00506,
-        "5": 0.03346,
-        "6": 0.163,
-        "7": 0.27904,
-        "8": 0.26228,
-        "9": 0.15934,
-        "10": 0.06866,
-        "11": 0.02222,
-        "12": 0.0059,
-        "13": 0.00076,
-        "14": 0.00004
+        "14": 0.0001
       }
     },
     "fc-groningen": {
@@ -715,14 +643,6 @@
       "teamName": "FC Groningen",
       "totalChampionshipProbability": 0,
       "dateProbabilities": [
-        {
-          "date": "2026-03-22",
-          "round": 28,
-          "probability": 0,
-          "cumulativeProbability": 0,
-          "opponent": "az",
-          "isHome": true
-        },
         {
           "date": "2026-04-04",
           "round": 29,
@@ -778,19 +698,18 @@
       "neverChampionProbability": 1,
       "neverChampionCount": 50000,
       "positionProbabilities": {
-        "4": 0.0001,
-        "5": 0.00164,
-        "6": 0.01528,
-        "7": 0.04676,
-        "8": 0.10502,
-        "9": 0.21648,
-        "10": 0.32262,
-        "11": 0.17162,
-        "12": 0.08948,
-        "13": 0.0271,
-        "14": 0.00346,
-        "15": 0.00042,
-        "16": 0.00002
+        "3": 0.00002,
+        "4": 0.00024,
+        "5": 0.00422,
+        "6": 0.03652,
+        "7": 0.08698,
+        "8": 0.17064,
+        "9": 0.28336,
+        "10": 0.30792,
+        "11": 0.08452,
+        "12": 0.02152,
+        "13": 0.00378,
+        "14": 0.00028
       }
     },
     "fortuna-sittard": {
@@ -798,14 +717,6 @@
       "teamName": "Fortuna Sittard",
       "totalChampionshipProbability": 0,
       "dateProbabilities": [
-        {
-          "date": "2026-03-22",
-          "round": 28,
-          "probability": 0,
-          "cumulativeProbability": 0,
-          "opponent": "vrij",
-          "isHome": false
-        },
         {
           "date": "2026-04-04",
           "round": 29,
@@ -861,18 +772,18 @@
       "neverChampionProbability": 1,
       "neverChampionCount": 50000,
       "positionProbabilities": {
-        "5": 0.00002,
-        "6": 0.00152,
-        "7": 0.00716,
-        "8": 0.01962,
-        "9": 0.05402,
-        "10": 0.14216,
-        "11": 0.3337,
-        "12": 0.27742,
-        "13": 0.14444,
-        "14": 0.01854,
-        "15": 0.00136,
-        "16": 0.00004
+        "5": 0.00006,
+        "6": 0.00146,
+        "7": 0.00502,
+        "8": 0.01526,
+        "9": 0.03876,
+        "10": 0.11474,
+        "11": 0.4062,
+        "12": 0.2556,
+        "13": 0.1258,
+        "14": 0.03342,
+        "15": 0.00356,
+        "16": 0.00012
       }
     },
     "pec-zwolle": {
@@ -880,14 +791,6 @@
       "teamName": "PEC Zwolle",
       "totalChampionshipProbability": 0,
       "dateProbabilities": [
-        {
-          "date": "2026-03-22",
-          "round": 28,
-          "probability": 0,
-          "cumulativeProbability": 0,
-          "opponent": "vrij",
-          "isHome": false
-        },
         {
           "date": "2026-04-05",
           "round": 29,
@@ -943,18 +846,18 @@
       "neverChampionProbability": 1,
       "neverChampionCount": 50000,
       "positionProbabilities": {
-        "6": 0.00004,
-        "7": 0.0001,
-        "8": 0.00116,
-        "9": 0.00784,
-        "10": 0.04108,
-        "11": 0.14326,
-        "12": 0.264,
-        "13": 0.4233,
-        "14": 0.09678,
-        "15": 0.01998,
-        "16": 0.00238,
-        "17": 0.00008
+        "6": 0.00002,
+        "7": 0.00018,
+        "8": 0.00066,
+        "9": 0.00516,
+        "10": 0.02656,
+        "11": 0.16794,
+        "12": 0.29296,
+        "13": 0.33694,
+        "14": 0.1314,
+        "15": 0.03356,
+        "16": 0.00444,
+        "17": 0.00018
       }
     },
     "go-ahead-eagles": {
@@ -962,14 +865,6 @@
       "teamName": "Go Ahead Eagles",
       "totalChampionshipProbability": 0,
       "dateProbabilities": [
-        {
-          "date": "2026-03-22",
-          "round": 28,
-          "probability": 0,
-          "cumulativeProbability": 0,
-          "opponent": "fc-utrecht",
-          "isHome": false
-        },
         {
           "date": "2026-04-05",
           "round": 29,
@@ -1025,17 +920,90 @@
       "neverChampionProbability": 1,
       "neverChampionCount": 50000,
       "positionProbabilities": {
-        "6": 0.00066,
-        "7": 0.00338,
-        "8": 0.01334,
-        "9": 0.04858,
-        "10": 0.1159,
-        "11": 0.21738,
-        "12": 0.29834,
-        "13": 0.23562,
-        "14": 0.05484,
-        "15": 0.01058,
-        "16": 0.00138
+        "6": 0.00002,
+        "7": 0.00032,
+        "8": 0.0024,
+        "9": 0.01364,
+        "10": 0.04742,
+        "11": 0.19034,
+        "12": 0.32632,
+        "13": 0.27644,
+        "14": 0.11084,
+        "15": 0.02776,
+        "16": 0.0043,
+        "17": 0.0002
+      }
+    },
+    "telstar-1963": {
+      "teamId": "telstar-1963",
+      "teamName": "Telstar 1963",
+      "totalChampionshipProbability": 0,
+      "dateProbabilities": [
+        {
+          "date": "2026-04-04",
+          "round": 29,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "fc-groningen",
+          "isHome": true
+        },
+        {
+          "date": "2026-04-11",
+          "round": 30,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "fc-utrecht",
+          "isHome": false
+        },
+        {
+          "date": "2026-04-22",
+          "round": 31,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "sparta-rotterdam",
+          "isHome": true
+        },
+        {
+          "date": "2026-05-02",
+          "round": 32,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "nec",
+          "isHome": false
+        },
+        {
+          "date": "2026-05-10",
+          "round": 33,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "heracles-almelo",
+          "isHome": true
+        },
+        {
+          "date": "2026-05-17",
+          "round": 34,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "fc-volendam",
+          "isHome": false
+        }
+      ],
+      "bestCaseDate": null,
+      "bestCaseRound": null,
+      "expectedDate": null,
+      "neverChampionProbability": 1,
+      "neverChampionCount": 50000,
+      "positionProbabilities": {
+        "9": 0.0002,
+        "10": 0.00128,
+        "11": 0.01268,
+        "12": 0.04984,
+        "13": 0.14986,
+        "14": 0.36874,
+        "15": 0.26678,
+        "16": 0.12842,
+        "17": 0.02116,
+        "18": 0.00104
       }
     },
     "fc-volendam": {
@@ -1043,14 +1011,6 @@
       "teamName": "FC Volendam",
       "totalChampionshipProbability": 0,
       "dateProbabilities": [
-        {
-          "date": "2026-03-22",
-          "round": 28,
-          "probability": 0,
-          "cumulativeProbability": 0,
-          "opponent": "vrij",
-          "isHome": false
-        },
         {
           "date": "2026-04-05",
           "round": 29,
@@ -1106,15 +1066,15 @@
       "neverChampionProbability": 1,
       "neverChampionCount": 50000,
       "positionProbabilities": {
-        "10": 0.00034,
-        "11": 0.00204,
-        "12": 0.01252,
-        "13": 0.059,
-        "14": 0.32328,
-        "15": 0.28532,
-        "16": 0.25666,
-        "17": 0.0583,
-        "18": 0.00254
+        "10": 0.00008,
+        "11": 0.00232,
+        "12": 0.01484,
+        "13": 0.05616,
+        "14": 0.20364,
+        "15": 0.3276,
+        "16": 0.3245,
+        "17": 0.06798,
+        "18": 0.00288
       }
     },
     "sbv-excelsior": {
@@ -1122,14 +1082,6 @@
       "teamName": "SBV Excelsior",
       "totalChampionshipProbability": 0,
       "dateProbabilities": [
-        {
-          "date": "2026-03-22",
-          "round": 28,
-          "probability": 0,
-          "cumulativeProbability": 0,
-          "opponent": "vrij",
-          "isHome": false
-        },
         {
           "date": "2026-04-04",
           "round": 29,
@@ -1186,95 +1138,15 @@
       "neverChampionCount": 50000,
       "positionProbabilities": {
         "9": 0.00002,
-        "10": 0.00048,
-        "11": 0.00248,
-        "12": 0.01288,
-        "13": 0.05424,
-        "14": 0.23104,
-        "15": 0.3259,
-        "16": 0.30464,
-        "17": 0.06674,
-        "18": 0.00158
-      }
-    },
-    "telstar-1963": {
-      "teamId": "telstar-1963",
-      "teamName": "Telstar 1963",
-      "totalChampionshipProbability": 0,
-      "dateProbabilities": [
-        {
-          "date": "2026-03-22",
-          "round": 28,
-          "probability": 0,
-          "cumulativeProbability": 0,
-          "opponent": "psv",
-          "isHome": true
-        },
-        {
-          "date": "2026-04-04",
-          "round": 29,
-          "probability": 0,
-          "cumulativeProbability": 0,
-          "opponent": "fc-groningen",
-          "isHome": true
-        },
-        {
-          "date": "2026-04-11",
-          "round": 30,
-          "probability": 0,
-          "cumulativeProbability": 0,
-          "opponent": "fc-utrecht",
-          "isHome": false
-        },
-        {
-          "date": "2026-04-22",
-          "round": 31,
-          "probability": 0,
-          "cumulativeProbability": 0,
-          "opponent": "sparta-rotterdam",
-          "isHome": true
-        },
-        {
-          "date": "2026-05-02",
-          "round": 32,
-          "probability": 0,
-          "cumulativeProbability": 0,
-          "opponent": "nec",
-          "isHome": false
-        },
-        {
-          "date": "2026-05-10",
-          "round": 33,
-          "probability": 0,
-          "cumulativeProbability": 0,
-          "opponent": "heracles-almelo",
-          "isHome": true
-        },
-        {
-          "date": "2026-05-17",
-          "round": 34,
-          "probability": 0,
-          "cumulativeProbability": 0,
-          "opponent": "fc-volendam",
-          "isHome": false
-        }
-      ],
-      "bestCaseDate": null,
-      "bestCaseRound": null,
-      "expectedDate": null,
-      "neverChampionProbability": 1,
-      "neverChampionCount": 50000,
-      "positionProbabilities": {
-        "8": 0.00002,
-        "10": 0.00018,
-        "11": 0.00154,
-        "12": 0.0106,
-        "13": 0.05192,
-        "14": 0.25744,
-        "15": 0.305,
-        "16": 0.27286,
-        "17": 0.09044,
-        "18": 0.01
+        "10": 0.00024,
+        "11": 0.00214,
+        "12": 0.01146,
+        "13": 0.04764,
+        "14": 0.14358,
+        "15": 0.30408,
+        "16": 0.40784,
+        "17": 0.08116,
+        "18": 0.00184
       }
     },
     "nac-breda": {
@@ -1282,14 +1154,6 @@
       "teamName": "NAC Breda",
       "totalChampionshipProbability": 0,
       "dateProbabilities": [
-        {
-          "date": "2026-03-22",
-          "round": 28,
-          "probability": 0,
-          "cumulativeProbability": 0,
-          "opponent": "vrij",
-          "isHome": false
-        },
         {
           "date": "2026-04-05",
           "round": 29,
@@ -1345,14 +1209,14 @@
       "neverChampionProbability": 1,
       "neverChampionCount": 50000,
       "positionProbabilities": {
-        "11": 0.00006,
-        "12": 0.00014,
-        "13": 0.00142,
-        "14": 0.01372,
-        "15": 0.04818,
-        "16": 0.14694,
-        "17": 0.6944,
-        "18": 0.09514
+        "11": 0.00002,
+        "12": 0.00018,
+        "13": 0.0012,
+        "14": 0.00766,
+        "15": 0.03508,
+        "16": 0.12146,
+        "17": 0.74622,
+        "18": 0.08818
       }
     },
     "heracles-almelo": {
@@ -1360,14 +1224,6 @@
       "teamName": "Heracles Almelo",
       "totalChampionshipProbability": 0,
       "dateProbabilities": [
-        {
-          "date": "2026-03-22",
-          "round": 28,
-          "probability": 0,
-          "cumulativeProbability": 0,
-          "opponent": "vrij",
-          "isHome": false
-        },
         {
           "date": "2026-04-05",
           "round": 29,
@@ -1423,12 +1279,12 @@
       "neverChampionProbability": 1,
       "neverChampionCount": 50000,
       "positionProbabilities": {
-        "13": 0.00006,
-        "14": 0.00082,
-        "15": 0.00326,
-        "16": 0.01508,
-        "17": 0.09004,
-        "18": 0.89074
+        "13": 0.00002,
+        "14": 0.00032,
+        "15": 0.00158,
+        "16": 0.00892,
+        "17": 0.0831,
+        "18": 0.90606
       }
     }
   },
@@ -1436,175 +1292,175 @@
   "explanation": {
     "psv": {
       "clubPoints": 68,
-      "clubPlayed": 27,
-      "clubRemaining": 7,
+      "clubPlayed": 28,
+      "clubRemaining": 6,
       "rivals": [
         {
           "name": "Feyenoord Rotterdam",
-          "points": 52,
-          "maxPoints": 73,
-          "gap": 16,
-          "winAllProb": 0.01273805863001128
+          "points": 53,
+          "maxPoints": 71,
+          "gap": 15,
+          "winAllProb": 0.023542667794344867
         },
         {
           "name": "NEC",
-          "points": 49,
-          "maxPoints": 70,
-          "gap": 19,
-          "winAllProb": 0.01391077820010717
+          "points": 50,
+          "maxPoints": 68,
+          "gap": 18,
+          "winAllProb": 0.017914565178703608
         },
         {
           "name": "AFC Ajax",
-          "points": 47,
-          "maxPoints": 68,
-          "gap": 21,
-          "winAllProb": 0.004881533575846546
+          "points": 48,
+          "maxPoints": 66,
+          "gap": 20,
+          "winAllProb": 0.016893487760104662
         },
         {
           "name": "FC Twente '65",
           "points": 47,
           "maxPoints": 65,
           "gap": 21,
-          "winAllProb": 0.005939182516062641
+          "winAllProb": 0.00708450626860985
         },
         {
           "name": "AZ",
           "points": 42,
-          "maxPoints": 63,
+          "maxPoints": 60,
           "gap": 26,
-          "winAllProb": 0.0016744606374929874
+          "winAllProb": 0.0038522713998503056
         }
       ],
       "iterations": 50000,
       "neverChampionCount": 1
     },
     "feyenoord-rotterdam": {
-      "clubPoints": 52,
-      "clubPlayed": 27,
-      "clubRemaining": 7,
+      "clubPoints": 53,
+      "clubPlayed": 28,
+      "clubRemaining": 6,
       "rivals": [
         {
           "name": "PSV",
           "points": 68,
-          "maxPoints": 89,
-          "gap": -16,
-          "winAllProb": 0.053331483567926316
+          "maxPoints": 86,
+          "gap": -15,
+          "winAllProb": 0.06135410791927977
         },
         {
           "name": "NEC",
-          "points": 49,
-          "maxPoints": 70,
+          "points": 50,
+          "maxPoints": 68,
           "gap": 3,
-          "winAllProb": 0.01391077820010717
+          "winAllProb": 0.017914565178703608
         },
         {
           "name": "AFC Ajax",
-          "points": 47,
-          "maxPoints": 68,
+          "points": 48,
+          "maxPoints": 66,
           "gap": 5,
-          "winAllProb": 0.004881533575846546
+          "winAllProb": 0.016893487760104662
         },
         {
           "name": "FC Twente '65",
           "points": 47,
           "maxPoints": 65,
-          "gap": 5,
-          "winAllProb": 0.005939182516062641
+          "gap": 6,
+          "winAllProb": 0.00708450626860985
         },
         {
           "name": "AZ",
           "points": 42,
-          "maxPoints": 63,
-          "gap": 10,
-          "winAllProb": 0.0016744606374929874
+          "maxPoints": 60,
+          "gap": 11,
+          "winAllProb": 0.0038522713998503056
         }
       ],
       "iterations": 50000,
       "neverChampionCount": 50000
     },
     "nec": {
-      "clubPoints": 49,
-      "clubPlayed": 27,
-      "clubRemaining": 7,
+      "clubPoints": 50,
+      "clubPlayed": 28,
+      "clubRemaining": 6,
       "rivals": [
         {
           "name": "PSV",
           "points": 68,
-          "maxPoints": 89,
-          "gap": -19,
-          "winAllProb": 0.053331483567926316
+          "maxPoints": 86,
+          "gap": -18,
+          "winAllProb": 0.06135410791927977
         },
         {
           "name": "Feyenoord Rotterdam",
-          "points": 52,
-          "maxPoints": 73,
+          "points": 53,
+          "maxPoints": 71,
           "gap": -3,
-          "winAllProb": 0.01273805863001128
+          "winAllProb": 0.023542667794344867
         },
         {
           "name": "AFC Ajax",
-          "points": 47,
-          "maxPoints": 68,
+          "points": 48,
+          "maxPoints": 66,
           "gap": 2,
-          "winAllProb": 0.004881533575846546
+          "winAllProb": 0.016893487760104662
         },
         {
           "name": "FC Twente '65",
           "points": 47,
           "maxPoints": 65,
-          "gap": 2,
-          "winAllProb": 0.005939182516062641
+          "gap": 3,
+          "winAllProb": 0.00708450626860985
         },
         {
           "name": "AZ",
           "points": 42,
-          "maxPoints": 63,
-          "gap": 7,
-          "winAllProb": 0.0016744606374929874
+          "maxPoints": 60,
+          "gap": 8,
+          "winAllProb": 0.0038522713998503056
         }
       ],
       "iterations": 50000,
       "neverChampionCount": 50000
     },
     "afc-ajax": {
-      "clubPoints": 47,
-      "clubPlayed": 27,
-      "clubRemaining": 7,
+      "clubPoints": 48,
+      "clubPlayed": 28,
+      "clubRemaining": 6,
       "rivals": [
         {
           "name": "PSV",
           "points": 68,
-          "maxPoints": 89,
-          "gap": -21,
-          "winAllProb": 0.053331483567926316
+          "maxPoints": 86,
+          "gap": -20,
+          "winAllProb": 0.06135410791927977
         },
         {
           "name": "Feyenoord Rotterdam",
-          "points": 52,
-          "maxPoints": 73,
+          "points": 53,
+          "maxPoints": 71,
           "gap": -5,
-          "winAllProb": 0.01273805863001128
+          "winAllProb": 0.023542667794344867
         },
         {
           "name": "NEC",
-          "points": 49,
-          "maxPoints": 70,
+          "points": 50,
+          "maxPoints": 68,
           "gap": -2,
-          "winAllProb": 0.01391077820010717
+          "winAllProb": 0.017914565178703608
         },
         {
           "name": "FC Twente '65",
           "points": 47,
           "maxPoints": 65,
-          "gap": 0,
-          "winAllProb": 0.005939182516062641
+          "gap": 1,
+          "winAllProb": 0.00708450626860985
         },
         {
           "name": "AZ",
           "points": 42,
-          "maxPoints": 63,
-          "gap": 5,
-          "winAllProb": 0.0016744606374929874
+          "maxPoints": 60,
+          "gap": 6,
+          "winAllProb": 0.0038522713998503056
         }
       ],
       "iterations": 50000,
@@ -1618,37 +1474,37 @@
         {
           "name": "PSV",
           "points": 68,
-          "maxPoints": 89,
+          "maxPoints": 86,
           "gap": -21,
-          "winAllProb": 0.053331483567926316
+          "winAllProb": 0.06135410791927977
         },
         {
           "name": "Feyenoord Rotterdam",
-          "points": 52,
-          "maxPoints": 73,
-          "gap": -5,
-          "winAllProb": 0.01273805863001128
+          "points": 53,
+          "maxPoints": 71,
+          "gap": -6,
+          "winAllProb": 0.023542667794344867
         },
         {
           "name": "NEC",
-          "points": 49,
-          "maxPoints": 70,
-          "gap": -2,
-          "winAllProb": 0.01391077820010717
+          "points": 50,
+          "maxPoints": 68,
+          "gap": -3,
+          "winAllProb": 0.017914565178703608
         },
         {
           "name": "AFC Ajax",
-          "points": 47,
-          "maxPoints": 68,
-          "gap": 0,
-          "winAllProb": 0.004881533575846546
+          "points": 48,
+          "maxPoints": 66,
+          "gap": -1,
+          "winAllProb": 0.016893487760104662
         },
         {
           "name": "AZ",
           "points": 42,
-          "maxPoints": 63,
+          "maxPoints": 60,
           "gap": 5,
-          "winAllProb": 0.0016744606374929874
+          "winAllProb": 0.0038522713998503056
         }
       ],
       "iterations": 50000,
@@ -1656,43 +1512,131 @@
     },
     "az": {
       "clubPoints": 42,
-      "clubPlayed": 27,
-      "clubRemaining": 7,
+      "clubPlayed": 28,
+      "clubRemaining": 6,
       "rivals": [
         {
           "name": "PSV",
           "points": 68,
-          "maxPoints": 89,
+          "maxPoints": 86,
           "gap": -26,
-          "winAllProb": 0.053331483567926316
+          "winAllProb": 0.06135410791927977
         },
         {
           "name": "Feyenoord Rotterdam",
-          "points": 52,
-          "maxPoints": 73,
-          "gap": -10,
-          "winAllProb": 0.01273805863001128
+          "points": 53,
+          "maxPoints": 71,
+          "gap": -11,
+          "winAllProb": 0.023542667794344867
         },
         {
           "name": "NEC",
-          "points": 49,
-          "maxPoints": 70,
-          "gap": -7,
-          "winAllProb": 0.01391077820010717
+          "points": 50,
+          "maxPoints": 68,
+          "gap": -8,
+          "winAllProb": 0.017914565178703608
         },
         {
           "name": "AFC Ajax",
-          "points": 47,
-          "maxPoints": 68,
-          "gap": -5,
-          "winAllProb": 0.004881533575846546
+          "points": 48,
+          "maxPoints": 66,
+          "gap": -6,
+          "winAllProb": 0.016893487760104662
         },
         {
           "name": "FC Twente '65",
           "points": 47,
           "maxPoints": 65,
           "gap": -5,
-          "winAllProb": 0.005939182516062641
+          "winAllProb": 0.00708450626860985
+        }
+      ],
+      "iterations": 50000,
+      "neverChampionCount": 50000
+    },
+    "fc-utrecht": {
+      "clubPoints": 41,
+      "clubPlayed": 28,
+      "clubRemaining": 6,
+      "rivals": [
+        {
+          "name": "PSV",
+          "points": 68,
+          "maxPoints": 86,
+          "gap": -27,
+          "winAllProb": 0.06135410791927977
+        },
+        {
+          "name": "Feyenoord Rotterdam",
+          "points": 53,
+          "maxPoints": 71,
+          "gap": -12,
+          "winAllProb": 0.023542667794344867
+        },
+        {
+          "name": "NEC",
+          "points": 50,
+          "maxPoints": 68,
+          "gap": -9,
+          "winAllProb": 0.017914565178703608
+        },
+        {
+          "name": "AFC Ajax",
+          "points": 48,
+          "maxPoints": 66,
+          "gap": -7,
+          "winAllProb": 0.016893487760104662
+        },
+        {
+          "name": "FC Twente '65",
+          "points": 47,
+          "maxPoints": 65,
+          "gap": -6,
+          "winAllProb": 0.00708450626860985
+        }
+      ],
+      "iterations": 50000,
+      "neverChampionCount": 50000
+    },
+    "sc-heerenveen": {
+      "clubPoints": 41,
+      "clubPlayed": 28,
+      "clubRemaining": 6,
+      "rivals": [
+        {
+          "name": "PSV",
+          "points": 68,
+          "maxPoints": 86,
+          "gap": -27,
+          "winAllProb": 0.06135410791927977
+        },
+        {
+          "name": "Feyenoord Rotterdam",
+          "points": 53,
+          "maxPoints": 71,
+          "gap": -12,
+          "winAllProb": 0.023542667794344867
+        },
+        {
+          "name": "NEC",
+          "points": 50,
+          "maxPoints": 68,
+          "gap": -9,
+          "winAllProb": 0.017914565178703608
+        },
+        {
+          "name": "AFC Ajax",
+          "points": 48,
+          "maxPoints": 66,
+          "gap": -7,
+          "winAllProb": 0.016893487760104662
+        },
+        {
+          "name": "FC Twente '65",
+          "points": 47,
+          "maxPoints": 65,
+          "gap": -6,
+          "winAllProb": 0.00708450626860985
         }
       ],
       "iterations": 50000,
@@ -1706,169 +1650,81 @@
         {
           "name": "PSV",
           "points": 68,
-          "maxPoints": 89,
+          "maxPoints": 86,
           "gap": -27,
-          "winAllProb": 0.053331483567926316
+          "winAllProb": 0.06135410791927977
         },
         {
           "name": "Feyenoord Rotterdam",
-          "points": 52,
-          "maxPoints": 73,
-          "gap": -11,
-          "winAllProb": 0.01273805863001128
-        },
-        {
-          "name": "NEC",
-          "points": 49,
-          "maxPoints": 70,
-          "gap": -8,
-          "winAllProb": 0.01391077820010717
-        },
-        {
-          "name": "AFC Ajax",
-          "points": 47,
-          "maxPoints": 68,
-          "gap": -6,
-          "winAllProb": 0.004881533575846546
-        },
-        {
-          "name": "FC Twente '65",
-          "points": 47,
-          "maxPoints": 65,
-          "gap": -6,
-          "winAllProb": 0.005939182516062641
-        }
-      ],
-      "iterations": 50000,
-      "neverChampionCount": 50000
-    },
-    "sc-heerenveen": {
-      "clubPoints": 40,
-      "clubPlayed": 27,
-      "clubRemaining": 7,
-      "rivals": [
-        {
-          "name": "PSV",
-          "points": 68,
-          "maxPoints": 89,
-          "gap": -28,
-          "winAllProb": 0.053331483567926316
-        },
-        {
-          "name": "Feyenoord Rotterdam",
-          "points": 52,
-          "maxPoints": 73,
+          "points": 53,
+          "maxPoints": 71,
           "gap": -12,
-          "winAllProb": 0.01273805863001128
+          "winAllProb": 0.023542667794344867
         },
         {
           "name": "NEC",
-          "points": 49,
-          "maxPoints": 70,
+          "points": 50,
+          "maxPoints": 68,
           "gap": -9,
-          "winAllProb": 0.01391077820010717
+          "winAllProb": 0.017914565178703608
         },
         {
           "name": "AFC Ajax",
-          "points": 47,
-          "maxPoints": 68,
+          "points": 48,
+          "maxPoints": 66,
           "gap": -7,
-          "winAllProb": 0.004881533575846546
+          "winAllProb": 0.016893487760104662
         },
         {
           "name": "FC Twente '65",
           "points": 47,
           "maxPoints": 65,
-          "gap": -7,
-          "winAllProb": 0.005939182516062641
-        }
-      ],
-      "iterations": 50000,
-      "neverChampionCount": 50000
-    },
-    "fc-utrecht": {
-      "clubPoints": 38,
-      "clubPlayed": 27,
-      "clubRemaining": 7,
-      "rivals": [
-        {
-          "name": "PSV",
-          "points": 68,
-          "maxPoints": 89,
-          "gap": -30,
-          "winAllProb": 0.053331483567926316
-        },
-        {
-          "name": "Feyenoord Rotterdam",
-          "points": 52,
-          "maxPoints": 73,
-          "gap": -14,
-          "winAllProb": 0.01273805863001128
-        },
-        {
-          "name": "NEC",
-          "points": 49,
-          "maxPoints": 70,
-          "gap": -11,
-          "winAllProb": 0.01391077820010717
-        },
-        {
-          "name": "AFC Ajax",
-          "points": 47,
-          "maxPoints": 68,
-          "gap": -9,
-          "winAllProb": 0.004881533575846546
-        },
-        {
-          "name": "FC Twente '65",
-          "points": 47,
-          "maxPoints": 65,
-          "gap": -9,
-          "winAllProb": 0.005939182516062641
+          "gap": -6,
+          "winAllProb": 0.00708450626860985
         }
       ],
       "iterations": 50000,
       "neverChampionCount": 50000
     },
     "fc-groningen": {
-      "clubPoints": 35,
-      "clubPlayed": 27,
-      "clubRemaining": 7,
+      "clubPoints": 38,
+      "clubPlayed": 28,
+      "clubRemaining": 6,
       "rivals": [
         {
           "name": "PSV",
           "points": 68,
-          "maxPoints": 89,
-          "gap": -33,
-          "winAllProb": 0.053331483567926316
+          "maxPoints": 86,
+          "gap": -30,
+          "winAllProb": 0.06135410791927977
         },
         {
           "name": "Feyenoord Rotterdam",
-          "points": 52,
-          "maxPoints": 73,
-          "gap": -17,
-          "winAllProb": 0.01273805863001128
+          "points": 53,
+          "maxPoints": 71,
+          "gap": -15,
+          "winAllProb": 0.023542667794344867
         },
         {
           "name": "NEC",
-          "points": 49,
-          "maxPoints": 70,
-          "gap": -14,
-          "winAllProb": 0.01391077820010717
+          "points": 50,
+          "maxPoints": 68,
+          "gap": -12,
+          "winAllProb": 0.017914565178703608
         },
         {
           "name": "AFC Ajax",
-          "points": 47,
-          "maxPoints": 68,
-          "gap": -12,
-          "winAllProb": 0.004881533575846546
+          "points": 48,
+          "maxPoints": 66,
+          "gap": -10,
+          "winAllProb": 0.016893487760104662
         },
         {
           "name": "FC Twente '65",
           "points": 47,
           "maxPoints": 65,
-          "gap": -12,
-          "winAllProb": 0.005939182516062641
+          "gap": -9,
+          "winAllProb": 0.00708450626860985
         }
       ],
       "iterations": 50000,
@@ -1882,37 +1738,37 @@
         {
           "name": "PSV",
           "points": 68,
-          "maxPoints": 89,
+          "maxPoints": 86,
           "gap": -33,
-          "winAllProb": 0.053331483567926316
+          "winAllProb": 0.06135410791927977
         },
         {
           "name": "Feyenoord Rotterdam",
-          "points": 52,
-          "maxPoints": 73,
-          "gap": -17,
-          "winAllProb": 0.01273805863001128
+          "points": 53,
+          "maxPoints": 71,
+          "gap": -18,
+          "winAllProb": 0.023542667794344867
         },
         {
           "name": "NEC",
-          "points": 49,
-          "maxPoints": 70,
-          "gap": -14,
-          "winAllProb": 0.01391077820010717
+          "points": 50,
+          "maxPoints": 68,
+          "gap": -15,
+          "winAllProb": 0.017914565178703608
         },
         {
           "name": "AFC Ajax",
-          "points": 47,
-          "maxPoints": 68,
-          "gap": -12,
-          "winAllProb": 0.004881533575846546
+          "points": 48,
+          "maxPoints": 66,
+          "gap": -13,
+          "winAllProb": 0.016893487760104662
         },
         {
           "name": "FC Twente '65",
           "points": 47,
           "maxPoints": 65,
           "gap": -12,
-          "winAllProb": 0.005939182516062641
+          "winAllProb": 0.00708450626860985
         }
       ],
       "iterations": 50000,
@@ -1926,37 +1782,37 @@
         {
           "name": "PSV",
           "points": 68,
-          "maxPoints": 89,
+          "maxPoints": 86,
           "gap": -35,
-          "winAllProb": 0.053331483567926316
+          "winAllProb": 0.06135410791927977
         },
         {
           "name": "Feyenoord Rotterdam",
-          "points": 52,
-          "maxPoints": 73,
-          "gap": -19,
-          "winAllProb": 0.01273805863001128
+          "points": 53,
+          "maxPoints": 71,
+          "gap": -20,
+          "winAllProb": 0.023542667794344867
         },
         {
           "name": "NEC",
-          "points": 49,
-          "maxPoints": 70,
-          "gap": -16,
-          "winAllProb": 0.01391077820010717
+          "points": 50,
+          "maxPoints": 68,
+          "gap": -17,
+          "winAllProb": 0.017914565178703608
         },
         {
           "name": "AFC Ajax",
-          "points": 47,
-          "maxPoints": 68,
-          "gap": -14,
-          "winAllProb": 0.004881533575846546
+          "points": 48,
+          "maxPoints": 66,
+          "gap": -15,
+          "winAllProb": 0.016893487760104662
         },
         {
           "name": "FC Twente '65",
           "points": 47,
           "maxPoints": 65,
           "gap": -14,
-          "winAllProb": 0.005939182516062641
+          "winAllProb": 0.00708450626860985
         }
       ],
       "iterations": 50000,
@@ -1964,43 +1820,87 @@
     },
     "go-ahead-eagles": {
       "clubPoints": 32,
-      "clubPlayed": 27,
-      "clubRemaining": 7,
+      "clubPlayed": 28,
+      "clubRemaining": 6,
       "rivals": [
         {
           "name": "PSV",
           "points": 68,
-          "maxPoints": 89,
+          "maxPoints": 86,
           "gap": -36,
-          "winAllProb": 0.053331483567926316
+          "winAllProb": 0.06135410791927977
         },
         {
           "name": "Feyenoord Rotterdam",
-          "points": 52,
-          "maxPoints": 73,
-          "gap": -20,
-          "winAllProb": 0.01273805863001128
+          "points": 53,
+          "maxPoints": 71,
+          "gap": -21,
+          "winAllProb": 0.023542667794344867
         },
         {
           "name": "NEC",
-          "points": 49,
-          "maxPoints": 70,
-          "gap": -17,
-          "winAllProb": 0.01391077820010717
+          "points": 50,
+          "maxPoints": 68,
+          "gap": -18,
+          "winAllProb": 0.017914565178703608
         },
         {
           "name": "AFC Ajax",
-          "points": 47,
-          "maxPoints": 68,
-          "gap": -15,
-          "winAllProb": 0.004881533575846546
+          "points": 48,
+          "maxPoints": 66,
+          "gap": -16,
+          "winAllProb": 0.016893487760104662
         },
         {
           "name": "FC Twente '65",
           "points": 47,
           "maxPoints": 65,
           "gap": -15,
-          "winAllProb": 0.005939182516062641
+          "winAllProb": 0.00708450626860985
+        }
+      ],
+      "iterations": 50000,
+      "neverChampionCount": 50000
+    },
+    "telstar-1963": {
+      "clubPoints": 27,
+      "clubPlayed": 28,
+      "clubRemaining": 6,
+      "rivals": [
+        {
+          "name": "PSV",
+          "points": 68,
+          "maxPoints": 86,
+          "gap": -41,
+          "winAllProb": 0.06135410791927977
+        },
+        {
+          "name": "Feyenoord Rotterdam",
+          "points": 53,
+          "maxPoints": 71,
+          "gap": -26,
+          "winAllProb": 0.023542667794344867
+        },
+        {
+          "name": "NEC",
+          "points": 50,
+          "maxPoints": 68,
+          "gap": -23,
+          "winAllProb": 0.017914565178703608
+        },
+        {
+          "name": "AFC Ajax",
+          "points": 48,
+          "maxPoints": 66,
+          "gap": -21,
+          "winAllProb": 0.016893487760104662
+        },
+        {
+          "name": "FC Twente '65",
+          "points": 47,
+          "maxPoints": 65,
+          "gap": -20,
+          "winAllProb": 0.00708450626860985
         }
       ],
       "iterations": 50000,
@@ -2014,37 +1914,37 @@
         {
           "name": "PSV",
           "points": 68,
-          "maxPoints": 89,
+          "maxPoints": 86,
           "gap": -41,
-          "winAllProb": 0.053331483567926316
+          "winAllProb": 0.06135410791927977
         },
         {
           "name": "Feyenoord Rotterdam",
-          "points": 52,
-          "maxPoints": 73,
-          "gap": -25,
-          "winAllProb": 0.01273805863001128
+          "points": 53,
+          "maxPoints": 71,
+          "gap": -26,
+          "winAllProb": 0.023542667794344867
         },
         {
           "name": "NEC",
-          "points": 49,
-          "maxPoints": 70,
-          "gap": -22,
-          "winAllProb": 0.01391077820010717
+          "points": 50,
+          "maxPoints": 68,
+          "gap": -23,
+          "winAllProb": 0.017914565178703608
         },
         {
           "name": "AFC Ajax",
-          "points": 47,
-          "maxPoints": 68,
-          "gap": -20,
-          "winAllProb": 0.004881533575846546
+          "points": 48,
+          "maxPoints": 66,
+          "gap": -21,
+          "winAllProb": 0.016893487760104662
         },
         {
           "name": "FC Twente '65",
           "points": 47,
           "maxPoints": 65,
           "gap": -20,
-          "winAllProb": 0.005939182516062641
+          "winAllProb": 0.00708450626860985
         }
       ],
       "iterations": 50000,
@@ -2058,81 +1958,37 @@
         {
           "name": "PSV",
           "points": 68,
-          "maxPoints": 89,
+          "maxPoints": 86,
           "gap": -41,
-          "winAllProb": 0.053331483567926316
+          "winAllProb": 0.06135410791927977
         },
         {
           "name": "Feyenoord Rotterdam",
-          "points": 52,
-          "maxPoints": 73,
-          "gap": -25,
-          "winAllProb": 0.01273805863001128
+          "points": 53,
+          "maxPoints": 71,
+          "gap": -26,
+          "winAllProb": 0.023542667794344867
         },
         {
           "name": "NEC",
-          "points": 49,
-          "maxPoints": 70,
-          "gap": -22,
-          "winAllProb": 0.01391077820010717
+          "points": 50,
+          "maxPoints": 68,
+          "gap": -23,
+          "winAllProb": 0.017914565178703608
         },
         {
           "name": "AFC Ajax",
-          "points": 47,
-          "maxPoints": 68,
-          "gap": -20,
-          "winAllProb": 0.004881533575846546
+          "points": 48,
+          "maxPoints": 66,
+          "gap": -21,
+          "winAllProb": 0.016893487760104662
         },
         {
           "name": "FC Twente '65",
           "points": 47,
           "maxPoints": 65,
           "gap": -20,
-          "winAllProb": 0.005939182516062641
-        }
-      ],
-      "iterations": 50000,
-      "neverChampionCount": 50000
-    },
-    "telstar-1963": {
-      "clubPoints": 24,
-      "clubPlayed": 27,
-      "clubRemaining": 7,
-      "rivals": [
-        {
-          "name": "PSV",
-          "points": 68,
-          "maxPoints": 89,
-          "gap": -44,
-          "winAllProb": 0.053331483567926316
-        },
-        {
-          "name": "Feyenoord Rotterdam",
-          "points": 52,
-          "maxPoints": 73,
-          "gap": -28,
-          "winAllProb": 0.01273805863001128
-        },
-        {
-          "name": "NEC",
-          "points": 49,
-          "maxPoints": 70,
-          "gap": -25,
-          "winAllProb": 0.01391077820010717
-        },
-        {
-          "name": "AFC Ajax",
-          "points": 47,
-          "maxPoints": 68,
-          "gap": -23,
-          "winAllProb": 0.004881533575846546
-        },
-        {
-          "name": "FC Twente '65",
-          "points": 47,
-          "maxPoints": 65,
-          "gap": -23,
-          "winAllProb": 0.005939182516062641
+          "winAllProb": 0.00708450626860985
         }
       ],
       "iterations": 50000,
@@ -2146,37 +2002,37 @@
         {
           "name": "PSV",
           "points": 68,
-          "maxPoints": 89,
+          "maxPoints": 86,
           "gap": -45,
-          "winAllProb": 0.053331483567926316
+          "winAllProb": 0.06135410791927977
         },
         {
           "name": "Feyenoord Rotterdam",
-          "points": 52,
-          "maxPoints": 73,
-          "gap": -29,
-          "winAllProb": 0.01273805863001128
+          "points": 53,
+          "maxPoints": 71,
+          "gap": -30,
+          "winAllProb": 0.023542667794344867
         },
         {
           "name": "NEC",
-          "points": 49,
-          "maxPoints": 70,
-          "gap": -26,
-          "winAllProb": 0.01391077820010717
+          "points": 50,
+          "maxPoints": 68,
+          "gap": -27,
+          "winAllProb": 0.017914565178703608
         },
         {
           "name": "AFC Ajax",
-          "points": 47,
-          "maxPoints": 68,
-          "gap": -24,
-          "winAllProb": 0.004881533575846546
+          "points": 48,
+          "maxPoints": 66,
+          "gap": -25,
+          "winAllProb": 0.016893487760104662
         },
         {
           "name": "FC Twente '65",
           "points": 47,
           "maxPoints": 65,
           "gap": -24,
-          "winAllProb": 0.005939182516062641
+          "winAllProb": 0.00708450626860985
         }
       ],
       "iterations": 50000,
@@ -2190,37 +2046,37 @@
         {
           "name": "PSV",
           "points": 68,
-          "maxPoints": 89,
+          "maxPoints": 86,
           "gap": -49,
-          "winAllProb": 0.053331483567926316
+          "winAllProb": 0.06135410791927977
         },
         {
           "name": "Feyenoord Rotterdam",
-          "points": 52,
-          "maxPoints": 73,
-          "gap": -33,
-          "winAllProb": 0.01273805863001128
+          "points": 53,
+          "maxPoints": 71,
+          "gap": -34,
+          "winAllProb": 0.023542667794344867
         },
         {
           "name": "NEC",
-          "points": 49,
-          "maxPoints": 70,
-          "gap": -30,
-          "winAllProb": 0.01391077820010717
+          "points": 50,
+          "maxPoints": 68,
+          "gap": -31,
+          "winAllProb": 0.017914565178703608
         },
         {
           "name": "AFC Ajax",
-          "points": 47,
-          "maxPoints": 68,
-          "gap": -28,
-          "winAllProb": 0.004881533575846546
+          "points": 48,
+          "maxPoints": 66,
+          "gap": -29,
+          "winAllProb": 0.016893487760104662
         },
         {
           "name": "FC Twente '65",
           "points": 47,
           "maxPoints": 65,
           "gap": -28,
-          "winAllProb": 0.005939182516062641
+          "winAllProb": 0.00708450626860985
         }
       ],
       "iterations": 50000,
@@ -2233,48 +2089,48 @@
       "name": "PSV",
       "shortName": "PSV",
       "points": 68,
-      "played": 27,
+      "played": 28,
       "won": 22,
       "drawn": 2,
-      "lost": 3,
-      "goalsFor": 77,
-      "goalsAgainst": 34
+      "lost": 4,
+      "goalsFor": 78,
+      "goalsAgainst": 37
     },
     {
       "id": "feyenoord-rotterdam",
       "name": "Feyenoord Rotterdam",
       "shortName": "Feyenoord",
-      "points": 52,
-      "played": 27,
+      "points": 53,
+      "played": 28,
       "won": 16,
-      "drawn": 4,
+      "drawn": 5,
       "lost": 7,
-      "goalsFor": 60,
-      "goalsAgainst": 39
+      "goalsFor": 61,
+      "goalsAgainst": 40
     },
     {
       "id": "nec",
       "name": "NEC",
       "shortName": "NEC",
-      "points": 49,
-      "played": 27,
+      "points": 50,
+      "played": 28,
       "won": 14,
-      "drawn": 7,
+      "drawn": 8,
       "lost": 6,
-      "goalsFor": 67,
-      "goalsAgainst": 45
+      "goalsFor": 69,
+      "goalsAgainst": 47
     },
     {
       "id": "afc-ajax",
       "name": "AFC Ajax",
       "shortName": "Ajax",
-      "points": 47,
-      "played": 27,
+      "points": 48,
+      "played": 28,
       "won": 12,
-      "drawn": 11,
+      "drawn": 12,
       "lost": 4,
-      "goalsFor": 52,
-      "goalsAgainst": 34
+      "goalsFor": 53,
+      "goalsAgainst": 35
     },
     {
       "id": "fc-twente-65",
@@ -2293,12 +2149,36 @@
       "name": "AZ",
       "shortName": "AZ",
       "points": 42,
-      "played": 27,
+      "played": 28,
       "won": 12,
       "drawn": 6,
-      "lost": 9,
+      "lost": 10,
       "goalsFor": 47,
-      "goalsAgainst": 42
+      "goalsAgainst": 45
+    },
+    {
+      "id": "fc-utrecht",
+      "name": "FC Utrecht",
+      "shortName": "Utrecht",
+      "points": 41,
+      "played": 28,
+      "won": 11,
+      "drawn": 8,
+      "lost": 9,
+      "goalsFor": 42,
+      "goalsAgainst": 31
+    },
+    {
+      "id": "sc-heerenveen",
+      "name": "SC Heerenveen",
+      "shortName": "Heerenveen",
+      "points": 41,
+      "played": 28,
+      "won": 11,
+      "drawn": 8,
+      "lost": 9,
+      "goalsFor": 49,
+      "goalsAgainst": 46
     },
     {
       "id": "sparta-rotterdam",
@@ -2313,39 +2193,15 @@
       "goalsAgainst": 47
     },
     {
-      "id": "sc-heerenveen",
-      "name": "SC Heerenveen",
-      "shortName": "Heerenveen",
-      "points": 40,
-      "played": 27,
-      "won": 11,
-      "drawn": 7,
-      "lost": 9,
-      "goalsFor": 47,
-      "goalsAgainst": 44
-    },
-    {
-      "id": "fc-utrecht",
-      "name": "FC Utrecht",
-      "shortName": "Utrecht",
-      "points": 38,
-      "played": 27,
-      "won": 10,
-      "drawn": 8,
-      "lost": 9,
-      "goalsFor": 40,
-      "goalsAgainst": 31
-    },
-    {
       "id": "fc-groningen",
       "name": "FC Groningen",
       "shortName": "Groningen",
-      "points": 35,
-      "played": 27,
-      "won": 10,
+      "points": 38,
+      "played": 28,
+      "won": 11,
       "drawn": 5,
       "lost": 12,
-      "goalsFor": 37,
+      "goalsFor": 40,
       "goalsAgainst": 37
     },
     {
@@ -2377,12 +2233,24 @@
       "name": "Go Ahead Eagles",
       "shortName": "Go",
       "points": 32,
-      "played": 27,
+      "played": 28,
       "won": 7,
       "drawn": 11,
-      "lost": 9,
+      "lost": 10,
       "goalsFor": 45,
-      "goalsAgainst": 43
+      "goalsAgainst": 45
+    },
+    {
+      "id": "telstar-1963",
+      "name": "Telstar 1963",
+      "shortName": "Telstar",
+      "points": 27,
+      "played": 28,
+      "won": 6,
+      "drawn": 9,
+      "lost": 13,
+      "goalsFor": 38,
+      "goalsAgainst": 46
     },
     {
       "id": "fc-volendam",
@@ -2407,18 +2275,6 @@
       "lost": 15,
       "goalsFor": 29,
       "goalsAgainst": 47
-    },
-    {
-      "id": "telstar-1963",
-      "name": "Telstar 1963",
-      "shortName": "Telstar",
-      "points": 24,
-      "played": 27,
-      "won": 5,
-      "drawn": 9,
-      "lost": 13,
-      "goalsFor": 35,
-      "goalsAgainst": 45
     },
     {
       "id": "nac-breda",
@@ -2447,69 +2303,14 @@
   ],
   "fixtures": [
     {
-      "id": "match-nec:sc-heerenveen-r28",
-      "date": "2026-03-22",
-      "round": 28,
-      "homeTeam": "nec",
-      "awayTeam": "sc-heerenveen",
-      "homeWinProb": 0.6804111597546769,
-      "drawProb": 0.14456405158681,
-      "awayWinProb": 0.17502478865851304,
-      "source": "poisson"
-    },
-    {
-      "id": "match-fc-utrecht:go-ahead-eagles-r28",
-      "date": "2026-03-22",
-      "round": 28,
-      "homeTeam": "fc-utrecht",
-      "awayTeam": "go-ahead-eagles",
-      "homeWinProb": 0.5891936995620349,
-      "drawProb": 0.20411149997707922,
-      "awayWinProb": 0.2066948004608859,
-      "source": "api"
-    },
-    {
-      "id": "match-feyenoord-rotterdam:afc-ajax-r28",
-      "date": "2026-03-22",
-      "round": 28,
-      "homeTeam": "feyenoord-rotterdam",
-      "awayTeam": "afc-ajax",
-      "homeWinProb": 0.5188378494519379,
-      "drawProb": 0.19625651378056627,
-      "awayWinProb": 0.2849056367674958,
-      "source": "poisson"
-    },
-    {
-      "id": "match-fc-groningen:az-r28",
-      "date": "2026-03-22",
-      "round": 28,
-      "homeTeam": "fc-groningen",
-      "awayTeam": "az",
-      "homeWinProb": 0.45060774196978887,
-      "drawProb": 0.22804881863865717,
-      "awayWinProb": 0.321343439391554,
-      "source": "poisson"
-    },
-    {
-      "id": "match-telstar-1963:psv-r28",
-      "date": "2026-03-22",
-      "round": 28,
-      "homeTeam": "telstar-1963",
-      "awayTeam": "psv",
-      "homeWinProb": 0.15031805336866147,
-      "drawProb": 0.15267318055971257,
-      "awayWinProb": 0.697008766071626,
-      "source": "poisson"
-    },
-    {
       "id": "match-psv:fc-utrecht-r29",
       "date": "2026-04-04",
       "round": 29,
       "homeTeam": "psv",
       "awayTeam": "fc-utrecht",
-      "homeWinProb": 0.7072607187328106,
-      "drawProb": 0.15696691653785746,
-      "awayWinProb": 0.13577236472933185,
+      "homeWinProb": 0.6662918557764946,
+      "drawProb": 0.17123234864824283,
+      "awayWinProb": 0.1624757955752625,
       "source": "poisson"
     },
     {
@@ -2518,9 +2319,9 @@
       "round": 29,
       "homeTeam": "az",
       "awayTeam": "fortuna-sittard",
-      "homeWinProb": 0.6352368249914451,
-      "drawProb": 0.17171444974199876,
-      "awayWinProb": 0.19304872526655614,
+      "homeWinProb": 0.608569465795343,
+      "drawProb": 0.17873366213409286,
+      "awayWinProb": 0.21269687207056406,
       "source": "poisson"
     },
     {
@@ -2529,9 +2330,9 @@
       "round": 29,
       "homeTeam": "telstar-1963",
       "awayTeam": "fc-groningen",
-      "homeWinProb": 0.3926462981343649,
-      "drawProb": 0.2464231693837515,
-      "awayWinProb": 0.36093053248188367,
+      "homeWinProb": 0.3883143046893143,
+      "drawProb": 0.24380256883548346,
+      "awayWinProb": 0.36788312647520227,
       "source": "poisson"
     },
     {
@@ -2540,9 +2341,9 @@
       "round": 29,
       "homeTeam": "afc-ajax",
       "awayTeam": "fc-twente-65",
-      "homeWinProb": 0.47346742436954403,
-      "drawProb": 0.23472195965201428,
-      "awayWinProb": 0.2918106159784417,
+      "homeWinProb": 0.4687013483750016,
+      "drawProb": 0.23676197110890856,
+      "awayWinProb": 0.29453668051608983,
       "source": "poisson"
     },
     {
@@ -2551,9 +2352,9 @@
       "round": 29,
       "homeTeam": "sbv-excelsior",
       "awayTeam": "nec",
-      "homeWinProb": 0.20049158878568557,
-      "drawProb": 0.17840375990807605,
-      "awayWinProb": 0.6211046513062384,
+      "homeWinProb": 0.20437669943723644,
+      "drawProb": 0.1796506729288614,
+      "awayWinProb": 0.6159726276339021,
       "source": "poisson"
     },
     {
@@ -2562,9 +2363,9 @@
       "round": 29,
       "homeTeam": "go-ahead-eagles",
       "awayTeam": "pec-zwolle",
-      "homeWinProb": 0.652916985868573,
-      "drawProb": 0.17140799516237257,
-      "awayWinProb": 0.17567501896905424,
+      "homeWinProb": 0.6341086051782505,
+      "drawProb": 0.17796633020784977,
+      "awayWinProb": 0.1879250646138997,
       "source": "poisson"
     },
     {
@@ -2573,9 +2374,9 @@
       "round": 29,
       "homeTeam": "fc-volendam",
       "awayTeam": "feyenoord-rotterdam",
-      "homeWinProb": 0.19856766625614372,
-      "drawProb": 0.1892755768087705,
-      "awayWinProb": 0.6121567569350858,
+      "homeWinProb": 0.2013371816411367,
+      "drawProb": 0.19207233445287672,
+      "awayWinProb": 0.6065904839059866,
       "source": "poisson"
     },
     {
@@ -2584,9 +2385,9 @@
       "round": 29,
       "homeTeam": "sc-heerenveen",
       "awayTeam": "heracles-almelo",
-      "homeWinProb": 0.8158571689821029,
-      "drawProb": 0.10427300682164624,
-      "awayWinProb": 0.07986982419625095,
+      "homeWinProb": 0.8164916940185168,
+      "drawProb": 0.10367905609009061,
+      "awayWinProb": 0.07982924989139245,
       "source": "poisson"
     },
     {
@@ -2595,9 +2396,9 @@
       "round": 29,
       "homeTeam": "nac-breda",
       "awayTeam": "sparta-rotterdam",
-      "homeWinProb": 0.3913192214720174,
-      "drawProb": 0.24957923042855248,
-      "awayWinProb": 0.3591015480994302,
+      "homeWinProb": 0.39142047927451357,
+      "drawProb": 0.2493991296616061,
+      "awayWinProb": 0.35918039106388033,
       "source": "poisson"
     },
     {
@@ -2606,9 +2407,9 @@
       "round": 30,
       "homeTeam": "fc-twente-65",
       "awayTeam": "fc-volendam",
-      "homeWinProb": 0.7511198660091354,
-      "drawProb": 0.15803548146911509,
-      "awayWinProb": 0.09084465252174953,
+      "homeWinProb": 0.7513951692334085,
+      "drawProb": 0.1578211045829381,
+      "awayWinProb": 0.09078372618365341,
       "source": "poisson"
     },
     {
@@ -2617,9 +2418,9 @@
       "round": 30,
       "homeTeam": "fc-utrecht",
       "awayTeam": "telstar-1963",
-      "homeWinProb": 0.6393460538688066,
-      "drawProb": 0.20183881351831645,
-      "awayWinProb": 0.158815132612877,
+      "homeWinProb": 0.6366429721067249,
+      "drawProb": 0.20235146790289563,
+      "awayWinProb": 0.16100555999037944,
       "source": "poisson"
     },
     {
@@ -2628,9 +2429,9 @@
       "round": 30,
       "homeTeam": "sparta-rotterdam",
       "awayTeam": "psv",
-      "homeWinProb": 0.1410610369386786,
-      "drawProb": 0.14926178531551226,
-      "awayWinProb": 0.7096771777458092,
+      "homeWinProb": 0.15713604186908323,
+      "drawProb": 0.15614683976006602,
+      "awayWinProb": 0.6867171183708508,
       "source": "poisson"
     },
     {
@@ -2639,9 +2440,9 @@
       "round": 30,
       "homeTeam": "fc-groningen",
       "awayTeam": "go-ahead-eagles",
-      "homeWinProb": 0.47364355570737965,
-      "drawProb": 0.22662532122298787,
-      "awayWinProb": 0.29973112306963257,
+      "homeWinProb": 0.5168796353375646,
+      "drawProb": 0.22088709176568777,
+      "awayWinProb": 0.26223327289674764,
       "source": "poisson"
     },
     {
@@ -2650,9 +2451,9 @@
       "round": 30,
       "homeTeam": "heracles-almelo",
       "awayTeam": "afc-ajax",
-      "homeWinProb": 0.12849612421921774,
-      "drawProb": 0.14468380418089974,
-      "awayWinProb": 0.7268200715998826,
+      "homeWinProb": 0.13121330605113019,
+      "drawProb": 0.14737984933211834,
+      "awayWinProb": 0.7214068446167514,
       "source": "poisson"
     },
     {
@@ -2661,9 +2462,9 @@
       "round": 30,
       "homeTeam": "fortuna-sittard",
       "awayTeam": "nac-breda",
-      "homeWinProb": 0.6220284887314379,
-      "drawProb": 0.19132858660625876,
-      "awayWinProb": 0.18664292466230326,
+      "homeWinProb": 0.6222485712251258,
+      "drawProb": 0.19115196173189344,
+      "awayWinProb": 0.18659946704298072,
       "source": "poisson"
     },
     {
@@ -2672,9 +2473,9 @@
       "round": 30,
       "homeTeam": "nec",
       "awayTeam": "feyenoord-rotterdam",
-      "homeWinProb": 0.531461683298526,
-      "drawProb": 0.17071830801470983,
-      "awayWinProb": 0.2978200086867641,
+      "homeWinProb": 0.5276570298817583,
+      "drawProb": 0.17235207253069423,
+      "awayWinProb": 0.2999908975875475,
       "source": "poisson"
     },
     {
@@ -2683,9 +2484,9 @@
       "round": 30,
       "homeTeam": "pec-zwolle",
       "awayTeam": "sbv-excelsior",
-      "homeWinProb": 0.5361448732546022,
-      "drawProb": 0.22199086385625677,
-      "awayWinProb": 0.24186426288914092,
+      "homeWinProb": 0.536331109443678,
+      "drawProb": 0.22181134262668178,
+      "awayWinProb": 0.2418575479296401,
       "source": "poisson"
     },
     {
@@ -2694,9 +2495,9 @@
       "round": 30,
       "homeTeam": "az",
       "awayTeam": "sc-heerenveen",
-      "homeWinProb": 0.5343219090388434,
-      "drawProb": 0.19442614042593204,
-      "awayWinProb": 0.27125195053522455,
+      "homeWinProb": 0.5084793308404016,
+      "drawProb": 0.19781595039477226,
+      "awayWinProb": 0.29370471876482607,
       "source": "poisson"
     },
     {
@@ -2705,9 +2506,9 @@
       "round": 31,
       "homeTeam": "telstar-1963",
       "awayTeam": "sparta-rotterdam",
-      "homeWinProb": 0.49957878255005,
-      "drawProb": 0.22830744130357217,
-      "awayWinProb": 0.27211377614637783,
+      "homeWinProb": 0.5232555044903031,
+      "drawProb": 0.22196844481716785,
+      "awayWinProb": 0.254776050692529,
       "source": "poisson"
     },
     {
@@ -2716,9 +2517,9 @@
       "round": 31,
       "homeTeam": "sbv-excelsior",
       "awayTeam": "fc-utrecht",
-      "homeWinProb": 0.244458708901529,
-      "drawProb": 0.25459305032935436,
-      "awayWinProb": 0.5009482407691166,
+      "homeWinProb": 0.23239629654051325,
+      "drawProb": 0.25279376544517984,
+      "awayWinProb": 0.5148099380143069,
       "source": "poisson"
     },
     {
@@ -2727,9 +2528,9 @@
       "round": 31,
       "homeTeam": "feyenoord-rotterdam",
       "awayTeam": "fc-groningen",
-      "homeWinProb": 0.6608009535258214,
-      "drawProb": 0.17366843716476346,
-      "awayWinProb": 0.16553060930941516,
+      "homeWinProb": 0.6278271586464323,
+      "drawProb": 0.1848377698592262,
+      "awayWinProb": 0.18733507149434148,
       "source": "poisson"
     },
     {
@@ -2738,9 +2539,9 @@
       "round": 31,
       "homeTeam": "heracles-almelo",
       "awayTeam": "fc-volendam",
-      "homeWinProb": 0.39271144088112653,
-      "drawProb": 0.22732444191661988,
-      "awayWinProb": 0.37996411720225365,
+      "homeWinProb": 0.3927953767874699,
+      "drawProb": 0.22716523030635344,
+      "awayWinProb": 0.3800393929061767,
       "source": "poisson"
     },
     {
@@ -2749,9 +2550,9 @@
       "round": 31,
       "homeTeam": "nac-breda",
       "awayTeam": "afc-ajax",
-      "homeWinProb": 0.18571875303567356,
-      "drawProb": 0.20151023181093497,
-      "awayWinProb": 0.6127710151533915,
+      "homeWinProb": 0.18840321283135897,
+      "drawProb": 0.20420659545242376,
+      "awayWinProb": 0.6073901917162173,
       "source": "poisson"
     },
     {
@@ -2760,9 +2561,9 @@
       "round": 31,
       "homeTeam": "sc-heerenveen",
       "awayTeam": "fortuna-sittard",
-      "homeWinProb": 0.6210407485952106,
-      "drawProb": 0.17365010972053935,
-      "awayWinProb": 0.20530914168425007,
+      "homeWinProb": 0.6212030510131173,
+      "drawProb": 0.17297677550007567,
+      "awayWinProb": 0.205820173486807,
       "source": "poisson"
     },
     {
@@ -2771,9 +2572,9 @@
       "round": 31,
       "homeTeam": "fc-twente-65",
       "awayTeam": "nec",
-      "homeWinProb": 0.5340604842338601,
-      "drawProb": 0.19601592820624072,
-      "awayWinProb": 0.2699235875598991,
+      "homeWinProb": 0.5398153755733069,
+      "drawProb": 0.19488462326560863,
+      "awayWinProb": 0.2653000011610845,
       "source": "poisson"
     },
     {
@@ -2782,9 +2583,9 @@
       "round": 31,
       "homeTeam": "go-ahead-eagles",
       "awayTeam": "az",
-      "homeWinProb": 0.48539064062307913,
-      "drawProb": 0.20478269079299552,
-      "awayWinProb": 0.30982666858392527,
+      "homeWinProb": 0.4931164171017872,
+      "drawProb": 0.20532183335863927,
+      "awayWinProb": 0.3015617495395735,
       "source": "poisson"
     },
     {
@@ -2793,9 +2594,9 @@
       "round": 31,
       "homeTeam": "psv",
       "awayTeam": "pec-zwolle",
-      "homeWinProb": 0.9013391945857911,
-      "drawProb": 0.061134433150452694,
-      "awayWinProb": 0.03752637226375608,
+      "homeWinProb": 0.8892544673677089,
+      "drawProb": 0.06716847518392265,
+      "awayWinProb": 0.04357705744836838,
       "source": "poisson"
     },
     {
@@ -2804,9 +2605,9 @@
       "round": 32,
       "homeTeam": "fc-utrecht",
       "awayTeam": "nac-breda",
-      "homeWinProb": 0.7123707990176681,
-      "drawProb": 0.17820966175652458,
-      "awayWinProb": 0.10941953922580729,
+      "homeWinProb": 0.723859003908899,
+      "drawProb": 0.17359983767339585,
+      "awayWinProb": 0.10254115841770522,
       "source": "poisson"
     },
     {
@@ -2815,9 +2616,9 @@
       "round": 32,
       "homeTeam": "fc-groningen",
       "awayTeam": "sbv-excelsior",
-      "homeWinProb": 0.6202574381874927,
-      "drawProb": 0.21428866954349995,
-      "awayWinProb": 0.16545389226900736,
+      "homeWinProb": 0.6455341298208597,
+      "drawProb": 0.20458407966683276,
+      "awayWinProb": 0.14988179051230766,
       "source": "poisson"
     },
     {
@@ -2826,9 +2627,9 @@
       "round": 32,
       "homeTeam": "afc-ajax",
       "awayTeam": "psv",
-      "homeWinProb": 0.3638033845835243,
-      "drawProb": 0.19870227705947002,
-      "awayWinProb": 0.43749433835700574,
+      "homeWinProb": 0.3880408531768638,
+      "drawProb": 0.19937004631571772,
+      "awayWinProb": 0.4125891005074185,
       "source": "poisson"
     },
     {
@@ -2837,9 +2638,9 @@
       "round": 32,
       "homeTeam": "nec",
       "awayTeam": "telstar-1963",
-      "homeWinProb": 0.7712629737872613,
-      "drawProb": 0.12154440261410608,
-      "awayWinProb": 0.10719262359863267,
+      "homeWinProb": 0.74982532935699,
+      "drawProb": 0.12887054816907165,
+      "awayWinProb": 0.12130412247393829,
       "source": "poisson"
     },
     {
@@ -2848,9 +2649,9 @@
       "round": 32,
       "homeTeam": "fc-volendam",
       "awayTeam": "sc-heerenveen",
-      "homeWinProb": 0.3061367353980978,
-      "drawProb": 0.2245517050171666,
-      "awayWinProb": 0.4693115595847356,
+      "homeWinProb": 0.30720029156726375,
+      "drawProb": 0.22363604790152056,
+      "awayWinProb": 0.4691636605312157,
       "source": "poisson"
     },
     {
@@ -2859,9 +2660,9 @@
       "round": 32,
       "homeTeam": "fortuna-sittard",
       "awayTeam": "feyenoord-rotterdam",
-      "homeWinProb": 0.27938512075532573,
-      "drawProb": 0.18624469880767763,
-      "awayWinProb": 0.5343701804369967,
+      "homeWinProb": 0.28257900299560623,
+      "drawProb": 0.1883630441120637,
+      "awayWinProb": 0.52905795289233,
       "source": "poisson"
     },
     {
@@ -2870,9 +2671,9 @@
       "round": 32,
       "homeTeam": "pec-zwolle",
       "awayTeam": "heracles-almelo",
-      "homeWinProb": 0.6770550643676406,
-      "drawProb": 0.1600456211704723,
-      "awayWinProb": 0.16289931446188702,
+      "homeWinProb": 0.6772761490066013,
+      "drawProb": 0.15988726785831694,
+      "awayWinProb": 0.1628365831350818,
       "source": "poisson"
     },
     {
@@ -2881,9 +2682,9 @@
       "round": 32,
       "homeTeam": "az",
       "awayTeam": "fc-twente-65",
-      "homeWinProb": 0.3705422942832915,
-      "drawProb": 0.23405735154288573,
-      "awayWinProb": 0.3954003541738228,
+      "homeWinProb": 0.34743020663809776,
+      "drawProb": 0.23322573211867498,
+      "awayWinProb": 0.4193440612432272,
       "source": "poisson"
     },
     {
@@ -2892,9 +2693,9 @@
       "round": 32,
       "homeTeam": "sparta-rotterdam",
       "awayTeam": "go-ahead-eagles",
-      "homeWinProb": 0.37307272516749296,
-      "drawProb": 0.22538939391601767,
-      "awayWinProb": 0.40153788091648934,
+      "homeWinProb": 0.38831602433001905,
+      "drawProb": 0.2271040191520473,
+      "awayWinProb": 0.3845799565179337,
       "source": "poisson"
     },
     {
@@ -2903,9 +2704,9 @@
       "round": 33,
       "homeTeam": "afc-ajax",
       "awayTeam": "fc-utrecht",
-      "homeWinProb": 0.5370835521719869,
-      "drawProb": 0.22621014687973715,
-      "awayWinProb": 0.23670630094827594,
+      "homeWinProb": 0.5134950637835906,
+      "drawProb": 0.23399249122330834,
+      "awayWinProb": 0.25251244499310116,
       "source": "poisson"
     },
     {
@@ -2914,9 +2715,9 @@
       "round": 33,
       "homeTeam": "sbv-excelsior",
       "awayTeam": "fc-volendam",
-      "homeWinProb": 0.45808211097445084,
-      "drawProb": 0.25732880666152924,
-      "awayWinProb": 0.28458908236402,
+      "homeWinProb": 0.45824093958176004,
+      "drawProb": 0.25713169707380834,
+      "awayWinProb": 0.28462736334443167,
       "source": "poisson"
     },
     {
@@ -2925,9 +2726,9 @@
       "round": 33,
       "homeTeam": "fc-groningen",
       "awayTeam": "nec",
-      "homeWinProb": 0.35968891718936835,
-      "drawProb": 0.20487268380445306,
-      "awayWinProb": 0.43543839900617864,
+      "homeWinProb": 0.39500347982913675,
+      "drawProb": 0.20541883141263456,
+      "awayWinProb": 0.3995776887582287,
       "source": "poisson"
     },
     {
@@ -2936,9 +2737,9 @@
       "round": 33,
       "homeTeam": "feyenoord-rotterdam",
       "awayTeam": "az",
-      "homeWinProb": 0.6509642727107032,
-      "drawProb": 0.16290329068897083,
-      "awayWinProb": 0.18613243660032597,
+      "homeWinProb": 0.6711929145929286,
+      "drawProb": 0.15816073280710496,
+      "awayWinProb": 0.17064635259996638,
       "source": "poisson"
     },
     {
@@ -2947,9 +2748,9 @@
       "round": 33,
       "homeTeam": "fortuna-sittard",
       "awayTeam": "pec-zwolle",
-      "homeWinProb": 0.5692562103037854,
-      "drawProb": 0.18999602963568143,
-      "awayWinProb": 0.2407477600605331,
+      "homeWinProb": 0.5694340053069747,
+      "drawProb": 0.1898442769226605,
+      "awayWinProb": 0.2407217177703646,
       "source": "poisson"
     },
     {
@@ -2958,9 +2759,9 @@
       "round": 33,
       "homeTeam": "go-ahead-eagles",
       "awayTeam": "psv",
-      "homeWinProb": 0.2281410930390332,
-      "drawProb": 0.172198769023859,
-      "awayWinProb": 0.5996601379371078,
+      "homeWinProb": 0.23660209079116792,
+      "drawProb": 0.17451870406340966,
+      "awayWinProb": 0.5888792051454224,
       "source": "poisson"
     },
     {
@@ -2969,9 +2770,9 @@
       "round": 33,
       "homeTeam": "nac-breda",
       "awayTeam": "sc-heerenveen",
-      "homeWinProb": 0.2827104185573222,
-      "drawProb": 0.2203262427734344,
-      "awayWinProb": 0.4969633386692434,
+      "homeWinProb": 0.28364497996847876,
+      "drawProb": 0.2194377693003314,
+      "awayWinProb": 0.49691725073118986,
       "source": "poisson"
     },
     {
@@ -2980,9 +2781,9 @@
       "round": 33,
       "homeTeam": "telstar-1963",
       "awayTeam": "heracles-almelo",
-      "homeWinProb": 0.6901735787656431,
-      "drawProb": 0.16172598767154092,
-      "awayWinProb": 0.14810043356281594,
+      "homeWinProb": 0.7138675342836124,
+      "drawProb": 0.152049159950899,
+      "awayWinProb": 0.13408330576548863,
       "source": "poisson"
     },
     {
@@ -2991,9 +2792,9 @@
       "round": 33,
       "homeTeam": "fc-twente-65",
       "awayTeam": "sparta-rotterdam",
-      "homeWinProb": 0.715671974724449,
-      "drawProb": 0.17015464060433272,
-      "awayWinProb": 0.11417338467121829,
+      "homeWinProb": 0.7159377195260638,
+      "drawProb": 0.1699490380181556,
+      "awayWinProb": 0.11411324245578071,
       "source": "poisson"
     },
     {
@@ -3002,9 +2803,9 @@
       "round": 34,
       "homeTeam": "az",
       "awayTeam": "nac-breda",
-      "homeWinProb": 0.7184362055813723,
-      "drawProb": 0.15925246398683854,
-      "awayWinProb": 0.122311330431789,
+      "homeWinProb": 0.6962938752439052,
+      "drawProb": 0.16804937000695777,
+      "awayWinProb": 0.13565675474913705,
       "source": "poisson"
     },
     {
@@ -3013,9 +2814,9 @@
       "round": 34,
       "homeTeam": "fc-utrecht",
       "awayTeam": "fortuna-sittard",
-      "homeWinProb": 0.6457173277828466,
-      "drawProb": 0.18743019035474842,
-      "awayWinProb": 0.16685248186240503,
+      "homeWinProb": 0.6601281940707746,
+      "drawProb": 0.18336863687984675,
+      "awayWinProb": 0.15650316904937875,
       "source": "poisson"
     },
     {
@@ -3024,9 +2825,9 @@
       "round": 34,
       "homeTeam": "fc-volendam",
       "awayTeam": "telstar-1963",
-      "homeWinProb": 0.4024816937939165,
-      "drawProb": 0.24761500517770352,
-      "awayWinProb": 0.34990330102837996,
+      "homeWinProb": 0.38401758293178345,
+      "drawProb": 0.24576491249230234,
+      "awayWinProb": 0.3702175045759142,
       "source": "poisson"
     },
     {
@@ -3035,9 +2836,9 @@
       "round": 34,
       "homeTeam": "heracles-almelo",
       "awayTeam": "fc-groningen",
-      "homeWinProb": 0.24041357130949342,
-      "drawProb": 0.20707435243716044,
-      "awayWinProb": 0.5525120762533461,
+      "homeWinProb": 0.2184020971134426,
+      "drawProb": 0.19985553250181184,
+      "awayWinProb": 0.5817423703847455,
       "source": "poisson"
     },
     {
@@ -3046,9 +2847,9 @@
       "round": 34,
       "homeTeam": "nec",
       "awayTeam": "go-ahead-eagles",
-      "homeWinProb": 0.683239888404573,
-      "drawProb": 0.14582699090971404,
-      "awayWinProb": 0.17093312068571292,
+      "homeWinProb": 0.6934170882483777,
+      "drawProb": 0.14358432931037274,
+      "awayWinProb": 0.16299858244124957,
       "source": "poisson"
     },
     {
@@ -3057,9 +2858,9 @@
       "round": 34,
       "homeTeam": "pec-zwolle",
       "awayTeam": "feyenoord-rotterdam",
-      "homeWinProb": 0.23293353581131254,
-      "drawProb": 0.18121833992825812,
-      "awayWinProb": 0.5858481242604293,
+      "homeWinProb": 0.2360464724068233,
+      "drawProb": 0.1836418697620174,
+      "awayWinProb": 0.5803116578311592,
       "source": "poisson"
     },
     {
@@ -3068,9 +2869,9 @@
       "round": 34,
       "homeTeam": "psv",
       "awayTeam": "fc-twente-65",
-      "homeWinProb": 0.6446725426826669,
-      "drawProb": 0.1760297130497862,
-      "awayWinProb": 0.17929774426754677,
+      "homeWinProb": 0.6206278246869634,
+      "drawProb": 0.18185229626315086,
+      "awayWinProb": 0.19751987904988583,
       "source": "poisson"
     },
     {
@@ -3079,9 +2880,9 @@
       "round": 34,
       "homeTeam": "sc-heerenveen",
       "awayTeam": "afc-ajax",
-      "homeWinProb": 0.3717355994070492,
-      "drawProb": 0.21241946104493872,
-      "awayWinProb": 0.41584493954801216,
+      "homeWinProb": 0.37416684184485405,
+      "drawProb": 0.21301255730801624,
+      "awayWinProb": 0.41282060084712974,
       "source": "poisson"
     },
     {
@@ -3090,12 +2891,12 @@
       "round": 34,
       "homeTeam": "sparta-rotterdam",
       "awayTeam": "sbv-excelsior",
-      "homeWinProb": 0.533709283806084,
-      "drawProb": 0.23406213925295247,
-      "awayWinProb": 0.23222857694096347,
+      "homeWinProb": 0.5339062371938506,
+      "drawProb": 0.2338683790037481,
+      "awayWinProb": 0.23222538380240132,
       "source": "poisson"
     }
   ],
-  "fetchedAt": "2026-03-21T21:40:36.323Z",
-  "simulatedAt": "2026-03-21T21:40:37.959Z"
+  "fetchedAt": "2026-03-22T21:41:20.945Z",
+  "simulatedAt": "2026-03-22T21:41:22.581Z"
 }
