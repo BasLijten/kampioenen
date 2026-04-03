@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-03-30T21:48:00.664Z",
+  "fetchedAt": "2026-04-03T21:45:57.915Z",
   "psv": {
     "2026-03-22": {
       "date": "2026-03-22",
@@ -132,6 +132,16 @@
       "precipitationSum": 0,
       "windSpeedMax": 16.5,
       "source": "historical-estimate"
+    },
+    "2026-04-25": {
+      "date": "2026-04-25",
+      "weatherCode": 3,
+      "category": "partly-cloudy",
+      "temperatureMax": 14.1,
+      "temperatureMin": 7.9,
+      "precipitationSum": 0,
+      "windSpeedMax": 13.1,
+      "source": "historical-estimate"
     }
   },
   "feyenoord-rotterdam": {
@@ -193,6 +203,16 @@
       "temperatureMin": 9.6,
       "precipitationSum": 0,
       "windSpeedMax": 16.8,
+      "source": "historical-estimate"
+    },
+    "2026-04-25": {
+      "date": "2026-04-25",
+      "weatherCode": 3,
+      "category": "partly-cloudy",
+      "temperatureMax": 15.3,
+      "temperatureMin": 8.4,
+      "precipitationSum": 0,
+      "windSpeedMax": 12.6,
       "source": "historical-estimate"
     }
   }

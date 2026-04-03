@@ -428,72 +428,6 @@
       "source": "poisson"
     },
     {
-      "id": "match-sbv-excelsior:fc-utrecht-r31",
-      "date": "2026-04-23",
-      "round": 31,
-      "homeTeam": "sbv-excelsior",
-      "awayTeam": "fc-utrecht",
-      "homeWinProb": 0.23239629654051325,
-      "drawProb": 0.25279376544517984,
-      "awayWinProb": 0.5148099380143069,
-      "source": "poisson"
-    },
-    {
-      "id": "match-feyenoord-rotterdam:fc-groningen-r31",
-      "date": "2026-04-23",
-      "round": 31,
-      "homeTeam": "feyenoord-rotterdam",
-      "awayTeam": "fc-groningen",
-      "homeWinProb": 0.6278271586464323,
-      "drawProb": 0.1848377698592262,
-      "awayWinProb": 0.18733507149434148,
-      "source": "poisson"
-    },
-    {
-      "id": "match-heracles-almelo:fc-volendam-r31",
-      "date": "2026-04-23",
-      "round": 31,
-      "homeTeam": "heracles-almelo",
-      "awayTeam": "fc-volendam",
-      "homeWinProb": 0.3927953767874699,
-      "drawProb": 0.22716523030635344,
-      "awayWinProb": 0.3800393929061767,
-      "source": "poisson"
-    },
-    {
-      "id": "match-nac-breda:afc-ajax-r31",
-      "date": "2026-04-23",
-      "round": 31,
-      "homeTeam": "nac-breda",
-      "awayTeam": "afc-ajax",
-      "homeWinProb": 0.18840321283135897,
-      "drawProb": 0.20420659545242376,
-      "awayWinProb": 0.6073901917162173,
-      "source": "poisson"
-    },
-    {
-      "id": "match-sc-heerenveen:fortuna-sittard-r31",
-      "date": "2026-04-23",
-      "round": 31,
-      "homeTeam": "sc-heerenveen",
-      "awayTeam": "fortuna-sittard",
-      "homeWinProb": 0.6212030510131173,
-      "drawProb": 0.17297677550007567,
-      "awayWinProb": 0.205820173486807,
-      "source": "poisson"
-    },
-    {
-      "id": "match-fc-twente-65:nec-r31",
-      "date": "2026-04-23",
-      "round": 31,
-      "homeTeam": "fc-twente-65",
-      "awayTeam": "nec",
-      "homeWinProb": 0.5398153755733069,
-      "drawProb": 0.19488462326560863,
-      "awayWinProb": 0.2653000011610845,
-      "source": "poisson"
-    },
-    {
       "id": "match-go-ahead-eagles:az-r31",
       "date": "2026-04-23",
       "round": 31,
@@ -513,6 +447,72 @@
       "homeWinProb": 0.8892544673677089,
       "drawProb": 0.06716847518392265,
       "awayWinProb": 0.04357705744836838,
+      "source": "poisson"
+    },
+    {
+      "id": "match-feyenoord-rotterdam:fc-groningen-r31",
+      "date": "2026-04-25",
+      "round": 31,
+      "homeTeam": "feyenoord-rotterdam",
+      "awayTeam": "fc-groningen",
+      "homeWinProb": 0.6278271586464323,
+      "drawProb": 0.1848377698592262,
+      "awayWinProb": 0.18733507149434148,
+      "source": "poisson"
+    },
+    {
+      "id": "match-sc-heerenveen:fortuna-sittard-r31",
+      "date": "2026-04-25",
+      "round": 31,
+      "homeTeam": "sc-heerenveen",
+      "awayTeam": "fortuna-sittard",
+      "homeWinProb": 0.6212030510131173,
+      "drawProb": 0.17297677550007567,
+      "awayWinProb": 0.205820173486807,
+      "source": "poisson"
+    },
+    {
+      "id": "match-nac-breda:afc-ajax-r31",
+      "date": "2026-04-25",
+      "round": 31,
+      "homeTeam": "nac-breda",
+      "awayTeam": "afc-ajax",
+      "homeWinProb": 0.18840321283135897,
+      "drawProb": 0.20420659545242376,
+      "awayWinProb": 0.6073901917162173,
+      "source": "poisson"
+    },
+    {
+      "id": "match-fc-twente-65:nec-r31",
+      "date": "2026-04-25",
+      "round": 31,
+      "homeTeam": "fc-twente-65",
+      "awayTeam": "nec",
+      "homeWinProb": 0.5398153755733069,
+      "drawProb": 0.19488462326560863,
+      "awayWinProb": 0.2653000011610845,
+      "source": "poisson"
+    },
+    {
+      "id": "match-sbv-excelsior:fc-utrecht-r31",
+      "date": "2026-04-26",
+      "round": 31,
+      "homeTeam": "sbv-excelsior",
+      "awayTeam": "fc-utrecht",
+      "homeWinProb": 0.23239629654051325,
+      "drawProb": 0.25279376544517984,
+      "awayWinProb": 0.5148099380143069,
+      "source": "poisson"
+    },
+    {
+      "id": "match-heracles-almelo:fc-volendam-r31",
+      "date": "2026-04-26",
+      "round": 31,
+      "homeTeam": "heracles-almelo",
+      "awayTeam": "fc-volendam",
+      "homeWinProb": 0.3927953767874699,
+      "drawProb": 0.22716523030635344,
+      "awayWinProb": 0.3800393929061767,
       "source": "poisson"
     },
     {
@@ -813,5 +813,5 @@
       "source": "poisson"
     }
   ],
-  "fetchedAt": "2026-03-30T21:47:58.653Z"
+  "fetchedAt": "2026-04-03T21:45:53.913Z"
 }
