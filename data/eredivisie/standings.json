@@ -257,9 +257,9 @@
       "round": 30,
       "homeTeam": "fc-groningen",
       "awayTeam": "go-ahead-eagles",
-      "homeWinProb": 0.5554991049559446,
-      "drawProb": 0.1875082736260888,
-      "awayWinProb": 0.2569926214179667,
+      "homeWinProb": 0.5685740962015614,
+      "drawProb": 0.1866763612398535,
+      "awayWinProb": 0.24474954255858516,
       "source": "api"
     },
     {
@@ -268,9 +268,9 @@
       "round": 30,
       "homeTeam": "heracles-almelo",
       "awayTeam": "afc-ajax",
-      "homeWinProb": 0.2887141269507249,
-      "drawProb": 0.2546319633509809,
-      "awayWinProb": 0.4566539096982942,
+      "homeWinProb": 0.31066449398424806,
+      "drawProb": 0.2567370984564619,
+      "awayWinProb": 0.4325984075592901,
       "source": "api"
     },
     {
@@ -279,10 +279,10 @@
       "round": 30,
       "homeTeam": "fortuna-sittard",
       "awayTeam": "nac-breda",
-      "homeWinProb": 0.6006474489179596,
-      "drawProb": 0.20187615932536776,
-      "awayWinProb": 0.1974763917566726,
-      "source": "poisson"
+      "homeWinProb": 0.4073400730185963,
+      "drawProb": 0.2424214463277525,
+      "awayWinProb": 0.35023848065365115,
+      "source": "api"
     },
     {
       "id": "match-nec:feyenoord-rotterdam-r30",
@@ -714,5 +714,5 @@
       "source": "poisson"
     }
   ],
-  "fetchedAt": "2026-04-05T21:45:01.092Z"
+  "fetchedAt": "2026-04-06T21:47:12.698Z"
 }
