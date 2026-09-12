@@ -14,6 +14,10 @@ Preserve unrelated work already present in the worktree. Keep each change focuse
 
 ## Verification
 
+For changes limited to documentation or skills—such as `AGENTS.md`, `README.md`, `docs/**`, or `.agents/skills/**`—review the content, formatting, and links only. These changes require no rebuild, generated-data update, or new deployment.
+
+When a PR mixes documentation or skills with code, configuration, or generated data, use the code-change path below and allow the normal deployment process.
+
 For code changes:
 
 1. Add or update tests with the implementation.
