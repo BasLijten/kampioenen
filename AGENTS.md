@@ -42,3 +42,17 @@ Tests use Vitest and live in `__tests__/<module>.test.ts`.
 - The application is a Next.js / React / TypeScript static site styled with Tailwind CSS.
 - Runtime API calls are not part of the site; standings, fixtures, weather, and simulation results are prepared by scripts at build time.
 - `package.json` is the source of truth for available commands and dependencies. `README.md` is the source of truth for general setup.
+
+## Agent skills
+
+### Issue tracker
+
+Issues and specs live in GitHub Issues; use the `gh` CLI. See `docs/agents/issue-tracker.md`.
+
+### Triage labels
+
+Use the default labels: `needs-triage`, `needs-info`, `ready-for-agent`, `ready-for-human`, and `wontfix`. See `docs/agents/triage-labels.md`.
+
+### Domain docs
+
+This is a single-context repository. See `docs/agents/domain.md`.
