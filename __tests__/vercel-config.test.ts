@@ -9,5 +9,6 @@ describe("Vercel application-build configuration", () => {
     );
 
     expect(config.ignoreCommand).toBe("bash scripts/ignore-build-step.sh");
+    expect(Object.keys(config)).toEqual(["ignoreCommand"]);
   });
 });
