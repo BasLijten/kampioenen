@@ -23,6 +23,9 @@ exact allowlist:
 - `docs/**`
 - `.agents/skills/**`
 
+Nested `AGENTS.md` and `README.md` files are not included by the two root-file
+entries above.
+
 Everything else runs the normal application build, including application
 source, configuration, dependency, script, generated-data, and mixed changes.
 The gate also treats renames and deletions that cross the allowlist boundary
