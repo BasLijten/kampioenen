@@ -10,6 +10,8 @@ Ignore Build Step configuration for these Projects:
 All three Projects use the repository root and invoke the same
 `bash scripts/ignore-build-step.sh` command. The gate compares Vercel's
 previous successful deployment revision with the current revision.
+The decision is evaluated independently for each Project, using that
+Project's deployment history.
 
 ## Documentation-only changes
 
