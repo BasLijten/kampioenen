@@ -1,4 +1,6 @@
-# PSV Kampioen — Technische Documentatie
+# Kampioenen — Technische Documentatie
+
+De actuele bron voor de kampioenslogica is [`docs/agents/championship-algorithm.md`](agents/championship-algorithm.md). Die documentatie is agentgericht en verwijst naar de code als autoriteit.
 
 ## Architectuur
 
@@ -7,29 +9,29 @@ De site is 100% statisch gegenereerd met Next.js. Er zijn geen client-side API-c
 **Pipeline:**
 
 ```
-scripts/fetch-data.ts → data/eredivisie.json
+scripts/fetch-data.ts → data/eredivisie/standings.json
                               ↓
-scripts/simulate.ts   → data/simulation-result.json
+scripts/simulate.ts   → data/eredivisie/simulation-results.json
                               ↓
 app/page.tsx (build)  → statische HTML
 ```
 
-`page.tsx` is een Server Component die `data/simulation-result.json` leest met `fs.readFileSync` tijdens `next build`.
+`page.tsx` is een Server Component die `data/eredivisie/simulation-results.json` leest met `fs.readFileSync` tijdens `next build`.
 
 ## Data scope
 
-- **Alle 18 Eredivisie-teams** worden opgehaald via API-Football (standings endpoint)
-- **Alle 9 wedstrijden per ronde** worden gesimuleerd (niet alleen top-6 onderling)
-- **UI toont top 6** — de `StandingsTable` component sorteert op punten en toont `.slice(0, 6)`
-- Standaard fallback data in `lib/data.ts` bevat alleen de top 6 teams met onderlinge wedstrijden
+- **Alle 18 Eredivisie-teams** worden opgehaald via football-data.org (standings endpoint)
+- **Alle door football-data.org teruggegeven resterende wedstrijden** worden gesimuleerd (niet alleen top-6 onderling)
+- De actuele pagina gebruikt alle teams voor de simulatie en de eindpositievoorspelling; `StandingsTable` is geen onderdeel van de huidige `app/page.tsx`-rendering
+- Fallbackdata in `config/fallback/eredivisie.ts` bevat alleen zes teams met handmatige kansen
 
 ## Prediction modellen
 
 Elke fixture heeft een `source` veld dat aangeeft welk model de win/draw/loss kansen heeft bepaald:
 
-| Source | Wanneer | Bron |
+| Interne source | Wanneer | Actuele bron |
 |--------|---------|------|
-| `"api"` | API-Football prediction beschikbaar (typisch ≤14 dagen voor wedstrijd) | `/predictions` endpoint |
+| `"api"` | Een passende prediction beschikbaar | BZZOIRO `/predictions/?upcoming=true` |
 | `"poisson"` | Geen API prediction beschikbaar, of bij fallback data | Berekend uit standings |
 
 Per fixture wordt **precies een** model gebruikt — ze worden nooit gecombineerd.
@@ -101,7 +103,7 @@ UTR defense = (45/28) / 1.50 = 1.07
 ### Parameters
 
 - **50.000 iteraties** per simulatierun
-- Deterministisch per run (geen seed), herberekent bij elke `npm run simulate`
+- Willekeurig per run (`Math.random()`, geen seed); alleen best-case is deterministisch
 
 ### Wedstrijdsimulatie
 
@@ -115,10 +117,10 @@ anders                    → uitwinst (+3 punten uit)
 
 ### Kampioenschap check
 
-Na elke gespeelde ronde wordt gecontroleerd of PSV wiskundig kampioen is:
+Na elke kalenderdatum wordt gecontroleerd of het doelteam wiskundig kampioen is:
 
 ```
-isChampion(psv) = voor elke andere team:
+isChampion(team) = voor elke andere team:
   maxPunten(team) = huidigePunten + (34 - gespeeld) × 3
   maxPunten(team) < psvPunten
 ```
@@ -134,16 +136,15 @@ isChampion(psv) = voor elke andere team:
 
 | Script | Commando | Beschrijving |
 |--------|----------|-------------|
-| `fetch-data` | `npx tsx scripts/fetch-data.ts` | Haalt standings (football-data.org) + events/predictions (BZZOIRO) op → `data/eredivisie.json` |
-| `simulate` | `npx tsx scripts/simulate.ts` | Draait Monte Carlo simulatie → `data/simulation-result.json` |
+| `fetch-data` | `npx tsx scripts/fetch-data.ts` | Haalt standings en wedstrijden (football-data.org) plus predictions (BZZOIRO) op → `data/eredivisie/standings.json` |
+| `simulate` | `npx tsx scripts/simulate.ts` | Draait Monte Carlo simulatie → `data/eredivisie/simulation-results.json` |
 | `update-data` | `fetch-data` + `simulate` | Volledige data-refresh |
 | `build` | `prebuild` (simulate) + `next build` | Bouwt statische site met verse simulatieresultaten |
 
 ### Data APIs
 
-- Free tier: 100 requests/dag
 - football-data.org: standings endpoint (`FOOTBALL_DATA_ORG_KEY` in `.env.local`)
-- BZZOIRO: events + predictions endpoints (`BZZOIRO_TOKEN` in `.env.local`)
+- BZZOIRO: predictions endpoint (`BZZOIRO_TOKEN` in `.env.local`)
 - League filter: Eredivisie (API league ID 88)
 - Predictions blijven best-effort (Poisson fallback als ze ontbreken)
 
@@ -151,6 +152,6 @@ isChampion(psv) = voor elke andere team:
 
 | Bestand | Inhoud |
 |---------|--------|
-| `data/eredivisie.json` | `{ teams, remainingFixtures, fetchedAt }` — live data van football-data.org + BZZOIRO |
-| `data/simulation-result.json` | `{ result, teams, fixtures, fetchedAt, simulatedAt }` — MC resultaten |
-| `lib/data.ts` | Statische fallback data (top 6, ronde 28) |
+| `data/eredivisie/standings.json` | `{ teams, remainingFixtures, fetchedAt }` — gegenereerde snapshot van football-data.org + wedstrijdkansen |
+| `data/eredivisie/simulation-results.json` | `{ clubResults, teams, fixtures, fetchedAt, simulatedAt }` — MC-resultaten |
+| `config/fallback/eredivisie.ts` | Hardcoded fallbackdata voor de Eredivisie |
