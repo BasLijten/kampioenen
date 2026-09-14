@@ -2,6 +2,8 @@
 
 De actuele bron voor de kampioenslogica is [`docs/agents/championship-algorithm.md`](agents/championship-algorithm.md). Die documentatie is agentgericht en verwijst naar de code als autoriteit.
 
+Het voorgestelde opvolgmodel en de vergelijking met de huidige baseline staan in [`docs/agents/championship-prediction-model.md`](agents/championship-prediction-model.md). Dit document beschrijft doelarchitectuur en migratievereisten; het betekent niet dat de huidige code al ClubElo gebruikt.
+
 ## Architectuur
 
 De site is 100% statisch gegenereerd met Next.js. Er zijn geen client-side API-calls of runtime data-fetches.

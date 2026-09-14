@@ -60,3 +60,5 @@ This is a single-context repository. See `docs/agents/domain.md`.
 ## Championship algorithm
 
 Before analyzing or changing the championship calculation, match probabilities, simulation output, generated championship data, or user-facing explanations of those results, read `docs/agents/championship-algorithm.md`. It records the current source pipeline, 3/1/0 scoring, probability models, output semantics, and known date/check caveats; verify any disputed detail against the code named there.
+
+When designing, reviewing, backtesting, or migrating a prediction model, also read `docs/agents/championship-prediction-model.md`. It records the proposed ClubElo-based target model, provider boundaries, calibration requirements, reproducibility contract, and differences from the current implementation.
