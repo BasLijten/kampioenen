@@ -238,3 +238,197 @@ describe("Most likely scenario", () => {
     expect(result.iterations).toBe(250);
   });
 });
+
+describe("Deterministic prediction runs", () => {
+  it("repeats the exact same joint run for the same seed and records its metadata", () => {
+    const teams = [team("psv", 80, 28), team("ajax", 60, 28)];
+    const fixtures = [fixture("f1", 29, "2025-04-05", "psv", "ajax", 0.5, 0.25)];
+    const input = {
+      competition: {
+        teams,
+        remainingFixtures: fixtures,
+        totalRounds: 34,
+      },
+      probabilityModel: {
+        predict: () => ({ home: 0.5, draw: 0.25, away: 0.25 }),
+      },
+      config: {
+        modelVersion: "test-model-v1",
+        competitionId: "eredivisie",
+        season: "2025/26",
+        standingsSnapshotId: "standings-1",
+        fixturesSnapshotId: "fixtures-1",
+        iterations: 250,
+      },
+      seed: 12345,
+    };
+
+    const first = runSimulation(input);
+    const second = runSimulation(input);
+
+    expect(first).toEqual(second);
+    expect(first.metadata).toEqual({
+      modelVersion: "test-model-v1",
+      competitionId: "eredivisie",
+      season: "2025/26",
+      standingsSnapshotId: "standings-1",
+      fixturesSnapshotId: "fixtures-1",
+      iterations: 250,
+      seed: 12345,
+    });
+  });
+
+  it("uses stable fixture ordering even when normalized fixtures are supplied in another order", () => {
+    const teams = [team("psv", 0, 0), team("ajax", 0, 0), team("fey", 0, 0)];
+    const fixtures = [
+      fixture("second", 1, "2025-08-10", "ajax", "fey", 0.5, 0.25),
+      fixture("first", 1, "2025-08-10", "psv", "ajax", 0.5, 0.25),
+    ];
+    const input = {
+      competition: { teams, remainingFixtures: fixtures, totalRounds: 1 },
+      probabilityModel: {
+        predict: () => ({ home: 0.5, draw: 0.25, away: 0.25 }),
+      },
+      config: {
+        modelVersion: "test-model-v1",
+        competitionId: "eredivisie",
+        season: "2025/26",
+        standingsSnapshotId: "standings-1",
+        fixturesSnapshotId: "fixtures-1",
+        iterations: 250,
+      },
+      seed: 9,
+    };
+
+    const reordered = {
+      ...input,
+      competition: { ...input.competition, remainingFixtures: [...fixtures].reverse() },
+    };
+
+    expect(runSimulation(input)).toEqual(runSimulation(reordered));
+  });
+
+  it("keeps final position probabilities consistent across the joint simulation", () => {
+    const teams = [team("psv", 0, 0), team("ajax", 0, 0), team("fey", 0, 0)];
+    const fixtures = [
+      fixture("psv-ajax", 1, "2025-08-10", "psv", "ajax", 0.5, 0.25),
+      fixture("fey-psv", 1, "2025-08-10", "fey", "psv", 0.5, 0.25),
+      fixture("ajax-fey", 1, "2025-08-10", "ajax", "fey", 0.5, 0.25),
+    ];
+    const result = runSimulation({
+      competition: { teams, remainingFixtures: fixtures, totalRounds: 1 },
+      probabilityModel: { predict: () => ({ home: 0.5, draw: 0.25, away: 0.25 }) },
+      config: {
+        modelVersion: "test-model-v1",
+        competitionId: "eredivisie",
+        season: "2025/26",
+        standingsSnapshotId: "standings-1",
+        fixturesSnapshotId: "fixtures-1",
+        iterations: 500,
+      },
+      seed: 17,
+    });
+
+    for (const club of Object.values(result.clubResults)) {
+      expect(Object.values(club.positionProbabilities).reduce((sum, probability) => sum + probability, 0))
+        .toBeCloseTo(1, 10);
+    }
+  });
+
+  it("supports certain home wins, draws, and away wins through the injected model", () => {
+    const teams = [team("psv", 0, 0), team("ajax", 0, 0)];
+    const match = fixture("f1", 1, "2025-08-10", "psv", "ajax");
+    const baseInput = {
+      competition: { teams, remainingFixtures: [match], totalRounds: 1 },
+      config: {
+        modelVersion: "test-model-v1",
+        competitionId: "eredivisie",
+        season: "2025/26",
+        standingsSnapshotId: "standings-1",
+        fixturesSnapshotId: "fixtures-1",
+        iterations: 100,
+      },
+      seed: 1,
+    };
+
+    const homeWin = runSimulation({
+      ...baseInput,
+      probabilityModel: { predict: () => ({ home: 1, draw: 0, away: 0 }) },
+    });
+    const draw = runSimulation({
+      ...baseInput,
+      probabilityModel: { predict: () => ({ home: 0, draw: 1, away: 0 }) },
+    });
+    const awayWin = runSimulation({
+      ...baseInput,
+      probabilityModel: { predict: () => ({ home: 0, draw: 0, away: 1 }) },
+    });
+
+    expect(homeWin.clubResults.psv.totalChampionshipProbability).toBe(1);
+    expect(draw.clubResults.psv.totalChampionshipProbability).toBe(0);
+    expect(awayWin.clubResults.psv.totalChampionshipProbability).toBe(0);
+    expect(awayWin.clubResults.ajax.totalChampionshipProbability).toBe(1);
+  });
+
+  it("returns zero probabilities and null expected date for a zero-iteration boundary run", () => {
+    const result = runSimulation({
+      competition: {
+        teams: [team("psv", 0, 0), team("ajax", 0, 0)],
+        remainingFixtures: [fixture("f1", 1, "2025-08-10", "psv", "ajax")],
+        totalRounds: 1,
+      },
+      probabilityModel: { predict: () => ({ home: 1, draw: 0, away: 0 }) },
+      config: {
+        modelVersion: "test-model-v1",
+        competitionId: "eredivisie",
+        season: "2025/26",
+        standingsSnapshotId: "standings-1",
+        fixturesSnapshotId: "fixtures-1",
+        iterations: 0,
+      },
+      seed: 1,
+    });
+
+    expect(result.clubResults.psv.totalChampionshipProbability).toBe(0);
+    expect(result.clubResults.psv.neverChampionProbability).toBe(0);
+    expect(result.clubResults.psv.expectedDate).toBeNull();
+    expect(result.clubResults.psv.positionProbabilities).toEqual({});
+    expect(result.clubResults.psv.dateProbabilities[0].probability).toBe(0);
+    expect(result.metadata.iterations).toBe(0);
+    expect(result.metadata.seed).toBe(1);
+  });
+
+  it("rejects invalid normalized references and probability distributions", () => {
+    const teams = [team("psv", 0, 0), team("ajax", 0, 0)];
+    const config = {
+      modelVersion: "test-model-v1",
+      competitionId: "eredivisie",
+      season: "2025/26",
+      standingsSnapshotId: "standings-1",
+      fixturesSnapshotId: "fixtures-1",
+      iterations: 100,
+    };
+
+    expect(() => runSimulation({
+      competition: {
+        teams,
+        remainingFixtures: [fixture("unknown", 1, "2025-08-10", "psv", "fey")],
+        totalRounds: 1,
+      },
+      probabilityModel: { predict: () => ({ home: 1, draw: 0, away: 0 }) },
+      config,
+      seed: 1,
+    })).toThrow("unknown team");
+
+    expect(() => runSimulation({
+      competition: {
+        teams,
+        remainingFixtures: [fixture("invalid", 1, "2025-08-10", "psv", "ajax")],
+        totalRounds: 1,
+      },
+      probabilityModel: { predict: () => ({ home: 0.5, draw: 0.5, away: 0.5 }) },
+      config,
+      seed: 1,
+    })).toThrow("Invalid match probabilities");
+  });
+});
