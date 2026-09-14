@@ -208,6 +208,44 @@ describe("Most likely scenario", () => {
     expect(result.clubResults["psv"].neverChampionProbability).toBeCloseTo(0, 1);
   });
 
+  it("applies a certain draw to both clubs in the shared simulation", () => {
+    const teams = [team("psv", 80, 28), team("ajax", 60, 28)];
+    const fixtures = [fixture("f1", 29, "2025-04-05", "psv", "ajax", 0, 1)];
+
+    const result = runSimulation(250, teams, fixtures, 34);
+
+    expect(result.clubResults.psv.positionProbabilities[1]).toBe(1);
+    expect(result.clubResults.ajax.positionProbabilities[2]).toBe(1);
+    expect(result.clubResults.psv.totalChampionshipProbability).toBe(1);
+  });
+
+  it("records a complete joint final ranking for every simulation", () => {
+    const teams = [
+      team("psv", 80, 28),
+      team("ajax", 60, 28),
+      team("fey", 40, 28),
+    ];
+    const fixtures = [
+      fixture("psv-ajax", 29, "2025-04-05", "psv", "ajax", 1, 0),
+      fixture("fey-psv", 29, "2025-04-05", "fey", "psv", 0, 1),
+    ];
+
+    const result = runSimulation(250, teams, fixtures, 34);
+    const positionTotals = [1, 2, 3].map((position) =>
+      teams.reduce(
+        (total, currentTeam) =>
+          total + (result.clubResults[currentTeam.id].positionProbabilities[position] ?? 0),
+        0
+      )
+    );
+
+    expect(teams.map((currentTeam) =>
+      Object.values(result.clubResults[currentTeam.id].positionProbabilities)
+        .reduce((total, probability) => total + probability, 0)
+    )).toEqual([1, 1, 1]);
+    expect(positionTotals).toEqual([1, 1, 1]);
+  });
+
   it("totalChampionshipProbability ≈ 0 when PSV always loses and rival always wins", () => {
     // PSV always loses (homeWinProb=0, drawProb=0 → away always wins),
     // Ajax is home and wins every match → Ajax gets all points.

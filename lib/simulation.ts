@@ -88,7 +88,7 @@ function simulateMatch(homeWinProb: number, drawProb: number, random: () => numb
   return "away";
 }
 
-function isChampion(teamId: string, state: TeamState, allTeams: Team[], totalRounds: number): boolean {
+function isChampion(teamId: string, state: TeamState, allTeams: readonly Team[], totalRounds: number): boolean {
   const myPoints = state[teamId].points;
 
   for (const team of allTeams) {
@@ -108,14 +108,38 @@ export function runSimulation(
   remainingFixtures: Fixture[] = [],
   totalRounds: number = 34
 ): LeagueSimulationResult {
-  const model: MatchProbabilityModel = { version: "legacy-fixture-probabilities", predict: (f) => f };
-  return runPrediction({ teams, fixtures: remainingFixtures, totalRounds, iterations, seed: 0, competition: "unknown", season: "unknown", standingsSnapshotId: "unknown", fixturesSnapshotId: "unknown", model });
+  const model: MatchProbabilityModel = {
+    version: "legacy-fixture-probabilities",
+    predict: (fixture) => fixture,
+  };
+
+  return runPrediction({
+    teams,
+    fixtures: remainingFixtures,
+    totalRounds,
+    iterations,
+    seed: 0,
+    competition: "unknown",
+    season: "unknown",
+    standingsSnapshotId: "unknown",
+    fixturesSnapshotId: "unknown",
+    model,
+  });
 }
 
 export function runPrediction(input: PredictionRunInput): LeagueSimulationResult {
   const teams = [...input.teams].sort((a, b) => a.id.localeCompare(b.id));
-  const remainingFixtures = input.fixtures.map((fixture) => ({ ...fixture, ...input.model.predict(fixture, teams) }))
-    .sort((a, b) => a.date.localeCompare(b.date) || a.round - b.round || a.id.localeCompare(b.id));
+  const sortedFixtures = [...input.fixtures].sort((a, b) =>
+    a.date.localeCompare(b.date) ||
+    a.round - b.round ||
+    a.id.localeCompare(b.id) ||
+    a.homeTeam.localeCompare(b.homeTeam) ||
+    a.awayTeam.localeCompare(b.awayTeam)
+  );
+  const remainingFixtures = sortedFixtures.map((fixture) => ({
+    ...fixture,
+    ...input.model.predict(fixture, teams),
+  }));
   const { iterations, totalRounds } = input;
   const random = seededRandom(input.seed);
   const rounds = [...new Set(remainingFixtures.map((f) => f.round))].sort((a, b) => a - b);
