@@ -118,7 +118,6 @@ function validateFixtures(teams: Team[], fixtures: Fixture[]): void {
     if (fixture.homeTeam === fixture.awayTeam) throw new Error(`Fixture ${fixture.id} has the same home and away team`);
     if (fixture.homeWinProb < 0 || fixture.drawProb < 0 || fixture.awayWinProb < 0) throw new Error(`Fixture ${fixture.id} has a negative match probability`);
     if (Math.abs(fixture.homeWinProb + fixture.drawProb + fixture.awayWinProb - 1) > 1e-8) throw new Error(`Fixture ${fixture.id} match probabilities must sum to 1`);
->>>>>>> 629b3fe (feat: version competition rules and simulated goals)
   }
 }
 
@@ -128,7 +127,6 @@ function poissonDistribution(lambda: number): number[] {
   for (let goals = 0; goals <= MAX_GOALS; goals++) {
     if (goals > 0) probability *= Math.max(0, lambda) / goals;
     result.push(probability);
->>>>>>> 629b3fe (feat: version competition rules and simulated goals)
   }
   const total = result.reduce((sum, value) => sum + value, 0);
   return total ? result.map((value) => value / total) : [1];
@@ -287,7 +285,6 @@ export function runSimulation(iterations: number = 50000, teams: Team[] = [], re
       for (const fixture of fixturesByDate.get(date) ?? []) {
         const match = sampleMatch(fixture, scoreSamplers.get(fixture.id)!, random);
         applyMatch(state, fixture, match.result, match.homeGoals, match.awayGoals, rules);
->>>>>>> 629b3fe (feat: version competition rules and simulated goals)
       }
       const futureFixtures = futureFixturesByDate.get(date) ?? [];
       const standings = currentStandings(state);
