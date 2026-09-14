@@ -188,6 +188,10 @@ export const DEFAULT_PROMOTION_THRESHOLDS: PromotionThresholds = {
 };
 
 export interface ShadowRunCheck {
+  verified: boolean;
+  runId: string;
+  inputHash: string;
+  datasetVersion: string;
   completed: boolean;
   fullRound: boolean;
   dataQualityErrors: string[];
@@ -205,6 +209,8 @@ export interface PromotionGateInput {
   championCalibrationAbsolute?: number | null;
   reproducible: boolean;
   shadowRun?: ShadowRunCheck;
+  shadowRunInputHash?: string;
+  datasetVersion?: string;
 }
 
 export interface PromotionDecision {
@@ -609,7 +615,17 @@ export function evaluatePromotionGate(input: PromotionGateInput): PromotionDecis
   const backtestPassed = reasons.length === 0;
   const reproducibilityPassed = input.reproducible;
   if (!reproducibilityPassed) reasons.push("exact-reproducibility-failed");
-  const shadowRunPassed = Boolean(input.shadowRun?.completed && input.shadowRun.fullRound && input.shadowRun.dataQualityErrors.length === 0);
+  const shadowRunPassed = Boolean(
+    input.shadowRun?.verified
+      && input.shadowRun.runId
+      && input.shadowRun.inputHash
+      && input.shadowRun.datasetVersion
+      && input.shadowRun.inputHash === input.shadowRunInputHash
+      && input.shadowRun.datasetVersion === input.datasetVersion
+      && input.shadowRun.completed
+      && input.shadowRun.fullRound
+      && input.shadowRun.dataQualityErrors.length === 0,
+  );
   if (!shadowRunPassed) reasons.push("controlled-shadow-run-failed");
   return {
     gateVersion: PROMOTION_GATE_VERSION,
@@ -652,6 +668,8 @@ function reportInput(rows: readonly BacktestMatchRow[], options: ChronologicalBa
   const stableOptions = { ...options };
   delete stableOptions.generatedAt;
   delete stableOptions.predictors;
+  delete stableOptions.reproducible;
+  delete stableOptions.shadowRun;
   return hash({ rows, options: stableOptions, predictorNames: Object.keys(options.predictors ?? {}).sort() });
 }
 
@@ -755,6 +773,7 @@ export function runChronologicalBacktest(
     modelReports[model] = { rows: predictions.length, match: calculateMatchMetrics(predictions), champion: allChampionPredictions.get(model)!.length ? calculateChampionMetrics(allChampionPredictions.get(model)!) : null };
   }
   const thresholds = thresholdsFor(options.thresholds);
+  const inputHash = reportInput(suppliedRows, options);
   const candidatePredictions = allPredictions.get("elo-monte-carlo-v1")!;
   const baselinePredictions = allPredictions.get(baseline)!;
   const baselineById = new Map(baselinePredictions.map((prediction) => [prediction.rowId, prediction]));
@@ -792,8 +811,7 @@ export function runChronologicalBacktest(
   const completeSeasons = completeSeasonSet.size;
   const sharedCoverage = suppliedRows.length === 0 ? 0 : candidatePredictions.length / suppliedRows.length;
   const candidateChampionMetrics = modelReports["elo-monte-carlo-v1"]?.champion;
-  const promotion = evaluatePromotionGate({ candidate: "elo-monte-carlo-v1", baseline, thresholds, coverage: sharedCoverage, completeSeasons, matchLogLoss: logLoss, matchBrierScore: brierScore, championCalibration, championCalibrationAbsolute: candidateChampionMetrics?.calibrationError, reproducible: options.reproducible ?? false, shadowRun: options.shadowRun });
-  const inputHash = reportInput(suppliedRows, options);
+  const promotion = evaluatePromotionGate({ candidate: "elo-monte-carlo-v1", baseline, thresholds, coverage: sharedCoverage, completeSeasons, matchLogLoss: logLoss, matchBrierScore: brierScore, championCalibration, championCalibrationAbsolute: candidateChampionMetrics?.calibrationError, reproducible: options.reproducible ?? false, shadowRun: options.shadowRun, shadowRunInputHash: inputHash, datasetVersion: options.datasetVersion });
   const content = {
     schemaVersion: BACKTEST_SCHEMA_VERSION,
     reportVersion: BACKTEST_REPORT_VERSION,

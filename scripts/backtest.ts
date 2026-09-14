@@ -54,8 +54,8 @@ function readRows(path: string): BacktestMatchRow[] {
 function readShadowRun(path: string | undefined): ShadowRunCheck | undefined {
   if (!path) return undefined;
   const value = JSON.parse(readFileSync(resolve(path), "utf8")) as Partial<ShadowRunCheck>;
-  if (typeof value.completed !== "boolean" || typeof value.fullRound !== "boolean" || !Array.isArray(value.dataQualityErrors)) throw new Error("shadow-run input must contain completed, fullRound, and dataQualityErrors");
-  return { completed: value.completed, fullRound: value.fullRound, dataQualityErrors: value.dataQualityErrors.filter((error): error is string => typeof error === "string") };
+  if (typeof value.verified !== "boolean" || typeof value.runId !== "string" || typeof value.inputHash !== "string" || typeof value.datasetVersion !== "string" || typeof value.completed !== "boolean" || typeof value.fullRound !== "boolean" || !Array.isArray(value.dataQualityErrors)) throw new Error("shadow-run input must contain verified, runId, inputHash, datasetVersion, completed, fullRound, and dataQualityErrors");
+  return { verified: value.verified, runId: value.runId, inputHash: value.inputHash, datasetVersion: value.datasetVersion, completed: value.completed, fullRound: value.fullRound, dataQualityErrors: value.dataQualityErrors.filter((error): error is string => typeof error === "string") };
 }
 
 export async function main(argv = process.argv.slice(2)): Promise<void> {

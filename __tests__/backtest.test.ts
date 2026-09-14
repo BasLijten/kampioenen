@@ -131,7 +131,7 @@ describe("bootstrap and promotion", () => {
     };
     const brier = { ...passing, metric: "brierScore" as const };
     const champion = { ...passing, metric: "calibrationError" as const };
-    const input = { candidate: "elo-monte-carlo-v1" as const, baseline: "bzzoiro" as const, coverage: 1, completeSeasons: 3, matchLogLoss: passing, matchBrierScore: brier, championCalibration: champion, championCalibrationAbsolute: 0.01, reproducible: true, shadowRun: { completed: true, fullRound: true, dataQualityErrors: [] } };
+    const input = { candidate: "elo-monte-carlo-v1" as const, baseline: "bzzoiro" as const, coverage: 1, completeSeasons: 3, matchLogLoss: passing, matchBrierScore: brier, championCalibration: champion, championCalibrationAbsolute: 0.01, reproducible: true, shadowRun: { verified: true, runId: "shadow-1", inputHash: "input-1", datasetVersion: "test-v1", completed: true, fullRound: true, dataQualityErrors: [] }, shadowRunInputHash: "input-1", datasetVersion: "test-v1" };
     expect(evaluatePromotionGate(input)).toMatchObject({ passed: true, status: "production" });
     expect(evaluatePromotionGate({ ...input, matchBrierScore: { ...brier, upper: 0.03 } })).toMatchObject({ passed: false, status: "provisional", reasons: expect.arrayContaining(["brier-non-inferiority-failed"]) });
     expect(evaluatePromotionGate({ ...input, coverage: 0.9 })).toMatchObject({ passed: false, status: "provisional", reasons: expect.arrayContaining(["insufficient-coverage"]) });

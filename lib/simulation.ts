@@ -45,6 +45,11 @@ export interface LeagueSimulationResult {
 }
 
 export interface PredictionRunMetadata {
+  runId?: string;
+  createdAt?: string;
+  configurationHash?: string;
+  eloSnapshotId?: string;
+  promotionDecision?: "provisional" | "shadow" | "production";
   modelVersion: string;
   competition: string;
   season: string;

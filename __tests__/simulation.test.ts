@@ -319,6 +319,8 @@ describe("versioned competition rules and simulated scores", () => {
 
     expect(result.clubResults.alpha.simulatedGoalsFor).toBe(11);
     expect(result.clubResults.beta.simulatedGoalsFor).toBe(10);
+    expect(result.clubResults.alpha.simulatedGoalDifference).toBe(1);
+    expect(result.clubResults.alpha.noClinchProbability).toBe(0);
     expect(result.clubResults.alpha.positionProbabilities[1]).toBe(1);
     expect(result.rulesVersion).toBe("test-rules-v1");
   });
@@ -335,6 +337,8 @@ describe("versioned competition rules and simulated scores", () => {
 
     expect(result.clubResults.home.simulatedGoalsFor).toBe(1);
     expect(result.clubResults.home.simulatedGoalsAgainst).toBe(1);
+    expect(result.clubResults.home.simulatedGoalDifference).toBe(0);
+    expect(result.clubResults.home.noClinchProbability).toBe(1);
     expect(result.clubResults.home.positionProbabilities[1]).toBe(1);
     expect(result.clubResults.away.positionProbabilities[1]).toBe(1);
   });

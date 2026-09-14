@@ -103,6 +103,7 @@ async function main() {
     inputs: { mapping, snapshot, calibration },
     rules: createCompetitionRules(league.competitionRules),
     homeAdvantage: league.prediction.homeAdvantage,
+    runRound,
   });
   const elapsed = ((Date.now() - start) / 1000).toFixed(1);
 

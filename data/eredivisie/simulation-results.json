@@ -12950,7 +12950,7 @@
     }
   ],
   "fetchedAt": "2026-09-14T10:32:10.591Z",
-  "simulatedAt": "2026-09-14T16:16:04.235Z",
+  "simulatedAt": "2026-09-14T16:53:48.136Z",
   "metadata": {
     "modelVersion": "elo-monte-carlo-v1",
     "competition": "eredivisie",
@@ -12959,6 +12959,11 @@
     "fixturesSnapshotId": "fixtures-8c925400b953cf01",
     "seed": 1,
     "iterations": 100000,
+    "runId": "prediction-99fabc9880021586",
+    "createdAt": "2026-09-14T10:32:10.591Z",
+    "configurationHash": "37b2a093c8565ef26fb8d5ce655da504d96866b3fd6c8a3a6b879d6b2a43c563",
+    "eloSnapshotId": "clubelo-production-2026-09-14-round-6",
+    "promotionDecision": "provisional",
     "configuration": {
       "homeAdvantage": 50,
       "rulesVersion": "eredivisie-rules-v1"

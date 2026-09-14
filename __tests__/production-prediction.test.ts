@@ -117,6 +117,10 @@ describe("production ClubElo prediction pipeline", () => {
     expect(first.fixtures?.[0]).toMatchObject({ source: "clubelo", homeWinProb: 1, drawProb: 0, awayWinProb: 0 });
     expect(first.clubResults.home.totalChampionshipProbability).toBe(1);
     expect(first.metadata).toMatchObject({
+      runId: expect.stringMatching(/^prediction-/),
+      createdAt: "2026-09-14T00:00:00.000Z",
+      eloSnapshotId: "snapshot-1",
+      promotionDecision: "provisional",
       modelVersion: "elo-monte-carlo-v1",
       calibration: { status: "calibrated", provisional: false },
       mapping: { coverage: { eligible: 1, mapped: 1, ratio: 1 } },
@@ -142,5 +146,25 @@ describe("production ClubElo prediction pipeline", () => {
     incompleteSnapshot.snapshotHash = calculateClubEloSnapshotHash(incompleteSnapshot);
     const incomplete = inputs({ snapshot: incompleteSnapshot });
     expect(() => run(incomplete)).toThrow(/missing strength|incomplete/i);
+  });
+
+  it("rejects snapshots older than the previous round", () => {
+    const stale = snapshot();
+    stale.sourceRound = 1;
+    stale.snapshotHash = calculateClubEloSnapshotHash(stale);
+    expect(() => runClubEloPrediction({
+      teams,
+      fixtures: [fixture],
+      totalRounds: 7,
+      iterations: 250,
+      seed: 42,
+      competition: "test-league",
+      season: "2026/27",
+      standingsSnapshotId: "standings-1",
+      fixturesSnapshotId: "fixtures-1",
+      inputs: inputs({ snapshot: stale }),
+      rules,
+      runRound: 4,
+    })).toThrow(/too old|future round/i);
   });
 });

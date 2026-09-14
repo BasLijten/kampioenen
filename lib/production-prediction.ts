@@ -1,3 +1,4 @@
+import { createHash } from "node:crypto";
 import type { CalibrationArtifact, CalibrationArtifactSet } from "./clubelo-calibration";
 import { probabilityForCalibration } from "./clubelo-calibration";
 import {
@@ -28,6 +29,7 @@ export interface ProductionPredictionOptions {
   competitionId: string;
   season: string;
   homeAdvantage?: number;
+  runRound?: number;
   rules: CompetitionRules;
 }
 
@@ -59,7 +61,7 @@ function assertProbability(probability: { home: number; draw: number; away: numb
   }
 }
 
-function validateSnapshot(snapshot: ClubEloSnapshot, teams: readonly Team[], competitionId: string, season: string): Map<string, TeamStrength> {
+function validateSnapshot(snapshot: ClubEloSnapshot, teams: readonly Team[], competitionId: string, season: string, runRound?: number): Map<string, TeamStrength> {
   if (snapshot.schemaVersion !== 1) throw new ProductionPredictionInputError("ClubElo snapshot schema version is unsupported");
   if (snapshot.competitionId !== competitionId || snapshot.season !== season) {
     throw new ProductionPredictionInputError("ClubElo snapshot scope does not match the competition run");
@@ -67,6 +69,9 @@ function validateSnapshot(snapshot: ClubEloSnapshot, teams: readonly Team[], com
   if (!snapshot.snapshotId || !snapshot.snapshotHash) throw new ProductionPredictionInputError("ClubElo snapshot is missing immutable identity metadata");
   if (!Number.isInteger(snapshot.sourceRound) || snapshot.sourceRound < 0 || !Array.isArray(snapshot.strengths)) {
     throw new ProductionPredictionInputError("ClubElo snapshot has invalid round or strength data");
+  }
+  if (runRound !== undefined && (!Number.isInteger(runRound) || runRound < 0 || snapshot.sourceRound < runRound - 1 || snapshot.sourceRound > runRound)) {
+    throw new ProductionPredictionInputError("ClubElo snapshot is too old or from a future round for the production run");
   }
   if (calculateClubEloSnapshotHash(snapshot) !== snapshot.snapshotHash) {
     throw new ProductionPredictionInputError("ClubElo snapshot hash does not match its contents");
@@ -114,7 +119,7 @@ export function createClubEloProbabilityModel(
   const mappings = approvedMappingsForProduction(inputs.mapping.mappings, sourceClubs, {
     scope: { competitionId: options.competitionId, season: options.season, kind: "current" },
   });
-  const strengths = validateSnapshot(inputs.snapshot, teams, options.competitionId, options.season);
+  const strengths = validateSnapshot(inputs.snapshot, teams, options.competitionId, options.season, options.runRound);
   validateCalibration(inputs.calibration, options.competitionId);
   const mappingBySourceId = new Map(mappings.map((mapping) => [mapping.sourceId, mapping]));
   const homeAdvantage = options.homeAdvantage ?? CLUB_ELO_HOME_ADVANTAGE;
@@ -148,6 +153,7 @@ export function runClubEloPrediction(
     inputs: ProductionPredictionInputs;
     rules: CompetitionRules;
     homeAdvantage?: number;
+    runRound?: number;
   },
 ): LeagueSimulationResult {
   const sourceClubs: SourceClub[] = input.teams.map(({ id, name }) => ({ id, name }));
@@ -160,21 +166,43 @@ export function runClubEloPrediction(
     competitionId: input.competition,
     season: input.season,
     homeAdvantage: input.homeAdvantage,
+    runRound: input.runRound,
     rules: input.rules,
   });
   const selectedCalibration = input.inputs.calibration.competitions[input.competition] ?? input.inputs.calibration.generalPrior;
+  const mappedFixtures = input.fixtures.filter((fixture) => mappings.some((mapping) => mapping.sourceId === fixture.homeTeam) && mappings.some((mapping) => mapping.sourceId === fixture.awayTeam)).length;
   const mappingCoverage = {
     eligible: input.fixtures.length,
-    mapped: input.fixtures.filter((fixture) => mappings.some((mapping) => mapping.sourceId === fixture.homeTeam) && mappings.some((mapping) => mapping.sourceId === fixture.awayTeam)).length,
-    ratio: input.fixtures.length === 0 ? 1 : input.fixtures.filter((fixture) => mappings.some((mapping) => mapping.sourceId === fixture.homeTeam) && mappings.some((mapping) => mapping.sourceId === fixture.awayTeam)).length / input.fixtures.length,
+    mapped: mappedFixtures,
+    ratio: input.fixtures.length === 0 ? 1 : mappedFixtures / input.fixtures.length,
     required: 1,
   };
+  const configuration = { homeAdvantage: input.homeAdvantage ?? CLUB_ELO_HOME_ADVANTAGE, rulesVersion: input.rules.version };
+  const configurationHash = createHash("sha256").update(JSON.stringify(configuration)).digest("hex");
+  const runId = `prediction-${createHash("sha256").update(JSON.stringify({
+    competition: input.competition,
+    season: input.season,
+    standingsSnapshotId: input.standingsSnapshotId,
+    fixturesSnapshotId: input.fixturesSnapshotId,
+    snapshotHash: input.inputs.snapshot.snapshotHash,
+    configurationHash,
+    seed: input.seed,
+    iterations: input.iterations,
+  })).digest("hex").slice(0, 16)}`;
   return runPrediction({
     ...input,
     model,
     rules: input.rules,
     metadata: {
-      configuration: { homeAdvantage: input.homeAdvantage ?? CLUB_ELO_HOME_ADVANTAGE, rulesVersion: input.rules.version },
+      runId,
+      createdAt: input.inputs.snapshot.fetchedAt,
+      configurationHash,
+      eloSnapshotId: input.inputs.snapshot.snapshotId,
+      // A calibrated artifact is not a promotion decision. The production
+      // run remains provisional until a persisted backtest gate and clean
+      // shadow-run evidence explicitly promote it.
+      promotionDecision: "provisional",
+      configuration,
       calibration: {
         artifactId: selectedCalibration.artifactId,
         modelVersion: input.inputs.calibration.modelVersion,
@@ -218,6 +246,6 @@ export function validateProductionInputs(
     scope: { competitionId: options.competitionId, season: options.season, kind: "current" },
     eligibleFixtures,
   });
-  validateSnapshot(inputs.snapshot, teams, options.competitionId, options.season);
+  validateSnapshot(inputs.snapshot, teams, options.competitionId, options.season, options.runRound);
   validateCalibration(inputs.calibration, options.competitionId);
 }
