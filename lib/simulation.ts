@@ -23,6 +23,35 @@ export interface DateProbability {
 export interface LeagueSimulationResult {
   clubResults: Record<string, ClubSimulationResult>;
   iterations: number;
+  metadata?: PredictionRunMetadata;
+}
+
+export interface PredictionRunMetadata {
+  modelVersion: string;
+  competition: string;
+  season: string;
+  standingsSnapshotId: string;
+  fixturesSnapshotId: string;
+  seed: number;
+  iterations: number;
+}
+
+export interface MatchProbabilityModel {
+  version: string;
+  predict(fixture: Fixture, teams: readonly Team[]): Pick<Fixture, "homeWinProb" | "drawProb" | "awayWinProb">;
+}
+
+export interface PredictionRunInput {
+  teams: readonly Team[];
+  fixtures: readonly Fixture[];
+  totalRounds: number;
+  iterations: number;
+  seed: number;
+  competition: string;
+  season: string;
+  standingsSnapshotId: string;
+  fixturesSnapshotId: string;
+  model: MatchProbabilityModel;
 }
 
 export interface ClubSimulationResult {
@@ -42,8 +71,18 @@ interface TeamState {
   [teamId: string]: { points: number; played: number };
 }
 
-function simulateMatch(homeWinProb: number, drawProb: number): "home" | "draw" | "away" {
-  const rand = Math.random();
+function seededRandom(seed: number): () => number {
+  let state = seed >>> 0;
+  return () => {
+    state = (state + 0x6d2b79f5) | 0;
+    let t = Math.imul(state ^ (state >>> 15), 1 | state);
+    t = (t + Math.imul(t ^ (t >>> 7), 61 | t)) ^ t;
+    return ((t ^ (t >>> 14)) >>> 0) / 4294967296;
+  };
+}
+
+function simulateMatch(homeWinProb: number, drawProb: number, random: () => number): "home" | "draw" | "away" {
+  const rand = random();
   if (rand < homeWinProb) return "home";
   if (rand < homeWinProb + drawProb) return "draw";
   return "away";
@@ -69,6 +108,16 @@ export function runSimulation(
   remainingFixtures: Fixture[] = [],
   totalRounds: number = 34
 ): LeagueSimulationResult {
+  const model: MatchProbabilityModel = { version: "legacy-fixture-probabilities", predict: (f) => f };
+  return runPrediction({ teams, fixtures: remainingFixtures, totalRounds, iterations, seed: 0, competition: "unknown", season: "unknown", standingsSnapshotId: "unknown", fixturesSnapshotId: "unknown", model });
+}
+
+export function runPrediction(input: PredictionRunInput): LeagueSimulationResult {
+  const teams = [...input.teams].sort((a, b) => a.id.localeCompare(b.id));
+  const remainingFixtures = input.fixtures.map((fixture) => ({ ...fixture, ...input.model.predict(fixture, teams) }))
+    .sort((a, b) => a.date.localeCompare(b.date) || a.round - b.round || a.id.localeCompare(b.id));
+  const { iterations, totalRounds } = input;
+  const random = seededRandom(input.seed);
   const rounds = [...new Set(remainingFixtures.map((f) => f.round))].sort((a, b) => a - b);
 
   // Group fixtures by date (sorted), so we can check clinch after each match day
@@ -106,7 +155,7 @@ export function runSimulation(
 
     for (const date of allDates) {
       for (const fixture of fixturesByDate[date]) {
-        const result = simulateMatch(fixture.homeWinProb, fixture.drawProb);
+        const result = simulateMatch(fixture.homeWinProb, fixture.drawProb, random);
         if (result === "home") {
           state[fixture.homeTeam].points += 3;
         } else if (result === "draw") {
@@ -245,5 +294,5 @@ export function runSimulation(
     };
   }
 
-  return { clubResults, iterations };
+  return { clubResults, iterations, metadata: { modelVersion: input.model.version, competition: input.competition, season: input.season, standingsSnapshotId: input.standingsSnapshotId, fixturesSnapshotId: input.fixturesSnapshotId, seed: input.seed, iterations } };
 }

@@ -1,5 +1,5 @@
 import { describe, it, expect } from "vitest";
-import { runSimulation } from "../lib/simulation";
+import { runPrediction, runSimulation } from "../lib/simulation";
 import type { Team, Fixture } from "../lib/data";
 
 // ─── helpers ────────────────────────────────────────────────────────────────
@@ -179,6 +179,24 @@ describe("Best case scenario", () => {
 // deterministic, so all iterations produce the same outcome.
 
 describe("Most likely scenario", () => {
+  it("reproduces an entire prediction run from its seed and records its contract metadata", () => {
+    const teams = [team("psv", 80, 28), team("ajax", 60, 28)];
+    const fixtures = [
+      fixture("z", 30, "2025-04-12", "psv", "ajax"),
+      fixture("a", 29, "2025-04-05", "psv", "ajax"),
+    ];
+    const model = { version: "test-model-v1", predict: (f: Fixture) => f };
+    const input = { teams, fixtures, totalRounds: 34, iterations: 250, seed: 42,
+      competition: "eredivisie", season: "2025/26", standingsSnapshotId: "standings-1",
+      fixturesSnapshotId: "fixtures-1", model };
+
+    const first = runPrediction(input);
+    const second = runPrediction({ ...input, fixtures: [...fixtures].reverse() });
+
+    expect(second).toEqual(first);
+    expect(first.metadata).toEqual({ modelVersion: "test-model-v1", competition: "eredivisie", season: "2025/26", standingsSnapshotId: "standings-1", fixturesSnapshotId: "fixtures-1", seed: 42, iterations: 250 });
+  });
+
   it("totalChampionshipProbability ≈ 1 when PSV wins every match with certainty", () => {
     // PSV always wins (homeWinProb=1), rivals always draw → PSV clinches each time.
     const teams = [team("psv", 80, 28), team("ajax", 60, 28)];
