@@ -11,8 +11,10 @@
 import { writeFileSync, readFileSync, mkdirSync } from "fs";
 import { join } from "path";
 import { runSimulation } from "../lib/simulation";
+import { createCompetitionRules } from "../lib/competition-rules";
 import { Team, Fixture } from "../lib/data";
 import { resolveLeague } from "../config/env";
+import { fallbackFixtures, fallbackTeams } from "../config/fallback/eredivisie";
 
 // Laad .env.local handmatig (tsx heeft geen Next.js env-loading)
 function loadEnv() {
@@ -47,8 +49,6 @@ function loadLeagueData(dataDir: string, leagueId: string): { teams: Team[]; fix
     if (leagueId === "eredivisie") {
       console.warn("standings.json niet gevonden -- eredivisie fallback data wordt gebruikt");
       console.warn("     Draai `npm run fetch-data` voor live data.");
-      // Dynamic import to avoid bundling fallback when not needed
-      const { fallbackTeams, fallbackFixtures } = require("../config/fallback/eredivisie");
       return { teams: fallbackTeams, fixtures: fallbackFixtures, fetchedAt: null };
     }
     throw new Error(`${dataDir}/standings.json niet gevonden. Draai eerst \`npm run fetch-data\`.`);
@@ -67,7 +67,9 @@ function main() {
   }
 
   const start = Date.now();
-  const result = runSimulation(ITERATIONS, teams, fixtures, league.totalRounds);
+  const result = runSimulation(ITERATIONS, teams, fixtures, league.totalRounds, {
+    rules: createCompetitionRules(league.competitionRules),
+  });
   const elapsed = ((Date.now() - start) / 1000).toFixed(1);
 
   // Show top clubs' championship probabilities
@@ -114,6 +116,7 @@ function main() {
       clubRemaining: remaining,
       rivals,
       iterations: result.iterations,
+      championCount: Math.round(club.totalChampionshipProbability * result.iterations),
       neverChampionCount: club.neverChampionCount,
     };
   }
@@ -123,6 +126,10 @@ function main() {
   const output = {
     clubResults: result.clubResults,
     iterations: result.iterations,
+    seed: result.seed,
+    rulesVersion: result.rulesVersion,
+    fixtureOrder: result.fixtureOrder,
+    seededTieBreakCount: result.seededTieBreakCount,
     explanation,
     teams,
     fixtures,

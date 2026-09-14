@@ -3,11 +3,27 @@
     "psv": {
       "teamId": "psv",
       "teamName": "PSV",
-      "totalChampionshipProbability": 0.61046,
+      "totalChampionshipProbability": 0.6451,
       "dateProbabilities": [
         {
           "date": "2026-09-15",
           "round": 3,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "vrij",
+          "isHome": false
+        },
+        {
+          "date": "2026-09-18",
+          "round": 7,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "vrij",
+          "isHome": false
+        },
+        {
+          "date": "2026-09-19",
+          "round": 7,
           "probability": 0,
           "cumulativeProbability": 0,
           "opponent": "vrij",
@@ -30,11 +46,59 @@
           "isHome": true
         },
         {
+          "date": "2026-10-10",
+          "round": 8,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "vrij",
+          "isHome": false
+        },
+        {
+          "date": "2026-10-11",
+          "round": 8,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "vrij",
+          "isHome": false
+        },
+        {
+          "date": "2026-10-16",
+          "round": 9,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "vrij",
+          "isHome": false
+        },
+        {
           "date": "2026-10-17",
           "round": 9,
           "probability": 0,
           "cumulativeProbability": 0,
           "opponent": "ado-den-haag",
+          "isHome": false
+        },
+        {
+          "date": "2026-10-18",
+          "round": 9,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "vrij",
+          "isHome": false
+        },
+        {
+          "date": "2026-10-23",
+          "round": 10,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "vrij",
+          "isHome": false
+        },
+        {
+          "date": "2026-10-24",
+          "round": 10,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "vrij",
           "isHome": false
         },
         {
@@ -54,6 +118,30 @@
           "isHome": true
         },
         {
+          "date": "2026-11-01",
+          "round": 11,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "vrij",
+          "isHome": false
+        },
+        {
+          "date": "2026-11-06",
+          "round": 12,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "vrij",
+          "isHome": false
+        },
+        {
+          "date": "2026-11-07",
+          "round": 12,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "vrij",
+          "isHome": false
+        },
+        {
           "date": "2026-11-08",
           "round": 12,
           "probability": 0,
@@ -67,6 +155,22 @@
           "probability": 0,
           "cumulativeProbability": 0,
           "opponent": "nec",
+          "isHome": false
+        },
+        {
+          "date": "2026-11-22",
+          "round": 13,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "vrij",
+          "isHome": false
+        },
+        {
+          "date": "2026-11-27",
+          "round": 14,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "vrij",
           "isHome": false
         },
         {
@@ -78,11 +182,43 @@
           "isHome": true
         },
         {
+          "date": "2026-11-29",
+          "round": 14,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "vrij",
+          "isHome": false
+        },
+        {
+          "date": "2026-12-04",
+          "round": 15,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "vrij",
+          "isHome": false
+        },
+        {
           "date": "2026-12-05",
           "round": 15,
           "probability": 0,
           "cumulativeProbability": 0,
           "opponent": "az",
+          "isHome": false
+        },
+        {
+          "date": "2026-12-06",
+          "round": 15,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "vrij",
+          "isHome": false
+        },
+        {
+          "date": "2026-12-12",
+          "round": 16,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "vrij",
           "isHome": false
         },
         {
@@ -94,6 +230,22 @@
           "isHome": true
         },
         {
+          "date": "2026-12-18",
+          "round": 17,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "vrij",
+          "isHome": false
+        },
+        {
+          "date": "2026-12-19",
+          "round": 17,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "vrij",
+          "isHome": false
+        },
+        {
           "date": "2026-12-20",
           "round": 17,
           "probability": 0,
@@ -102,11 +254,35 @@
           "isHome": true
         },
         {
+          "date": "2027-01-08",
+          "round": 18,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "vrij",
+          "isHome": false
+        },
+        {
+          "date": "2027-01-09",
+          "round": 18,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "vrij",
+          "isHome": false
+        },
+        {
           "date": "2027-01-10",
           "round": 18,
           "probability": 0,
           "cumulativeProbability": 0,
           "opponent": "feyenoord-rotterdam",
+          "isHome": false
+        },
+        {
+          "date": "2027-01-15",
+          "round": 19,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "vrij",
           "isHome": false
         },
         {
@@ -118,6 +294,22 @@
           "isHome": false
         },
         {
+          "date": "2027-01-17",
+          "round": 19,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "vrij",
+          "isHome": false
+        },
+        {
+          "date": "2027-01-22",
+          "round": 20,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "vrij",
+          "isHome": false
+        },
+        {
           "date": "2027-01-23",
           "round": 20,
           "probability": 0,
@@ -126,11 +318,43 @@
           "isHome": true
         },
         {
+          "date": "2027-01-24",
+          "round": 20,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "vrij",
+          "isHome": false
+        },
+        {
+          "date": "2027-01-29",
+          "round": 21,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "vrij",
+          "isHome": false
+        },
+        {
           "date": "2027-01-30",
           "round": 21,
           "probability": 0,
           "cumulativeProbability": 0,
           "opponent": "willem-ii-tilburg",
+          "isHome": false
+        },
+        {
+          "date": "2027-01-31",
+          "round": 21,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "vrij",
+          "isHome": false
+        },
+        {
+          "date": "2027-02-06",
+          "round": 16,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "vrij",
           "isHome": false
         },
         {
@@ -176,64 +400,64 @@
         {
           "date": "2027-03-20",
           "round": 27,
-          "probability": 0.00004,
-          "cumulativeProbability": 0.00004,
+          "probability": 0.00008,
+          "cumulativeProbability": 0.00008,
           "opponent": "fc-groningen",
           "isHome": false
         },
         {
           "date": "2027-04-03",
           "round": 28,
-          "probability": 0.00194,
-          "cumulativeProbability": 0.00198,
+          "probability": 0.00178,
+          "cumulativeProbability": 0.0018599999999999999,
           "opponent": "az",
           "isHome": true
         },
         {
           "date": "2027-04-10",
           "round": 29,
-          "probability": 0.01152,
-          "cumulativeProbability": 0.013500000000000002,
+          "probability": 0.0104,
+          "cumulativeProbability": 0.01226,
           "opponent": "pec-zwolle",
           "isHome": false
         },
         {
           "date": "2027-04-24",
           "round": 30,
-          "probability": 0.03586,
-          "cumulativeProbability": 0.04936,
+          "probability": 0.03474,
+          "cumulativeProbability": 0.047,
           "opponent": "afc-ajax",
           "isHome": true
         },
         {
           "date": "2027-05-01",
           "round": 31,
-          "probability": 0.06896,
-          "cumulativeProbability": 0.11832,
+          "probability": 0.06974,
+          "cumulativeProbability": 0.11674,
           "opponent": "go-ahead-eagles",
           "isHome": false
         },
         {
           "date": "2027-05-08",
           "round": 32,
-          "probability": 0.13022,
-          "cumulativeProbability": 0.24853999999999998,
+          "probability": 0.1303,
+          "cumulativeProbability": 0.24703999999999998,
           "opponent": "sbv-excelsior",
           "isHome": true
         },
         {
           "date": "2027-05-16",
           "round": 33,
-          "probability": 0.20866,
-          "cumulativeProbability": 0.4572,
+          "probability": 0.20834,
+          "cumulativeProbability": 0.45538,
           "opponent": "nec",
           "isHome": true
         },
         {
           "date": "2027-05-23",
           "round": 34,
-          "probability": 0.15326,
-          "cumulativeProbability": 0.61046,
+          "probability": 0.18972,
+          "cumulativeProbability": 0.6451,
           "opponent": "sc-heerenveen",
           "isHome": false
         }
@@ -241,25 +465,46 @@
       "bestCaseDate": "2027-01-30",
       "bestCaseRound": 21,
       "expectedDate": "2027-05-16",
-      "neverChampionProbability": 0.38954,
-      "neverChampionCount": 19477,
+      "neverChampionProbability": 0.3549,
+      "neverChampionCount": 17745,
+      "noClinchProbability": 0.3549,
+      "tieProbability": 0.00042,
       "positionProbabilities": {
-        "1": 0.66564,
-        "2": 0.21828,
-        "3": 0.08562,
-        "4": 0.02524,
-        "5": 0.00478,
-        "6": 0.00044
-      }
+        "1": 0.64538,
+        "2": 0.22596,
+        "3": 0.09332,
+        "4": 0.02798,
+        "5": 0.0068,
+        "6": 0.00056
+      },
+      "simulatedGoalsFor": 75.82928,
+      "simulatedGoalsAgainst": 29.55834,
+      "simulatedGoalDifference": 46.270939999999996
     },
     "az": {
       "teamId": "az",
       "teamName": "AZ",
-      "totalChampionshipProbability": 0.16356,
+      "totalChampionshipProbability": 0.17198,
       "dateProbabilities": [
         {
           "date": "2026-09-15",
           "round": 3,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "vrij",
+          "isHome": false
+        },
+        {
+          "date": "2026-09-18",
+          "round": 7,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "vrij",
+          "isHome": false
+        },
+        {
+          "date": "2026-09-19",
+          "round": 7,
           "probability": 0,
           "cumulativeProbability": 0,
           "opponent": "vrij",
@@ -274,11 +519,43 @@
           "isHome": true
         },
         {
+          "date": "2026-10-09",
+          "round": 8,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "vrij",
+          "isHome": false
+        },
+        {
           "date": "2026-10-10",
           "round": 8,
           "probability": 0,
           "cumulativeProbability": 0,
           "opponent": "feyenoord-rotterdam",
+          "isHome": false
+        },
+        {
+          "date": "2026-10-11",
+          "round": 8,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "vrij",
+          "isHome": false
+        },
+        {
+          "date": "2026-10-16",
+          "round": 9,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "vrij",
+          "isHome": false
+        },
+        {
+          "date": "2026-10-17",
+          "round": 9,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "vrij",
           "isHome": false
         },
         {
@@ -290,6 +567,22 @@
           "isHome": false
         },
         {
+          "date": "2026-10-23",
+          "round": 10,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "vrij",
+          "isHome": false
+        },
+        {
+          "date": "2026-10-24",
+          "round": 10,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "vrij",
+          "isHome": false
+        },
+        {
           "date": "2026-10-25",
           "round": 10,
           "probability": 0,
@@ -306,6 +599,30 @@
           "isHome": false
         },
         {
+          "date": "2026-11-01",
+          "round": 11,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "vrij",
+          "isHome": false
+        },
+        {
+          "date": "2026-11-06",
+          "round": 12,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "vrij",
+          "isHome": false
+        },
+        {
+          "date": "2026-11-07",
+          "round": 12,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "vrij",
+          "isHome": false
+        },
+        {
           "date": "2026-11-08",
           "round": 12,
           "probability": 0,
@@ -314,11 +631,35 @@
           "isHome": true
         },
         {
+          "date": "2026-11-21",
+          "round": 13,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "vrij",
+          "isHome": false
+        },
+        {
           "date": "2026-11-22",
           "round": 13,
           "probability": 0,
           "cumulativeProbability": 0,
           "opponent": "sparta-rotterdam",
+          "isHome": false
+        },
+        {
+          "date": "2026-11-27",
+          "round": 14,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "vrij",
+          "isHome": false
+        },
+        {
+          "date": "2026-11-28",
+          "round": 14,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "vrij",
           "isHome": false
         },
         {
@@ -330,12 +671,36 @@
           "isHome": false
         },
         {
+          "date": "2026-12-04",
+          "round": 15,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "vrij",
+          "isHome": false
+        },
+        {
           "date": "2026-12-05",
           "round": 15,
           "probability": 0,
           "cumulativeProbability": 0,
           "opponent": "psv",
           "isHome": true
+        },
+        {
+          "date": "2026-12-06",
+          "round": 15,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "vrij",
+          "isHome": false
+        },
+        {
+          "date": "2026-12-12",
+          "round": 16,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "vrij",
+          "isHome": false
         },
         {
           "date": "2026-12-13",
@@ -346,11 +711,35 @@
           "isHome": true
         },
         {
+          "date": "2026-12-18",
+          "round": 17,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "vrij",
+          "isHome": false
+        },
+        {
           "date": "2026-12-19",
           "round": 17,
           "probability": 0,
           "cumulativeProbability": 0,
           "opponent": "sbv-excelsior",
+          "isHome": false
+        },
+        {
+          "date": "2026-12-20",
+          "round": 17,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "vrij",
+          "isHome": false
+        },
+        {
+          "date": "2027-01-08",
+          "round": 18,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "vrij",
           "isHome": false
         },
         {
@@ -362,11 +751,51 @@
           "isHome": true
         },
         {
+          "date": "2027-01-10",
+          "round": 18,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "vrij",
+          "isHome": false
+        },
+        {
+          "date": "2027-01-15",
+          "round": 19,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "vrij",
+          "isHome": false
+        },
+        {
+          "date": "2027-01-16",
+          "round": 19,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "vrij",
+          "isHome": false
+        },
+        {
           "date": "2027-01-17",
           "round": 19,
           "probability": 0,
           "cumulativeProbability": 0,
           "opponent": "go-ahead-eagles",
+          "isHome": false
+        },
+        {
+          "date": "2027-01-22",
+          "round": 20,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "vrij",
+          "isHome": false
+        },
+        {
+          "date": "2027-01-23",
+          "round": 20,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "vrij",
           "isHome": false
         },
         {
@@ -378,12 +807,36 @@
           "isHome": true
         },
         {
+          "date": "2027-01-29",
+          "round": 21,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "vrij",
+          "isHome": false
+        },
+        {
+          "date": "2027-01-30",
+          "round": 21,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "vrij",
+          "isHome": false
+        },
+        {
           "date": "2027-01-31",
           "round": 21,
           "probability": 0,
           "cumulativeProbability": 0,
           "opponent": "feyenoord-rotterdam",
           "isHome": true
+        },
+        {
+          "date": "2027-02-06",
+          "round": 16,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "vrij",
+          "isHome": false
         },
         {
           "date": "2027-02-13",
@@ -444,48 +897,48 @@
         {
           "date": "2027-04-10",
           "round": 29,
-          "probability": 0.0001,
-          "cumulativeProbability": 0.0001,
+          "probability": 0.00006,
+          "cumulativeProbability": 0.00006,
           "opponent": "willem-ii-tilburg",
           "isHome": false
         },
         {
           "date": "2027-04-24",
           "round": 30,
-          "probability": 0.00124,
-          "cumulativeProbability": 0.00134,
+          "probability": 0.00098,
+          "cumulativeProbability": 0.00104,
           "opponent": "sc-cambuur-leeuwarden",
           "isHome": true
         },
         {
           "date": "2027-05-01",
           "round": 31,
-          "probability": 0.00528,
-          "cumulativeProbability": 0.00662,
+          "probability": 0.00532,
+          "cumulativeProbability": 0.00636,
           "opponent": "telstar-1963",
           "isHome": false
         },
         {
           "date": "2027-05-08",
           "round": 32,
-          "probability": 0.01674,
-          "cumulativeProbability": 0.023360000000000002,
+          "probability": 0.01614,
+          "cumulativeProbability": 0.022500000000000003,
           "opponent": "afc-ajax",
           "isHome": true
         },
         {
           "date": "2027-05-16",
           "round": 33,
-          "probability": 0.05048,
-          "cumulativeProbability": 0.07384,
+          "probability": 0.04864,
+          "cumulativeProbability": 0.07114000000000001,
           "opponent": "pec-zwolle",
           "isHome": true
         },
         {
           "date": "2027-05-23",
           "round": 34,
-          "probability": 0.08972,
-          "cumulativeProbability": 0.16355999999999998,
+          "probability": 0.10084,
+          "cumulativeProbability": 0.17198000000000002,
           "opponent": "ado-den-haag",
           "isHome": false
         }
@@ -493,26 +946,48 @@
       "bestCaseDate": "2027-01-31",
       "bestCaseRound": 21,
       "expectedDate": "2027-05-23",
-      "neverChampionProbability": 0.83644,
-      "neverChampionCount": 41822,
+      "neverChampionProbability": 0.82802,
+      "neverChampionCount": 41401,
+      "noClinchProbability": 0.82802,
+      "tieProbability": 0.00056,
       "positionProbabilities": {
-        "1": 0.16582,
-        "2": 0.32766,
-        "3": 0.29202,
-        "4": 0.14622,
-        "5": 0.05712,
-        "6": 0.01074,
-        "7": 0.00042
-      }
+        "1": 0.17212,
+        "2": 0.32018,
+        "3": 0.27704,
+        "4": 0.15542,
+        "5": 0.0619,
+        "6": 0.01308,
+        "7": 0.00024,
+        "8": 0.00002
+      },
+      "simulatedGoalsFor": 67.6883,
+      "simulatedGoalsAgainst": 31.06506,
+      "simulatedGoalDifference": 36.623239999999996
     },
     "feyenoord-rotterdam": {
       "teamId": "feyenoord-rotterdam",
       "teamName": "Feyenoord Rotterdam",
-      "totalChampionshipProbability": 0.1285,
+      "totalChampionshipProbability": 0.14534,
       "dateProbabilities": [
         {
           "date": "2026-09-15",
           "round": 3,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "vrij",
+          "isHome": false
+        },
+        {
+          "date": "2026-09-18",
+          "round": 7,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "vrij",
+          "isHome": false
+        },
+        {
+          "date": "2026-09-19",
+          "round": 7,
           "probability": 0,
           "cumulativeProbability": 0,
           "opponent": "vrij",
@@ -527,6 +1002,14 @@
           "isHome": true
         },
         {
+          "date": "2026-10-09",
+          "round": 8,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "vrij",
+          "isHome": false
+        },
+        {
           "date": "2026-10-10",
           "round": 8,
           "probability": 0,
@@ -535,11 +1018,51 @@
           "isHome": true
         },
         {
+          "date": "2026-10-11",
+          "round": 8,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "vrij",
+          "isHome": false
+        },
+        {
+          "date": "2026-10-16",
+          "round": 9,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "vrij",
+          "isHome": false
+        },
+        {
           "date": "2026-10-17",
           "round": 9,
           "probability": 0,
           "cumulativeProbability": 0,
           "opponent": "telstar-1963",
+          "isHome": false
+        },
+        {
+          "date": "2026-10-18",
+          "round": 9,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "vrij",
+          "isHome": false
+        },
+        {
+          "date": "2026-10-23",
+          "round": 10,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "vrij",
+          "isHome": false
+        },
+        {
+          "date": "2026-10-24",
+          "round": 10,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "vrij",
           "isHome": false
         },
         {
@@ -557,6 +1080,30 @@
           "cumulativeProbability": 0,
           "opponent": "fortuna-sittard",
           "isHome": true
+        },
+        {
+          "date": "2026-11-01",
+          "round": 11,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "vrij",
+          "isHome": false
+        },
+        {
+          "date": "2026-11-06",
+          "round": 12,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "vrij",
+          "isHome": false
+        },
+        {
+          "date": "2026-11-07",
+          "round": 12,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "vrij",
+          "isHome": false
         },
         {
           "date": "2026-11-08",
@@ -575,6 +1122,30 @@
           "isHome": true
         },
         {
+          "date": "2026-11-22",
+          "round": 13,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "vrij",
+          "isHome": false
+        },
+        {
+          "date": "2026-11-27",
+          "round": 14,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "vrij",
+          "isHome": false
+        },
+        {
+          "date": "2026-11-28",
+          "round": 14,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "vrij",
+          "isHome": false
+        },
+        {
           "date": "2026-11-29",
           "round": 14,
           "probability": 0,
@@ -583,11 +1154,35 @@
           "isHome": true
         },
         {
+          "date": "2026-12-04",
+          "round": 15,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "vrij",
+          "isHome": false
+        },
+        {
           "date": "2026-12-05",
           "round": 15,
           "probability": 0,
           "cumulativeProbability": 0,
           "opponent": "willem-ii-tilburg",
+          "isHome": false
+        },
+        {
+          "date": "2026-12-06",
+          "round": 15,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "vrij",
+          "isHome": false
+        },
+        {
+          "date": "2026-12-12",
+          "round": 16,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "vrij",
           "isHome": false
         },
         {
@@ -599,12 +1194,44 @@
           "isHome": false
         },
         {
+          "date": "2026-12-18",
+          "round": 17,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "vrij",
+          "isHome": false
+        },
+        {
+          "date": "2026-12-19",
+          "round": 17,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "vrij",
+          "isHome": false
+        },
+        {
           "date": "2026-12-20",
           "round": 17,
           "probability": 0,
           "cumulativeProbability": 0,
           "opponent": "fc-twente-65",
           "isHome": true
+        },
+        {
+          "date": "2027-01-08",
+          "round": 18,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "vrij",
+          "isHome": false
+        },
+        {
+          "date": "2027-01-09",
+          "round": 18,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "vrij",
+          "isHome": false
         },
         {
           "date": "2027-01-10",
@@ -615,11 +1242,35 @@
           "isHome": true
         },
         {
+          "date": "2027-01-15",
+          "round": 19,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "vrij",
+          "isHome": false
+        },
+        {
           "date": "2027-01-16",
           "round": 19,
           "probability": 0,
           "cumulativeProbability": 0,
           "opponent": "sbv-excelsior",
+          "isHome": false
+        },
+        {
+          "date": "2027-01-17",
+          "round": 19,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "vrij",
+          "isHome": false
+        },
+        {
+          "date": "2027-01-22",
+          "round": 20,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "vrij",
           "isHome": false
         },
         {
@@ -631,11 +1282,43 @@
           "isHome": true
         },
         {
+          "date": "2027-01-24",
+          "round": 20,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "vrij",
+          "isHome": false
+        },
+        {
+          "date": "2027-01-29",
+          "round": 21,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "vrij",
+          "isHome": false
+        },
+        {
+          "date": "2027-01-30",
+          "round": 21,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "vrij",
+          "isHome": false
+        },
+        {
           "date": "2027-01-31",
           "round": 21,
           "probability": 0,
           "cumulativeProbability": 0,
           "opponent": "az",
+          "isHome": false
+        },
+        {
+          "date": "2027-02-06",
+          "round": 16,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "vrij",
           "isHome": false
         },
         {
@@ -697,48 +1380,48 @@
         {
           "date": "2027-04-10",
           "round": 29,
-          "probability": 0.0001,
-          "cumulativeProbability": 0.0001,
+          "probability": 0.00014,
+          "cumulativeProbability": 0.00014,
           "opponent": "ado-den-haag",
           "isHome": false
         },
         {
           "date": "2027-04-24",
           "round": 30,
-          "probability": 0.0008,
-          "cumulativeProbability": 0.0009000000000000001,
+          "probability": 0.00096,
+          "cumulativeProbability": 0.0011,
           "opponent": "sparta-rotterdam",
           "isHome": true
         },
         {
           "date": "2027-05-01",
           "round": 31,
-          "probability": 0.0059,
-          "cumulativeProbability": 0.0068,
+          "probability": 0.00518,
+          "cumulativeProbability": 0.00628,
           "opponent": "willem-ii-tilburg",
           "isHome": true
         },
         {
           "date": "2027-05-08",
           "round": 32,
-          "probability": 0.02316,
-          "cumulativeProbability": 0.02996,
+          "probability": 0.02276,
+          "cumulativeProbability": 0.02904,
           "opponent": "fc-utrecht",
           "isHome": false
         },
         {
           "date": "2027-05-16",
           "round": 33,
-          "probability": 0.02246,
-          "cumulativeProbability": 0.05242,
+          "probability": 0.02282,
+          "cumulativeProbability": 0.05186,
           "opponent": "fc-twente-65",
           "isHome": false
         },
         {
           "date": "2027-05-23",
           "round": 34,
-          "probability": 0.07608,
-          "cumulativeProbability": 0.1285,
+          "probability": 0.09348,
+          "cumulativeProbability": 0.14534,
           "opponent": "fc-groningen",
           "isHome": true
         }
@@ -746,27 +1429,48 @@
       "bestCaseDate": "2027-01-31",
       "bestCaseRound": 21,
       "expectedDate": "2027-05-23",
-      "neverChampionProbability": 0.8715,
-      "neverChampionCount": 43575,
+      "neverChampionProbability": 0.85466,
+      "neverChampionCount": 42733,
+      "noClinchProbability": 0.85466,
+      "tieProbability": 0.00046,
       "positionProbabilities": {
-        "1": 0.13772,
-        "2": 0.31532,
-        "3": 0.30472,
-        "4": 0.16478,
-        "5": 0.06442,
-        "6": 0.01248,
-        "7": 0.00054,
+        "1": 0.14552,
+        "2": 0.30282,
+        "3": 0.29992,
+        "4": 0.16758,
+        "5": 0.06958,
+        "6": 0.01412,
+        "7": 0.00044,
         "8": 0.00002
-      }
+      },
+      "simulatedGoalsFor": 71.6055,
+      "simulatedGoalsAgainst": 31.66404,
+      "simulatedGoalDifference": 39.941460000000006
     },
     "fc-twente-65": {
       "teamId": "fc-twente-65",
       "teamName": "FC Twente '65",
-      "totalChampionshipProbability": 0.00962,
+      "totalChampionshipProbability": 0.01188,
       "dateProbabilities": [
         {
           "date": "2026-09-15",
           "round": 3,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "vrij",
+          "isHome": false
+        },
+        {
+          "date": "2026-09-18",
+          "round": 7,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "vrij",
+          "isHome": false
+        },
+        {
+          "date": "2026-09-19",
+          "round": 7,
           "probability": 0,
           "cumulativeProbability": 0,
           "opponent": "vrij",
@@ -781,11 +1485,43 @@
           "isHome": true
         },
         {
+          "date": "2026-10-09",
+          "round": 8,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "vrij",
+          "isHome": false
+        },
+        {
           "date": "2026-10-10",
           "round": 8,
           "probability": 0,
           "cumulativeProbability": 0,
           "opponent": "fortuna-sittard",
+          "isHome": false
+        },
+        {
+          "date": "2026-10-11",
+          "round": 8,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "vrij",
+          "isHome": false
+        },
+        {
+          "date": "2026-10-16",
+          "round": 9,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "vrij",
+          "isHome": false
+        },
+        {
+          "date": "2026-10-17",
+          "round": 9,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "vrij",
           "isHome": false
         },
         {
@@ -797,11 +1533,35 @@
           "isHome": true
         },
         {
+          "date": "2026-10-23",
+          "round": 10,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "vrij",
+          "isHome": false
+        },
+        {
+          "date": "2026-10-24",
+          "round": 10,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "vrij",
+          "isHome": false
+        },
+        {
           "date": "2026-10-25",
           "round": 10,
           "probability": 0,
           "cumulativeProbability": 0,
           "opponent": "az",
+          "isHome": false
+        },
+        {
+          "date": "2026-10-31",
+          "round": 11,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "vrij",
           "isHome": false
         },
         {
@@ -813,12 +1573,36 @@
           "isHome": false
         },
         {
+          "date": "2026-11-06",
+          "round": 12,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "vrij",
+          "isHome": false
+        },
+        {
+          "date": "2026-11-07",
+          "round": 12,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "vrij",
+          "isHome": false
+        },
+        {
           "date": "2026-11-08",
           "round": 12,
           "probability": 0,
           "cumulativeProbability": 0,
           "opponent": "afc-ajax",
           "isHome": true
+        },
+        {
+          "date": "2026-11-21",
+          "round": 13,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "vrij",
+          "isHome": false
         },
         {
           "date": "2026-11-22",
@@ -829,11 +1613,43 @@
           "isHome": true
         },
         {
+          "date": "2026-11-27",
+          "round": 14,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "vrij",
+          "isHome": false
+        },
+        {
+          "date": "2026-11-28",
+          "round": 14,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "vrij",
+          "isHome": false
+        },
+        {
           "date": "2026-11-29",
           "round": 14,
           "probability": 0,
           "cumulativeProbability": 0,
           "opponent": "nec",
+          "isHome": false
+        },
+        {
+          "date": "2026-12-04",
+          "round": 15,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "vrij",
+          "isHome": false
+        },
+        {
+          "date": "2026-12-05",
+          "round": 15,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "vrij",
           "isHome": false
         },
         {
@@ -845,12 +1661,36 @@
           "isHome": false
         },
         {
-          "date": "2027-02-06",
+          "date": "2026-12-12",
           "round": 16,
           "probability": 0,
           "cumulativeProbability": 0,
-          "opponent": "sparta-rotterdam",
-          "isHome": true
+          "opponent": "vrij",
+          "isHome": false
+        },
+        {
+          "date": "2026-12-13",
+          "round": 16,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "vrij",
+          "isHome": false
+        },
+        {
+          "date": "2026-12-18",
+          "round": 17,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "vrij",
+          "isHome": false
+        },
+        {
+          "date": "2026-12-19",
+          "round": 17,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "vrij",
+          "isHome": false
         },
         {
           "date": "2026-12-20",
@@ -869,11 +1709,51 @@
           "isHome": true
         },
         {
+          "date": "2027-01-09",
+          "round": 18,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "vrij",
+          "isHome": false
+        },
+        {
+          "date": "2027-01-10",
+          "round": 18,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "vrij",
+          "isHome": false
+        },
+        {
+          "date": "2027-01-15",
+          "round": 19,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "vrij",
+          "isHome": false
+        },
+        {
+          "date": "2027-01-16",
+          "round": 19,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "vrij",
+          "isHome": false
+        },
+        {
           "date": "2027-01-17",
           "round": 19,
           "probability": 0,
           "cumulativeProbability": 0,
           "opponent": "fc-utrecht",
+          "isHome": false
+        },
+        {
+          "date": "2027-01-22",
+          "round": 20,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "vrij",
           "isHome": false
         },
         {
@@ -885,11 +1765,43 @@
           "isHome": true
         },
         {
+          "date": "2027-01-24",
+          "round": 20,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "vrij",
+          "isHome": false
+        },
+        {
+          "date": "2027-01-29",
+          "round": 21,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "vrij",
+          "isHome": false
+        },
+        {
+          "date": "2027-01-30",
+          "round": 21,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "vrij",
+          "isHome": false
+        },
+        {
           "date": "2027-01-31",
           "round": 21,
           "probability": 0,
           "cumulativeProbability": 0,
           "opponent": "sc-cambuur-leeuwarden",
+          "isHome": true
+        },
+        {
+          "date": "2027-02-06",
+          "round": 16,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "sparta-rotterdam",
           "isHome": true
         },
         {
@@ -967,8 +1879,8 @@
         {
           "date": "2027-05-01",
           "round": 31,
-          "probability": 0.00002,
-          "cumulativeProbability": 0.00002,
+          "probability": 0.00008,
+          "cumulativeProbability": 0.00008,
           "opponent": "sparta-rotterdam",
           "isHome": false
         },
@@ -976,7 +1888,7 @@
           "date": "2027-05-08",
           "round": 32,
           "probability": 0.00066,
-          "cumulativeProbability": 0.00068,
+          "cumulativeProbability": 0.00074,
           "opponent": "fc-groningen",
           "isHome": true
         },
@@ -984,15 +1896,15 @@
           "date": "2027-05-16",
           "round": 33,
           "probability": 0.00198,
-          "cumulativeProbability": 0.00266,
+          "cumulativeProbability": 0.00272,
           "opponent": "feyenoord-rotterdam",
           "isHome": true
         },
         {
           "date": "2027-05-23",
           "round": 34,
-          "probability": 0.00696,
-          "cumulativeProbability": 0.00962,
+          "probability": 0.00916,
+          "cumulativeProbability": 0.01188,
           "opponent": "pec-zwolle",
           "isHome": false
         }
@@ -1000,25 +1912,30 @@
       "bestCaseDate": "2027-02-06",
       "bestCaseRound": 16,
       "expectedDate": "2027-05-23",
-      "neverChampionProbability": 0.99038,
-      "neverChampionCount": 49519,
+      "neverChampionProbability": 0.98812,
+      "neverChampionCount": 49406,
+      "noClinchProbability": 0.98812,
+      "tieProbability": 0.00048,
       "positionProbabilities": {
-        "1": 0.00964,
-        "2": 0.04484,
-        "3": 0.11148,
-        "4": 0.24406,
-        "5": 0.40356,
-        "6": 0.16718,
-        "7": 0.01726,
-        "8": 0.00178,
-        "9": 0.00018,
-        "10": 0.00002
-      }
+        "1": 0.01188,
+        "2": 0.04862,
+        "3": 0.11688,
+        "4": 0.24376,
+        "5": 0.37922,
+        "6": 0.17886,
+        "7": 0.0187,
+        "8": 0.0017,
+        "9": 0.00034,
+        "10": 0.00004
+      },
+      "simulatedGoalsFor": 59.29444,
+      "simulatedGoalsAgainst": 32.41108,
+      "simulatedGoalDifference": 26.883360000000003
     },
     "afc-ajax": {
       "teamId": "afc-ajax",
       "teamName": "AFC Ajax",
-      "totalChampionshipProbability": 0.02048,
+      "totalChampionshipProbability": 0.02486,
       "dateProbabilities": [
         {
           "date": "2026-09-15",
@@ -1029,12 +1946,36 @@
           "isHome": true
         },
         {
+          "date": "2026-09-18",
+          "round": 7,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "vrij",
+          "isHome": false
+        },
+        {
           "date": "2026-09-19",
           "round": 7,
           "probability": 0,
           "cumulativeProbability": 0,
           "opponent": "sbv-excelsior",
           "isHome": true
+        },
+        {
+          "date": "2026-09-20",
+          "round": 7,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "vrij",
+          "isHome": false
+        },
+        {
+          "date": "2026-10-09",
+          "round": 8,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "vrij",
+          "isHome": false
         },
         {
           "date": "2026-10-10",
@@ -1045,11 +1986,51 @@
           "isHome": true
         },
         {
+          "date": "2026-10-11",
+          "round": 8,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "vrij",
+          "isHome": false
+        },
+        {
+          "date": "2026-10-16",
+          "round": 9,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "vrij",
+          "isHome": false
+        },
+        {
+          "date": "2026-10-17",
+          "round": 9,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "vrij",
+          "isHome": false
+        },
+        {
           "date": "2026-10-18",
           "round": 9,
           "probability": 0,
           "cumulativeProbability": 0,
           "opponent": "fc-groningen",
+          "isHome": false
+        },
+        {
+          "date": "2026-10-23",
+          "round": 10,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "vrij",
+          "isHome": false
+        },
+        {
+          "date": "2026-10-24",
+          "round": 10,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "vrij",
           "isHome": false
         },
         {
@@ -1069,11 +2050,43 @@
           "isHome": true
         },
         {
+          "date": "2026-11-01",
+          "round": 11,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "vrij",
+          "isHome": false
+        },
+        {
+          "date": "2026-11-06",
+          "round": 12,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "vrij",
+          "isHome": false
+        },
+        {
+          "date": "2026-11-07",
+          "round": 12,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "vrij",
+          "isHome": false
+        },
+        {
           "date": "2026-11-08",
           "round": 12,
           "probability": 0,
           "cumulativeProbability": 0,
           "opponent": "fc-twente-65",
+          "isHome": false
+        },
+        {
+          "date": "2026-11-21",
+          "round": 13,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "vrij",
           "isHome": false
         },
         {
@@ -1085,11 +2098,43 @@
           "isHome": true
         },
         {
+          "date": "2026-11-27",
+          "round": 14,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "vrij",
+          "isHome": false
+        },
+        {
+          "date": "2026-11-28",
+          "round": 14,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "vrij",
+          "isHome": false
+        },
+        {
           "date": "2026-11-29",
           "round": 14,
           "probability": 0,
           "cumulativeProbability": 0,
           "opponent": "feyenoord-rotterdam",
+          "isHome": false
+        },
+        {
+          "date": "2026-12-04",
+          "round": 15,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "vrij",
+          "isHome": false
+        },
+        {
+          "date": "2026-12-05",
+          "round": 15,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "vrij",
           "isHome": false
         },
         {
@@ -1101,6 +2146,14 @@
           "isHome": true
         },
         {
+          "date": "2026-12-12",
+          "round": 16,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "vrij",
+          "isHome": false
+        },
+        {
           "date": "2026-12-13",
           "round": 16,
           "probability": 0,
@@ -1109,11 +2162,35 @@
           "isHome": true
         },
         {
+          "date": "2026-12-18",
+          "round": 17,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "vrij",
+          "isHome": false
+        },
+        {
+          "date": "2026-12-19",
+          "round": 17,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "vrij",
+          "isHome": false
+        },
+        {
           "date": "2026-12-20",
           "round": 17,
           "probability": 0,
           "cumulativeProbability": 0,
           "opponent": "go-ahead-eagles",
+          "isHome": false
+        },
+        {
+          "date": "2027-01-08",
+          "round": 18,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "vrij",
           "isHome": false
         },
         {
@@ -1125,12 +2202,44 @@
           "isHome": false
         },
         {
+          "date": "2027-01-10",
+          "round": 18,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "vrij",
+          "isHome": false
+        },
+        {
+          "date": "2027-01-15",
+          "round": 19,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "vrij",
+          "isHome": false
+        },
+        {
+          "date": "2027-01-16",
+          "round": 19,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "vrij",
+          "isHome": false
+        },
+        {
           "date": "2027-01-17",
           "round": 19,
           "probability": 0,
           "cumulativeProbability": 0,
           "opponent": "fc-groningen",
           "isHome": true
+        },
+        {
+          "date": "2027-01-22",
+          "round": 20,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "vrij",
+          "isHome": false
         },
         {
           "date": "2027-01-23",
@@ -1141,11 +2250,43 @@
           "isHome": true
         },
         {
+          "date": "2027-01-24",
+          "round": 20,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "vrij",
+          "isHome": false
+        },
+        {
+          "date": "2027-01-29",
+          "round": 21,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "vrij",
+          "isHome": false
+        },
+        {
+          "date": "2027-01-30",
+          "round": 21,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "vrij",
+          "isHome": false
+        },
+        {
           "date": "2027-01-31",
           "round": 21,
           "probability": 0,
           "cumulativeProbability": 0,
           "opponent": "sc-heerenveen",
+          "isHome": false
+        },
+        {
+          "date": "2027-02-06",
+          "round": 16,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "vrij",
           "isHome": false
         },
         {
@@ -1215,40 +2356,40 @@
         {
           "date": "2027-04-24",
           "round": 30,
-          "probability": 0.00004,
-          "cumulativeProbability": 0.00004,
+          "probability": 0,
+          "cumulativeProbability": 0,
           "opponent": "psv",
           "isHome": false
         },
         {
           "date": "2027-05-01",
           "round": 31,
-          "probability": 0.00016,
-          "cumulativeProbability": 0.0002,
+          "probability": 0.00026,
+          "cumulativeProbability": 0.00026,
           "opponent": "fortuna-sittard",
           "isHome": true
         },
         {
           "date": "2027-05-08",
           "round": 32,
-          "probability": 0.00064,
-          "cumulativeProbability": 0.00084,
+          "probability": 0.00108,
+          "cumulativeProbability": 0.00134,
           "opponent": "az",
           "isHome": false
         },
         {
           "date": "2027-05-16",
           "round": 33,
-          "probability": 0.00436,
-          "cumulativeProbability": 0.0052,
+          "probability": 0.00468,
+          "cumulativeProbability": 0.00602,
           "opponent": "sparta-rotterdam",
           "isHome": true
         },
         {
           "date": "2027-05-23",
           "round": 34,
-          "probability": 0.01528,
-          "cumulativeProbability": 0.020479999999999998,
+          "probability": 0.01884,
+          "cumulativeProbability": 0.02486,
           "opponent": "sc-cambuur-leeuwarden",
           "isHome": false
         }
@@ -1256,28 +2397,41 @@
       "bestCaseDate": "2027-01-31",
       "bestCaseRound": 21,
       "expectedDate": "2027-05-23",
-      "neverChampionProbability": 0.97952,
-      "neverChampionCount": 48976,
+      "neverChampionProbability": 0.97514,
+      "neverChampionCount": 48757,
+      "noClinchProbability": 0.97514,
+      "tieProbability": 0.00066,
       "positionProbabilities": {
-        "1": 0.02078,
-        "2": 0.0896,
-        "3": 0.18712,
-        "4": 0.35278,
-        "5": 0.25912,
-        "6": 0.08502,
-        "7": 0.00516,
-        "8": 0.00034,
-        "9": 0.00008
-      }
+        "1": 0.0249,
+        "2": 0.09696,
+        "3": 0.1924,
+        "4": 0.32824,
+        "5": 0.25842,
+        "6": 0.09204,
+        "7": 0.00652,
+        "8": 0.0004,
+        "9": 0.00012
+      },
+      "simulatedGoalsFor": 65.23572,
+      "simulatedGoalsAgainst": 33.36098,
+      "simulatedGoalDifference": 31.874740000000003
     },
     "sbv-excelsior": {
       "teamId": "sbv-excelsior",
       "teamName": "SBV Excelsior",
-      "totalChampionshipProbability": 0.0004,
+      "totalChampionshipProbability": 0.00052,
       "dateProbabilities": [
         {
           "date": "2026-09-15",
           "round": 3,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "vrij",
+          "isHome": false
+        },
+        {
+          "date": "2026-09-18",
+          "round": 7,
           "probability": 0,
           "cumulativeProbability": 0,
           "opponent": "vrij",
@@ -1289,6 +2443,30 @@
           "probability": 0,
           "cumulativeProbability": 0,
           "opponent": "afc-ajax",
+          "isHome": false
+        },
+        {
+          "date": "2026-09-20",
+          "round": 7,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "vrij",
+          "isHome": false
+        },
+        {
+          "date": "2026-10-09",
+          "round": 8,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "vrij",
+          "isHome": false
+        },
+        {
+          "date": "2026-10-10",
+          "round": 8,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "vrij",
           "isHome": false
         },
         {
@@ -1308,11 +2486,51 @@
           "isHome": false
         },
         {
+          "date": "2026-10-17",
+          "round": 9,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "vrij",
+          "isHome": false
+        },
+        {
+          "date": "2026-10-18",
+          "round": 9,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "vrij",
+          "isHome": false
+        },
+        {
+          "date": "2026-10-23",
+          "round": 10,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "vrij",
+          "isHome": false
+        },
+        {
+          "date": "2026-10-24",
+          "round": 10,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "vrij",
+          "isHome": false
+        },
+        {
           "date": "2026-10-25",
           "round": 10,
           "probability": 0,
           "cumulativeProbability": 0,
           "opponent": "fortuna-sittard",
+          "isHome": false
+        },
+        {
+          "date": "2026-10-31",
+          "round": 11,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "vrij",
           "isHome": false
         },
         {
@@ -1324,12 +2542,28 @@
           "isHome": true
         },
         {
+          "date": "2026-11-06",
+          "round": 12,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "vrij",
+          "isHome": false
+        },
+        {
           "date": "2026-11-07",
           "round": 12,
           "probability": 0,
           "cumulativeProbability": 0,
           "opponent": "go-ahead-eagles",
           "isHome": true
+        },
+        {
+          "date": "2026-11-08",
+          "round": 12,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "vrij",
+          "isHome": false
         },
         {
           "date": "2026-11-21",
@@ -1340,12 +2574,52 @@
           "isHome": false
         },
         {
+          "date": "2026-11-22",
+          "round": 13,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "vrij",
+          "isHome": false
+        },
+        {
+          "date": "2026-11-27",
+          "round": 14,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "vrij",
+          "isHome": false
+        },
+        {
           "date": "2026-11-28",
           "round": 14,
           "probability": 0,
           "cumulativeProbability": 0,
           "opponent": "telstar-1963",
           "isHome": true
+        },
+        {
+          "date": "2026-11-29",
+          "round": 14,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "vrij",
+          "isHome": false
+        },
+        {
+          "date": "2026-12-04",
+          "round": 15,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "vrij",
+          "isHome": false
+        },
+        {
+          "date": "2026-12-05",
+          "round": 15,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "vrij",
+          "isHome": false
         },
         {
           "date": "2026-12-06",
@@ -1364,6 +2638,22 @@
           "isHome": false
         },
         {
+          "date": "2026-12-13",
+          "round": 16,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "vrij",
+          "isHome": false
+        },
+        {
+          "date": "2026-12-18",
+          "round": 17,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "vrij",
+          "isHome": false
+        },
+        {
           "date": "2026-12-19",
           "round": 17,
           "probability": 0,
@@ -1372,11 +2662,43 @@
           "isHome": true
         },
         {
+          "date": "2026-12-20",
+          "round": 17,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "vrij",
+          "isHome": false
+        },
+        {
+          "date": "2027-01-08",
+          "round": 18,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "vrij",
+          "isHome": false
+        },
+        {
           "date": "2027-01-09",
           "round": 18,
           "probability": 0,
           "cumulativeProbability": 0,
           "opponent": "sparta-rotterdam",
+          "isHome": false
+        },
+        {
+          "date": "2027-01-10",
+          "round": 18,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "vrij",
+          "isHome": false
+        },
+        {
+          "date": "2027-01-15",
+          "round": 19,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "vrij",
           "isHome": false
         },
         {
@@ -1388,6 +2710,14 @@
           "isHome": true
         },
         {
+          "date": "2027-01-17",
+          "round": 19,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "vrij",
+          "isHome": false
+        },
+        {
           "date": "2027-01-22",
           "round": 20,
           "probability": 0,
@@ -1396,11 +2726,51 @@
           "isHome": true
         },
         {
+          "date": "2027-01-23",
+          "round": 20,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "vrij",
+          "isHome": false
+        },
+        {
+          "date": "2027-01-24",
+          "round": 20,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "vrij",
+          "isHome": false
+        },
+        {
           "date": "2027-01-29",
           "round": 21,
           "probability": 0,
           "cumulativeProbability": 0,
           "opponent": "fc-utrecht",
+          "isHome": false
+        },
+        {
+          "date": "2027-01-30",
+          "round": 21,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "vrij",
+          "isHome": false
+        },
+        {
+          "date": "2027-01-31",
+          "round": 21,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "vrij",
+          "isHome": false
+        },
+        {
+          "date": "2027-02-06",
+          "round": 16,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "vrij",
           "isHome": false
         },
         {
@@ -1486,24 +2856,24 @@
         {
           "date": "2027-05-08",
           "round": 32,
-          "probability": 0.00004,
-          "cumulativeProbability": 0.00004,
+          "probability": 0,
+          "cumulativeProbability": 0,
           "opponent": "psv",
           "isHome": false
         },
         {
           "date": "2027-05-16",
           "round": 33,
-          "probability": 0.00008,
-          "cumulativeProbability": 0.00012000000000000002,
+          "probability": 0.00006,
+          "cumulativeProbability": 0.00006,
           "opponent": "ado-den-haag",
           "isHome": true
         },
         {
           "date": "2027-05-23",
           "round": 34,
-          "probability": 0.00028,
-          "cumulativeProbability": 0.00039999999999999996,
+          "probability": 0.00046,
+          "cumulativeProbability": 0.0005200000000000001,
           "opponent": "telstar-1963",
           "isHome": false
         }
@@ -1511,22 +2881,27 @@
       "bestCaseDate": "2027-02-13",
       "bestCaseRound": 22,
       "expectedDate": "2027-05-23",
-      "neverChampionProbability": 0.9996,
-      "neverChampionCount": 49980,
+      "neverChampionProbability": 0.99948,
+      "neverChampionCount": 49974,
+      "noClinchProbability": 0.99948,
+      "tieProbability": 0.00038,
       "positionProbabilities": {
-        "1": 0.0004,
-        "2": 0.00426,
-        "3": 0.01876,
-        "4": 0.06484,
-        "5": 0.19494,
-        "6": 0.59502,
-        "7": 0.09894,
-        "8": 0.01802,
-        "9": 0.00398,
-        "10": 0.00064,
-        "11": 0.00018,
-        "13": 0.00002
-      }
+        "1": 0.00052,
+        "2": 0.00534,
+        "3": 0.02034,
+        "4": 0.07452,
+        "5": 0.20714,
+        "6": 0.56426,
+        "7": 0.10204,
+        "8": 0.02022,
+        "9": 0.00464,
+        "10": 0.00082,
+        "11": 0.00014,
+        "12": 0.00002
+      },
+      "simulatedGoalsFor": 58.52424,
+      "simulatedGoalsAgainst": 36.67396,
+      "simulatedGoalDifference": 21.850279999999998
     },
     "fortuna-sittard": {
       "teamId": "fortuna-sittard",
@@ -1542,11 +2917,35 @@
           "isHome": false
         },
         {
+          "date": "2026-09-18",
+          "round": 7,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "vrij",
+          "isHome": false
+        },
+        {
           "date": "2026-09-19",
           "round": 7,
           "probability": 0,
           "cumulativeProbability": 0,
           "opponent": "willem-ii-tilburg",
+          "isHome": false
+        },
+        {
+          "date": "2026-09-20",
+          "round": 7,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "vrij",
+          "isHome": false
+        },
+        {
+          "date": "2026-10-09",
+          "round": 8,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "vrij",
           "isHome": false
         },
         {
@@ -1558,11 +2957,51 @@
           "isHome": true
         },
         {
+          "date": "2026-10-11",
+          "round": 8,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "vrij",
+          "isHome": false
+        },
+        {
+          "date": "2026-10-16",
+          "round": 9,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "vrij",
+          "isHome": false
+        },
+        {
+          "date": "2026-10-17",
+          "round": 9,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "vrij",
+          "isHome": false
+        },
+        {
           "date": "2026-10-18",
           "round": 9,
           "probability": 0,
           "cumulativeProbability": 0,
           "opponent": "nec",
+          "isHome": false
+        },
+        {
+          "date": "2026-10-23",
+          "round": 10,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "vrij",
+          "isHome": false
+        },
+        {
+          "date": "2026-10-24",
+          "round": 10,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "vrij",
           "isHome": false
         },
         {
@@ -1582,6 +3021,22 @@
           "isHome": false
         },
         {
+          "date": "2026-11-01",
+          "round": 11,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "vrij",
+          "isHome": false
+        },
+        {
+          "date": "2026-11-06",
+          "round": 12,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "vrij",
+          "isHome": false
+        },
+        {
           "date": "2026-11-07",
           "round": 12,
           "probability": 0,
@@ -1590,11 +3045,43 @@
           "isHome": true
         },
         {
+          "date": "2026-11-08",
+          "round": 12,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "vrij",
+          "isHome": false
+        },
+        {
+          "date": "2026-11-21",
+          "round": 13,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "vrij",
+          "isHome": false
+        },
+        {
           "date": "2026-11-22",
           "round": 13,
           "probability": 0,
           "cumulativeProbability": 0,
           "opponent": "go-ahead-eagles",
+          "isHome": false
+        },
+        {
+          "date": "2026-11-27",
+          "round": 14,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "vrij",
+          "isHome": false
+        },
+        {
+          "date": "2026-11-28",
+          "round": 14,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "vrij",
           "isHome": false
         },
         {
@@ -1606,6 +3093,14 @@
           "isHome": true
         },
         {
+          "date": "2026-12-04",
+          "round": 15,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "vrij",
+          "isHome": false
+        },
+        {
           "date": "2026-12-05",
           "round": 15,
           "probability": 0,
@@ -1614,11 +3109,35 @@
           "isHome": true
         },
         {
+          "date": "2026-12-06",
+          "round": 15,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "vrij",
+          "isHome": false
+        },
+        {
           "date": "2026-12-12",
           "round": 16,
           "probability": 0,
           "cumulativeProbability": 0,
           "opponent": "fc-utrecht",
+          "isHome": false
+        },
+        {
+          "date": "2026-12-13",
+          "round": 16,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "vrij",
+          "isHome": false
+        },
+        {
+          "date": "2026-12-18",
+          "round": 17,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "vrij",
           "isHome": false
         },
         {
@@ -1630,11 +3149,43 @@
           "isHome": true
         },
         {
+          "date": "2026-12-20",
+          "round": 17,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "vrij",
+          "isHome": false
+        },
+        {
           "date": "2027-01-08",
           "round": 18,
           "probability": 0,
           "cumulativeProbability": 0,
           "opponent": "fc-twente-65",
+          "isHome": false
+        },
+        {
+          "date": "2027-01-09",
+          "round": 18,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "vrij",
+          "isHome": false
+        },
+        {
+          "date": "2027-01-10",
+          "round": 18,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "vrij",
+          "isHome": false
+        },
+        {
+          "date": "2027-01-15",
+          "round": 19,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "vrij",
           "isHome": false
         },
         {
@@ -1646,6 +3197,14 @@
           "isHome": true
         },
         {
+          "date": "2027-01-17",
+          "round": 19,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "vrij",
+          "isHome": false
+        },
+        {
           "date": "2027-01-22",
           "round": 20,
           "probability": 0,
@@ -1654,11 +3213,51 @@
           "isHome": false
         },
         {
+          "date": "2027-01-23",
+          "round": 20,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "vrij",
+          "isHome": false
+        },
+        {
+          "date": "2027-01-24",
+          "round": 20,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "vrij",
+          "isHome": false
+        },
+        {
+          "date": "2027-01-29",
+          "round": 21,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "vrij",
+          "isHome": false
+        },
+        {
           "date": "2027-01-30",
           "round": 21,
           "probability": 0,
           "cumulativeProbability": 0,
           "opponent": "pec-zwolle",
+          "isHome": false
+        },
+        {
+          "date": "2027-01-31",
+          "round": 21,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "vrij",
+          "isHome": false
+        },
+        {
+          "date": "2027-02-06",
+          "round": 16,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "vrij",
           "isHome": false
         },
         {
@@ -1771,22 +3370,27 @@
       "expectedDate": null,
       "neverChampionProbability": 1,
       "neverChampionCount": 50000,
+      "noClinchProbability": 1,
+      "tieProbability": 0.00062,
       "positionProbabilities": {
-        "3": 0.00002,
-        "4": 0.00014,
+        "4": 0.00008,
         "5": 0.00154,
-        "6": 0.01826,
-        "7": 0.15498,
-        "8": 0.2685,
-        "9": 0.24236,
-        "10": 0.16572,
-        "11": 0.09066,
-        "12": 0.04064,
-        "13": 0.0136,
-        "14": 0.00286,
+        "6": 0.01878,
+        "7": 0.16216,
+        "8": 0.26432,
+        "9": 0.23234,
+        "10": 0.16088,
+        "11": 0.09212,
+        "12": 0.04676,
+        "13": 0.01618,
+        "14": 0.00406,
         "15": 0.00066,
-        "16": 0.00006
-      }
+        "16": 0.00008,
+        "17": 0.00004
+      },
+      "simulatedGoalsFor": 48.45256,
+      "simulatedGoalsAgainst": 53.11178,
+      "simulatedGoalDifference": -4.659220000000005
     },
     "go-ahead-eagles": {
       "teamId": "go-ahead-eagles",
@@ -1802,11 +3406,35 @@
           "isHome": false
         },
         {
+          "date": "2026-09-18",
+          "round": 7,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "vrij",
+          "isHome": false
+        },
+        {
+          "date": "2026-09-19",
+          "round": 7,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "vrij",
+          "isHome": false
+        },
+        {
           "date": "2026-09-20",
           "round": 7,
           "probability": 0,
           "cumulativeProbability": 0,
           "opponent": "nec",
+          "isHome": false
+        },
+        {
+          "date": "2026-10-09",
+          "round": 8,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "vrij",
           "isHome": false
         },
         {
@@ -1816,6 +3444,30 @@
           "cumulativeProbability": 0,
           "opponent": "sparta-rotterdam",
           "isHome": true
+        },
+        {
+          "date": "2026-10-11",
+          "round": 8,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "vrij",
+          "isHome": false
+        },
+        {
+          "date": "2026-10-16",
+          "round": 9,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "vrij",
+          "isHome": false
+        },
+        {
+          "date": "2026-10-17",
+          "round": 9,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "vrij",
+          "isHome": false
         },
         {
           "date": "2026-10-18",
@@ -1834,11 +3486,43 @@
           "isHome": true
         },
         {
+          "date": "2026-10-24",
+          "round": 10,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "vrij",
+          "isHome": false
+        },
+        {
+          "date": "2026-10-25",
+          "round": 10,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "vrij",
+          "isHome": false
+        },
+        {
           "date": "2026-10-31",
           "round": 11,
           "probability": 0,
           "cumulativeProbability": 0,
           "opponent": "sc-cambuur-leeuwarden",
+          "isHome": false
+        },
+        {
+          "date": "2026-11-01",
+          "round": 11,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "vrij",
+          "isHome": false
+        },
+        {
+          "date": "2026-11-06",
+          "round": 12,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "vrij",
           "isHome": false
         },
         {
@@ -1850,6 +3534,22 @@
           "isHome": false
         },
         {
+          "date": "2026-11-08",
+          "round": 12,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "vrij",
+          "isHome": false
+        },
+        {
+          "date": "2026-11-21",
+          "round": 13,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "vrij",
+          "isHome": false
+        },
+        {
           "date": "2026-11-22",
           "round": 13,
           "probability": 0,
@@ -1858,11 +3558,43 @@
           "isHome": true
         },
         {
+          "date": "2026-11-27",
+          "round": 14,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "vrij",
+          "isHome": false
+        },
+        {
           "date": "2026-11-28",
           "round": 14,
           "probability": 0,
           "cumulativeProbability": 0,
           "opponent": "psv",
+          "isHome": false
+        },
+        {
+          "date": "2026-11-29",
+          "round": 14,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "vrij",
+          "isHome": false
+        },
+        {
+          "date": "2026-12-04",
+          "round": 15,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "vrij",
+          "isHome": false
+        },
+        {
+          "date": "2026-12-05",
+          "round": 15,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "vrij",
           "isHome": false
         },
         {
@@ -1882,6 +3614,30 @@
           "isHome": false
         },
         {
+          "date": "2026-12-13",
+          "round": 16,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "vrij",
+          "isHome": false
+        },
+        {
+          "date": "2026-12-18",
+          "round": 17,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "vrij",
+          "isHome": false
+        },
+        {
+          "date": "2026-12-19",
+          "round": 17,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "vrij",
+          "isHome": false
+        },
+        {
           "date": "2026-12-20",
           "round": 17,
           "probability": 0,
@@ -1890,11 +3646,43 @@
           "isHome": true
         },
         {
+          "date": "2027-01-08",
+          "round": 18,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "vrij",
+          "isHome": false
+        },
+        {
+          "date": "2027-01-09",
+          "round": 18,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "vrij",
+          "isHome": false
+        },
+        {
           "date": "2027-01-10",
           "round": 18,
           "probability": 0,
           "cumulativeProbability": 0,
           "opponent": "fc-groningen",
+          "isHome": false
+        },
+        {
+          "date": "2027-01-15",
+          "round": 19,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "vrij",
+          "isHome": false
+        },
+        {
+          "date": "2027-01-16",
+          "round": 19,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "vrij",
           "isHome": false
         },
         {
@@ -1906,6 +3694,22 @@
           "isHome": true
         },
         {
+          "date": "2027-01-22",
+          "round": 20,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "vrij",
+          "isHome": false
+        },
+        {
+          "date": "2027-01-23",
+          "round": 20,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "vrij",
+          "isHome": false
+        },
+        {
           "date": "2027-01-24",
           "round": 20,
           "probability": 0,
@@ -1914,11 +3718,35 @@
           "isHome": true
         },
         {
+          "date": "2027-01-29",
+          "round": 21,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "vrij",
+          "isHome": false
+        },
+        {
           "date": "2027-01-30",
           "round": 21,
           "probability": 0,
           "cumulativeProbability": 0,
           "opponent": "ado-den-haag",
+          "isHome": false
+        },
+        {
+          "date": "2027-01-31",
+          "round": 21,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "vrij",
+          "isHome": false
+        },
+        {
+          "date": "2027-02-06",
+          "round": 16,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "vrij",
           "isHome": false
         },
         {
@@ -2031,22 +3859,27 @@
       "expectedDate": null,
       "neverChampionProbability": 1,
       "neverChampionCount": 50000,
+      "noClinchProbability": 1,
+      "tieProbability": 0.0005,
       "positionProbabilities": {
         "2": 0.00004,
-        "3": 0.00026,
-        "4": 0.00186,
-        "5": 0.01364,
-        "6": 0.09284,
-        "7": 0.50352,
-        "8": 0.21326,
-        "9": 0.10276,
-        "10": 0.04582,
-        "11": 0.01864,
-        "12": 0.00592,
-        "13": 0.00112,
-        "14": 0.0003,
-        "15": 0.00002
-      }
+        "3": 0.00014,
+        "4": 0.00234,
+        "5": 0.01428,
+        "6": 0.09826,
+        "7": 0.48112,
+        "8": 0.21762,
+        "9": 0.10722,
+        "10": 0.04956,
+        "11": 0.02026,
+        "12": 0.00714,
+        "13": 0.00164,
+        "14": 0.00032,
+        "15": 0.00006
+      },
+      "simulatedGoalsFor": 55.07604,
+      "simulatedGoalsAgainst": 48.35836,
+      "simulatedGoalDifference": 6.717680000000001
     },
     "fc-groningen": {
       "teamId": "fc-groningen",
@@ -2070,11 +3903,59 @@
           "isHome": true
         },
         {
+          "date": "2026-09-19",
+          "round": 7,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "vrij",
+          "isHome": false
+        },
+        {
+          "date": "2026-09-20",
+          "round": 7,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "vrij",
+          "isHome": false
+        },
+        {
+          "date": "2026-10-09",
+          "round": 8,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "vrij",
+          "isHome": false
+        },
+        {
+          "date": "2026-10-10",
+          "round": 8,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "vrij",
+          "isHome": false
+        },
+        {
           "date": "2026-10-11",
           "round": 8,
           "probability": 0,
           "cumulativeProbability": 0,
           "opponent": "sbv-excelsior",
+          "isHome": false
+        },
+        {
+          "date": "2026-10-16",
+          "round": 9,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "vrij",
+          "isHome": false
+        },
+        {
+          "date": "2026-10-17",
+          "round": 9,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "vrij",
           "isHome": false
         },
         {
@@ -2086,11 +3967,35 @@
           "isHome": true
         },
         {
+          "date": "2026-10-23",
+          "round": 10,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "vrij",
+          "isHome": false
+        },
+        {
+          "date": "2026-10-24",
+          "round": 10,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "vrij",
+          "isHome": false
+        },
+        {
           "date": "2026-10-25",
           "round": 10,
           "probability": 0,
           "cumulativeProbability": 0,
           "opponent": "nec",
+          "isHome": false
+        },
+        {
+          "date": "2026-10-31",
+          "round": 11,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "vrij",
           "isHome": false
         },
         {
@@ -2100,6 +4005,22 @@
           "cumulativeProbability": 0,
           "opponent": "sparta-rotterdam",
           "isHome": true
+        },
+        {
+          "date": "2026-11-06",
+          "round": 12,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "vrij",
+          "isHome": false
+        },
+        {
+          "date": "2026-11-07",
+          "round": 12,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "vrij",
+          "isHome": false
         },
         {
           "date": "2026-11-08",
@@ -2118,6 +4039,14 @@
           "isHome": true
         },
         {
+          "date": "2026-11-22",
+          "round": 13,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "vrij",
+          "isHome": false
+        },
+        {
           "date": "2026-11-27",
           "round": 14,
           "probability": 0,
@@ -2126,11 +4055,51 @@
           "isHome": true
         },
         {
+          "date": "2026-11-28",
+          "round": 14,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "vrij",
+          "isHome": false
+        },
+        {
+          "date": "2026-11-29",
+          "round": 14,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "vrij",
+          "isHome": false
+        },
+        {
           "date": "2026-12-04",
           "round": 15,
           "probability": 0,
           "cumulativeProbability": 0,
           "opponent": "telstar-1963",
+          "isHome": false
+        },
+        {
+          "date": "2026-12-05",
+          "round": 15,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "vrij",
+          "isHome": false
+        },
+        {
+          "date": "2026-12-06",
+          "round": 15,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "vrij",
+          "isHome": false
+        },
+        {
+          "date": "2026-12-12",
+          "round": 16,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "vrij",
           "isHome": false
         },
         {
@@ -2142,11 +4111,43 @@
           "isHome": true
         },
         {
+          "date": "2026-12-18",
+          "round": 17,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "vrij",
+          "isHome": false
+        },
+        {
+          "date": "2026-12-19",
+          "round": 17,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "vrij",
+          "isHome": false
+        },
+        {
           "date": "2026-12-20",
           "round": 17,
           "probability": 0,
           "cumulativeProbability": 0,
           "opponent": "sc-cambuur-leeuwarden",
+          "isHome": false
+        },
+        {
+          "date": "2027-01-08",
+          "round": 18,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "vrij",
+          "isHome": false
+        },
+        {
+          "date": "2027-01-09",
+          "round": 18,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "vrij",
           "isHome": false
         },
         {
@@ -2158,11 +4159,43 @@
           "isHome": true
         },
         {
+          "date": "2027-01-15",
+          "round": 19,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "vrij",
+          "isHome": false
+        },
+        {
+          "date": "2027-01-16",
+          "round": 19,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "vrij",
+          "isHome": false
+        },
+        {
           "date": "2027-01-17",
           "round": 19,
           "probability": 0,
           "cumulativeProbability": 0,
           "opponent": "afc-ajax",
+          "isHome": false
+        },
+        {
+          "date": "2027-01-22",
+          "round": 20,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "vrij",
+          "isHome": false
+        },
+        {
+          "date": "2027-01-23",
+          "round": 20,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "vrij",
           "isHome": false
         },
         {
@@ -2174,12 +4207,36 @@
           "isHome": false
         },
         {
+          "date": "2027-01-29",
+          "round": 21,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "vrij",
+          "isHome": false
+        },
+        {
+          "date": "2027-01-30",
+          "round": 21,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "vrij",
+          "isHome": false
+        },
+        {
           "date": "2027-01-31",
           "round": 21,
           "probability": 0,
           "cumulativeProbability": 0,
           "opponent": "nec",
           "isHome": true
+        },
+        {
+          "date": "2027-02-06",
+          "round": 16,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "vrij",
+          "isHome": false
         },
         {
           "date": "2027-02-13",
@@ -2291,23 +4348,27 @@
       "expectedDate": null,
       "neverChampionProbability": 1,
       "neverChampionCount": 50000,
+      "noClinchProbability": 1,
+      "tieProbability": 0.00096,
       "positionProbabilities": {
         "4": 0.00008,
-        "5": 0.00066,
-        "6": 0.0134,
-        "7": 0.12948,
-        "8": 0.25796,
-        "9": 0.24916,
-        "10": 0.17462,
-        "11": 0.10174,
-        "12": 0.04992,
-        "13": 0.0176,
-        "14": 0.0045,
-        "15": 0.00072,
-        "16": 0.00012,
-        "17": 0.00002,
-        "18": 0.00002
-      }
+        "5": 0.00086,
+        "6": 0.01344,
+        "7": 0.13016,
+        "8": 0.23962,
+        "9": 0.24368,
+        "10": 0.18024,
+        "11": 0.1106,
+        "12": 0.05418,
+        "13": 0.0207,
+        "14": 0.00498,
+        "15": 0.0013,
+        "16": 0.00014,
+        "17": 0.00002
+      },
+      "simulatedGoalsFor": 48.9948,
+      "simulatedGoalsAgainst": 51.43794,
+      "simulatedGoalDifference": -2.4431399999999996
     },
     "nec": {
       "teamId": "nec",
@@ -2323,12 +4384,36 @@
           "isHome": false
         },
         {
+          "date": "2026-09-18",
+          "round": 7,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "vrij",
+          "isHome": false
+        },
+        {
+          "date": "2026-09-19",
+          "round": 7,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "vrij",
+          "isHome": false
+        },
+        {
           "date": "2026-09-20",
           "round": 7,
           "probability": 0,
           "cumulativeProbability": 0,
           "opponent": "go-ahead-eagles",
           "isHome": true
+        },
+        {
+          "date": "2026-10-09",
+          "round": 8,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "vrij",
+          "isHome": false
         },
         {
           "date": "2026-10-10",
@@ -2339,12 +4424,52 @@
           "isHome": false
         },
         {
+          "date": "2026-10-11",
+          "round": 8,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "vrij",
+          "isHome": false
+        },
+        {
+          "date": "2026-10-16",
+          "round": 9,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "vrij",
+          "isHome": false
+        },
+        {
+          "date": "2026-10-17",
+          "round": 9,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "vrij",
+          "isHome": false
+        },
+        {
           "date": "2026-10-18",
           "round": 9,
           "probability": 0,
           "cumulativeProbability": 0,
           "opponent": "fortuna-sittard",
           "isHome": true
+        },
+        {
+          "date": "2026-10-23",
+          "round": 10,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "vrij",
+          "isHome": false
+        },
+        {
+          "date": "2026-10-24",
+          "round": 10,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "vrij",
+          "isHome": false
         },
         {
           "date": "2026-10-25",
@@ -2360,6 +4485,30 @@
           "probability": 0,
           "cumulativeProbability": 0,
           "opponent": "sc-heerenveen",
+          "isHome": false
+        },
+        {
+          "date": "2026-11-01",
+          "round": 11,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "vrij",
+          "isHome": false
+        },
+        {
+          "date": "2026-11-06",
+          "round": 12,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "vrij",
+          "isHome": false
+        },
+        {
+          "date": "2026-11-07",
+          "round": 12,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "vrij",
           "isHome": false
         },
         {
@@ -2379,6 +4528,30 @@
           "isHome": true
         },
         {
+          "date": "2026-11-22",
+          "round": 13,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "vrij",
+          "isHome": false
+        },
+        {
+          "date": "2026-11-27",
+          "round": 14,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "vrij",
+          "isHome": false
+        },
+        {
+          "date": "2026-11-28",
+          "round": 14,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "vrij",
+          "isHome": false
+        },
+        {
           "date": "2026-11-29",
           "round": 14,
           "probability": 0,
@@ -2387,11 +4560,35 @@
           "isHome": true
         },
         {
+          "date": "2026-12-04",
+          "round": 15,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "vrij",
+          "isHome": false
+        },
+        {
           "date": "2026-12-05",
           "round": 15,
           "probability": 0,
           "cumulativeProbability": 0,
           "opponent": "sparta-rotterdam",
+          "isHome": false
+        },
+        {
+          "date": "2026-12-06",
+          "round": 15,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "vrij",
+          "isHome": false
+        },
+        {
+          "date": "2026-12-12",
+          "round": 16,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "vrij",
           "isHome": false
         },
         {
@@ -2403,12 +4600,44 @@
           "isHome": false
         },
         {
+          "date": "2026-12-18",
+          "round": 17,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "vrij",
+          "isHome": false
+        },
+        {
+          "date": "2026-12-19",
+          "round": 17,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "vrij",
+          "isHome": false
+        },
+        {
           "date": "2026-12-20",
           "round": 17,
           "probability": 0,
           "cumulativeProbability": 0,
           "opponent": "ado-den-haag",
           "isHome": true
+        },
+        {
+          "date": "2027-01-08",
+          "round": 18,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "vrij",
+          "isHome": false
+        },
+        {
+          "date": "2027-01-09",
+          "round": 18,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "vrij",
+          "isHome": false
         },
         {
           "date": "2027-01-10",
@@ -2419,11 +4648,43 @@
           "isHome": true
         },
         {
+          "date": "2027-01-15",
+          "round": 19,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "vrij",
+          "isHome": false
+        },
+        {
           "date": "2027-01-16",
           "round": 19,
           "probability": 0,
           "cumulativeProbability": 0,
           "opponent": "telstar-1963",
+          "isHome": false
+        },
+        {
+          "date": "2027-01-17",
+          "round": 19,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "vrij",
+          "isHome": false
+        },
+        {
+          "date": "2027-01-22",
+          "round": 20,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "vrij",
+          "isHome": false
+        },
+        {
+          "date": "2027-01-23",
+          "round": 20,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "vrij",
           "isHome": false
         },
         {
@@ -2435,11 +4696,35 @@
           "isHome": true
         },
         {
+          "date": "2027-01-29",
+          "round": 21,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "vrij",
+          "isHome": false
+        },
+        {
+          "date": "2027-01-30",
+          "round": 21,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "vrij",
+          "isHome": false
+        },
+        {
           "date": "2027-01-31",
           "round": 21,
           "probability": 0,
           "cumulativeProbability": 0,
           "opponent": "fc-groningen",
+          "isHome": false
+        },
+        {
+          "date": "2027-02-06",
+          "round": 16,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "vrij",
           "isHome": false
         },
         {
@@ -2552,21 +4837,28 @@
       "expectedDate": null,
       "neverChampionProbability": 1,
       "neverChampionCount": 50000,
+      "noClinchProbability": 1,
+      "tieProbability": 0.00096,
       "positionProbabilities": {
-        "5": 0.0002,
-        "6": 0.00328,
-        "7": 0.06012,
-        "8": 0.14374,
-        "9": 0.2013,
-        "10": 0.24426,
-        "11": 0.1789,
-        "12": 0.10548,
-        "13": 0.04772,
-        "14": 0.01154,
-        "15": 0.00306,
-        "16": 0.00032,
-        "17": 0.00008
-      }
+        "4": 0.00002,
+        "5": 0.00018,
+        "6": 0.00458,
+        "7": 0.06332,
+        "8": 0.1442,
+        "9": 0.19532,
+        "10": 0.22974,
+        "11": 0.17948,
+        "12": 0.11278,
+        "13": 0.05066,
+        "14": 0.01464,
+        "15": 0.00414,
+        "16": 0.0008,
+        "17": 0.00012,
+        "18": 0.00002
+      },
+      "simulatedGoalsFor": 46.8384,
+      "simulatedGoalsAgainst": 51.67628,
+      "simulatedGoalDifference": -4.837879999999998
     },
     "sc-heerenveen": {
       "teamId": "sc-heerenveen",
@@ -2582,11 +4874,27 @@
           "isHome": false
         },
         {
+          "date": "2026-09-18",
+          "round": 7,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "vrij",
+          "isHome": false
+        },
+        {
           "date": "2026-09-19",
           "round": 7,
           "probability": 0,
           "cumulativeProbability": 0,
           "opponent": "sparta-rotterdam",
+          "isHome": false
+        },
+        {
+          "date": "2026-09-20",
+          "round": 7,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "vrij",
           "isHome": false
         },
         {
@@ -2598,12 +4906,52 @@
           "isHome": false
         },
         {
+          "date": "2026-10-10",
+          "round": 8,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "vrij",
+          "isHome": false
+        },
+        {
+          "date": "2026-10-11",
+          "round": 8,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "vrij",
+          "isHome": false
+        },
+        {
           "date": "2026-10-16",
           "round": 9,
           "probability": 0,
           "cumulativeProbability": 0,
           "opponent": "sbv-excelsior",
           "isHome": true
+        },
+        {
+          "date": "2026-10-17",
+          "round": 9,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "vrij",
+          "isHome": false
+        },
+        {
+          "date": "2026-10-18",
+          "round": 9,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "vrij",
+          "isHome": false
+        },
+        {
+          "date": "2026-10-23",
+          "round": 10,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "vrij",
+          "isHome": false
         },
         {
           "date": "2026-10-24",
@@ -2614,12 +4962,44 @@
           "isHome": false
         },
         {
+          "date": "2026-10-25",
+          "round": 10,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "vrij",
+          "isHome": false
+        },
+        {
           "date": "2026-10-31",
           "round": 11,
           "probability": 0,
           "cumulativeProbability": 0,
           "opponent": "nec",
           "isHome": true
+        },
+        {
+          "date": "2026-11-01",
+          "round": 11,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "vrij",
+          "isHome": false
+        },
+        {
+          "date": "2026-11-06",
+          "round": 12,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "vrij",
+          "isHome": false
+        },
+        {
+          "date": "2026-11-07",
+          "round": 12,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "vrij",
+          "isHome": false
         },
         {
           "date": "2026-11-08",
@@ -2638,11 +5018,51 @@
           "isHome": false
         },
         {
+          "date": "2026-11-22",
+          "round": 13,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "vrij",
+          "isHome": false
+        },
+        {
+          "date": "2026-11-27",
+          "round": 14,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "vrij",
+          "isHome": false
+        },
+        {
+          "date": "2026-11-28",
+          "round": 14,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "vrij",
+          "isHome": false
+        },
+        {
           "date": "2026-11-29",
           "round": 14,
           "probability": 0,
           "cumulativeProbability": 0,
           "opponent": "fortuna-sittard",
+          "isHome": false
+        },
+        {
+          "date": "2026-12-04",
+          "round": 15,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "vrij",
+          "isHome": false
+        },
+        {
+          "date": "2026-12-05",
+          "round": 15,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "vrij",
           "isHome": false
         },
         {
@@ -2662,11 +5082,43 @@
           "isHome": true
         },
         {
+          "date": "2026-12-13",
+          "round": 16,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "vrij",
+          "isHome": false
+        },
+        {
+          "date": "2026-12-18",
+          "round": 17,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "vrij",
+          "isHome": false
+        },
+        {
           "date": "2026-12-19",
           "round": 17,
           "probability": 0,
           "cumulativeProbability": 0,
           "opponent": "fc-utrecht",
+          "isHome": false
+        },
+        {
+          "date": "2026-12-20",
+          "round": 17,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "vrij",
+          "isHome": false
+        },
+        {
+          "date": "2027-01-08",
+          "round": 18,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "vrij",
           "isHome": false
         },
         {
@@ -2678,12 +5130,44 @@
           "isHome": false
         },
         {
+          "date": "2027-01-10",
+          "round": 18,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "vrij",
+          "isHome": false
+        },
+        {
           "date": "2027-01-15",
           "round": 19,
           "probability": 0,
           "cumulativeProbability": 0,
           "opponent": "sparta-rotterdam",
           "isHome": true
+        },
+        {
+          "date": "2027-01-16",
+          "round": 19,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "vrij",
+          "isHome": false
+        },
+        {
+          "date": "2027-01-17",
+          "round": 19,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "vrij",
+          "isHome": false
+        },
+        {
+          "date": "2027-01-22",
+          "round": 20,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "vrij",
+          "isHome": false
         },
         {
           "date": "2027-01-23",
@@ -2694,12 +5178,44 @@
           "isHome": false
         },
         {
+          "date": "2027-01-24",
+          "round": 20,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "vrij",
+          "isHome": false
+        },
+        {
+          "date": "2027-01-29",
+          "round": 21,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "vrij",
+          "isHome": false
+        },
+        {
+          "date": "2027-01-30",
+          "round": 21,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "vrij",
+          "isHome": false
+        },
+        {
           "date": "2027-01-31",
           "round": 21,
           "probability": 0,
           "cumulativeProbability": 0,
           "opponent": "afc-ajax",
           "isHome": true
+        },
+        {
+          "date": "2027-02-06",
+          "round": 16,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "vrij",
+          "isHome": false
         },
         {
           "date": "2027-02-13",
@@ -2811,22 +5327,27 @@
       "expectedDate": null,
       "neverChampionProbability": 1,
       "neverChampionCount": 50000,
+      "noClinchProbability": 1,
+      "tieProbability": 0.00068,
       "positionProbabilities": {
-        "5": 0.00002,
-        "6": 0.0007,
-        "7": 0.0155,
-        "8": 0.0487,
-        "9": 0.09552,
-        "10": 0.16216,
-        "11": 0.23898,
-        "12": 0.22088,
-        "13": 0.13686,
-        "14": 0.05438,
-        "15": 0.01912,
-        "16": 0.00584,
-        "17": 0.00114,
-        "18": 0.0002
-      }
+        "5": 0.00006,
+        "6": 0.00094,
+        "7": 0.0192,
+        "8": 0.05574,
+        "9": 0.1003,
+        "10": 0.16116,
+        "11": 0.22574,
+        "12": 0.21312,
+        "13": 0.14126,
+        "14": 0.05478,
+        "15": 0.0209,
+        "16": 0.00532,
+        "17": 0.0012,
+        "18": 0.00028
+      },
+      "simulatedGoalsFor": 40.62136,
+      "simulatedGoalsAgainst": 49.58896,
+      "simulatedGoalDifference": -8.967599999999997
     },
     "sparta-rotterdam": {
       "teamId": "sparta-rotterdam",
@@ -2842,6 +5363,14 @@
           "isHome": false
         },
         {
+          "date": "2026-09-18",
+          "round": 7,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "vrij",
+          "isHome": false
+        },
+        {
           "date": "2026-09-19",
           "round": 7,
           "probability": 0,
@@ -2850,11 +5379,43 @@
           "isHome": true
         },
         {
+          "date": "2026-09-20",
+          "round": 7,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "vrij",
+          "isHome": false
+        },
+        {
+          "date": "2026-10-09",
+          "round": 8,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "vrij",
+          "isHome": false
+        },
+        {
           "date": "2026-10-10",
           "round": 8,
           "probability": 0,
           "cumulativeProbability": 0,
           "opponent": "go-ahead-eagles",
+          "isHome": false
+        },
+        {
+          "date": "2026-10-11",
+          "round": 8,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "vrij",
+          "isHome": false
+        },
+        {
+          "date": "2026-10-16",
+          "round": 9,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "vrij",
           "isHome": false
         },
         {
@@ -2866,6 +5427,30 @@
           "isHome": true
         },
         {
+          "date": "2026-10-18",
+          "round": 9,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "vrij",
+          "isHome": false
+        },
+        {
+          "date": "2026-10-23",
+          "round": 10,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "vrij",
+          "isHome": false
+        },
+        {
+          "date": "2026-10-24",
+          "round": 10,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "vrij",
+          "isHome": false
+        },
+        {
           "date": "2026-10-25",
           "round": 10,
           "probability": 0,
@@ -2874,11 +5459,27 @@
           "isHome": true
         },
         {
+          "date": "2026-10-31",
+          "round": 11,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "vrij",
+          "isHome": false
+        },
+        {
           "date": "2026-11-01",
           "round": 11,
           "probability": 0,
           "cumulativeProbability": 0,
           "opponent": "fc-groningen",
+          "isHome": false
+        },
+        {
+          "date": "2026-11-06",
+          "round": 12,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "vrij",
           "isHome": false
         },
         {
@@ -2890,6 +5491,22 @@
           "isHome": false
         },
         {
+          "date": "2026-11-08",
+          "round": 12,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "vrij",
+          "isHome": false
+        },
+        {
+          "date": "2026-11-21",
+          "round": 13,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "vrij",
+          "isHome": false
+        },
+        {
           "date": "2026-11-22",
           "round": 13,
           "probability": 0,
@@ -2898,11 +5515,35 @@
           "isHome": true
         },
         {
+          "date": "2026-11-27",
+          "round": 14,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "vrij",
+          "isHome": false
+        },
+        {
           "date": "2026-11-28",
           "round": 14,
           "probability": 0,
           "cumulativeProbability": 0,
           "opponent": "sc-cambuur-leeuwarden",
+          "isHome": false
+        },
+        {
+          "date": "2026-11-29",
+          "round": 14,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "vrij",
+          "isHome": false
+        },
+        {
+          "date": "2026-12-04",
+          "round": 15,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "vrij",
           "isHome": false
         },
         {
@@ -2914,11 +5555,35 @@
           "isHome": true
         },
         {
-          "date": "2027-02-06",
+          "date": "2026-12-06",
+          "round": 15,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "vrij",
+          "isHome": false
+        },
+        {
+          "date": "2026-12-12",
           "round": 16,
           "probability": 0,
           "cumulativeProbability": 0,
-          "opponent": "fc-twente-65",
+          "opponent": "vrij",
+          "isHome": false
+        },
+        {
+          "date": "2026-12-13",
+          "round": 16,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "vrij",
+          "isHome": false
+        },
+        {
+          "date": "2026-12-18",
+          "round": 17,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "vrij",
           "isHome": false
         },
         {
@@ -2930,6 +5595,22 @@
           "isHome": false
         },
         {
+          "date": "2026-12-20",
+          "round": 17,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "vrij",
+          "isHome": false
+        },
+        {
+          "date": "2027-01-08",
+          "round": 18,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "vrij",
+          "isHome": false
+        },
+        {
           "date": "2027-01-09",
           "round": 18,
           "probability": 0,
@@ -2938,11 +5619,51 @@
           "isHome": true
         },
         {
+          "date": "2027-01-10",
+          "round": 18,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "vrij",
+          "isHome": false
+        },
+        {
           "date": "2027-01-15",
           "round": 19,
           "probability": 0,
           "cumulativeProbability": 0,
           "opponent": "sc-heerenveen",
+          "isHome": false
+        },
+        {
+          "date": "2027-01-16",
+          "round": 19,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "vrij",
+          "isHome": false
+        },
+        {
+          "date": "2027-01-17",
+          "round": 19,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "vrij",
+          "isHome": false
+        },
+        {
+          "date": "2027-01-22",
+          "round": 20,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "vrij",
+          "isHome": false
+        },
+        {
+          "date": "2027-01-23",
+          "round": 20,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "vrij",
           "isHome": false
         },
         {
@@ -2954,12 +5675,36 @@
           "isHome": true
         },
         {
+          "date": "2027-01-29",
+          "round": 21,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "vrij",
+          "isHome": false
+        },
+        {
           "date": "2027-01-30",
           "round": 21,
           "probability": 0,
           "cumulativeProbability": 0,
           "opponent": "telstar-1963",
           "isHome": true
+        },
+        {
+          "date": "2027-01-31",
+          "round": 21,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "vrij",
+          "isHome": false
+        },
+        {
+          "date": "2027-02-06",
+          "round": 16,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "fc-twente-65",
+          "isHome": false
         },
         {
           "date": "2027-02-13",
@@ -3071,21 +5816,27 @@
       "expectedDate": null,
       "neverChampionProbability": 1,
       "neverChampionCount": 50000,
+      "noClinchProbability": 1,
+      "tieProbability": 0.0008,
       "positionProbabilities": {
-        "6": 0.00058,
-        "7": 0.0127,
-        "8": 0.0401,
-        "9": 0.08118,
-        "10": 0.1443,
-        "11": 0.2208,
-        "12": 0.25302,
-        "13": 0.15568,
-        "14": 0.06016,
-        "15": 0.02258,
-        "16": 0.0071,
-        "17": 0.00152,
+        "5": 0.00002,
+        "6": 0.0008,
+        "7": 0.015,
+        "8": 0.04816,
+        "9": 0.0904,
+        "10": 0.15066,
+        "11": 0.21388,
+        "12": 0.2316,
+        "13": 0.1495,
+        "14": 0.06588,
+        "15": 0.0243,
+        "16": 0.00762,
+        "17": 0.0019,
         "18": 0.00028
-      }
+      },
+      "simulatedGoalsFor": 44.06598,
+      "simulatedGoalsAgainst": 54.0317,
+      "simulatedGoalDifference": -9.965719999999997
     },
     "telstar-1963": {
       "teamId": "telstar-1963",
@@ -3101,11 +5852,43 @@
           "isHome": false
         },
         {
+          "date": "2026-09-18",
+          "round": 7,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "vrij",
+          "isHome": false
+        },
+        {
+          "date": "2026-09-19",
+          "round": 7,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "vrij",
+          "isHome": false
+        },
+        {
           "date": "2026-09-20",
           "round": 7,
           "probability": 0,
           "cumulativeProbability": 0,
           "opponent": "az",
+          "isHome": false
+        },
+        {
+          "date": "2026-10-09",
+          "round": 8,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "vrij",
+          "isHome": false
+        },
+        {
+          "date": "2026-10-10",
+          "round": 8,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "vrij",
           "isHome": false
         },
         {
@@ -3117,6 +5900,14 @@
           "isHome": true
         },
         {
+          "date": "2026-10-16",
+          "round": 9,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "vrij",
+          "isHome": false
+        },
+        {
           "date": "2026-10-17",
           "round": 9,
           "probability": 0,
@@ -3125,11 +5916,43 @@
           "isHome": true
         },
         {
+          "date": "2026-10-18",
+          "round": 9,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "vrij",
+          "isHome": false
+        },
+        {
           "date": "2026-10-23",
           "round": 10,
           "probability": 0,
           "cumulativeProbability": 0,
           "opponent": "go-ahead-eagles",
+          "isHome": false
+        },
+        {
+          "date": "2026-10-24",
+          "round": 10,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "vrij",
+          "isHome": false
+        },
+        {
+          "date": "2026-10-25",
+          "round": 10,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "vrij",
+          "isHome": false
+        },
+        {
+          "date": "2026-10-31",
+          "round": 11,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "vrij",
           "isHome": false
         },
         {
@@ -3141,11 +5964,27 @@
           "isHome": true
         },
         {
+          "date": "2026-11-06",
+          "round": 12,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "vrij",
+          "isHome": false
+        },
+        {
           "date": "2026-11-07",
           "round": 12,
           "probability": 0,
           "cumulativeProbability": 0,
           "opponent": "fortuna-sittard",
+          "isHome": false
+        },
+        {
+          "date": "2026-11-08",
+          "round": 12,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "vrij",
           "isHome": false
         },
         {
@@ -3157,11 +5996,35 @@
           "isHome": true
         },
         {
+          "date": "2026-11-22",
+          "round": 13,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "vrij",
+          "isHome": false
+        },
+        {
+          "date": "2026-11-27",
+          "round": 14,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "vrij",
+          "isHome": false
+        },
+        {
           "date": "2026-11-28",
           "round": 14,
           "probability": 0,
           "cumulativeProbability": 0,
           "opponent": "sbv-excelsior",
+          "isHome": false
+        },
+        {
+          "date": "2026-11-29",
+          "round": 14,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "vrij",
           "isHome": false
         },
         {
@@ -3171,6 +6034,30 @@
           "cumulativeProbability": 0,
           "opponent": "fc-groningen",
           "isHome": true
+        },
+        {
+          "date": "2026-12-05",
+          "round": 15,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "vrij",
+          "isHome": false
+        },
+        {
+          "date": "2026-12-06",
+          "round": 15,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "vrij",
+          "isHome": false
+        },
+        {
+          "date": "2026-12-12",
+          "round": 16,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "vrij",
+          "isHome": false
         },
         {
           "date": "2026-12-13",
@@ -3189,11 +6076,51 @@
           "isHome": true
         },
         {
+          "date": "2026-12-19",
+          "round": 17,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "vrij",
+          "isHome": false
+        },
+        {
+          "date": "2026-12-20",
+          "round": 17,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "vrij",
+          "isHome": false
+        },
+        {
+          "date": "2027-01-08",
+          "round": 18,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "vrij",
+          "isHome": false
+        },
+        {
+          "date": "2027-01-09",
+          "round": 18,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "vrij",
+          "isHome": false
+        },
+        {
           "date": "2027-01-10",
           "round": 18,
           "probability": 0,
           "cumulativeProbability": 0,
           "opponent": "ado-den-haag",
+          "isHome": false
+        },
+        {
+          "date": "2027-01-15",
+          "round": 19,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "vrij",
           "isHome": false
         },
         {
@@ -3205,6 +6132,22 @@
           "isHome": true
         },
         {
+          "date": "2027-01-17",
+          "round": 19,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "vrij",
+          "isHome": false
+        },
+        {
+          "date": "2027-01-22",
+          "round": 20,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "vrij",
+          "isHome": false
+        },
+        {
           "date": "2027-01-23",
           "round": 20,
           "probability": 0,
@@ -3213,11 +6156,43 @@
           "isHome": false
         },
         {
+          "date": "2027-01-24",
+          "round": 20,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "vrij",
+          "isHome": false
+        },
+        {
+          "date": "2027-01-29",
+          "round": 21,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "vrij",
+          "isHome": false
+        },
+        {
           "date": "2027-01-30",
           "round": 21,
           "probability": 0,
           "cumulativeProbability": 0,
           "opponent": "sparta-rotterdam",
+          "isHome": false
+        },
+        {
+          "date": "2027-01-31",
+          "round": 21,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "vrij",
+          "isHome": false
+        },
+        {
+          "date": "2027-02-06",
+          "round": 16,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "vrij",
           "isHome": false
         },
         {
@@ -3330,20 +6305,25 @@
       "expectedDate": null,
       "neverChampionProbability": 1,
       "neverChampionCount": 50000,
+      "noClinchProbability": 1,
+      "tieProbability": 0.00058,
       "positionProbabilities": {
-        "7": 0.00008,
-        "8": 0.00044,
-        "9": 0.00134,
-        "10": 0.00594,
-        "11": 0.01854,
-        "12": 0.05414,
-        "13": 0.1404,
-        "14": 0.25748,
-        "15": 0.24956,
-        "16": 0.15442,
-        "17": 0.08246,
-        "18": 0.0352
-      }
+        "7": 0.0001,
+        "8": 0.00032,
+        "9": 0.00154,
+        "10": 0.00574,
+        "11": 0.0199,
+        "12": 0.05622,
+        "13": 0.1326,
+        "14": 0.24734,
+        "15": 0.25028,
+        "16": 0.15836,
+        "17": 0.08876,
+        "18": 0.03884
+      },
+      "simulatedGoalsFor": 32.68062,
+      "simulatedGoalsAgainst": 57.9223,
+      "simulatedGoalDifference": -25.241680000000002
     },
     "fc-utrecht": {
       "teamId": "fc-utrecht",
@@ -3359,11 +6339,43 @@
           "isHome": false
         },
         {
+          "date": "2026-09-18",
+          "round": 7,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "vrij",
+          "isHome": false
+        },
+        {
+          "date": "2026-09-19",
+          "round": 7,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "vrij",
+          "isHome": false
+        },
+        {
           "date": "2026-09-20",
           "round": 7,
           "probability": 0,
           "cumulativeProbability": 0,
           "opponent": "feyenoord-rotterdam",
+          "isHome": false
+        },
+        {
+          "date": "2026-10-09",
+          "round": 8,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "vrij",
+          "isHome": false
+        },
+        {
+          "date": "2026-10-10",
+          "round": 8,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "vrij",
           "isHome": false
         },
         {
@@ -3375,11 +6387,35 @@
           "isHome": true
         },
         {
+          "date": "2026-10-16",
+          "round": 9,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "vrij",
+          "isHome": false
+        },
+        {
+          "date": "2026-10-17",
+          "round": 9,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "vrij",
+          "isHome": false
+        },
+        {
           "date": "2026-10-18",
           "round": 9,
           "probability": 0,
           "cumulativeProbability": 0,
           "opponent": "fc-twente-65",
+          "isHome": false
+        },
+        {
+          "date": "2026-10-23",
+          "round": 10,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "vrij",
           "isHome": false
         },
         {
@@ -3391,11 +6427,43 @@
           "isHome": true
         },
         {
+          "date": "2026-10-25",
+          "round": 10,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "vrij",
+          "isHome": false
+        },
+        {
+          "date": "2026-10-31",
+          "round": 11,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "vrij",
+          "isHome": false
+        },
+        {
           "date": "2026-11-01",
           "round": 11,
           "probability": 0,
           "cumulativeProbability": 0,
           "opponent": "telstar-1963",
+          "isHome": false
+        },
+        {
+          "date": "2026-11-06",
+          "round": 12,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "vrij",
+          "isHome": false
+        },
+        {
+          "date": "2026-11-07",
+          "round": 12,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "vrij",
           "isHome": false
         },
         {
@@ -3415,11 +6483,51 @@
           "isHome": true
         },
         {
+          "date": "2026-11-22",
+          "round": 13,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "vrij",
+          "isHome": false
+        },
+        {
+          "date": "2026-11-27",
+          "round": 14,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "vrij",
+          "isHome": false
+        },
+        {
+          "date": "2026-11-28",
+          "round": 14,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "vrij",
+          "isHome": false
+        },
+        {
           "date": "2026-11-29",
           "round": 14,
           "probability": 0,
           "cumulativeProbability": 0,
           "opponent": "ado-den-haag",
+          "isHome": false
+        },
+        {
+          "date": "2026-12-04",
+          "round": 15,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "vrij",
+          "isHome": false
+        },
+        {
+          "date": "2026-12-05",
+          "round": 15,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "vrij",
           "isHome": false
         },
         {
@@ -3439,12 +6547,44 @@
           "isHome": true
         },
         {
+          "date": "2026-12-13",
+          "round": 16,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "vrij",
+          "isHome": false
+        },
+        {
+          "date": "2026-12-18",
+          "round": 17,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "vrij",
+          "isHome": false
+        },
+        {
           "date": "2026-12-19",
           "round": 17,
           "probability": 0,
           "cumulativeProbability": 0,
           "opponent": "sc-heerenveen",
           "isHome": true
+        },
+        {
+          "date": "2026-12-20",
+          "round": 17,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "vrij",
+          "isHome": false
+        },
+        {
+          "date": "2027-01-08",
+          "round": 18,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "vrij",
+          "isHome": false
         },
         {
           "date": "2027-01-09",
@@ -3455,12 +6595,52 @@
           "isHome": false
         },
         {
+          "date": "2027-01-10",
+          "round": 18,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "vrij",
+          "isHome": false
+        },
+        {
+          "date": "2027-01-15",
+          "round": 19,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "vrij",
+          "isHome": false
+        },
+        {
+          "date": "2027-01-16",
+          "round": 19,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "vrij",
+          "isHome": false
+        },
+        {
           "date": "2027-01-17",
           "round": 19,
           "probability": 0,
           "cumulativeProbability": 0,
           "opponent": "fc-twente-65",
           "isHome": true
+        },
+        {
+          "date": "2027-01-22",
+          "round": 20,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "vrij",
+          "isHome": false
+        },
+        {
+          "date": "2027-01-23",
+          "round": 20,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "vrij",
+          "isHome": false
         },
         {
           "date": "2027-01-24",
@@ -3477,6 +6657,30 @@
           "cumulativeProbability": 0,
           "opponent": "sbv-excelsior",
           "isHome": true
+        },
+        {
+          "date": "2027-01-30",
+          "round": 21,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "vrij",
+          "isHome": false
+        },
+        {
+          "date": "2027-01-31",
+          "round": 21,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "vrij",
+          "isHome": false
+        },
+        {
+          "date": "2027-02-06",
+          "round": 16,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "vrij",
+          "isHome": false
         },
         {
           "date": "2027-02-13",
@@ -3588,21 +6792,26 @@
       "expectedDate": null,
       "neverChampionProbability": 1,
       "neverChampionCount": 50000,
+      "noClinchProbability": 1,
+      "tieProbability": 0.00058,
       "positionProbabilities": {
-        "6": 0.00006,
-        "7": 0.00126,
-        "8": 0.0069,
-        "9": 0.0204,
-        "10": 0.05016,
-        "11": 0.10698,
-        "12": 0.1979,
-        "13": 0.30104,
-        "14": 0.17512,
-        "15": 0.09158,
-        "16": 0.03372,
-        "17": 0.01188,
-        "18": 0.003
-      }
+        "6": 0.00002,
+        "7": 0.00124,
+        "8": 0.00746,
+        "9": 0.022,
+        "10": 0.0541,
+        "11": 0.11272,
+        "12": 0.20056,
+        "13": 0.28726,
+        "14": 0.17152,
+        "15": 0.09088,
+        "16": 0.03466,
+        "17": 0.0136,
+        "18": 0.00398
+      },
+      "simulatedGoalsFor": 42.6073,
+      "simulatedGoalsAgainst": 63.34474,
+      "simulatedGoalDifference": -20.73744
     },
     "sc-cambuur-leeuwarden": {
       "teamId": "sc-cambuur-leeuwarden",
@@ -3618,11 +6827,43 @@
           "isHome": false
         },
         {
+          "date": "2026-09-18",
+          "round": 7,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "vrij",
+          "isHome": false
+        },
+        {
           "date": "2026-09-19",
           "round": 7,
           "probability": 0,
           "cumulativeProbability": 0,
           "opponent": "ado-den-haag",
+          "isHome": false
+        },
+        {
+          "date": "2026-09-20",
+          "round": 7,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "vrij",
+          "isHome": false
+        },
+        {
+          "date": "2026-10-09",
+          "round": 8,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "vrij",
+          "isHome": false
+        },
+        {
+          "date": "2026-10-10",
+          "round": 8,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "vrij",
           "isHome": false
         },
         {
@@ -3634,12 +6875,36 @@
           "isHome": false
         },
         {
+          "date": "2026-10-16",
+          "round": 9,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "vrij",
+          "isHome": false
+        },
+        {
+          "date": "2026-10-17",
+          "round": 9,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "vrij",
+          "isHome": false
+        },
+        {
           "date": "2026-10-18",
           "round": 9,
           "probability": 0,
           "cumulativeProbability": 0,
           "opponent": "az",
           "isHome": true
+        },
+        {
+          "date": "2026-10-23",
+          "round": 10,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "vrij",
+          "isHome": false
         },
         {
           "date": "2026-10-24",
@@ -3650,12 +6915,44 @@
           "isHome": false
         },
         {
+          "date": "2026-10-25",
+          "round": 10,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "vrij",
+          "isHome": false
+        },
+        {
           "date": "2026-10-31",
           "round": 11,
           "probability": 0,
           "cumulativeProbability": 0,
           "opponent": "go-ahead-eagles",
           "isHome": true
+        },
+        {
+          "date": "2026-11-01",
+          "round": 11,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "vrij",
+          "isHome": false
+        },
+        {
+          "date": "2026-11-06",
+          "round": 12,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "vrij",
+          "isHome": false
+        },
+        {
+          "date": "2026-11-07",
+          "round": 12,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "vrij",
+          "isHome": false
         },
         {
           "date": "2026-11-08",
@@ -3674,6 +6971,22 @@
           "isHome": false
         },
         {
+          "date": "2026-11-22",
+          "round": 13,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "vrij",
+          "isHome": false
+        },
+        {
+          "date": "2026-11-27",
+          "round": 14,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "vrij",
+          "isHome": false
+        },
+        {
           "date": "2026-11-28",
           "round": 14,
           "probability": 0,
@@ -3682,11 +6995,43 @@
           "isHome": true
         },
         {
+          "date": "2026-11-29",
+          "round": 14,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "vrij",
+          "isHome": false
+        },
+        {
+          "date": "2026-12-04",
+          "round": 15,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "vrij",
+          "isHome": false
+        },
+        {
+          "date": "2026-12-05",
+          "round": 15,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "vrij",
+          "isHome": false
+        },
+        {
           "date": "2026-12-06",
           "round": 15,
           "probability": 0,
           "cumulativeProbability": 0,
           "opponent": "sc-heerenveen",
+          "isHome": false
+        },
+        {
+          "date": "2026-12-12",
+          "round": 16,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "vrij",
           "isHome": false
         },
         {
@@ -3698,6 +7043,22 @@
           "isHome": false
         },
         {
+          "date": "2026-12-18",
+          "round": 17,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "vrij",
+          "isHome": false
+        },
+        {
+          "date": "2026-12-19",
+          "round": 17,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "vrij",
+          "isHome": false
+        },
+        {
           "date": "2026-12-20",
           "round": 17,
           "probability": 0,
@@ -3706,11 +7067,43 @@
           "isHome": true
         },
         {
+          "date": "2027-01-08",
+          "round": 18,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "vrij",
+          "isHome": false
+        },
+        {
+          "date": "2027-01-09",
+          "round": 18,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "vrij",
+          "isHome": false
+        },
+        {
           "date": "2027-01-10",
           "round": 18,
           "probability": 0,
           "cumulativeProbability": 0,
           "opponent": "nec",
+          "isHome": false
+        },
+        {
+          "date": "2027-01-15",
+          "round": 19,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "vrij",
+          "isHome": false
+        },
+        {
+          "date": "2027-01-16",
+          "round": 19,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "vrij",
           "isHome": false
         },
         {
@@ -3722,6 +7115,22 @@
           "isHome": true
         },
         {
+          "date": "2027-01-22",
+          "round": 20,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "vrij",
+          "isHome": false
+        },
+        {
+          "date": "2027-01-23",
+          "round": 20,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "vrij",
+          "isHome": false
+        },
+        {
           "date": "2027-01-24",
           "round": 20,
           "probability": 0,
@@ -3730,11 +7139,35 @@
           "isHome": false
         },
         {
+          "date": "2027-01-29",
+          "round": 21,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "vrij",
+          "isHome": false
+        },
+        {
+          "date": "2027-01-30",
+          "round": 21,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "vrij",
+          "isHome": false
+        },
+        {
           "date": "2027-01-31",
           "round": 21,
           "probability": 0,
           "cumulativeProbability": 0,
           "opponent": "fc-twente-65",
+          "isHome": false
+        },
+        {
+          "date": "2027-02-06",
+          "round": 16,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "vrij",
           "isHome": false
         },
         {
@@ -3847,20 +7280,24 @@
       "expectedDate": null,
       "neverChampionProbability": 1,
       "neverChampionCount": 50000,
+      "noClinchProbability": 1,
+      "tieProbability": 0.00086,
       "positionProbabilities": {
-        "7": 0.00004,
-        "8": 0.00024,
-        "9": 0.0017,
-        "10": 0.00584,
-        "11": 0.02134,
-        "12": 0.05822,
-        "13": 0.13426,
-        "14": 0.26372,
-        "15": 0.26016,
-        "16": 0.14364,
-        "17": 0.07678,
-        "18": 0.03406
-      }
+        "8": 0.00036,
+        "9": 0.00198,
+        "10": 0.00644,
+        "11": 0.0217,
+        "12": 0.06292,
+        "13": 0.14172,
+        "14": 0.25276,
+        "15": 0.24236,
+        "16": 0.1493,
+        "17": 0.08422,
+        "18": 0.03624
+      },
+      "simulatedGoalsFor": 37.64716,
+      "simulatedGoalsAgainst": 65.39706,
+      "simulatedGoalDifference": -27.749899999999997
     },
     "pec-zwolle": {
       "teamId": "pec-zwolle",
@@ -3884,12 +7321,60 @@
           "isHome": false
         },
         {
+          "date": "2026-09-19",
+          "round": 7,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "vrij",
+          "isHome": false
+        },
+        {
+          "date": "2026-09-20",
+          "round": 7,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "vrij",
+          "isHome": false
+        },
+        {
+          "date": "2026-10-09",
+          "round": 8,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "vrij",
+          "isHome": false
+        },
+        {
+          "date": "2026-10-10",
+          "round": 8,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "vrij",
+          "isHome": false
+        },
+        {
           "date": "2026-10-11",
           "round": 8,
           "probability": 0,
           "cumulativeProbability": 0,
           "opponent": "sc-cambuur-leeuwarden",
           "isHome": true
+        },
+        {
+          "date": "2026-10-16",
+          "round": 9,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "vrij",
+          "isHome": false
+        },
+        {
+          "date": "2026-10-17",
+          "round": 9,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "vrij",
+          "isHome": false
         },
         {
           "date": "2026-10-18",
@@ -3900,11 +7385,35 @@
           "isHome": true
         },
         {
+          "date": "2026-10-23",
+          "round": 10,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "vrij",
+          "isHome": false
+        },
+        {
           "date": "2026-10-24",
           "round": 10,
           "probability": 0,
           "cumulativeProbability": 0,
           "opponent": "fc-utrecht",
+          "isHome": false
+        },
+        {
+          "date": "2026-10-25",
+          "round": 10,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "vrij",
+          "isHome": false
+        },
+        {
+          "date": "2026-10-31",
+          "round": 11,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "vrij",
           "isHome": false
         },
         {
@@ -3924,11 +7433,51 @@
           "isHome": false
         },
         {
+          "date": "2026-11-07",
+          "round": 12,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "vrij",
+          "isHome": false
+        },
+        {
+          "date": "2026-11-08",
+          "round": 12,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "vrij",
+          "isHome": false
+        },
+        {
           "date": "2026-11-21",
           "round": 13,
           "probability": 0,
           "cumulativeProbability": 0,
           "opponent": "telstar-1963",
+          "isHome": false
+        },
+        {
+          "date": "2026-11-22",
+          "round": 13,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "vrij",
+          "isHome": false
+        },
+        {
+          "date": "2026-11-27",
+          "round": 14,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "vrij",
+          "isHome": false
+        },
+        {
+          "date": "2026-11-28",
+          "round": 14,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "vrij",
           "isHome": false
         },
         {
@@ -3940,11 +7489,27 @@
           "isHome": true
         },
         {
+          "date": "2026-12-04",
+          "round": 15,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "vrij",
+          "isHome": false
+        },
+        {
           "date": "2026-12-05",
           "round": 15,
           "probability": 0,
           "cumulativeProbability": 0,
           "opponent": "fortuna-sittard",
+          "isHome": false
+        },
+        {
+          "date": "2026-12-06",
+          "round": 15,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "vrij",
           "isHome": false
         },
         {
@@ -3956,11 +7521,43 @@
           "isHome": true
         },
         {
+          "date": "2026-12-13",
+          "round": 16,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "vrij",
+          "isHome": false
+        },
+        {
+          "date": "2026-12-18",
+          "round": 17,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "vrij",
+          "isHome": false
+        },
+        {
+          "date": "2026-12-19",
+          "round": 17,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "vrij",
+          "isHome": false
+        },
+        {
           "date": "2026-12-20",
           "round": 17,
           "probability": 0,
           "cumulativeProbability": 0,
           "opponent": "psv",
+          "isHome": false
+        },
+        {
+          "date": "2027-01-08",
+          "round": 18,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "vrij",
           "isHome": false
         },
         {
@@ -3972,11 +7569,43 @@
           "isHome": true
         },
         {
+          "date": "2027-01-10",
+          "round": 18,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "vrij",
+          "isHome": false
+        },
+        {
+          "date": "2027-01-15",
+          "round": 19,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "vrij",
+          "isHome": false
+        },
+        {
           "date": "2027-01-16",
           "round": 19,
           "probability": 0,
           "cumulativeProbability": 0,
           "opponent": "ado-den-haag",
+          "isHome": false
+        },
+        {
+          "date": "2027-01-17",
+          "round": 19,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "vrij",
+          "isHome": false
+        },
+        {
+          "date": "2027-01-22",
+          "round": 20,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "vrij",
           "isHome": false
         },
         {
@@ -3988,12 +7617,44 @@
           "isHome": false
         },
         {
+          "date": "2027-01-24",
+          "round": 20,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "vrij",
+          "isHome": false
+        },
+        {
+          "date": "2027-01-29",
+          "round": 21,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "vrij",
+          "isHome": false
+        },
+        {
           "date": "2027-01-30",
           "round": 21,
           "probability": 0,
           "cumulativeProbability": 0,
           "opponent": "fortuna-sittard",
           "isHome": true
+        },
+        {
+          "date": "2027-01-31",
+          "round": 21,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "vrij",
+          "isHome": false
+        },
+        {
+          "date": "2027-02-06",
+          "round": 16,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "vrij",
+          "isHome": false
         },
         {
           "date": "2027-02-13",
@@ -4105,18 +7766,24 @@
       "expectedDate": null,
       "neverChampionProbability": 1,
       "neverChampionCount": 50000,
+      "noClinchProbability": 1,
+      "tieProbability": 0.0006,
       "positionProbabilities": {
-        "9": 0.00002,
-        "10": 0.00026,
-        "11": 0.00162,
-        "12": 0.00646,
-        "13": 0.02186,
-        "14": 0.0699,
-        "15": 0.13796,
-        "16": 0.23336,
-        "17": 0.26964,
-        "18": 0.25892
-      }
+        "8": 0.00002,
+        "9": 0.00004,
+        "10": 0.00018,
+        "11": 0.0014,
+        "12": 0.00592,
+        "13": 0.0238,
+        "14": 0.07426,
+        "15": 0.14412,
+        "16": 0.23838,
+        "17": 0.26708,
+        "18": 0.2448
+      },
+      "simulatedGoalsFor": 31.0709,
+      "simulatedGoalsAgainst": 67.65082,
+      "simulatedGoalDifference": -36.579919999999994
     },
     "willem-ii-tilburg": {
       "teamId": "willem-ii-tilburg",
@@ -4132,6 +7799,14 @@
           "isHome": false
         },
         {
+          "date": "2026-09-18",
+          "round": 7,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "vrij",
+          "isHome": false
+        },
+        {
           "date": "2026-09-19",
           "round": 7,
           "probability": 0,
@@ -4140,11 +7815,43 @@
           "isHome": true
         },
         {
+          "date": "2026-09-20",
+          "round": 7,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "vrij",
+          "isHome": false
+        },
+        {
+          "date": "2026-10-09",
+          "round": 8,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "vrij",
+          "isHome": false
+        },
+        {
+          "date": "2026-10-10",
+          "round": 8,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "vrij",
+          "isHome": false
+        },
+        {
           "date": "2026-10-11",
           "round": 8,
           "probability": 0,
           "cumulativeProbability": 0,
           "opponent": "fc-utrecht",
+          "isHome": false
+        },
+        {
+          "date": "2026-10-16",
+          "round": 9,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "vrij",
           "isHome": false
         },
         {
@@ -4156,12 +7863,36 @@
           "isHome": false
         },
         {
+          "date": "2026-10-18",
+          "round": 9,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "vrij",
+          "isHome": false
+        },
+        {
+          "date": "2026-10-23",
+          "round": 10,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "vrij",
+          "isHome": false
+        },
+        {
           "date": "2026-10-24",
           "round": 10,
           "probability": 0,
           "cumulativeProbability": 0,
           "opponent": "sc-cambuur-leeuwarden",
           "isHome": true
+        },
+        {
+          "date": "2026-10-25",
+          "round": 10,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "vrij",
+          "isHome": false
         },
         {
           "date": "2026-10-31",
@@ -4172,12 +7903,44 @@
           "isHome": false
         },
         {
+          "date": "2026-11-01",
+          "round": 11,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "vrij",
+          "isHome": false
+        },
+        {
           "date": "2026-11-06",
           "round": 12,
           "probability": 0,
           "cumulativeProbability": 0,
           "opponent": "pec-zwolle",
           "isHome": true
+        },
+        {
+          "date": "2026-11-07",
+          "round": 12,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "vrij",
+          "isHome": false
+        },
+        {
+          "date": "2026-11-08",
+          "round": 12,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "vrij",
+          "isHome": false
+        },
+        {
+          "date": "2026-11-21",
+          "round": 13,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "vrij",
+          "isHome": false
         },
         {
           "date": "2026-11-22",
@@ -4196,12 +7959,52 @@
           "isHome": false
         },
         {
+          "date": "2026-11-28",
+          "round": 14,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "vrij",
+          "isHome": false
+        },
+        {
+          "date": "2026-11-29",
+          "round": 14,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "vrij",
+          "isHome": false
+        },
+        {
+          "date": "2026-12-04",
+          "round": 15,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "vrij",
+          "isHome": false
+        },
+        {
           "date": "2026-12-05",
           "round": 15,
           "probability": 0,
           "cumulativeProbability": 0,
           "opponent": "feyenoord-rotterdam",
           "isHome": true
+        },
+        {
+          "date": "2026-12-06",
+          "round": 15,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "vrij",
+          "isHome": false
+        },
+        {
+          "date": "2026-12-12",
+          "round": 16,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "vrij",
+          "isHome": false
         },
         {
           "date": "2026-12-13",
@@ -4220,6 +8023,30 @@
           "isHome": false
         },
         {
+          "date": "2026-12-19",
+          "round": 17,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "vrij",
+          "isHome": false
+        },
+        {
+          "date": "2026-12-20",
+          "round": 17,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "vrij",
+          "isHome": false
+        },
+        {
+          "date": "2027-01-08",
+          "round": 18,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "vrij",
+          "isHome": false
+        },
+        {
           "date": "2027-01-09",
           "round": 18,
           "probability": 0,
@@ -4228,11 +8055,51 @@
           "isHome": true
         },
         {
+          "date": "2027-01-10",
+          "round": 18,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "vrij",
+          "isHome": false
+        },
+        {
+          "date": "2027-01-15",
+          "round": 19,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "vrij",
+          "isHome": false
+        },
+        {
+          "date": "2027-01-16",
+          "round": 19,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "vrij",
+          "isHome": false
+        },
+        {
           "date": "2027-01-17",
           "round": 19,
           "probability": 0,
           "cumulativeProbability": 0,
           "opponent": "sc-cambuur-leeuwarden",
+          "isHome": false
+        },
+        {
+          "date": "2027-01-22",
+          "round": 20,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "vrij",
+          "isHome": false
+        },
+        {
+          "date": "2027-01-23",
+          "round": 20,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "vrij",
           "isHome": false
         },
         {
@@ -4244,12 +8111,36 @@
           "isHome": false
         },
         {
+          "date": "2027-01-29",
+          "round": 21,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "vrij",
+          "isHome": false
+        },
+        {
           "date": "2027-01-30",
           "round": 21,
           "probability": 0,
           "cumulativeProbability": 0,
           "opponent": "psv",
           "isHome": true
+        },
+        {
+          "date": "2027-01-31",
+          "round": 21,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "vrij",
+          "isHome": false
+        },
+        {
+          "date": "2027-02-06",
+          "round": 16,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "vrij",
+          "isHome": false
         },
         {
           "date": "2027-02-13",
@@ -4361,17 +8252,24 @@
       "expectedDate": null,
       "neverChampionProbability": 1,
       "neverChampionCount": 50000,
+      "noClinchProbability": 1,
+      "tieProbability": 0.00068,
       "positionProbabilities": {
-        "10": 0.00016,
-        "11": 0.00084,
-        "12": 0.00316,
-        "13": 0.01386,
-        "14": 0.04832,
-        "15": 0.10608,
-        "16": 0.21336,
-        "17": 0.28236,
-        "18": 0.33186
-      }
+        "8": 0.00002,
+        "9": 0.00002,
+        "10": 0.00022,
+        "11": 0.00082,
+        "12": 0.0041,
+        "13": 0.01534,
+        "14": 0.05028,
+        "15": 0.10398,
+        "16": 0.19734,
+        "17": 0.27268,
+        "18": 0.3552
+      },
+      "simulatedGoalsFor": 30.82642,
+      "simulatedGoalsAgainst": 66.56238,
+      "simulatedGoalDifference": -35.735960000000006
     },
     "ado-den-haag": {
       "teamId": "ado-den-haag",
@@ -4387,6 +8285,14 @@
           "isHome": false
         },
         {
+          "date": "2026-09-18",
+          "round": 7,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "vrij",
+          "isHome": false
+        },
+        {
           "date": "2026-09-19",
           "round": 7,
           "probability": 0,
@@ -4395,11 +8301,43 @@
           "isHome": true
         },
         {
+          "date": "2026-09-20",
+          "round": 7,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "vrij",
+          "isHome": false
+        },
+        {
+          "date": "2026-10-09",
+          "round": 8,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "vrij",
+          "isHome": false
+        },
+        {
+          "date": "2026-10-10",
+          "round": 8,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "vrij",
+          "isHome": false
+        },
+        {
           "date": "2026-10-11",
           "round": 8,
           "probability": 0,
           "cumulativeProbability": 0,
           "opponent": "telstar-1963",
+          "isHome": false
+        },
+        {
+          "date": "2026-10-16",
+          "round": 9,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "vrij",
           "isHome": false
         },
         {
@@ -4411,6 +8349,22 @@
           "isHome": true
         },
         {
+          "date": "2026-10-18",
+          "round": 9,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "vrij",
+          "isHome": false
+        },
+        {
+          "date": "2026-10-23",
+          "round": 10,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "vrij",
+          "isHome": false
+        },
+        {
           "date": "2026-10-24",
           "round": 10,
           "probability": 0,
@@ -4419,11 +8373,35 @@
           "isHome": true
         },
         {
+          "date": "2026-10-25",
+          "round": 10,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "vrij",
+          "isHome": false
+        },
+        {
+          "date": "2026-10-31",
+          "round": 11,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "vrij",
+          "isHome": false
+        },
+        {
           "date": "2026-11-01",
           "round": 11,
           "probability": 0,
           "cumulativeProbability": 0,
           "opponent": "pec-zwolle",
+          "isHome": false
+        },
+        {
+          "date": "2026-11-06",
+          "round": 12,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "vrij",
           "isHome": false
         },
         {
@@ -4435,11 +8413,43 @@
           "isHome": true
         },
         {
+          "date": "2026-11-08",
+          "round": 12,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "vrij",
+          "isHome": false
+        },
+        {
+          "date": "2026-11-21",
+          "round": 13,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "vrij",
+          "isHome": false
+        },
+        {
           "date": "2026-11-22",
           "round": 13,
           "probability": 0,
           "cumulativeProbability": 0,
           "opponent": "afc-ajax",
+          "isHome": false
+        },
+        {
+          "date": "2026-11-27",
+          "round": 14,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "vrij",
+          "isHome": false
+        },
+        {
+          "date": "2026-11-28",
+          "round": 14,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "vrij",
           "isHome": false
         },
         {
@@ -4451,6 +8461,22 @@
           "isHome": true
         },
         {
+          "date": "2026-12-04",
+          "round": 15,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "vrij",
+          "isHome": false
+        },
+        {
+          "date": "2026-12-05",
+          "round": 15,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "vrij",
+          "isHome": false
+        },
+        {
           "date": "2026-12-06",
           "round": 15,
           "probability": 0,
@@ -4459,11 +8485,35 @@
           "isHome": true
         },
         {
+          "date": "2026-12-12",
+          "round": 16,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "vrij",
+          "isHome": false
+        },
+        {
           "date": "2026-12-13",
           "round": 16,
           "probability": 0,
           "cumulativeProbability": 0,
           "opponent": "willem-ii-tilburg",
+          "isHome": false
+        },
+        {
+          "date": "2026-12-18",
+          "round": 17,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "vrij",
+          "isHome": false
+        },
+        {
+          "date": "2026-12-19",
+          "round": 17,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "vrij",
           "isHome": false
         },
         {
@@ -4475,12 +8525,36 @@
           "isHome": false
         },
         {
+          "date": "2027-01-08",
+          "round": 18,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "vrij",
+          "isHome": false
+        },
+        {
+          "date": "2027-01-09",
+          "round": 18,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "vrij",
+          "isHome": false
+        },
+        {
           "date": "2027-01-10",
           "round": 18,
           "probability": 0,
           "cumulativeProbability": 0,
           "opponent": "telstar-1963",
           "isHome": true
+        },
+        {
+          "date": "2027-01-15",
+          "round": 19,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "vrij",
+          "isHome": false
         },
         {
           "date": "2027-01-16",
@@ -4491,11 +8565,43 @@
           "isHome": true
         },
         {
+          "date": "2027-01-17",
+          "round": 19,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "vrij",
+          "isHome": false
+        },
+        {
+          "date": "2027-01-22",
+          "round": 20,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "vrij",
+          "isHome": false
+        },
+        {
           "date": "2027-01-23",
           "round": 20,
           "probability": 0,
           "cumulativeProbability": 0,
           "opponent": "psv",
+          "isHome": false
+        },
+        {
+          "date": "2027-01-24",
+          "round": 20,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "vrij",
+          "isHome": false
+        },
+        {
+          "date": "2027-01-29",
+          "round": 21,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "vrij",
           "isHome": false
         },
         {
@@ -4505,6 +8611,22 @@
           "cumulativeProbability": 0,
           "opponent": "go-ahead-eagles",
           "isHome": true
+        },
+        {
+          "date": "2027-01-31",
+          "round": 21,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "vrij",
+          "isHome": false
+        },
+        {
+          "date": "2027-02-06",
+          "round": 16,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "vrij",
+          "isHome": false
         },
         {
           "date": "2027-02-13",
@@ -4616,21 +8738,284 @@
       "expectedDate": null,
       "neverChampionProbability": 1,
       "neverChampionCount": 50000,
+      "noClinchProbability": 1,
+      "tieProbability": 0.00062,
       "positionProbabilities": {
-        "9": 0.00002,
-        "10": 0.0001,
-        "11": 0.00078,
-        "12": 0.00426,
-        "13": 0.01598,
-        "14": 0.05172,
-        "15": 0.1085,
-        "16": 0.20806,
-        "17": 0.27412,
-        "18": 0.33646
-      }
+        "9": 0.00006,
+        "10": 0.00014,
+        "11": 0.00118,
+        "12": 0.00476,
+        "13": 0.0192,
+        "14": 0.05922,
+        "15": 0.11716,
+        "16": 0.2079,
+        "17": 0.27042,
+        "18": 0.31996
+      },
+      "simulatedGoalsFor": 31.97248,
+      "simulatedGoalsAgainst": 65.21572,
+      "simulatedGoalDifference": -33.24324
     }
   },
   "iterations": 50000,
+  "seed": 1,
+  "rulesVersion": "eredivisie-rules-v1",
+  "fixtureOrder": [
+    "match-afc-ajax:willem-ii-tilburg-r3",
+    "match-fc-groningen:pec-zwolle-r7",
+    "match-ado-den-haag:sc-cambuur-leeuwarden-r7",
+    "match-afc-ajax:sbv-excelsior-r7",
+    "match-sparta-rotterdam:sc-heerenveen-r7",
+    "match-willem-ii-tilburg:fortuna-sittard-r7",
+    "match-az:telstar-1963-r7",
+    "match-fc-twente-65:psv-r7",
+    "match-feyenoord-rotterdam:fc-utrecht-r7",
+    "match-nec:go-ahead-eagles-r7",
+    "match-psv:sc-heerenveen-r8",
+    "match-afc-ajax:nec-r8",
+    "match-feyenoord-rotterdam:az-r8",
+    "match-fortuna-sittard:fc-twente-65-r8",
+    "match-go-ahead-eagles:sparta-rotterdam-r8",
+    "match-fc-utrecht:willem-ii-tilburg-r8",
+    "match-pec-zwolle:sc-cambuur-leeuwarden-r8",
+    "match-sbv-excelsior:fc-groningen-r8",
+    "match-telstar-1963:ado-den-haag-r8",
+    "match-sc-heerenveen:sbv-excelsior-r9",
+    "match-ado-den-haag:psv-r9",
+    "match-sparta-rotterdam:willem-ii-tilburg-r9",
+    "match-telstar-1963:feyenoord-rotterdam-r9",
+    "match-fc-groningen:afc-ajax-r9",
+    "match-fc-twente-65:fc-utrecht-r9",
+    "match-nec:fortuna-sittard-r9",
+    "match-pec-zwolle:go-ahead-eagles-r9",
+    "match-sc-cambuur-leeuwarden:az-r9",
+    "match-go-ahead-eagles:telstar-1963-r10",
+    "match-ado-den-haag:sc-heerenveen-r10",
+    "match-fc-utrecht:pec-zwolle-r10",
+    "match-willem-ii-tilburg:sc-cambuur-leeuwarden-r10",
+    "match-az:fc-twente-65-r10",
+    "match-fortuna-sittard:sbv-excelsior-r10",
+    "match-nec:fc-groningen-r10",
+    "match-psv:feyenoord-rotterdam-r10",
+    "match-sparta-rotterdam:afc-ajax-r10",
+    "match-afc-ajax:az-r11",
+    "match-feyenoord-rotterdam:fortuna-sittard-r11",
+    "match-psv:willem-ii-tilburg-r11",
+    "match-sc-cambuur-leeuwarden:go-ahead-eagles-r11",
+    "match-sc-heerenveen:nec-r11",
+    "match-fc-groningen:sparta-rotterdam-r11",
+    "match-pec-zwolle:ado-den-haag-r11",
+    "match-sbv-excelsior:fc-twente-65-r11",
+    "match-telstar-1963:fc-utrecht-r11",
+    "match-willem-ii-tilburg:pec-zwolle-r12",
+    "match-ado-den-haag:sparta-rotterdam-r12",
+    "match-fortuna-sittard:telstar-1963-r12",
+    "match-sbv-excelsior:go-ahead-eagles-r12",
+    "match-az:fc-groningen-r12",
+    "match-fc-twente-65:afc-ajax-r12",
+    "match-fc-utrecht:nec-r12",
+    "match-sc-cambuur-leeuwarden:psv-r12",
+    "match-sc-heerenveen:feyenoord-rotterdam-r12",
+    "match-fc-groningen:sc-heerenveen-r13",
+    "match-fc-utrecht:sc-cambuur-leeuwarden-r13",
+    "match-feyenoord-rotterdam:sbv-excelsior-r13",
+    "match-nec:psv-r13",
+    "match-telstar-1963:pec-zwolle-r13",
+    "match-afc-ajax:ado-den-haag-r13",
+    "match-fc-twente-65:willem-ii-tilburg-r13",
+    "match-go-ahead-eagles:fortuna-sittard-r13",
+    "match-sparta-rotterdam:az-r13",
+    "match-fc-groningen:willem-ii-tilburg-r14",
+    "match-psv:go-ahead-eagles-r14",
+    "match-sbv-excelsior:telstar-1963-r14",
+    "match-sc-cambuur-leeuwarden:sparta-rotterdam-r14",
+    "match-ado-den-haag:fc-utrecht-r14",
+    "match-feyenoord-rotterdam:afc-ajax-r14",
+    "match-fortuna-sittard:sc-heerenveen-r14",
+    "match-nec:fc-twente-65-r14",
+    "match-pec-zwolle:az-r14",
+    "match-telstar-1963:fc-groningen-r15",
+    "match-az:psv-r15",
+    "match-fortuna-sittard:pec-zwolle-r15",
+    "match-sparta-rotterdam:nec-r15",
+    "match-willem-ii-tilburg:feyenoord-rotterdam-r15",
+    "match-ado-den-haag:sbv-excelsior-r15",
+    "match-afc-ajax:fc-utrecht-r15",
+    "match-go-ahead-eagles:fc-twente-65-r15",
+    "match-sc-heerenveen:sc-cambuur-leeuwarden-r15",
+    "match-fc-utrecht:fortuna-sittard-r16",
+    "match-pec-zwolle:sbv-excelsior-r16",
+    "match-sc-heerenveen:go-ahead-eagles-r16",
+    "match-afc-ajax:sc-cambuur-leeuwarden-r16",
+    "match-az:nec-r16",
+    "match-fc-groningen:feyenoord-rotterdam-r16",
+    "match-psv:telstar-1963-r16",
+    "match-willem-ii-tilburg:ado-den-haag-r16",
+    "match-telstar-1963:willem-ii-tilburg-r17",
+    "match-fc-utrecht:sc-heerenveen-r17",
+    "match-fortuna-sittard:sparta-rotterdam-r17",
+    "match-sbv-excelsior:az-r17",
+    "match-feyenoord-rotterdam:fc-twente-65-r17",
+    "match-go-ahead-eagles:afc-ajax-r17",
+    "match-nec:ado-den-haag-r17",
+    "match-psv:pec-zwolle-r17",
+    "match-sc-cambuur-leeuwarden:fc-groningen-r17",
+    "match-fc-twente-65:fortuna-sittard-r18",
+    "match-az:sc-heerenveen-r18",
+    "match-pec-zwolle:fc-utrecht-r18",
+    "match-sparta-rotterdam:sbv-excelsior-r18",
+    "match-willem-ii-tilburg:afc-ajax-r18",
+    "match-ado-den-haag:telstar-1963-r18",
+    "match-fc-groningen:go-ahead-eagles-r18",
+    "match-feyenoord-rotterdam:psv-r18",
+    "match-nec:sc-cambuur-leeuwarden-r18",
+    "match-sc-heerenveen:sparta-rotterdam-r19",
+    "match-ado-den-haag:pec-zwolle-r19",
+    "match-fortuna-sittard:psv-r19",
+    "match-sbv-excelsior:feyenoord-rotterdam-r19",
+    "match-telstar-1963:nec-r19",
+    "match-afc-ajax:fc-groningen-r19",
+    "match-fc-utrecht:fc-twente-65-r19",
+    "match-go-ahead-eagles:az-r19",
+    "match-sc-cambuur-leeuwarden:willem-ii-tilburg-r19",
+    "match-sbv-excelsior:fortuna-sittard-r20",
+    "match-afc-ajax:telstar-1963-r20",
+    "match-fc-twente-65:sc-heerenveen-r20",
+    "match-feyenoord-rotterdam:pec-zwolle-r20",
+    "match-psv:ado-den-haag-r20",
+    "match-az:fc-utrecht-r20",
+    "match-go-ahead-eagles:sc-cambuur-leeuwarden-r20",
+    "match-nec:willem-ii-tilburg-r20",
+    "match-sparta-rotterdam:fc-groningen-r20",
+    "match-fc-utrecht:sbv-excelsior-r21",
+    "match-ado-den-haag:go-ahead-eagles-r21",
+    "match-pec-zwolle:fortuna-sittard-r21",
+    "match-sparta-rotterdam:telstar-1963-r21",
+    "match-willem-ii-tilburg:psv-r21",
+    "match-az:feyenoord-rotterdam-r21",
+    "match-fc-groningen:nec-r21",
+    "match-fc-twente-65:sc-cambuur-leeuwarden-r21",
+    "match-sc-heerenveen:afc-ajax-r21",
+    "match-fc-twente-65:sparta-rotterdam-r16",
+    "match-fc-groningen:az-r22",
+    "match-feyenoord-rotterdam:nec-r22",
+    "match-fortuna-sittard:ado-den-haag-r22",
+    "match-go-ahead-eagles:pec-zwolle-r22",
+    "match-psv:fc-twente-65-r22",
+    "match-sbv-excelsior:afc-ajax-r22",
+    "match-sc-cambuur-leeuwarden:fc-utrecht-r22",
+    "match-telstar-1963:sc-heerenveen-r22",
+    "match-willem-ii-tilburg:sparta-rotterdam-r22",
+    "match-afc-ajax:go-ahead-eagles-r23",
+    "match-az:fortuna-sittard-r23",
+    "match-fc-twente-65:sbv-excelsior-r23",
+    "match-fc-utrecht:ado-den-haag-r23",
+    "match-feyenoord-rotterdam:telstar-1963-r23",
+    "match-nec:sparta-rotterdam-r23",
+    "match-pec-zwolle:fc-groningen-r23",
+    "match-psv:sc-cambuur-leeuwarden-r23",
+    "match-sc-heerenveen:willem-ii-tilburg-r23",
+    "match-ado-den-haag:fc-twente-65-r24",
+    "match-afc-ajax:feyenoord-rotterdam-r24",
+    "match-fortuna-sittard:fc-utrecht-r24",
+    "match-nec:az-r24",
+    "match-sbv-excelsior:sc-heerenveen-r24",
+    "match-sc-cambuur-leeuwarden:pec-zwolle-r24",
+    "match-sparta-rotterdam:psv-r24",
+    "match-telstar-1963:go-ahead-eagles-r24",
+    "match-willem-ii-tilburg:fc-groningen-r24",
+    "match-ado-den-haag:afc-ajax-r25",
+    "match-fc-groningen:telstar-1963-r25",
+    "match-fc-twente-65:az-r25",
+    "match-feyenoord-rotterdam:sc-heerenveen-r25",
+    "match-fortuna-sittard:nec-r25",
+    "match-go-ahead-eagles:sbv-excelsior-r25",
+    "match-pec-zwolle:willem-ii-tilburg-r25",
+    "match-psv:fc-utrecht-r25",
+    "match-sparta-rotterdam:sc-cambuur-leeuwarden-r25",
+    "match-afc-ajax:pec-zwolle-r26",
+    "match-az:sparta-rotterdam-r26",
+    "match-fc-utrecht:fc-groningen-r26",
+    "match-go-ahead-eagles:feyenoord-rotterdam-r26",
+    "match-sbv-excelsior:nec-r26",
+    "match-sc-cambuur-leeuwarden:ado-den-haag-r26",
+    "match-sc-heerenveen:fortuna-sittard-r26",
+    "match-telstar-1963:psv-r26",
+    "match-willem-ii-tilburg:fc-twente-65-r26",
+    "match-ado-den-haag:willem-ii-tilburg-r27",
+    "match-az:sbv-excelsior-r27",
+    "match-fc-groningen:psv-r27",
+    "match-fc-twente-65:go-ahead-eagles-r27",
+    "match-fc-utrecht:sparta-rotterdam-r27",
+    "match-feyenoord-rotterdam:sc-cambuur-leeuwarden-r27",
+    "match-nec:afc-ajax-r27",
+    "match-pec-zwolle:sc-heerenveen-r27",
+    "match-telstar-1963:fortuna-sittard-r27",
+    "match-afc-ajax:fc-twente-65-r28",
+    "match-fortuna-sittard:feyenoord-rotterdam-r28",
+    "match-go-ahead-eagles:nec-r28",
+    "match-psv:az-r28",
+    "match-sbv-excelsior:pec-zwolle-r28",
+    "match-sc-cambuur-leeuwarden:telstar-1963-r28",
+    "match-sc-heerenveen:fc-groningen-r28",
+    "match-sparta-rotterdam:ado-den-haag-r28",
+    "match-willem-ii-tilburg:fc-utrecht-r28",
+    "match-ado-den-haag:feyenoord-rotterdam-r29",
+    "match-fc-groningen:sbv-excelsior-r29",
+    "match-fc-utrecht:afc-ajax-r29",
+    "match-nec:sc-heerenveen-r29",
+    "match-pec-zwolle:psv-r29",
+    "match-sc-cambuur-leeuwarden:fortuna-sittard-r29",
+    "match-sparta-rotterdam:go-ahead-eagles-r29",
+    "match-telstar-1963:fc-twente-65-r29",
+    "match-willem-ii-tilburg:az-r29",
+    "match-az:sc-cambuur-leeuwarden-r30",
+    "match-fc-twente-65:nec-r30",
+    "match-feyenoord-rotterdam:sparta-rotterdam-r30",
+    "match-fortuna-sittard:fc-groningen-r30",
+    "match-go-ahead-eagles:fc-utrecht-r30",
+    "match-pec-zwolle:telstar-1963-r30",
+    "match-psv:afc-ajax-r30",
+    "match-sbv-excelsior:willem-ii-tilburg-r30",
+    "match-sc-heerenveen:ado-den-haag-r30",
+    "match-afc-ajax:fortuna-sittard-r31",
+    "match-fc-groningen:ado-den-haag-r31",
+    "match-feyenoord-rotterdam:willem-ii-tilburg-r31",
+    "match-go-ahead-eagles:psv-r31",
+    "match-nec:pec-zwolle-r31",
+    "match-sbv-excelsior:sc-cambuur-leeuwarden-r31",
+    "match-sc-heerenveen:fc-utrecht-r31",
+    "match-sparta-rotterdam:fc-twente-65-r31",
+    "match-telstar-1963:az-r31",
+    "match-ado-den-haag:nec-r32",
+    "match-az:afc-ajax-r32",
+    "match-fc-twente-65:fc-groningen-r32",
+    "match-fc-utrecht:feyenoord-rotterdam-r32",
+    "match-fortuna-sittard:go-ahead-eagles-r32",
+    "match-pec-zwolle:sparta-rotterdam-r32",
+    "match-psv:sbv-excelsior-r32",
+    "match-sc-cambuur-leeuwarden:sc-heerenveen-r32",
+    "match-willem-ii-tilburg:telstar-1963-r32",
+    "match-afc-ajax:sparta-rotterdam-r33",
+    "match-az:pec-zwolle-r33",
+    "match-fc-groningen:sc-cambuur-leeuwarden-r33",
+    "match-fc-twente-65:feyenoord-rotterdam-r33",
+    "match-fc-utrecht:telstar-1963-r33",
+    "match-fortuna-sittard:willem-ii-tilburg-r33",
+    "match-go-ahead-eagles:sc-heerenveen-r33",
+    "match-psv:nec-r33",
+    "match-sbv-excelsior:ado-den-haag-r33",
+    "match-ado-den-haag:az-r34",
+    "match-feyenoord-rotterdam:fc-groningen-r34",
+    "match-nec:fc-utrecht-r34",
+    "match-pec-zwolle:fc-twente-65-r34",
+    "match-sc-cambuur-leeuwarden:afc-ajax-r34",
+    "match-sc-heerenveen:psv-r34",
+    "match-sparta-rotterdam:fortuna-sittard-r34",
+    "match-telstar-1963:sbv-excelsior-r34",
+    "match-willem-ii-tilburg:go-ahead-eagles-r34"
+  ],
+  "seededTieBreakCount": 0,
   "explanation": {
     "psv": {
       "clubPoints": 16,
@@ -4674,7 +9059,8 @@
         }
       ],
       "iterations": 50000,
-      "neverChampionCount": 19477
+      "championCount": 32255,
+      "neverChampionCount": 17745
     },
     "az": {
       "clubPoints": 16,
@@ -4718,7 +9104,8 @@
         }
       ],
       "iterations": 50000,
-      "neverChampionCount": 41822
+      "championCount": 8599,
+      "neverChampionCount": 41401
     },
     "feyenoord-rotterdam": {
       "clubPoints": 14,
@@ -4762,7 +9149,8 @@
         }
       ],
       "iterations": 50000,
-      "neverChampionCount": 43575
+      "championCount": 7267,
+      "neverChampionCount": 42733
     },
     "afc-ajax": {
       "clubPoints": 10,
@@ -4806,7 +9194,8 @@
         }
       ],
       "iterations": 50000,
-      "neverChampionCount": 48976
+      "championCount": 1243,
+      "neverChampionCount": 48757
     },
     "fc-twente-65": {
       "clubPoints": 13,
@@ -4850,7 +9239,8 @@
         }
       ],
       "iterations": 50000,
-      "neverChampionCount": 49519
+      "championCount": 594,
+      "neverChampionCount": 49406
     },
     "sbv-excelsior": {
       "clubPoints": 10,
@@ -4894,7 +9284,8 @@
         }
       ],
       "iterations": 50000,
-      "neverChampionCount": 49980
+      "championCount": 26,
+      "neverChampionCount": 49974
     },
     "fortuna-sittard": {
       "clubPoints": 10,
@@ -4938,6 +9329,7 @@
         }
       ],
       "iterations": 50000,
+      "championCount": 0,
       "neverChampionCount": 50000
     },
     "go-ahead-eagles": {
@@ -4982,6 +9374,7 @@
         }
       ],
       "iterations": 50000,
+      "championCount": 0,
       "neverChampionCount": 50000
     },
     "fc-groningen": {
@@ -5026,6 +9419,7 @@
         }
       ],
       "iterations": 50000,
+      "championCount": 0,
       "neverChampionCount": 50000
     },
     "nec": {
@@ -5070,6 +9464,7 @@
         }
       ],
       "iterations": 50000,
+      "championCount": 0,
       "neverChampionCount": 50000
     },
     "sc-heerenveen": {
@@ -5114,6 +9509,7 @@
         }
       ],
       "iterations": 50000,
+      "championCount": 0,
       "neverChampionCount": 50000
     },
     "sparta-rotterdam": {
@@ -5158,6 +9554,7 @@
         }
       ],
       "iterations": 50000,
+      "championCount": 0,
       "neverChampionCount": 50000
     },
     "telstar-1963": {
@@ -5202,6 +9599,7 @@
         }
       ],
       "iterations": 50000,
+      "championCount": 0,
       "neverChampionCount": 50000
     },
     "fc-utrecht": {
@@ -5246,6 +9644,7 @@
         }
       ],
       "iterations": 50000,
+      "championCount": 0,
       "neverChampionCount": 50000
     },
     "sc-cambuur-leeuwarden": {
@@ -5290,6 +9689,7 @@
         }
       ],
       "iterations": 50000,
+      "championCount": 0,
       "neverChampionCount": 50000
     },
     "pec-zwolle": {
@@ -5334,6 +9734,7 @@
         }
       ],
       "iterations": 50000,
+      "championCount": 0,
       "neverChampionCount": 50000
     },
     "willem-ii-tilburg": {
@@ -5378,6 +9779,7 @@
         }
       ],
       "iterations": 50000,
+      "championCount": 0,
       "neverChampionCount": 50000
     },
     "ado-den-haag": {
@@ -5422,6 +9824,7 @@
         }
       ],
       "iterations": 50000,
+      "championCount": 0,
       "neverChampionCount": 50000
     }
   },
@@ -8429,5 +12832,5 @@
     }
   ],
   "fetchedAt": "2026-09-14T10:32:10.591Z",
-  "simulatedAt": "2026-09-14T10:33:15.660Z"
+  "simulatedAt": "2026-09-14T15:33:33.282Z"
 }

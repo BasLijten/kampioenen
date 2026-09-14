@@ -36,7 +36,7 @@ Voor iedere fixture wordt precies één kansmodel gebruikt:
 
 De interne `Fixture.source`-waarde `"api"` betekent in de huidige pipeline dat de percentages uit BZZOIRO kwamen. De naam is historisch en betekent niet dat de actuele fetch uit API-Football kwam. `lib/api-football.ts` levert hier alleen compatibele types; de actieve fetchroute gebruikt `lib/football-data-org.ts` en `lib/bzzoiro.ts`.
 
-De Monte Carlo-sampling gebruikt `homeWinProb` en `drawProb`; de resterende kans wordt uitwinst. `awayWinProb` wordt opgeslagen en gebruikt in de verklarende `winAllProb`, maar niet als afzonderlijke drempel in `simulateMatch`.
+De Monte Carlo-sampling gebruikt een seeded generator en de drie opgeslagen kansen. Na de W/D/A-keuze wordt conditioneel een scorelijn uit de fixture-goalverdelingen (of een Poisson-verdeling op expected goals) getrokken. Die scorelijn kan de eerder gekozen uitslag niet wijzigen; zij is bedoeld voor score-tiebreakers.
 
 ### Poisson-fallback
 
@@ -71,10 +71,10 @@ De puntenverwerking is de standaard 3/1/0-regel:
 - uitwinst: uitteam `+3`;
 - beide teams krijgen na iedere fixture `played +1`.
 
-Na iedere kalenderdatum worden de resterende wedstrijden van die datum verwerkt. Daarna wordt voor ieder team dat nog geen kampioen is gecontroleerd:
+Fixtures worden stabiel gesorteerd op werkelijke kalenderdatum en daarna op fixture-id. Na alle wedstrijden van iedere kalenderdatum wordt voor ieder team dat nog geen kampioen is gecontroleerd:
 
 ```text
-concurrentMax = concurrentPoints + (totalRounds - concurrentPlayed) × 3
+concurrentMax = concurrentPoints + (aantal daadwerkelijk resterende fixtures) × pointsForWin
 ```
 
 Het team is kampioen als voor iedere andere ploeg geldt:
@@ -83,9 +83,9 @@ Het team is kampioen als voor iedere andere ploeg geldt:
 concurrentMax < teamPoints
 ```
 
-Een gelijke stand betekent dus dat het team nog niet mathematisch kampioen is. Doelsaldo, onderlinge resultaten en andere tiebreakers worden in deze check niet gebruikt.
+Een gelijke stand betekent dus dat het team nog niet mathematisch kampioen is, tenzij de actuele en volledige geconfigureerde tiebreakers al een strikte volgorde vastleggen. De competitieconfiguratie bepaalt de versie, punten voor winst/gelijkspel/verlies en geordende tiebreakers. Een vereiste maar incomplete head-to-head-dataset blokkeert de run vóór simulatie.
 
-De standaardrun gebruikt 50.000 iteraties. Elke fixture krijgt per iteratie één willekeurige W/G/V-uitkomst via `Math.random()`. De run is daardoor niet reproduceerbaar zonder seed; alleen het best-case-resultaat is deterministisch.
+De standaardrun gebruikt 50.000 iteraties. De run gebruikt standaard seed `1` en accepteert een expliciete seed, zodat dezelfde snapshots, rules-version en fixturevolgorde dezelfde output opleveren.
 
 ## Uitkomsten
 
@@ -99,7 +99,9 @@ Per team worden deze waarden berekend:
 - `expectedDate`: de datum met de hoogste `dateProbabilities`-waarde;
 - `positionProbabilities`: eindposities op basis van gesimuleerde punten.
 
-De eindrangschikking sorteert eerst op gesimuleerde punten en gebruikt bij gelijkstand het oorspronkelijke doelsaldo (`goalsFor - goalsAgainst`). Er worden geen doelpunten per gesimuleerde wedstrijd gegenereerd.
+De huidige simulator publiceert daarnaast `noClinchProbability`, `tieProbability`, `simulatedGoalsFor`, `simulatedGoalsAgainst` en `simulatedGoalDifference`. `totalChampionshipProbability` volgt de unieke kampioen uit de geconfigureerde eindrangschikking; `dateProbabilities` bevat de feitelijke kalenderdatum en het administratieve ronde-label.
+
+De eindrangschikking sorteert eerst op punten en daarna volgens de geconfigureerde tiebreakers. Gelijke groepen blijven gelijk wanneer `requireUniqueRanking` niet is ingesteld. Een configuratie die een unieke volgorde vereist gebruikt de seeded generator voor de resterende gelijkstand en bewaart seed, rules-version en fixturevolgorde in de output. De simulator houdt `goalsFor`, `goalsAgainst` en `goalDifference` per gesimuleerde eindstand bij.
 
 `explanation.rivals[].winAllProb`, `gap` en `maxPoints` zijn verklarende UI-data. Ze bepalen de `totalChampionshipProbability` niet.
 
@@ -116,8 +118,8 @@ Dit is een analytisch scenario, geen geldige wedstrijdverdeling: een niet-doelte
 
 ## Bekende implementatievalkuilen
 
-1. De huidige code controleert de beginsituatie niet. `isChampion` wordt pas na de eerste resterende kalenderdatum aangeroepen. Een team dat vóór het resterende programma al mathematisch kampioen is, krijgt daardoor toch een toekomstige clinchdatum.
-2. `dateProbabilities` telt clinches op alle datums binnen een ronde, maar labelt de rij met de datum van de wedstrijd van het doelteam. Bij gespreide speelrondes kan de weergegeven datum dus verschillen van de feitelijke clinchdatum.
+1. De best-case-berekening is analytisch: fixtures zonder het doelteam leveren geen punten op, maar verhogen wel `played`.
+2. `dateProbabilities` gebruikt de feitelijke kalenderdatum waarop na de volledige datumgroep de clinch vaststaat. `round` blijft een administratief rapportagelabel.
 3. Gebruik voor nieuwe uitleg de actuele bronnen `football-data.org`, BZZOIRO en Poisson. Verwijder verwijzingen naar API-Football als actuele predictionbron, tenzij de fetchpipeline eerst wordt gewijzigd.
 4. Als `data/{league}/standings.json` ontbreekt, gebruikt `scripts/simulate.ts` voor de Eredivisie de hardcoded fallback in `config/fallback/eredivisie.ts`. Die fallback bevat slechts zes teams en handmatige Poisson-kansen.
 
@@ -126,6 +128,6 @@ Dit is een analytisch scenario, geen geldige wedstrijdverdeling: een niet-doelte
 Bij een wijziging aan dit domein:
 
 1. Traceer eerst de gewijzigde invoer van bron naar `Fixture`, simulatie en UI-output; de stap is klaar als ieder gewijzigd veld een bron en consument heeft.
-2. Werk de relevante tests in `__tests__/simulation.test.ts` bij voor de nieuwe logische paden; de stap is klaar als best case, zekerheid-winst, zekerheid-verlies en nul/boundary-gevallen zijn afgedekt waar relevant.
+2. Werk de relevante tests in `__tests__/simulation.test.ts` bij voor de nieuwe logische paden; de stap is klaar als best case, zekerheid-winst, zekerheid-verlies, score-tiebreakers, head-to-head, uitgestelde/same-date fixtures en nul/boundary-gevallen zijn afgedekt waar relevant.
 3. Werk deze referentie en eventuele gebruikersuitleg bij op basis van de code; de stap is klaar als er geen documentatieclaim over bronnen, scoreverwerking of datumpresentatie achterblijft die de code tegenspreekt.
 4. Voer voor codewijzigingen `npm run lint`, `npm run test:run` en waar vereist `npm run build` uit. Documentatie-only wijzigingen hebben volgens `AGENTS.md` alleen inhouds-, opmaak- en linkcontrole nodig.

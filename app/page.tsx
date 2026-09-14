@@ -1,6 +1,6 @@
 import { readFileSync } from "fs";
 import { join } from "path";
-import type { ClubSimulationResult, DateProbability } from "@/lib/simulation";
+import type { ClubSimulationResult } from "@/lib/simulation";
 import type { Team, Fixture } from "@/lib/data";
 import { resolveConfig, formatTemplate, toClientLeague } from "@/config/env";
 import { loadWeather } from "@/lib/weather.server";
@@ -16,6 +16,7 @@ export interface Explanation {
   clubRemaining: number;
   rivals: Array<{ name: string; points: number; maxPoints: number; gap: number; winAllProb: number }>;
   iterations: number;
+  championCount: number;
   neverChampionCount: number;
 }
 

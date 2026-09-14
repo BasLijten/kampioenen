@@ -12,7 +12,8 @@ export interface ResolvedConfig {
 
 /** Strip non-serializable fields from league config for client components */
 export function toClientLeague(league: LeagueConfig): LeagueClientConfig {
-  const { bzzoiroLeagueFilter: _, ...client } = league;
+  const { bzzoiroLeagueFilter: ignoredFilter, ...client } = league;
+  void ignoredFilter;
   return client;
 }
 

@@ -41,13 +41,13 @@ export function predictMatch(
   awayId: string,
   strengths: Map<string, TeamStrength>,
   leagueAvg: number
-): { homeWinProb: number; drawProb: number; awayWinProb: number } {
+): { homeWinProb: number; drawProb: number; awayWinProb: number; expectedHomeGoals: number; expectedAwayGoals: number } {
   const home = strengths.get(homeId);
   const away = strengths.get(awayId);
 
   if (!home || !away) {
     // Unknown team — return flat prior
-    return { homeWinProb: 0.45, drawProb: 0.25, awayWinProb: 0.30 };
+    return { homeWinProb: 0.45, drawProb: 0.25, awayWinProb: 0.30, expectedHomeGoals: 1.35, expectedAwayGoals: 1.05 };
   }
 
   const homeLambda = home.attack * away.defense * leagueAvg * HOME_ADVANTAGE;
@@ -72,5 +72,7 @@ export function predictMatch(
     homeWinProb: homeWinProb / total,
     drawProb: drawProb / total,
     awayWinProb: awayWinProb / total,
+    expectedHomeGoals: homeLambda,
+    expectedAwayGoals: awayLambda,
   };
 }

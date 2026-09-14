@@ -57,6 +57,8 @@ export function transformFixtures(
     let homeWinProb: number;
     let drawProb: number;
     let awayWinProb: number;
+    let expectedHomeGoals: number | undefined;
+    let expectedAwayGoals: number | undefined;
     let source: "api" | "poisson";
 
     if (pred) {
@@ -69,6 +71,8 @@ export function transformFixtures(
       homeWinProb = poisson.homeWinProb;
       drawProb = poisson.drawProb;
       awayWinProb = poisson.awayWinProb;
+      expectedHomeGoals = poisson.expectedHomeGoals;
+      expectedAwayGoals = poisson.expectedAwayGoals;
       source = "poisson";
     }
 
@@ -81,6 +85,8 @@ export function transformFixtures(
       homeWinProb,
       drawProb,
       awayWinProb,
+      expectedHomeGoals,
+      expectedAwayGoals,
       source,
     };
   });

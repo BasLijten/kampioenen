@@ -11,6 +11,9 @@ export interface Team {
   goalsAgainst: number;
 }
 
+/** Probability of scoring 0, 1, 2, ... goals. */
+export type GoalProbabilities = number[];
+
 export interface Fixture {
   id: string;
   date: string; // ISO date string
@@ -21,4 +24,9 @@ export interface Fixture {
   drawProb: number;
   awayWinProb: number;
   source: "api" | "poisson";
+  /** Optional conditional-score input used for official score tiebreakers. */
+  homeGoalProbabilities?: GoalProbabilities;
+  awayGoalProbabilities?: GoalProbabilities;
+  expectedHomeGoals?: number;
+  expectedAwayGoals?: number;
 }

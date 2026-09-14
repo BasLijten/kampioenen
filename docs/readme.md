@@ -105,7 +105,7 @@ UTR defense = (45/28) / 1.50 = 1.07
 ### Parameters
 
 - **50.000 iteraties** per simulatierun
-- Willekeurig per run (`Math.random()`, geen seed); alleen best-case is deterministisch
+- Seeded per run; dezelfde seed en fixturevolgorde leveren reproduceerbare resultaten op
 
 ### Wedstrijdsimulatie
 
@@ -117,13 +117,15 @@ if r < homeWinProb + draw → gelijkspel (+1 punt elk)
 anders                    → uitwinst (+3 punten uit)
 ```
 
+Daarna wordt conditioneel een scorelijn getrokken voor goals-for, goals-against en doelsaldo. Deze scorelijn kan de gekozen W/D/A-uitkomst niet veranderen en wordt gebruikt voor de geconfigureerde officiële tiebreakers.
+
 ### Kampioenschap check
 
 Na elke kalenderdatum wordt gecontroleerd of het doelteam wiskundig kampioen is:
 
 ```
 isChampion(team) = voor elke andere team:
-  maxPunten(team) = huidigePunten + (34 - gespeeld) × 3
+maxPunten(team) = huidigePunten + (daadwerkelijk resterende fixtures) × 3
   maxPunten(team) < psvPunten
 ```
 
@@ -132,7 +134,8 @@ isChampion(team) = voor elke andere team:
 - `totalChampionshipProbability` — fractie iteraties waarin PSV kampioen wordt
 - `dateProbabilities[]` — per speelronde: kans dat PSV precies die ronde kampioen wordt
 - `bestCaseDate/Round` — vroegst mogelijke kampioenschap (PSV wint alles, rivalen verliezen)
-- `neverChampionProbability` — fractie iteraties waarin PSV niet kampioen wordt
+- `neverChampionProbability` — fractie iteraties waarin PSV niet vóór het einde clincht
+- `noClinchProbability` — expliciete no-clinch-kans naast de uiteindelijke kampioenschapskans
 
 ## npm scripts
 

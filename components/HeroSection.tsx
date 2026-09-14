@@ -46,7 +46,7 @@ export default function HeroSection({
     ? result.dateProbabilities.find((dp) => dp.date === result.expectedDate) ?? null
     : null;
 
-  const championCount = explanation.iterations - explanation.neverChampionCount;
+  const championCount = explanation.championCount;
 
   const templateVars = {
     clubName: club.name,

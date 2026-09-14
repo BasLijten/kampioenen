@@ -1,6 +1,7 @@
 import { describe, it, expect } from "vitest";
 import { runPrediction, runSimulation } from "../lib/simulation";
 import type { Team, Fixture } from "../lib/data";
+import { createCompetitionRules } from "../lib/competition-rules";
 
 // ─── helpers ────────────────────────────────────────────────────────────────
 
@@ -125,12 +126,11 @@ describe("Best case scenario", () => {
   it("uses losses (not draws) for non-target fixtures — clinches one round earlier", () => {
     // Mirrors the real PSV-2026 situation: PSV 65 pts, Feyenoord 48 pts, 9 rounds left.
     //
-    // After round 26: PSV 68, Fey 48 (lost), remaining 8 → max 48+24=72 ≥ 68  ❌
-    // After round 27: PSV 71, Fey 48 (lost), remaining 7 → max 48+21=69 < 71  ✓ CLINCH
+    // With actual remaining fixtures, after round 26 Feyenoord has only rounds
+    // 27 and 28 left: 48 + 2*3 = 54 < PSV's 68 → CLINCH.
     //
-    // With the old "draw" algorithm Feyenoord would gain 1 pt/round:
-    //   After R27: Fey 50, max 50+21=71 = 71  ❌  (tie still possible — no clinch)
-    //   After R28: Fey 51, max 51+18=69 < 74  ✓  (clinch one round later)
+    // With the old total-rounds algorithm the same scenario would be delayed,
+    // because it counted every unplayed league round instead of actual fixtures.
     const teams = [
       team("psv", 65, 25),
       team("fey", 48, 25),
@@ -149,8 +149,8 @@ describe("Best case scenario", () => {
     const result = runSimulation(100, teams, fixtures, 34);
     const psv = result.clubResults["psv"];
 
-    expect(psv.bestCaseRound).toBe(27);
-    expect(psv.bestCaseDate).toBe("2025-03-15");
+    expect(psv.bestCaseRound).toBe(26);
+    expect(psv.bestCaseDate).toBe("2025-03-08");
   });
 
   it("every team in a multi-team league gets independent best-case analysis", () => {
@@ -292,5 +292,152 @@ describe("Most likely scenario", () => {
     const result = runSimulation(250, teams, fixtures, 34);
 
     expect(result.iterations).toBe(250);
+  });
+});
+
+describe("versioned competition rules and simulated scores", () => {
+  it("uses configured points, goal difference, and goals scored in order", () => {
+    const rules = createCompetitionRules({
+      version: "test-rules-v1",
+      pointsForWin: 3,
+      pointsForDraw: 1,
+      pointsForLoss: 0,
+      tiebreakers: ["goalDifference", "goalsFor"],
+    });
+
+    const teams = [
+      team("alpha", 20, 10, 10, 10),
+      team("beta", 20, 10, 9, 10),
+      team("gamma", 20, 10, 8, 10),
+    ];
+    const fixtures = [
+      { ...fixture("b", 11, "2025-05-01", "beta", "gamma", 1, 0), homeGoalProbabilities: [0, 1] },
+      { ...fixture("a", 11, "2025-05-01", "alpha", "gamma", 1, 0), homeGoalProbabilities: [0, 1] },
+    ];
+
+    const result = runSimulation(1, teams, fixtures, 11, { rules, seed: 42 });
+
+    expect(result.clubResults.alpha.simulatedGoalsFor).toBe(11);
+    expect(result.clubResults.beta.simulatedGoalsFor).toBe(10);
+    expect(result.clubResults.alpha.positionProbabilities[1]).toBe(1);
+    expect(result.rulesVersion).toBe("test-rules-v1");
+  });
+
+  it("generates a score after sampling and never changes the sampled result", () => {
+    const teams = [team("home", 0, 0, 0, 0), team("away", 0, 0, 0, 0)];
+    const drawFixture = {
+      ...fixture("draw", 1, "2025-01-01", "home", "away", 0, 1),
+      homeGoalProbabilities: [0, 1],
+      awayGoalProbabilities: [0, 1],
+    };
+
+    const result = runSimulation(1, teams, [drawFixture], 1, { seed: 7 });
+
+    expect(result.clubResults.home.simulatedGoalsFor).toBe(1);
+    expect(result.clubResults.home.simulatedGoalsAgainst).toBe(1);
+    expect(result.clubResults.home.positionProbabilities[1]).toBe(1);
+    expect(result.clubResults.away.positionProbabilities[1]).toBe(1);
+  });
+
+  it("blocks a ruleset that requires incomplete head-to-head data", () => {
+    const rules = createCompetitionRules({
+      version: "head-to-head-v1",
+      pointsForWin: 3,
+      pointsForDraw: 1,
+      pointsForLoss: 0,
+      tiebreakers: ["headToHead", "goalDifference"],
+    });
+
+    expect(() => runSimulation(1, [team("a", 0, 0), team("b", 0, 0)], [], 1, { rules }))
+      .toThrow(/head-to-head/i);
+  });
+
+  it("uses complete head-to-head data when score tiebreakers are level", () => {
+    const rules = createCompetitionRules({
+      version: "head-to-head-v1",
+      pointsForWin: 3,
+      pointsForDraw: 1,
+      pointsForLoss: 0,
+      tiebreakers: ["headToHead", "goalDifference"],
+    });
+    const headToHead = {
+      a: { b: { played: 1, points: 3, goalsFor: 2, goalsAgainst: 0 } },
+      b: { a: { played: 1, points: 0, goalsFor: 0, goalsAgainst: 2 } },
+    };
+    const result = runSimulation(
+      1,
+      [team("a", 3, 1, 2, 2), team("b", 3, 1, 2, 2)],
+      [],
+      1,
+      { rules, headToHead }
+    );
+
+    expect(result.clubResults.a.positionProbabilities[1]).toBe(1);
+    expect(result.clubResults.b.positionProbabilities[2]).toBe(1);
+  });
+
+  it("keeps an unresolved final tie explicit unless unique ranking is configured", () => {
+    const rules = createCompetitionRules({
+      version: "tie-preserving-v1",
+      pointsForWin: 3,
+      pointsForDraw: 1,
+      pointsForLoss: 0,
+      tiebreakers: [],
+    });
+    const result = runSimulation(1, [team("a", 3, 1), team("b", 3, 1)],  [], 1, { rules, seed: 9 });
+
+    expect(result.clubResults.a.tieProbability).toBe(1);
+    expect(result.clubResults.a.positionProbabilities[1]).toBe(1);
+    expect(result.clubResults.b.positionProbabilities[1]).toBe(1);
+    expect(result.clubResults.a.totalChampionshipProbability).toBe(0);
+  });
+
+  it("resolves a required tie with the seed and records the tie-break audit count", () => {
+    const rules = createCompetitionRules({
+      version: "seeded-ranking-v1",
+      pointsForWin: 3,
+      pointsForDraw: 1,
+      pointsForLoss: 0,
+      tiebreakers: [],
+      requireUniqueRanking: true,
+    });
+    const teams = [team("a", 3, 1), team("b", 3, 1)];
+    const first = runSimulation(20, teams, [], 1, { rules, seed: 99 });
+    const second = runSimulation(20, teams, [], 1, { rules, seed: 99 });
+
+    expect(second).toEqual(first);
+    expect(first.seededTieBreakCount).toBe(20);
+    expect(first.clubResults.a.tieProbability).toBe(0);
+    expect(first.clubResults.a.totalChampionshipProbability + first.clubResults.b.totalChampionshipProbability).toBe(1);
+  });
+
+  it("is exactly reproducible with a seed and stable fixture ordering", () => {
+    const teams = [team("a", 0, 0), team("b", 0, 0), team("c", 0, 0)];
+    const fixtures = [
+      fixture("z", 1, "2025-01-01", "a", "b", 0.5, 0.25),
+      fixture("a", 1, "2025-01-01", "b", "c", 0.5, 0.25),
+    ];
+
+    const first = runSimulation(20, teams, fixtures, 1, { seed: 1234 });
+    const second = runSimulation(20, teams, [...fixtures].reverse(), 1, { seed: 1234 });
+
+    expect(second).toEqual(first);
+    expect(first.fixtureOrder).toEqual(["a", "z"]);
+  });
+
+  it("reports the actual clinch date after every fixture on that date", () => {
+    const teams = [team("leader", 80, 28), team("rival", 60, 28), team("third", 10, 28)];
+    const fixtures = [
+      fixture("later-id", 29, "2025-04-05", "rival", "third", 0, 1),
+      fixture("first-id", 28, "2025-04-04", "leader", "third", 1, 0),
+    ];
+
+    const result = runSimulation(1, teams, fixtures, 34, { seed: 1 });
+
+    expect(result.clubResults.leader.dateProbabilities[0]).toMatchObject({
+      date: "2025-04-04",
+      round: 28,
+      probability: 1,
+    });
   });
 });
