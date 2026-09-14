@@ -13,6 +13,7 @@
     "fetch-data": "tsx scripts/fetch-data.ts",
     "simulate": "tsx scripts/simulate.ts",
     "fetch-weather": "tsx scripts/fetch-weather.ts",
+    "generate-clubelo-mappings": "tsx scripts/generate-clubelo-mappings.ts",
     "update-data": "npm run fetch-data && npm run simulate && npm run fetch-weather",
     "build-all": "tsx scripts/build-all.ts",
     "test": "vitest",
