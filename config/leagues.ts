@@ -19,13 +19,13 @@ export const leagues: Record<string, LeagueConfig> = {
   eredivisie: {
     id: "eredivisie",
     name: "Eredivisie",
-    season: "2025/26",
+    season: "2026/27",
     totalRounds: 34,
     language: "nl",
     locale: "nl-NL",
     footballDataOrgCode: "DED",
     apiFootballLeagueId: 88,
-    apiFootballSeason: 2025,
+    apiFootballSeason: 2026,
     bzzoiroLeagueFilter: (league) =>
       league.api_id === 88 || (league.name ?? "").toLowerCase().includes("eredivisie"),
     dataDir: "data/eredivisie",
