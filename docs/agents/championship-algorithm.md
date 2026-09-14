@@ -85,7 +85,9 @@ concurrentMax < teamPoints
 
 Een gelijke stand betekent dus dat het team nog niet mathematisch kampioen is. Doelsaldo, onderlinge resultaten en andere tiebreakers worden in deze check niet gebruikt.
 
-De standaardrun gebruikt 50.000 iteraties. Elke fixture krijgt per iteratie één willekeurige W/G/V-uitkomst via `Math.random()`. De run is daardoor niet reproduceerbaar zonder seed; alleen het best-case-resultaat is deterministisch.
+De standaardrun gebruikt 50.000 iteraties met een expliciete seed. De simulator gebruikt een lokale seeded pseudo-random generator; `Math.random()` wordt niet aangeroepen. De vaste fixturevolgorde is chronologisch met fixture-id als tie-breaker, zodat dezelfde snapshots, configuratie en seed dezelfde resultaten opleveren.
+
+De prediction-run ontvangt een genormaliseerde competitiesnapshot en een geïnjecteerd `MatchProbabilityModel`. De kern importeert geen provider-DTO's. De huidige BZZOIRO/Poisson-kansen worden via een adapter aan dit model aangeboden. Iedere run legt `competitionId`, seizoen, modelversie, standings- en fixturesnapshot-id, seed en iteratie-aantal vast in `metadata`.
 
 ## Uitkomsten
 

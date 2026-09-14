@@ -1,5 +1,6 @@
-import { describe, it, expect } from "vitest";
-import { runSimulation } from "../lib/simulation";
+import { describe, it, expect, vi } from "vitest";
+import { runPrediction, runSimulation } from "../lib/simulation";
+import type { CompetitionSnapshot, MatchProbabilityModel } from "../lib/simulation";
 import type { Team, Fixture } from "../lib/data";
 
 // ─── helpers ────────────────────────────────────────────────────────────────
@@ -236,5 +237,102 @@ describe("Most likely scenario", () => {
     const result = runSimulation(250, teams, fixtures, 34);
 
     expect(result.iterations).toBe(250);
+  });
+});
+
+describe("Deterministic prediction runs", () => {
+  const competition: CompetitionSnapshot = {
+    competitionId: "eredivisie",
+    season: "2026/27",
+    totalRounds: 2,
+    standingsSnapshotId: "standings-1",
+    fixturesSnapshotId: "fixtures-1",
+    teams: [team("ajax", 0, 0), team("psv", 0, 0), team("fey", 0, 0)],
+    fixtures: [
+      { id: "b", date: "2026-08-08", round: 1, homeTeamId: "ajax", awayTeamId: "fey" },
+      { id: "a", date: "2026-08-08", round: 1, homeTeamId: "psv", awayTeamId: "ajax" },
+    ],
+  };
+
+  const model: MatchProbabilityModel = {
+    predict(match) {
+      return match.id === "a"
+        ? { home: 0.5, draw: 0.25, away: 0.25 }
+        : { home: 0.4, draw: 0.3, away: 0.3 };
+    },
+  };
+
+  it("reproduces the complete result for the same seed regardless of input order", () => {
+    const first = runPrediction({
+      competition,
+      probabilityModel: model,
+      config: { iterations: 250, seed: 42, modelVersion: "test-v1" },
+    });
+    const second = runPrediction({
+      competition: {
+        ...competition,
+        teams: [...competition.teams].reverse(),
+        fixtures: [...competition.fixtures].reverse(),
+      },
+      probabilityModel: model,
+      config: { iterations: 250, seed: 42, modelVersion: "test-v1" },
+    });
+
+    expect(second).toEqual(first);
+    expect(first.metadata).toEqual({
+      competitionId: "eredivisie",
+      season: "2026/27",
+      modelVersion: "test-v1",
+      standingsSnapshotId: "standings-1",
+      fixturesSnapshotId: "fixtures-1",
+      seed: 42,
+      simulationCount: 250,
+    });
+  });
+
+  it("simulates every club in one joint run and records all final positions", () => {
+    const result = runPrediction({
+      competition,
+      probabilityModel: model,
+      config: { iterations: 100, seed: 7, modelVersion: "test-v1" },
+    });
+
+    expect(Object.keys(result.clubResults)).toEqual(["ajax", "fey", "psv"]);
+    for (const club of Object.values(result.clubResults)) {
+      expect(Object.values(club.positionProbabilities).reduce((sum, p) => sum + p, 0)).toBe(1);
+    }
+  });
+
+  it("uses injected certainty outcomes without consulting Math.random", () => {
+    const certaintyModel: MatchProbabilityModel = {
+      predict: () => ({ home: 1, draw: 0, away: 0 }),
+    };
+    const random = vi.spyOn(Math, "random").mockImplementation(() => {
+      throw new Error("Math.random must not be used by a seeded run");
+    });
+    let result: ReturnType<typeof runPrediction> | undefined;
+    try {
+      result = runPrediction({
+        competition: {
+          ...competition,
+          totalRounds: 1,
+          teams: [team("ajax", 0, 0), team("psv", 0, 0)],
+          fixtures: [{
+            id: "a",
+            date: "2026-08-08",
+            round: 1,
+            homeTeamId: "psv",
+            awayTeamId: "ajax",
+          }],
+        },
+        probabilityModel: certaintyModel,
+        config: { iterations: 100, seed: 123, modelVersion: "test-v1" },
+      });
+    } finally {
+      random.mockRestore();
+    }
+
+    expect(result!.clubResults.psv.totalChampionshipProbability).toBe(1);
+    expect(result!.clubResults.ajax.totalChampionshipProbability).toBe(0);
   });
 });

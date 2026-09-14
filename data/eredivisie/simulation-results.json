@@ -1,1279 +1,9 @@
 {
   "clubResults": {
-    "psv": {
-      "teamId": "psv",
-      "teamName": "PSV",
-      "totalChampionshipProbability": 0.61046,
-      "dateProbabilities": [
-        {
-          "date": "2026-09-15",
-          "round": 3,
-          "probability": 0,
-          "cumulativeProbability": 0,
-          "opponent": "vrij",
-          "isHome": false
-        },
-        {
-          "date": "2026-09-20",
-          "round": 7,
-          "probability": 0,
-          "cumulativeProbability": 0,
-          "opponent": "fc-twente-65",
-          "isHome": false
-        },
-        {
-          "date": "2026-10-09",
-          "round": 8,
-          "probability": 0,
-          "cumulativeProbability": 0,
-          "opponent": "sc-heerenveen",
-          "isHome": true
-        },
-        {
-          "date": "2026-10-17",
-          "round": 9,
-          "probability": 0,
-          "cumulativeProbability": 0,
-          "opponent": "ado-den-haag",
-          "isHome": false
-        },
-        {
-          "date": "2026-10-25",
-          "round": 10,
-          "probability": 0,
-          "cumulativeProbability": 0,
-          "opponent": "feyenoord-rotterdam",
-          "isHome": true
-        },
-        {
-          "date": "2026-10-31",
-          "round": 11,
-          "probability": 0,
-          "cumulativeProbability": 0,
-          "opponent": "willem-ii-tilburg",
-          "isHome": true
-        },
-        {
-          "date": "2026-11-08",
-          "round": 12,
-          "probability": 0,
-          "cumulativeProbability": 0,
-          "opponent": "sc-cambuur-leeuwarden",
-          "isHome": false
-        },
-        {
-          "date": "2026-11-21",
-          "round": 13,
-          "probability": 0,
-          "cumulativeProbability": 0,
-          "opponent": "nec",
-          "isHome": false
-        },
-        {
-          "date": "2026-11-28",
-          "round": 14,
-          "probability": 0,
-          "cumulativeProbability": 0,
-          "opponent": "go-ahead-eagles",
-          "isHome": true
-        },
-        {
-          "date": "2026-12-05",
-          "round": 15,
-          "probability": 0,
-          "cumulativeProbability": 0,
-          "opponent": "az",
-          "isHome": false
-        },
-        {
-          "date": "2026-12-13",
-          "round": 16,
-          "probability": 0,
-          "cumulativeProbability": 0,
-          "opponent": "telstar-1963",
-          "isHome": true
-        },
-        {
-          "date": "2026-12-20",
-          "round": 17,
-          "probability": 0,
-          "cumulativeProbability": 0,
-          "opponent": "pec-zwolle",
-          "isHome": true
-        },
-        {
-          "date": "2027-01-10",
-          "round": 18,
-          "probability": 0,
-          "cumulativeProbability": 0,
-          "opponent": "feyenoord-rotterdam",
-          "isHome": false
-        },
-        {
-          "date": "2027-01-16",
-          "round": 19,
-          "probability": 0,
-          "cumulativeProbability": 0,
-          "opponent": "fortuna-sittard",
-          "isHome": false
-        },
-        {
-          "date": "2027-01-23",
-          "round": 20,
-          "probability": 0,
-          "cumulativeProbability": 0,
-          "opponent": "ado-den-haag",
-          "isHome": true
-        },
-        {
-          "date": "2027-01-30",
-          "round": 21,
-          "probability": 0,
-          "cumulativeProbability": 0,
-          "opponent": "willem-ii-tilburg",
-          "isHome": false
-        },
-        {
-          "date": "2027-02-13",
-          "round": 22,
-          "probability": 0,
-          "cumulativeProbability": 0,
-          "opponent": "fc-twente-65",
-          "isHome": true
-        },
-        {
-          "date": "2027-02-20",
-          "round": 23,
-          "probability": 0,
-          "cumulativeProbability": 0,
-          "opponent": "sc-cambuur-leeuwarden",
-          "isHome": true
-        },
-        {
-          "date": "2027-02-27",
-          "round": 24,
-          "probability": 0,
-          "cumulativeProbability": 0,
-          "opponent": "sparta-rotterdam",
-          "isHome": false
-        },
-        {
-          "date": "2027-03-06",
-          "round": 25,
-          "probability": 0,
-          "cumulativeProbability": 0,
-          "opponent": "fc-utrecht",
-          "isHome": true
-        },
-        {
-          "date": "2027-03-13",
-          "round": 26,
-          "probability": 0,
-          "cumulativeProbability": 0,
-          "opponent": "telstar-1963",
-          "isHome": false
-        },
-        {
-          "date": "2027-03-20",
-          "round": 27,
-          "probability": 0.00004,
-          "cumulativeProbability": 0.00004,
-          "opponent": "fc-groningen",
-          "isHome": false
-        },
-        {
-          "date": "2027-04-03",
-          "round": 28,
-          "probability": 0.00194,
-          "cumulativeProbability": 0.00198,
-          "opponent": "az",
-          "isHome": true
-        },
-        {
-          "date": "2027-04-10",
-          "round": 29,
-          "probability": 0.01152,
-          "cumulativeProbability": 0.013500000000000002,
-          "opponent": "pec-zwolle",
-          "isHome": false
-        },
-        {
-          "date": "2027-04-24",
-          "round": 30,
-          "probability": 0.03586,
-          "cumulativeProbability": 0.04936,
-          "opponent": "afc-ajax",
-          "isHome": true
-        },
-        {
-          "date": "2027-05-01",
-          "round": 31,
-          "probability": 0.06896,
-          "cumulativeProbability": 0.11832,
-          "opponent": "go-ahead-eagles",
-          "isHome": false
-        },
-        {
-          "date": "2027-05-08",
-          "round": 32,
-          "probability": 0.13022,
-          "cumulativeProbability": 0.24853999999999998,
-          "opponent": "sbv-excelsior",
-          "isHome": true
-        },
-        {
-          "date": "2027-05-16",
-          "round": 33,
-          "probability": 0.20866,
-          "cumulativeProbability": 0.4572,
-          "opponent": "nec",
-          "isHome": true
-        },
-        {
-          "date": "2027-05-23",
-          "round": 34,
-          "probability": 0.15326,
-          "cumulativeProbability": 0.61046,
-          "opponent": "sc-heerenveen",
-          "isHome": false
-        }
-      ],
-      "bestCaseDate": "2027-01-30",
-      "bestCaseRound": 21,
-      "expectedDate": "2027-05-16",
-      "neverChampionProbability": 0.38954,
-      "neverChampionCount": 19477,
-      "positionProbabilities": {
-        "1": 0.66564,
-        "2": 0.21828,
-        "3": 0.08562,
-        "4": 0.02524,
-        "5": 0.00478,
-        "6": 0.00044
-      }
-    },
-    "az": {
-      "teamId": "az",
-      "teamName": "AZ",
-      "totalChampionshipProbability": 0.16356,
-      "dateProbabilities": [
-        {
-          "date": "2026-09-15",
-          "round": 3,
-          "probability": 0,
-          "cumulativeProbability": 0,
-          "opponent": "vrij",
-          "isHome": false
-        },
-        {
-          "date": "2026-09-20",
-          "round": 7,
-          "probability": 0,
-          "cumulativeProbability": 0,
-          "opponent": "telstar-1963",
-          "isHome": true
-        },
-        {
-          "date": "2026-10-10",
-          "round": 8,
-          "probability": 0,
-          "cumulativeProbability": 0,
-          "opponent": "feyenoord-rotterdam",
-          "isHome": false
-        },
-        {
-          "date": "2026-10-18",
-          "round": 9,
-          "probability": 0,
-          "cumulativeProbability": 0,
-          "opponent": "sc-cambuur-leeuwarden",
-          "isHome": false
-        },
-        {
-          "date": "2026-10-25",
-          "round": 10,
-          "probability": 0,
-          "cumulativeProbability": 0,
-          "opponent": "fc-twente-65",
-          "isHome": true
-        },
-        {
-          "date": "2026-10-31",
-          "round": 11,
-          "probability": 0,
-          "cumulativeProbability": 0,
-          "opponent": "afc-ajax",
-          "isHome": false
-        },
-        {
-          "date": "2026-11-08",
-          "round": 12,
-          "probability": 0,
-          "cumulativeProbability": 0,
-          "opponent": "fc-groningen",
-          "isHome": true
-        },
-        {
-          "date": "2026-11-22",
-          "round": 13,
-          "probability": 0,
-          "cumulativeProbability": 0,
-          "opponent": "sparta-rotterdam",
-          "isHome": false
-        },
-        {
-          "date": "2026-11-29",
-          "round": 14,
-          "probability": 0,
-          "cumulativeProbability": 0,
-          "opponent": "pec-zwolle",
-          "isHome": false
-        },
-        {
-          "date": "2026-12-05",
-          "round": 15,
-          "probability": 0,
-          "cumulativeProbability": 0,
-          "opponent": "psv",
-          "isHome": true
-        },
-        {
-          "date": "2026-12-13",
-          "round": 16,
-          "probability": 0,
-          "cumulativeProbability": 0,
-          "opponent": "nec",
-          "isHome": true
-        },
-        {
-          "date": "2026-12-19",
-          "round": 17,
-          "probability": 0,
-          "cumulativeProbability": 0,
-          "opponent": "sbv-excelsior",
-          "isHome": false
-        },
-        {
-          "date": "2027-01-09",
-          "round": 18,
-          "probability": 0,
-          "cumulativeProbability": 0,
-          "opponent": "sc-heerenveen",
-          "isHome": true
-        },
-        {
-          "date": "2027-01-17",
-          "round": 19,
-          "probability": 0,
-          "cumulativeProbability": 0,
-          "opponent": "go-ahead-eagles",
-          "isHome": false
-        },
-        {
-          "date": "2027-01-24",
-          "round": 20,
-          "probability": 0,
-          "cumulativeProbability": 0,
-          "opponent": "fc-utrecht",
-          "isHome": true
-        },
-        {
-          "date": "2027-01-31",
-          "round": 21,
-          "probability": 0,
-          "cumulativeProbability": 0,
-          "opponent": "feyenoord-rotterdam",
-          "isHome": true
-        },
-        {
-          "date": "2027-02-13",
-          "round": 22,
-          "probability": 0,
-          "cumulativeProbability": 0,
-          "opponent": "fc-groningen",
-          "isHome": false
-        },
-        {
-          "date": "2027-02-20",
-          "round": 23,
-          "probability": 0,
-          "cumulativeProbability": 0,
-          "opponent": "fortuna-sittard",
-          "isHome": true
-        },
-        {
-          "date": "2027-02-27",
-          "round": 24,
-          "probability": 0,
-          "cumulativeProbability": 0,
-          "opponent": "nec",
-          "isHome": false
-        },
-        {
-          "date": "2027-03-06",
-          "round": 25,
-          "probability": 0,
-          "cumulativeProbability": 0,
-          "opponent": "fc-twente-65",
-          "isHome": false
-        },
-        {
-          "date": "2027-03-13",
-          "round": 26,
-          "probability": 0,
-          "cumulativeProbability": 0,
-          "opponent": "sparta-rotterdam",
-          "isHome": true
-        },
-        {
-          "date": "2027-03-20",
-          "round": 27,
-          "probability": 0,
-          "cumulativeProbability": 0,
-          "opponent": "sbv-excelsior",
-          "isHome": true
-        },
-        {
-          "date": "2027-04-03",
-          "round": 28,
-          "probability": 0,
-          "cumulativeProbability": 0,
-          "opponent": "psv",
-          "isHome": false
-        },
-        {
-          "date": "2027-04-10",
-          "round": 29,
-          "probability": 0.0001,
-          "cumulativeProbability": 0.0001,
-          "opponent": "willem-ii-tilburg",
-          "isHome": false
-        },
-        {
-          "date": "2027-04-24",
-          "round": 30,
-          "probability": 0.00124,
-          "cumulativeProbability": 0.00134,
-          "opponent": "sc-cambuur-leeuwarden",
-          "isHome": true
-        },
-        {
-          "date": "2027-05-01",
-          "round": 31,
-          "probability": 0.00528,
-          "cumulativeProbability": 0.00662,
-          "opponent": "telstar-1963",
-          "isHome": false
-        },
-        {
-          "date": "2027-05-08",
-          "round": 32,
-          "probability": 0.01674,
-          "cumulativeProbability": 0.023360000000000002,
-          "opponent": "afc-ajax",
-          "isHome": true
-        },
-        {
-          "date": "2027-05-16",
-          "round": 33,
-          "probability": 0.05048,
-          "cumulativeProbability": 0.07384,
-          "opponent": "pec-zwolle",
-          "isHome": true
-        },
-        {
-          "date": "2027-05-23",
-          "round": 34,
-          "probability": 0.08972,
-          "cumulativeProbability": 0.16355999999999998,
-          "opponent": "ado-den-haag",
-          "isHome": false
-        }
-      ],
-      "bestCaseDate": "2027-01-31",
-      "bestCaseRound": 21,
-      "expectedDate": "2027-05-23",
-      "neverChampionProbability": 0.83644,
-      "neverChampionCount": 41822,
-      "positionProbabilities": {
-        "1": 0.16582,
-        "2": 0.32766,
-        "3": 0.29202,
-        "4": 0.14622,
-        "5": 0.05712,
-        "6": 0.01074,
-        "7": 0.00042
-      }
-    },
-    "feyenoord-rotterdam": {
-      "teamId": "feyenoord-rotterdam",
-      "teamName": "Feyenoord Rotterdam",
-      "totalChampionshipProbability": 0.1285,
-      "dateProbabilities": [
-        {
-          "date": "2026-09-15",
-          "round": 3,
-          "probability": 0,
-          "cumulativeProbability": 0,
-          "opponent": "vrij",
-          "isHome": false
-        },
-        {
-          "date": "2026-09-20",
-          "round": 7,
-          "probability": 0,
-          "cumulativeProbability": 0,
-          "opponent": "fc-utrecht",
-          "isHome": true
-        },
-        {
-          "date": "2026-10-10",
-          "round": 8,
-          "probability": 0,
-          "cumulativeProbability": 0,
-          "opponent": "az",
-          "isHome": true
-        },
-        {
-          "date": "2026-10-17",
-          "round": 9,
-          "probability": 0,
-          "cumulativeProbability": 0,
-          "opponent": "telstar-1963",
-          "isHome": false
-        },
-        {
-          "date": "2026-10-25",
-          "round": 10,
-          "probability": 0,
-          "cumulativeProbability": 0,
-          "opponent": "psv",
-          "isHome": false
-        },
-        {
-          "date": "2026-10-31",
-          "round": 11,
-          "probability": 0,
-          "cumulativeProbability": 0,
-          "opponent": "fortuna-sittard",
-          "isHome": true
-        },
-        {
-          "date": "2026-11-08",
-          "round": 12,
-          "probability": 0,
-          "cumulativeProbability": 0,
-          "opponent": "sc-heerenveen",
-          "isHome": false
-        },
-        {
-          "date": "2026-11-21",
-          "round": 13,
-          "probability": 0,
-          "cumulativeProbability": 0,
-          "opponent": "sbv-excelsior",
-          "isHome": true
-        },
-        {
-          "date": "2026-11-29",
-          "round": 14,
-          "probability": 0,
-          "cumulativeProbability": 0,
-          "opponent": "afc-ajax",
-          "isHome": true
-        },
-        {
-          "date": "2026-12-05",
-          "round": 15,
-          "probability": 0,
-          "cumulativeProbability": 0,
-          "opponent": "willem-ii-tilburg",
-          "isHome": false
-        },
-        {
-          "date": "2026-12-13",
-          "round": 16,
-          "probability": 0,
-          "cumulativeProbability": 0,
-          "opponent": "fc-groningen",
-          "isHome": false
-        },
-        {
-          "date": "2026-12-20",
-          "round": 17,
-          "probability": 0,
-          "cumulativeProbability": 0,
-          "opponent": "fc-twente-65",
-          "isHome": true
-        },
-        {
-          "date": "2027-01-10",
-          "round": 18,
-          "probability": 0,
-          "cumulativeProbability": 0,
-          "opponent": "psv",
-          "isHome": true
-        },
-        {
-          "date": "2027-01-16",
-          "round": 19,
-          "probability": 0,
-          "cumulativeProbability": 0,
-          "opponent": "sbv-excelsior",
-          "isHome": false
-        },
-        {
-          "date": "2027-01-23",
-          "round": 20,
-          "probability": 0,
-          "cumulativeProbability": 0,
-          "opponent": "pec-zwolle",
-          "isHome": true
-        },
-        {
-          "date": "2027-01-31",
-          "round": 21,
-          "probability": 0,
-          "cumulativeProbability": 0,
-          "opponent": "az",
-          "isHome": false
-        },
-        {
-          "date": "2027-02-13",
-          "round": 22,
-          "probability": 0,
-          "cumulativeProbability": 0,
-          "opponent": "nec",
-          "isHome": true
-        },
-        {
-          "date": "2027-02-20",
-          "round": 23,
-          "probability": 0,
-          "cumulativeProbability": 0,
-          "opponent": "telstar-1963",
-          "isHome": true
-        },
-        {
-          "date": "2027-02-27",
-          "round": 24,
-          "probability": 0,
-          "cumulativeProbability": 0,
-          "opponent": "afc-ajax",
-          "isHome": false
-        },
-        {
-          "date": "2027-03-06",
-          "round": 25,
-          "probability": 0,
-          "cumulativeProbability": 0,
-          "opponent": "sc-heerenveen",
-          "isHome": true
-        },
-        {
-          "date": "2027-03-13",
-          "round": 26,
-          "probability": 0,
-          "cumulativeProbability": 0,
-          "opponent": "go-ahead-eagles",
-          "isHome": false
-        },
-        {
-          "date": "2027-03-20",
-          "round": 27,
-          "probability": 0,
-          "cumulativeProbability": 0,
-          "opponent": "sc-cambuur-leeuwarden",
-          "isHome": true
-        },
-        {
-          "date": "2027-04-03",
-          "round": 28,
-          "probability": 0,
-          "cumulativeProbability": 0,
-          "opponent": "fortuna-sittard",
-          "isHome": false
-        },
-        {
-          "date": "2027-04-10",
-          "round": 29,
-          "probability": 0.0001,
-          "cumulativeProbability": 0.0001,
-          "opponent": "ado-den-haag",
-          "isHome": false
-        },
-        {
-          "date": "2027-04-24",
-          "round": 30,
-          "probability": 0.0008,
-          "cumulativeProbability": 0.0009000000000000001,
-          "opponent": "sparta-rotterdam",
-          "isHome": true
-        },
-        {
-          "date": "2027-05-01",
-          "round": 31,
-          "probability": 0.0059,
-          "cumulativeProbability": 0.0068,
-          "opponent": "willem-ii-tilburg",
-          "isHome": true
-        },
-        {
-          "date": "2027-05-08",
-          "round": 32,
-          "probability": 0.02316,
-          "cumulativeProbability": 0.02996,
-          "opponent": "fc-utrecht",
-          "isHome": false
-        },
-        {
-          "date": "2027-05-16",
-          "round": 33,
-          "probability": 0.02246,
-          "cumulativeProbability": 0.05242,
-          "opponent": "fc-twente-65",
-          "isHome": false
-        },
-        {
-          "date": "2027-05-23",
-          "round": 34,
-          "probability": 0.07608,
-          "cumulativeProbability": 0.1285,
-          "opponent": "fc-groningen",
-          "isHome": true
-        }
-      ],
-      "bestCaseDate": "2027-01-31",
-      "bestCaseRound": 21,
-      "expectedDate": "2027-05-23",
-      "neverChampionProbability": 0.8715,
-      "neverChampionCount": 43575,
-      "positionProbabilities": {
-        "1": 0.13772,
-        "2": 0.31532,
-        "3": 0.30472,
-        "4": 0.16478,
-        "5": 0.06442,
-        "6": 0.01248,
-        "7": 0.00054,
-        "8": 0.00002
-      }
-    },
-    "fc-twente-65": {
-      "teamId": "fc-twente-65",
-      "teamName": "FC Twente '65",
-      "totalChampionshipProbability": 0.00962,
-      "dateProbabilities": [
-        {
-          "date": "2026-09-15",
-          "round": 3,
-          "probability": 0,
-          "cumulativeProbability": 0,
-          "opponent": "vrij",
-          "isHome": false
-        },
-        {
-          "date": "2026-09-20",
-          "round": 7,
-          "probability": 0,
-          "cumulativeProbability": 0,
-          "opponent": "psv",
-          "isHome": true
-        },
-        {
-          "date": "2026-10-10",
-          "round": 8,
-          "probability": 0,
-          "cumulativeProbability": 0,
-          "opponent": "fortuna-sittard",
-          "isHome": false
-        },
-        {
-          "date": "2026-10-18",
-          "round": 9,
-          "probability": 0,
-          "cumulativeProbability": 0,
-          "opponent": "fc-utrecht",
-          "isHome": true
-        },
-        {
-          "date": "2026-10-25",
-          "round": 10,
-          "probability": 0,
-          "cumulativeProbability": 0,
-          "opponent": "az",
-          "isHome": false
-        },
-        {
-          "date": "2026-11-01",
-          "round": 11,
-          "probability": 0,
-          "cumulativeProbability": 0,
-          "opponent": "sbv-excelsior",
-          "isHome": false
-        },
-        {
-          "date": "2026-11-08",
-          "round": 12,
-          "probability": 0,
-          "cumulativeProbability": 0,
-          "opponent": "afc-ajax",
-          "isHome": true
-        },
-        {
-          "date": "2026-11-22",
-          "round": 13,
-          "probability": 0,
-          "cumulativeProbability": 0,
-          "opponent": "willem-ii-tilburg",
-          "isHome": true
-        },
-        {
-          "date": "2026-11-29",
-          "round": 14,
-          "probability": 0,
-          "cumulativeProbability": 0,
-          "opponent": "nec",
-          "isHome": false
-        },
-        {
-          "date": "2026-12-06",
-          "round": 15,
-          "probability": 0,
-          "cumulativeProbability": 0,
-          "opponent": "go-ahead-eagles",
-          "isHome": false
-        },
-        {
-          "date": "2027-02-06",
-          "round": 16,
-          "probability": 0,
-          "cumulativeProbability": 0,
-          "opponent": "sparta-rotterdam",
-          "isHome": true
-        },
-        {
-          "date": "2026-12-20",
-          "round": 17,
-          "probability": 0,
-          "cumulativeProbability": 0,
-          "opponent": "feyenoord-rotterdam",
-          "isHome": false
-        },
-        {
-          "date": "2027-01-08",
-          "round": 18,
-          "probability": 0,
-          "cumulativeProbability": 0,
-          "opponent": "fortuna-sittard",
-          "isHome": true
-        },
-        {
-          "date": "2027-01-17",
-          "round": 19,
-          "probability": 0,
-          "cumulativeProbability": 0,
-          "opponent": "fc-utrecht",
-          "isHome": false
-        },
-        {
-          "date": "2027-01-23",
-          "round": 20,
-          "probability": 0,
-          "cumulativeProbability": 0,
-          "opponent": "sc-heerenveen",
-          "isHome": true
-        },
-        {
-          "date": "2027-01-31",
-          "round": 21,
-          "probability": 0,
-          "cumulativeProbability": 0,
-          "opponent": "sc-cambuur-leeuwarden",
-          "isHome": true
-        },
-        {
-          "date": "2027-02-13",
-          "round": 22,
-          "probability": 0,
-          "cumulativeProbability": 0,
-          "opponent": "psv",
-          "isHome": false
-        },
-        {
-          "date": "2027-02-20",
-          "round": 23,
-          "probability": 0,
-          "cumulativeProbability": 0,
-          "opponent": "sbv-excelsior",
-          "isHome": true
-        },
-        {
-          "date": "2027-02-27",
-          "round": 24,
-          "probability": 0,
-          "cumulativeProbability": 0,
-          "opponent": "ado-den-haag",
-          "isHome": false
-        },
-        {
-          "date": "2027-03-06",
-          "round": 25,
-          "probability": 0,
-          "cumulativeProbability": 0,
-          "opponent": "az",
-          "isHome": true
-        },
-        {
-          "date": "2027-03-13",
-          "round": 26,
-          "probability": 0,
-          "cumulativeProbability": 0,
-          "opponent": "willem-ii-tilburg",
-          "isHome": false
-        },
-        {
-          "date": "2027-03-20",
-          "round": 27,
-          "probability": 0,
-          "cumulativeProbability": 0,
-          "opponent": "go-ahead-eagles",
-          "isHome": true
-        },
-        {
-          "date": "2027-04-03",
-          "round": 28,
-          "probability": 0,
-          "cumulativeProbability": 0,
-          "opponent": "afc-ajax",
-          "isHome": false
-        },
-        {
-          "date": "2027-04-10",
-          "round": 29,
-          "probability": 0,
-          "cumulativeProbability": 0,
-          "opponent": "telstar-1963",
-          "isHome": false
-        },
-        {
-          "date": "2027-04-24",
-          "round": 30,
-          "probability": 0,
-          "cumulativeProbability": 0,
-          "opponent": "nec",
-          "isHome": true
-        },
-        {
-          "date": "2027-05-01",
-          "round": 31,
-          "probability": 0.00002,
-          "cumulativeProbability": 0.00002,
-          "opponent": "sparta-rotterdam",
-          "isHome": false
-        },
-        {
-          "date": "2027-05-08",
-          "round": 32,
-          "probability": 0.00066,
-          "cumulativeProbability": 0.00068,
-          "opponent": "fc-groningen",
-          "isHome": true
-        },
-        {
-          "date": "2027-05-16",
-          "round": 33,
-          "probability": 0.00198,
-          "cumulativeProbability": 0.00266,
-          "opponent": "feyenoord-rotterdam",
-          "isHome": true
-        },
-        {
-          "date": "2027-05-23",
-          "round": 34,
-          "probability": 0.00696,
-          "cumulativeProbability": 0.00962,
-          "opponent": "pec-zwolle",
-          "isHome": false
-        }
-      ],
-      "bestCaseDate": "2027-02-06",
-      "bestCaseRound": 16,
-      "expectedDate": "2027-05-23",
-      "neverChampionProbability": 0.99038,
-      "neverChampionCount": 49519,
-      "positionProbabilities": {
-        "1": 0.00964,
-        "2": 0.04484,
-        "3": 0.11148,
-        "4": 0.24406,
-        "5": 0.40356,
-        "6": 0.16718,
-        "7": 0.01726,
-        "8": 0.00178,
-        "9": 0.00018,
-        "10": 0.00002
-      }
-    },
-    "afc-ajax": {
-      "teamId": "afc-ajax",
-      "teamName": "AFC Ajax",
-      "totalChampionshipProbability": 0.02048,
-      "dateProbabilities": [
-        {
-          "date": "2026-09-15",
-          "round": 3,
-          "probability": 0,
-          "cumulativeProbability": 0,
-          "opponent": "willem-ii-tilburg",
-          "isHome": true
-        },
-        {
-          "date": "2026-09-19",
-          "round": 7,
-          "probability": 0,
-          "cumulativeProbability": 0,
-          "opponent": "sbv-excelsior",
-          "isHome": true
-        },
-        {
-          "date": "2026-10-10",
-          "round": 8,
-          "probability": 0,
-          "cumulativeProbability": 0,
-          "opponent": "nec",
-          "isHome": true
-        },
-        {
-          "date": "2026-10-18",
-          "round": 9,
-          "probability": 0,
-          "cumulativeProbability": 0,
-          "opponent": "fc-groningen",
-          "isHome": false
-        },
-        {
-          "date": "2026-10-25",
-          "round": 10,
-          "probability": 0,
-          "cumulativeProbability": 0,
-          "opponent": "sparta-rotterdam",
-          "isHome": false
-        },
-        {
-          "date": "2026-10-31",
-          "round": 11,
-          "probability": 0,
-          "cumulativeProbability": 0,
-          "opponent": "az",
-          "isHome": true
-        },
-        {
-          "date": "2026-11-08",
-          "round": 12,
-          "probability": 0,
-          "cumulativeProbability": 0,
-          "opponent": "fc-twente-65",
-          "isHome": false
-        },
-        {
-          "date": "2026-11-22",
-          "round": 13,
-          "probability": 0,
-          "cumulativeProbability": 0,
-          "opponent": "ado-den-haag",
-          "isHome": true
-        },
-        {
-          "date": "2026-11-29",
-          "round": 14,
-          "probability": 0,
-          "cumulativeProbability": 0,
-          "opponent": "feyenoord-rotterdam",
-          "isHome": false
-        },
-        {
-          "date": "2026-12-06",
-          "round": 15,
-          "probability": 0,
-          "cumulativeProbability": 0,
-          "opponent": "fc-utrecht",
-          "isHome": true
-        },
-        {
-          "date": "2026-12-13",
-          "round": 16,
-          "probability": 0,
-          "cumulativeProbability": 0,
-          "opponent": "sc-cambuur-leeuwarden",
-          "isHome": true
-        },
-        {
-          "date": "2026-12-20",
-          "round": 17,
-          "probability": 0,
-          "cumulativeProbability": 0,
-          "opponent": "go-ahead-eagles",
-          "isHome": false
-        },
-        {
-          "date": "2027-01-09",
-          "round": 18,
-          "probability": 0,
-          "cumulativeProbability": 0,
-          "opponent": "willem-ii-tilburg",
-          "isHome": false
-        },
-        {
-          "date": "2027-01-17",
-          "round": 19,
-          "probability": 0,
-          "cumulativeProbability": 0,
-          "opponent": "fc-groningen",
-          "isHome": true
-        },
-        {
-          "date": "2027-01-23",
-          "round": 20,
-          "probability": 0,
-          "cumulativeProbability": 0,
-          "opponent": "telstar-1963",
-          "isHome": true
-        },
-        {
-          "date": "2027-01-31",
-          "round": 21,
-          "probability": 0,
-          "cumulativeProbability": 0,
-          "opponent": "sc-heerenveen",
-          "isHome": false
-        },
-        {
-          "date": "2027-02-13",
-          "round": 22,
-          "probability": 0,
-          "cumulativeProbability": 0,
-          "opponent": "sbv-excelsior",
-          "isHome": false
-        },
-        {
-          "date": "2027-02-20",
-          "round": 23,
-          "probability": 0,
-          "cumulativeProbability": 0,
-          "opponent": "go-ahead-eagles",
-          "isHome": true
-        },
-        {
-          "date": "2027-02-27",
-          "round": 24,
-          "probability": 0,
-          "cumulativeProbability": 0,
-          "opponent": "feyenoord-rotterdam",
-          "isHome": true
-        },
-        {
-          "date": "2027-03-06",
-          "round": 25,
-          "probability": 0,
-          "cumulativeProbability": 0,
-          "opponent": "ado-den-haag",
-          "isHome": false
-        },
-        {
-          "date": "2027-03-13",
-          "round": 26,
-          "probability": 0,
-          "cumulativeProbability": 0,
-          "opponent": "pec-zwolle",
-          "isHome": true
-        },
-        {
-          "date": "2027-03-20",
-          "round": 27,
-          "probability": 0,
-          "cumulativeProbability": 0,
-          "opponent": "nec",
-          "isHome": false
-        },
-        {
-          "date": "2027-04-03",
-          "round": 28,
-          "probability": 0,
-          "cumulativeProbability": 0,
-          "opponent": "fc-twente-65",
-          "isHome": true
-        },
-        {
-          "date": "2027-04-10",
-          "round": 29,
-          "probability": 0,
-          "cumulativeProbability": 0,
-          "opponent": "fc-utrecht",
-          "isHome": false
-        },
-        {
-          "date": "2027-04-24",
-          "round": 30,
-          "probability": 0.00004,
-          "cumulativeProbability": 0.00004,
-          "opponent": "psv",
-          "isHome": false
-        },
-        {
-          "date": "2027-05-01",
-          "round": 31,
-          "probability": 0.00016,
-          "cumulativeProbability": 0.0002,
-          "opponent": "fortuna-sittard",
-          "isHome": true
-        },
-        {
-          "date": "2027-05-08",
-          "round": 32,
-          "probability": 0.00064,
-          "cumulativeProbability": 0.00084,
-          "opponent": "az",
-          "isHome": false
-        },
-        {
-          "date": "2027-05-16",
-          "round": 33,
-          "probability": 0.00436,
-          "cumulativeProbability": 0.0052,
-          "opponent": "sparta-rotterdam",
-          "isHome": true
-        },
-        {
-          "date": "2027-05-23",
-          "round": 34,
-          "probability": 0.01528,
-          "cumulativeProbability": 0.020479999999999998,
-          "opponent": "sc-cambuur-leeuwarden",
-          "isHome": false
-        }
-      ],
-      "bestCaseDate": "2027-01-31",
-      "bestCaseRound": 21,
-      "expectedDate": "2027-05-23",
-      "neverChampionProbability": 0.97952,
-      "neverChampionCount": 48976,
-      "positionProbabilities": {
-        "1": 0.02078,
-        "2": 0.0896,
-        "3": 0.18712,
-        "4": 0.35278,
-        "5": 0.25912,
-        "6": 0.08502,
-        "7": 0.00516,
-        "8": 0.00034,
-        "9": 0.00008
-      }
-    },
-    "sbv-excelsior": {
-      "teamId": "sbv-excelsior",
-      "teamName": "SBV Excelsior",
-      "totalChampionshipProbability": 0.0004,
+    "ado-den-haag": {
+      "teamId": "ado-den-haag",
+      "teamName": "ADO Den Haag",
+      "totalChampionshipProbability": 0,
       "dateProbabilities": [
         {
           "date": "2026-09-15",
@@ -1288,305 +18,47 @@
           "round": 7,
           "probability": 0,
           "cumulativeProbability": 0,
-          "opponent": "afc-ajax",
-          "isHome": false
+          "opponent": "sc-cambuur-leeuwarden",
+          "isHome": true
         },
         {
           "date": "2026-10-11",
           "round": 8,
           "probability": 0,
           "cumulativeProbability": 0,
-          "opponent": "fc-groningen",
-          "isHome": true
+          "opponent": "telstar-1963",
+          "isHome": false
         },
         {
-          "date": "2026-10-16",
+          "date": "2026-10-17",
           "round": 9,
           "probability": 0,
           "cumulativeProbability": 0,
-          "opponent": "sc-heerenveen",
-          "isHome": false
+          "opponent": "psv",
+          "isHome": true
         },
         {
-          "date": "2026-10-25",
+          "date": "2026-10-24",
           "round": 10,
           "probability": 0,
           "cumulativeProbability": 0,
-          "opponent": "fortuna-sittard",
-          "isHome": false
+          "opponent": "sc-heerenveen",
+          "isHome": true
         },
         {
           "date": "2026-11-01",
           "round": 11,
           "probability": 0,
           "cumulativeProbability": 0,
-          "opponent": "fc-twente-65",
-          "isHome": true
-        },
-        {
-          "date": "2026-11-07",
-          "round": 12,
-          "probability": 0,
-          "cumulativeProbability": 0,
-          "opponent": "go-ahead-eagles",
-          "isHome": true
-        },
-        {
-          "date": "2026-11-21",
-          "round": 13,
-          "probability": 0,
-          "cumulativeProbability": 0,
-          "opponent": "feyenoord-rotterdam",
-          "isHome": false
-        },
-        {
-          "date": "2026-11-28",
-          "round": 14,
-          "probability": 0,
-          "cumulativeProbability": 0,
-          "opponent": "telstar-1963",
-          "isHome": true
-        },
-        {
-          "date": "2026-12-06",
-          "round": 15,
-          "probability": 0,
-          "cumulativeProbability": 0,
-          "opponent": "ado-den-haag",
-          "isHome": false
-        },
-        {
-          "date": "2026-12-12",
-          "round": 16,
-          "probability": 0,
-          "cumulativeProbability": 0,
           "opponent": "pec-zwolle",
           "isHome": false
         },
         {
-          "date": "2026-12-19",
-          "round": 17,
-          "probability": 0,
-          "cumulativeProbability": 0,
-          "opponent": "az",
-          "isHome": true
-        },
-        {
-          "date": "2027-01-09",
-          "round": 18,
+          "date": "2026-11-07",
+          "round": 12,
           "probability": 0,
           "cumulativeProbability": 0,
           "opponent": "sparta-rotterdam",
-          "isHome": false
-        },
-        {
-          "date": "2027-01-16",
-          "round": 19,
-          "probability": 0,
-          "cumulativeProbability": 0,
-          "opponent": "feyenoord-rotterdam",
-          "isHome": true
-        },
-        {
-          "date": "2027-01-22",
-          "round": 20,
-          "probability": 0,
-          "cumulativeProbability": 0,
-          "opponent": "fortuna-sittard",
-          "isHome": true
-        },
-        {
-          "date": "2027-01-29",
-          "round": 21,
-          "probability": 0,
-          "cumulativeProbability": 0,
-          "opponent": "fc-utrecht",
-          "isHome": false
-        },
-        {
-          "date": "2027-02-13",
-          "round": 22,
-          "probability": 0,
-          "cumulativeProbability": 0,
-          "opponent": "afc-ajax",
-          "isHome": true
-        },
-        {
-          "date": "2027-02-20",
-          "round": 23,
-          "probability": 0,
-          "cumulativeProbability": 0,
-          "opponent": "fc-twente-65",
-          "isHome": false
-        },
-        {
-          "date": "2027-02-27",
-          "round": 24,
-          "probability": 0,
-          "cumulativeProbability": 0,
-          "opponent": "sc-heerenveen",
-          "isHome": true
-        },
-        {
-          "date": "2027-03-06",
-          "round": 25,
-          "probability": 0,
-          "cumulativeProbability": 0,
-          "opponent": "go-ahead-eagles",
-          "isHome": false
-        },
-        {
-          "date": "2027-03-13",
-          "round": 26,
-          "probability": 0,
-          "cumulativeProbability": 0,
-          "opponent": "nec",
-          "isHome": true
-        },
-        {
-          "date": "2027-03-20",
-          "round": 27,
-          "probability": 0,
-          "cumulativeProbability": 0,
-          "opponent": "az",
-          "isHome": false
-        },
-        {
-          "date": "2027-04-03",
-          "round": 28,
-          "probability": 0,
-          "cumulativeProbability": 0,
-          "opponent": "pec-zwolle",
-          "isHome": true
-        },
-        {
-          "date": "2027-04-10",
-          "round": 29,
-          "probability": 0,
-          "cumulativeProbability": 0,
-          "opponent": "fc-groningen",
-          "isHome": false
-        },
-        {
-          "date": "2027-04-24",
-          "round": 30,
-          "probability": 0,
-          "cumulativeProbability": 0,
-          "opponent": "willem-ii-tilburg",
-          "isHome": true
-        },
-        {
-          "date": "2027-05-01",
-          "round": 31,
-          "probability": 0,
-          "cumulativeProbability": 0,
-          "opponent": "sc-cambuur-leeuwarden",
-          "isHome": true
-        },
-        {
-          "date": "2027-05-08",
-          "round": 32,
-          "probability": 0.00004,
-          "cumulativeProbability": 0.00004,
-          "opponent": "psv",
-          "isHome": false
-        },
-        {
-          "date": "2027-05-16",
-          "round": 33,
-          "probability": 0.00008,
-          "cumulativeProbability": 0.00012000000000000002,
-          "opponent": "ado-den-haag",
-          "isHome": true
-        },
-        {
-          "date": "2027-05-23",
-          "round": 34,
-          "probability": 0.00028,
-          "cumulativeProbability": 0.00039999999999999996,
-          "opponent": "telstar-1963",
-          "isHome": false
-        }
-      ],
-      "bestCaseDate": "2027-02-13",
-      "bestCaseRound": 22,
-      "expectedDate": "2027-05-23",
-      "neverChampionProbability": 0.9996,
-      "neverChampionCount": 49980,
-      "positionProbabilities": {
-        "1": 0.0004,
-        "2": 0.00426,
-        "3": 0.01876,
-        "4": 0.06484,
-        "5": 0.19494,
-        "6": 0.59502,
-        "7": 0.09894,
-        "8": 0.01802,
-        "9": 0.00398,
-        "10": 0.00064,
-        "11": 0.00018,
-        "13": 0.00002
-      }
-    },
-    "fortuna-sittard": {
-      "teamId": "fortuna-sittard",
-      "teamName": "Fortuna Sittard",
-      "totalChampionshipProbability": 0,
-      "dateProbabilities": [
-        {
-          "date": "2026-09-15",
-          "round": 3,
-          "probability": 0,
-          "cumulativeProbability": 0,
-          "opponent": "vrij",
-          "isHome": false
-        },
-        {
-          "date": "2026-09-19",
-          "round": 7,
-          "probability": 0,
-          "cumulativeProbability": 0,
-          "opponent": "willem-ii-tilburg",
-          "isHome": false
-        },
-        {
-          "date": "2026-10-10",
-          "round": 8,
-          "probability": 0,
-          "cumulativeProbability": 0,
-          "opponent": "fc-twente-65",
-          "isHome": true
-        },
-        {
-          "date": "2026-10-18",
-          "round": 9,
-          "probability": 0,
-          "cumulativeProbability": 0,
-          "opponent": "nec",
-          "isHome": false
-        },
-        {
-          "date": "2026-10-25",
-          "round": 10,
-          "probability": 0,
-          "cumulativeProbability": 0,
-          "opponent": "sbv-excelsior",
-          "isHome": true
-        },
-        {
-          "date": "2026-10-31",
-          "round": 11,
-          "probability": 0,
-          "cumulativeProbability": 0,
-          "opponent": "feyenoord-rotterdam",
-          "isHome": false
-        },
-        {
-          "date": "2026-11-07",
-          "round": 12,
-          "probability": 0,
-          "cumulativeProbability": 0,
-          "opponent": "telstar-1963",
           "isHome": true
         },
         {
@@ -1594,7 +66,7 @@
           "round": 13,
           "probability": 0,
           "cumulativeProbability": 0,
-          "opponent": "go-ahead-eagles",
+          "opponent": "afc-ajax",
           "isHome": false
         },
         {
@@ -1602,55 +74,55 @@
           "round": 14,
           "probability": 0,
           "cumulativeProbability": 0,
-          "opponent": "sc-heerenveen",
+          "opponent": "fc-utrecht",
           "isHome": true
         },
         {
-          "date": "2026-12-05",
+          "date": "2026-12-06",
           "round": 15,
           "probability": 0,
           "cumulativeProbability": 0,
-          "opponent": "pec-zwolle",
+          "opponent": "sbv-excelsior",
           "isHome": true
         },
         {
-          "date": "2026-12-12",
+          "date": "2026-12-13",
           "round": 16,
           "probability": 0,
           "cumulativeProbability": 0,
-          "opponent": "fc-utrecht",
+          "opponent": "willem-ii-tilburg",
           "isHome": false
         },
         {
-          "date": "2026-12-19",
+          "date": "2026-12-20",
           "round": 17,
           "probability": 0,
           "cumulativeProbability": 0,
-          "opponent": "sparta-rotterdam",
-          "isHome": true
+          "opponent": "nec",
+          "isHome": false
         },
         {
-          "date": "2027-01-08",
+          "date": "2027-01-10",
           "round": 18,
           "probability": 0,
           "cumulativeProbability": 0,
-          "opponent": "fc-twente-65",
-          "isHome": false
+          "opponent": "telstar-1963",
+          "isHome": true
         },
         {
           "date": "2027-01-16",
           "round": 19,
           "probability": 0,
           "cumulativeProbability": 0,
-          "opponent": "psv",
+          "opponent": "pec-zwolle",
           "isHome": true
         },
         {
-          "date": "2027-01-22",
+          "date": "2027-01-23",
           "round": 20,
           "probability": 0,
           "cumulativeProbability": 0,
-          "opponent": "sbv-excelsior",
+          "opponent": "psv",
           "isHome": false
         },
         {
@@ -1658,23 +130,23 @@
           "round": 21,
           "probability": 0,
           "cumulativeProbability": 0,
-          "opponent": "pec-zwolle",
-          "isHome": false
+          "opponent": "go-ahead-eagles",
+          "isHome": true
         },
         {
           "date": "2027-02-13",
           "round": 22,
           "probability": 0,
           "cumulativeProbability": 0,
-          "opponent": "ado-den-haag",
-          "isHome": true
+          "opponent": "fortuna-sittard",
+          "isHome": false
         },
         {
           "date": "2027-02-20",
           "round": 23,
           "probability": 0,
           "cumulativeProbability": 0,
-          "opponent": "az",
+          "opponent": "fc-utrecht",
           "isHome": false
         },
         {
@@ -1682,7 +154,7 @@
           "round": 24,
           "probability": 0,
           "cumulativeProbability": 0,
-          "opponent": "fc-utrecht",
+          "opponent": "fc-twente-65",
           "isHome": true
         },
         {
@@ -1690,7 +162,7 @@
           "round": 25,
           "probability": 0,
           "cumulativeProbability": 0,
-          "opponent": "nec",
+          "opponent": "afc-ajax",
           "isHome": true
         },
         {
@@ -1698,7 +170,7 @@
           "round": 26,
           "probability": 0,
           "cumulativeProbability": 0,
-          "opponent": "sc-heerenveen",
+          "opponent": "sc-cambuur-leeuwarden",
           "isHome": false
         },
         {
@@ -1706,39 +178,39 @@
           "round": 27,
           "probability": 0,
           "cumulativeProbability": 0,
-          "opponent": "telstar-1963",
-          "isHome": false
+          "opponent": "willem-ii-tilburg",
+          "isHome": true
         },
         {
           "date": "2027-04-03",
           "round": 28,
           "probability": 0,
           "cumulativeProbability": 0,
-          "opponent": "feyenoord-rotterdam",
-          "isHome": true
+          "opponent": "sparta-rotterdam",
+          "isHome": false
         },
         {
           "date": "2027-04-10",
           "round": 29,
           "probability": 0,
           "cumulativeProbability": 0,
-          "opponent": "sc-cambuur-leeuwarden",
-          "isHome": false
+          "opponent": "feyenoord-rotterdam",
+          "isHome": true
         },
         {
           "date": "2027-04-24",
           "round": 30,
           "probability": 0,
           "cumulativeProbability": 0,
-          "opponent": "fc-groningen",
-          "isHome": true
+          "opponent": "sc-heerenveen",
+          "isHome": false
         },
         {
           "date": "2027-05-01",
           "round": 31,
           "probability": 0,
           "cumulativeProbability": 0,
-          "opponent": "afc-ajax",
+          "opponent": "fc-groningen",
           "isHome": false
         },
         {
@@ -1746,7 +218,7 @@
           "round": 32,
           "probability": 0,
           "cumulativeProbability": 0,
-          "opponent": "go-ahead-eagles",
+          "opponent": "nec",
           "isHome": true
         },
         {
@@ -1754,44 +226,295 @@
           "round": 33,
           "probability": 0,
           "cumulativeProbability": 0,
-          "opponent": "willem-ii-tilburg",
-          "isHome": true
+          "opponent": "sbv-excelsior",
+          "isHome": false
         },
         {
           "date": "2027-05-23",
           "round": 34,
           "probability": 0,
           "cumulativeProbability": 0,
-          "opponent": "sparta-rotterdam",
-          "isHome": false
+          "opponent": "az",
+          "isHome": true
         }
       ],
-      "bestCaseDate": "2027-02-13",
-      "bestCaseRound": 22,
+      "bestCaseDate": "2027-02-20",
+      "bestCaseRound": 23,
       "expectedDate": null,
       "neverChampionProbability": 1,
       "neverChampionCount": 50000,
       "positionProbabilities": {
-        "3": 0.00002,
-        "4": 0.00014,
-        "5": 0.00154,
-        "6": 0.01826,
-        "7": 0.15498,
-        "8": 0.2685,
-        "9": 0.24236,
-        "10": 0.16572,
-        "11": 0.09066,
-        "12": 0.04064,
-        "13": 0.0136,
-        "14": 0.00286,
-        "15": 0.00066,
-        "16": 0.00006
+        "9": 0.00004,
+        "10": 0.00012,
+        "11": 0.00082,
+        "12": 0.00448,
+        "13": 0.01594,
+        "14": 0.05058,
+        "15": 0.10914,
+        "16": 0.20186,
+        "17": 0.27698,
+        "18": 0.34004
       }
     },
-    "go-ahead-eagles": {
-      "teamId": "go-ahead-eagles",
-      "teamName": "Go Ahead Eagles",
-      "totalChampionshipProbability": 0,
+    "afc-ajax": {
+      "teamId": "afc-ajax",
+      "teamName": "AFC Ajax",
+      "totalChampionshipProbability": 0.02192,
+      "dateProbabilities": [
+        {
+          "date": "2026-09-15",
+          "round": 3,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "willem-ii-tilburg",
+          "isHome": true
+        },
+        {
+          "date": "2026-09-19",
+          "round": 7,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "sbv-excelsior",
+          "isHome": true
+        },
+        {
+          "date": "2026-10-10",
+          "round": 8,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "nec",
+          "isHome": true
+        },
+        {
+          "date": "2026-10-18",
+          "round": 9,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "fc-groningen",
+          "isHome": false
+        },
+        {
+          "date": "2026-10-25",
+          "round": 10,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "sparta-rotterdam",
+          "isHome": false
+        },
+        {
+          "date": "2026-10-31",
+          "round": 11,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "az",
+          "isHome": true
+        },
+        {
+          "date": "2026-11-08",
+          "round": 12,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "fc-twente-65",
+          "isHome": false
+        },
+        {
+          "date": "2026-11-22",
+          "round": 13,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "ado-den-haag",
+          "isHome": true
+        },
+        {
+          "date": "2026-11-29",
+          "round": 14,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "feyenoord-rotterdam",
+          "isHome": false
+        },
+        {
+          "date": "2026-12-06",
+          "round": 15,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "fc-utrecht",
+          "isHome": true
+        },
+        {
+          "date": "2026-12-13",
+          "round": 16,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "sc-cambuur-leeuwarden",
+          "isHome": true
+        },
+        {
+          "date": "2026-12-20",
+          "round": 17,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "go-ahead-eagles",
+          "isHome": false
+        },
+        {
+          "date": "2027-01-09",
+          "round": 18,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "willem-ii-tilburg",
+          "isHome": false
+        },
+        {
+          "date": "2027-01-17",
+          "round": 19,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "fc-groningen",
+          "isHome": true
+        },
+        {
+          "date": "2027-01-23",
+          "round": 20,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "telstar-1963",
+          "isHome": true
+        },
+        {
+          "date": "2027-01-31",
+          "round": 21,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "sc-heerenveen",
+          "isHome": false
+        },
+        {
+          "date": "2027-02-13",
+          "round": 22,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "sbv-excelsior",
+          "isHome": false
+        },
+        {
+          "date": "2027-02-20",
+          "round": 23,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "go-ahead-eagles",
+          "isHome": true
+        },
+        {
+          "date": "2027-02-27",
+          "round": 24,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "feyenoord-rotterdam",
+          "isHome": true
+        },
+        {
+          "date": "2027-03-06",
+          "round": 25,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "ado-den-haag",
+          "isHome": false
+        },
+        {
+          "date": "2027-03-13",
+          "round": 26,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "pec-zwolle",
+          "isHome": true
+        },
+        {
+          "date": "2027-03-20",
+          "round": 27,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "nec",
+          "isHome": false
+        },
+        {
+          "date": "2027-04-03",
+          "round": 28,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "fc-twente-65",
+          "isHome": true
+        },
+        {
+          "date": "2027-04-10",
+          "round": 29,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "fc-utrecht",
+          "isHome": false
+        },
+        {
+          "date": "2027-04-24",
+          "round": 30,
+          "probability": 0.00004,
+          "cumulativeProbability": 0.00004,
+          "opponent": "psv",
+          "isHome": false
+        },
+        {
+          "date": "2027-05-01",
+          "round": 31,
+          "probability": 0.00022,
+          "cumulativeProbability": 0.00026000000000000003,
+          "opponent": "fortuna-sittard",
+          "isHome": true
+        },
+        {
+          "date": "2027-05-08",
+          "round": 32,
+          "probability": 0.00096,
+          "cumulativeProbability": 0.0012200000000000002,
+          "opponent": "az",
+          "isHome": false
+        },
+        {
+          "date": "2027-05-16",
+          "round": 33,
+          "probability": 0.00432,
+          "cumulativeProbability": 0.00554,
+          "opponent": "sparta-rotterdam",
+          "isHome": true
+        },
+        {
+          "date": "2027-05-23",
+          "round": 34,
+          "probability": 0.01638,
+          "cumulativeProbability": 0.02192,
+          "opponent": "sc-cambuur-leeuwarden",
+          "isHome": false
+        }
+      ],
+      "bestCaseDate": "2027-01-31",
+      "bestCaseRound": 21,
+      "expectedDate": "2027-05-23",
+      "neverChampionProbability": 0.97808,
+      "neverChampionCount": 48904,
+      "positionProbabilities": {
+        "1": 0.02216,
+        "2": 0.08808,
+        "3": 0.18818,
+        "4": 0.35106,
+        "5": 0.25896,
+        "6": 0.0852,
+        "7": 0.0059,
+        "8": 0.00042,
+        "9": 0.00004
+      }
+    },
+    "az": {
+      "teamId": "az",
+      "teamName": "AZ",
+      "totalChampionshipProbability": 0.16092,
       "dateProbabilities": [
         {
           "date": "2026-09-15",
@@ -1806,31 +529,31 @@
           "round": 7,
           "probability": 0,
           "cumulativeProbability": 0,
-          "opponent": "nec",
-          "isHome": false
+          "opponent": "telstar-1963",
+          "isHome": true
         },
         {
           "date": "2026-10-10",
           "round": 8,
           "probability": 0,
           "cumulativeProbability": 0,
-          "opponent": "sparta-rotterdam",
-          "isHome": true
+          "opponent": "feyenoord-rotterdam",
+          "isHome": false
         },
         {
           "date": "2026-10-18",
           "round": 9,
           "probability": 0,
           "cumulativeProbability": 0,
-          "opponent": "pec-zwolle",
+          "opponent": "sc-cambuur-leeuwarden",
           "isHome": false
         },
         {
-          "date": "2026-10-23",
+          "date": "2026-10-25",
           "round": 10,
           "probability": 0,
           "cumulativeProbability": 0,
-          "opponent": "telstar-1963",
+          "opponent": "fc-twente-65",
           "isHome": true
         },
         {
@@ -1838,111 +561,111 @@
           "round": 11,
           "probability": 0,
           "cumulativeProbability": 0,
-          "opponent": "sc-cambuur-leeuwarden",
+          "opponent": "afc-ajax",
           "isHome": false
         },
         {
-          "date": "2026-11-07",
+          "date": "2026-11-08",
           "round": 12,
           "probability": 0,
           "cumulativeProbability": 0,
-          "opponent": "sbv-excelsior",
-          "isHome": false
+          "opponent": "fc-groningen",
+          "isHome": true
         },
         {
           "date": "2026-11-22",
           "round": 13,
           "probability": 0,
           "cumulativeProbability": 0,
-          "opponent": "fortuna-sittard",
-          "isHome": true
+          "opponent": "sparta-rotterdam",
+          "isHome": false
         },
         {
-          "date": "2026-11-28",
+          "date": "2026-11-29",
           "round": 14,
           "probability": 0,
           "cumulativeProbability": 0,
-          "opponent": "psv",
+          "opponent": "pec-zwolle",
           "isHome": false
         },
         {
-          "date": "2026-12-06",
+          "date": "2026-12-05",
           "round": 15,
           "probability": 0,
           "cumulativeProbability": 0,
-          "opponent": "fc-twente-65",
+          "opponent": "psv",
           "isHome": true
         },
         {
-          "date": "2026-12-12",
+          "date": "2026-12-13",
           "round": 16,
           "probability": 0,
           "cumulativeProbability": 0,
-          "opponent": "sc-heerenveen",
-          "isHome": false
-        },
-        {
-          "date": "2026-12-20",
-          "round": 17,
-          "probability": 0,
-          "cumulativeProbability": 0,
-          "opponent": "afc-ajax",
+          "opponent": "nec",
           "isHome": true
         },
         {
-          "date": "2027-01-10",
+          "date": "2026-12-19",
+          "round": 17,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "sbv-excelsior",
+          "isHome": false
+        },
+        {
+          "date": "2027-01-09",
           "round": 18,
           "probability": 0,
           "cumulativeProbability": 0,
-          "opponent": "fc-groningen",
-          "isHome": false
+          "opponent": "sc-heerenveen",
+          "isHome": true
         },
         {
           "date": "2027-01-17",
           "round": 19,
           "probability": 0,
           "cumulativeProbability": 0,
-          "opponent": "az",
-          "isHome": true
+          "opponent": "go-ahead-eagles",
+          "isHome": false
         },
         {
           "date": "2027-01-24",
           "round": 20,
           "probability": 0,
           "cumulativeProbability": 0,
-          "opponent": "sc-cambuur-leeuwarden",
+          "opponent": "fc-utrecht",
           "isHome": true
         },
         {
-          "date": "2027-01-30",
+          "date": "2027-01-31",
           "round": 21,
           "probability": 0,
           "cumulativeProbability": 0,
-          "opponent": "ado-den-haag",
-          "isHome": false
+          "opponent": "feyenoord-rotterdam",
+          "isHome": true
         },
         {
           "date": "2027-02-13",
           "round": 22,
           "probability": 0,
           "cumulativeProbability": 0,
-          "opponent": "pec-zwolle",
-          "isHome": true
+          "opponent": "fc-groningen",
+          "isHome": false
         },
         {
           "date": "2027-02-20",
           "round": 23,
           "probability": 0,
           "cumulativeProbability": 0,
-          "opponent": "afc-ajax",
-          "isHome": false
+          "opponent": "fortuna-sittard",
+          "isHome": true
         },
         {
           "date": "2027-02-27",
           "round": 24,
           "probability": 0,
           "cumulativeProbability": 0,
-          "opponent": "telstar-1963",
+          "opponent": "nec",
           "isHome": false
         },
         {
@@ -1950,15 +673,15 @@
           "round": 25,
           "probability": 0,
           "cumulativeProbability": 0,
-          "opponent": "sbv-excelsior",
-          "isHome": true
+          "opponent": "fc-twente-65",
+          "isHome": false
         },
         {
           "date": "2027-03-13",
           "round": 26,
           "probability": 0,
           "cumulativeProbability": 0,
-          "opponent": "feyenoord-rotterdam",
+          "opponent": "sparta-rotterdam",
           "isHome": true
         },
         {
@@ -1966,86 +689,79 @@
           "round": 27,
           "probability": 0,
           "cumulativeProbability": 0,
-          "opponent": "fc-twente-65",
-          "isHome": false
+          "opponent": "sbv-excelsior",
+          "isHome": true
         },
         {
           "date": "2027-04-03",
           "round": 28,
           "probability": 0,
           "cumulativeProbability": 0,
-          "opponent": "nec",
-          "isHome": true
+          "opponent": "psv",
+          "isHome": false
         },
         {
           "date": "2027-04-10",
           "round": 29,
-          "probability": 0,
-          "cumulativeProbability": 0,
-          "opponent": "sparta-rotterdam",
+          "probability": 0.00006,
+          "cumulativeProbability": 0.00006,
+          "opponent": "willem-ii-tilburg",
           "isHome": false
         },
         {
           "date": "2027-04-24",
           "round": 30,
-          "probability": 0,
-          "cumulativeProbability": 0,
-          "opponent": "fc-utrecht",
+          "probability": 0.0013,
+          "cumulativeProbability": 0.0013599999999999999,
+          "opponent": "sc-cambuur-leeuwarden",
           "isHome": true
         },
         {
           "date": "2027-05-01",
           "round": 31,
-          "probability": 0,
-          "cumulativeProbability": 0,
-          "opponent": "psv",
-          "isHome": true
+          "probability": 0.00572,
+          "cumulativeProbability": 0.00708,
+          "opponent": "telstar-1963",
+          "isHome": false
         },
         {
           "date": "2027-05-08",
           "round": 32,
-          "probability": 0,
-          "cumulativeProbability": 0,
-          "opponent": "fortuna-sittard",
-          "isHome": false
+          "probability": 0.01456,
+          "cumulativeProbability": 0.02164,
+          "opponent": "afc-ajax",
+          "isHome": true
         },
         {
           "date": "2027-05-16",
           "round": 33,
-          "probability": 0,
-          "cumulativeProbability": 0,
-          "opponent": "sc-heerenveen",
+          "probability": 0.0487,
+          "cumulativeProbability": 0.07034,
+          "opponent": "pec-zwolle",
           "isHome": true
         },
         {
           "date": "2027-05-23",
           "round": 34,
-          "probability": 0,
-          "cumulativeProbability": 0,
-          "opponent": "willem-ii-tilburg",
+          "probability": 0.09058,
+          "cumulativeProbability": 0.16092,
+          "opponent": "ado-den-haag",
           "isHome": false
         }
       ],
-      "bestCaseDate": "2027-02-13",
-      "bestCaseRound": 22,
-      "expectedDate": null,
-      "neverChampionProbability": 1,
-      "neverChampionCount": 50000,
+      "bestCaseDate": "2027-01-31",
+      "bestCaseRound": 21,
+      "expectedDate": "2027-05-23",
+      "neverChampionProbability": 0.83908,
+      "neverChampionCount": 41954,
       "positionProbabilities": {
-        "2": 0.00004,
-        "3": 0.00026,
-        "4": 0.00186,
-        "5": 0.01364,
-        "6": 0.09284,
-        "7": 0.50352,
-        "8": 0.21326,
-        "9": 0.10276,
-        "10": 0.04582,
-        "11": 0.01864,
-        "12": 0.00592,
-        "13": 0.00112,
-        "14": 0.0003,
-        "15": 0.00002
+        "1": 0.16342,
+        "2": 0.32696,
+        "3": 0.29422,
+        "4": 0.14692,
+        "5": 0.0571,
+        "6": 0.01132,
+        "7": 0.00006
       }
     },
     "fc-groningen": {
@@ -2292,27 +1008,26 @@
       "neverChampionProbability": 1,
       "neverChampionCount": 50000,
       "positionProbabilities": {
-        "4": 0.00008,
-        "5": 0.00066,
-        "6": 0.0134,
-        "7": 0.12948,
-        "8": 0.25796,
-        "9": 0.24916,
-        "10": 0.17462,
-        "11": 0.10174,
-        "12": 0.04992,
-        "13": 0.0176,
-        "14": 0.0045,
-        "15": 0.00072,
-        "16": 0.00012,
-        "17": 0.00002,
-        "18": 0.00002
+        "4": 0.00006,
+        "5": 0.00094,
+        "6": 0.01346,
+        "7": 0.1281,
+        "8": 0.2587,
+        "9": 0.24646,
+        "10": 0.17576,
+        "11": 0.10218,
+        "12": 0.05078,
+        "13": 0.01786,
+        "14": 0.00466,
+        "15": 0.0009,
+        "16": 0.0001,
+        "17": 0.00004
       }
     },
-    "nec": {
-      "teamId": "nec",
-      "teamName": "NEC",
-      "totalChampionshipProbability": 0,
+    "fc-twente-65": {
+      "teamId": "fc-twente-65",
+      "teamName": "FC Twente '65",
+      "totalChampionshipProbability": 0.01066,
       "dateProbabilities": [
         {
           "date": "2026-09-15",
@@ -2327,7 +1042,7 @@
           "round": 7,
           "probability": 0,
           "cumulativeProbability": 0,
-          "opponent": "go-ahead-eagles",
+          "opponent": "psv",
           "isHome": true
         },
         {
@@ -2335,7 +1050,7 @@
           "round": 8,
           "probability": 0,
           "cumulativeProbability": 0,
-          "opponent": "afc-ajax",
+          "opponent": "fortuna-sittard",
           "isHome": false
         },
         {
@@ -2343,7 +1058,7 @@
           "round": 9,
           "probability": 0,
           "cumulativeProbability": 0,
-          "opponent": "fortuna-sittard",
+          "opponent": "fc-utrecht",
           "isHome": true
         },
         {
@@ -2351,298 +1066,39 @@
           "round": 10,
           "probability": 0,
           "cumulativeProbability": 0,
-          "opponent": "fc-groningen",
-          "isHome": true
+          "opponent": "az",
+          "isHome": false
         },
         {
-          "date": "2026-10-31",
+          "date": "2026-11-01",
           "round": 11,
-          "probability": 0,
-          "cumulativeProbability": 0,
-          "opponent": "sc-heerenveen",
-          "isHome": false
-        },
-        {
-          "date": "2026-11-08",
-          "round": 12,
-          "probability": 0,
-          "cumulativeProbability": 0,
-          "opponent": "fc-utrecht",
-          "isHome": false
-        },
-        {
-          "date": "2026-11-21",
-          "round": 13,
-          "probability": 0,
-          "cumulativeProbability": 0,
-          "opponent": "psv",
-          "isHome": true
-        },
-        {
-          "date": "2026-11-29",
-          "round": 14,
-          "probability": 0,
-          "cumulativeProbability": 0,
-          "opponent": "fc-twente-65",
-          "isHome": true
-        },
-        {
-          "date": "2026-12-05",
-          "round": 15,
-          "probability": 0,
-          "cumulativeProbability": 0,
-          "opponent": "sparta-rotterdam",
-          "isHome": false
-        },
-        {
-          "date": "2026-12-13",
-          "round": 16,
-          "probability": 0,
-          "cumulativeProbability": 0,
-          "opponent": "az",
-          "isHome": false
-        },
-        {
-          "date": "2026-12-20",
-          "round": 17,
-          "probability": 0,
-          "cumulativeProbability": 0,
-          "opponent": "ado-den-haag",
-          "isHome": true
-        },
-        {
-          "date": "2027-01-10",
-          "round": 18,
-          "probability": 0,
-          "cumulativeProbability": 0,
-          "opponent": "sc-cambuur-leeuwarden",
-          "isHome": true
-        },
-        {
-          "date": "2027-01-16",
-          "round": 19,
-          "probability": 0,
-          "cumulativeProbability": 0,
-          "opponent": "telstar-1963",
-          "isHome": false
-        },
-        {
-          "date": "2027-01-24",
-          "round": 20,
-          "probability": 0,
-          "cumulativeProbability": 0,
-          "opponent": "willem-ii-tilburg",
-          "isHome": true
-        },
-        {
-          "date": "2027-01-31",
-          "round": 21,
-          "probability": 0,
-          "cumulativeProbability": 0,
-          "opponent": "fc-groningen",
-          "isHome": false
-        },
-        {
-          "date": "2027-02-13",
-          "round": 22,
-          "probability": 0,
-          "cumulativeProbability": 0,
-          "opponent": "feyenoord-rotterdam",
-          "isHome": false
-        },
-        {
-          "date": "2027-02-20",
-          "round": 23,
-          "probability": 0,
-          "cumulativeProbability": 0,
-          "opponent": "sparta-rotterdam",
-          "isHome": true
-        },
-        {
-          "date": "2027-02-27",
-          "round": 24,
-          "probability": 0,
-          "cumulativeProbability": 0,
-          "opponent": "az",
-          "isHome": true
-        },
-        {
-          "date": "2027-03-06",
-          "round": 25,
-          "probability": 0,
-          "cumulativeProbability": 0,
-          "opponent": "fortuna-sittard",
-          "isHome": false
-        },
-        {
-          "date": "2027-03-13",
-          "round": 26,
           "probability": 0,
           "cumulativeProbability": 0,
           "opponent": "sbv-excelsior",
           "isHome": false
         },
         {
-          "date": "2027-03-20",
-          "round": 27,
+          "date": "2026-11-08",
+          "round": 12,
           "probability": 0,
           "cumulativeProbability": 0,
           "opponent": "afc-ajax",
           "isHome": true
         },
         {
-          "date": "2027-04-03",
-          "round": 28,
-          "probability": 0,
-          "cumulativeProbability": 0,
-          "opponent": "go-ahead-eagles",
-          "isHome": false
-        },
-        {
-          "date": "2027-04-10",
-          "round": 29,
-          "probability": 0,
-          "cumulativeProbability": 0,
-          "opponent": "sc-heerenveen",
-          "isHome": true
-        },
-        {
-          "date": "2027-04-24",
-          "round": 30,
-          "probability": 0,
-          "cumulativeProbability": 0,
-          "opponent": "fc-twente-65",
-          "isHome": false
-        },
-        {
-          "date": "2027-05-01",
-          "round": 31,
-          "probability": 0,
-          "cumulativeProbability": 0,
-          "opponent": "pec-zwolle",
-          "isHome": true
-        },
-        {
-          "date": "2027-05-08",
-          "round": 32,
-          "probability": 0,
-          "cumulativeProbability": 0,
-          "opponent": "ado-den-haag",
-          "isHome": false
-        },
-        {
-          "date": "2027-05-16",
-          "round": 33,
-          "probability": 0,
-          "cumulativeProbability": 0,
-          "opponent": "psv",
-          "isHome": false
-        },
-        {
-          "date": "2027-05-23",
-          "round": 34,
-          "probability": 0,
-          "cumulativeProbability": 0,
-          "opponent": "fc-utrecht",
-          "isHome": true
-        }
-      ],
-      "bestCaseDate": "2027-02-13",
-      "bestCaseRound": 22,
-      "expectedDate": null,
-      "neverChampionProbability": 1,
-      "neverChampionCount": 50000,
-      "positionProbabilities": {
-        "5": 0.0002,
-        "6": 0.00328,
-        "7": 0.06012,
-        "8": 0.14374,
-        "9": 0.2013,
-        "10": 0.24426,
-        "11": 0.1789,
-        "12": 0.10548,
-        "13": 0.04772,
-        "14": 0.01154,
-        "15": 0.00306,
-        "16": 0.00032,
-        "17": 0.00008
-      }
-    },
-    "sc-heerenveen": {
-      "teamId": "sc-heerenveen",
-      "teamName": "SC Heerenveen",
-      "totalChampionshipProbability": 0,
-      "dateProbabilities": [
-        {
-          "date": "2026-09-15",
-          "round": 3,
-          "probability": 0,
-          "cumulativeProbability": 0,
-          "opponent": "vrij",
-          "isHome": false
-        },
-        {
-          "date": "2026-09-19",
-          "round": 7,
-          "probability": 0,
-          "cumulativeProbability": 0,
-          "opponent": "sparta-rotterdam",
-          "isHome": false
-        },
-        {
-          "date": "2026-10-09",
-          "round": 8,
-          "probability": 0,
-          "cumulativeProbability": 0,
-          "opponent": "psv",
-          "isHome": false
-        },
-        {
-          "date": "2026-10-16",
-          "round": 9,
-          "probability": 0,
-          "cumulativeProbability": 0,
-          "opponent": "sbv-excelsior",
-          "isHome": true
-        },
-        {
-          "date": "2026-10-24",
-          "round": 10,
-          "probability": 0,
-          "cumulativeProbability": 0,
-          "opponent": "ado-den-haag",
-          "isHome": false
-        },
-        {
-          "date": "2026-10-31",
-          "round": 11,
-          "probability": 0,
-          "cumulativeProbability": 0,
-          "opponent": "nec",
-          "isHome": true
-        },
-        {
-          "date": "2026-11-08",
-          "round": 12,
-          "probability": 0,
-          "cumulativeProbability": 0,
-          "opponent": "feyenoord-rotterdam",
-          "isHome": true
-        },
-        {
-          "date": "2026-11-21",
+          "date": "2026-11-22",
           "round": 13,
           "probability": 0,
           "cumulativeProbability": 0,
-          "opponent": "fc-groningen",
-          "isHome": false
+          "opponent": "willem-ii-tilburg",
+          "isHome": true
         },
         {
           "date": "2026-11-29",
           "round": 14,
           "probability": 0,
           "cumulativeProbability": 0,
-          "opponent": "fortuna-sittard",
+          "opponent": "nec",
           "isHome": false
         },
         {
@@ -2650,622 +1106,103 @@
           "round": 15,
           "probability": 0,
           "cumulativeProbability": 0,
-          "opponent": "sc-cambuur-leeuwarden",
-          "isHome": true
-        },
-        {
-          "date": "2026-12-12",
-          "round": 16,
-          "probability": 0,
-          "cumulativeProbability": 0,
-          "opponent": "go-ahead-eagles",
-          "isHome": true
-        },
-        {
-          "date": "2026-12-19",
-          "round": 17,
-          "probability": 0,
-          "cumulativeProbability": 0,
-          "opponent": "fc-utrecht",
-          "isHome": false
-        },
-        {
-          "date": "2027-01-09",
-          "round": 18,
-          "probability": 0,
-          "cumulativeProbability": 0,
-          "opponent": "az",
-          "isHome": false
-        },
-        {
-          "date": "2027-01-15",
-          "round": 19,
-          "probability": 0,
-          "cumulativeProbability": 0,
-          "opponent": "sparta-rotterdam",
-          "isHome": true
-        },
-        {
-          "date": "2027-01-23",
-          "round": 20,
-          "probability": 0,
-          "cumulativeProbability": 0,
-          "opponent": "fc-twente-65",
-          "isHome": false
-        },
-        {
-          "date": "2027-01-31",
-          "round": 21,
-          "probability": 0,
-          "cumulativeProbability": 0,
-          "opponent": "afc-ajax",
-          "isHome": true
-        },
-        {
-          "date": "2027-02-13",
-          "round": 22,
-          "probability": 0,
-          "cumulativeProbability": 0,
-          "opponent": "telstar-1963",
-          "isHome": false
-        },
-        {
-          "date": "2027-02-20",
-          "round": 23,
-          "probability": 0,
-          "cumulativeProbability": 0,
-          "opponent": "willem-ii-tilburg",
-          "isHome": true
-        },
-        {
-          "date": "2027-02-27",
-          "round": 24,
-          "probability": 0,
-          "cumulativeProbability": 0,
-          "opponent": "sbv-excelsior",
-          "isHome": false
-        },
-        {
-          "date": "2027-03-06",
-          "round": 25,
-          "probability": 0,
-          "cumulativeProbability": 0,
-          "opponent": "feyenoord-rotterdam",
-          "isHome": false
-        },
-        {
-          "date": "2027-03-13",
-          "round": 26,
-          "probability": 0,
-          "cumulativeProbability": 0,
-          "opponent": "fortuna-sittard",
-          "isHome": true
-        },
-        {
-          "date": "2027-03-20",
-          "round": 27,
-          "probability": 0,
-          "cumulativeProbability": 0,
-          "opponent": "pec-zwolle",
-          "isHome": false
-        },
-        {
-          "date": "2027-04-03",
-          "round": 28,
-          "probability": 0,
-          "cumulativeProbability": 0,
-          "opponent": "fc-groningen",
-          "isHome": true
-        },
-        {
-          "date": "2027-04-10",
-          "round": 29,
-          "probability": 0,
-          "cumulativeProbability": 0,
-          "opponent": "nec",
-          "isHome": false
-        },
-        {
-          "date": "2027-04-24",
-          "round": 30,
-          "probability": 0,
-          "cumulativeProbability": 0,
-          "opponent": "ado-den-haag",
-          "isHome": true
-        },
-        {
-          "date": "2027-05-01",
-          "round": 31,
-          "probability": 0,
-          "cumulativeProbability": 0,
-          "opponent": "fc-utrecht",
-          "isHome": true
-        },
-        {
-          "date": "2027-05-08",
-          "round": 32,
-          "probability": 0,
-          "cumulativeProbability": 0,
-          "opponent": "sc-cambuur-leeuwarden",
-          "isHome": false
-        },
-        {
-          "date": "2027-05-16",
-          "round": 33,
-          "probability": 0,
-          "cumulativeProbability": 0,
           "opponent": "go-ahead-eagles",
           "isHome": false
-        },
-        {
-          "date": "2027-05-23",
-          "round": 34,
-          "probability": 0,
-          "cumulativeProbability": 0,
-          "opponent": "psv",
-          "isHome": true
-        }
-      ],
-      "bestCaseDate": "2027-02-13",
-      "bestCaseRound": 22,
-      "expectedDate": null,
-      "neverChampionProbability": 1,
-      "neverChampionCount": 50000,
-      "positionProbabilities": {
-        "5": 0.00002,
-        "6": 0.0007,
-        "7": 0.0155,
-        "8": 0.0487,
-        "9": 0.09552,
-        "10": 0.16216,
-        "11": 0.23898,
-        "12": 0.22088,
-        "13": 0.13686,
-        "14": 0.05438,
-        "15": 0.01912,
-        "16": 0.00584,
-        "17": 0.00114,
-        "18": 0.0002
-      }
-    },
-    "sparta-rotterdam": {
-      "teamId": "sparta-rotterdam",
-      "teamName": "Sparta Rotterdam",
-      "totalChampionshipProbability": 0,
-      "dateProbabilities": [
-        {
-          "date": "2026-09-15",
-          "round": 3,
-          "probability": 0,
-          "cumulativeProbability": 0,
-          "opponent": "vrij",
-          "isHome": false
-        },
-        {
-          "date": "2026-09-19",
-          "round": 7,
-          "probability": 0,
-          "cumulativeProbability": 0,
-          "opponent": "sc-heerenveen",
-          "isHome": true
-        },
-        {
-          "date": "2026-10-10",
-          "round": 8,
-          "probability": 0,
-          "cumulativeProbability": 0,
-          "opponent": "go-ahead-eagles",
-          "isHome": false
-        },
-        {
-          "date": "2026-10-17",
-          "round": 9,
-          "probability": 0,
-          "cumulativeProbability": 0,
-          "opponent": "willem-ii-tilburg",
-          "isHome": true
-        },
-        {
-          "date": "2026-10-25",
-          "round": 10,
-          "probability": 0,
-          "cumulativeProbability": 0,
-          "opponent": "afc-ajax",
-          "isHome": true
-        },
-        {
-          "date": "2026-11-01",
-          "round": 11,
-          "probability": 0,
-          "cumulativeProbability": 0,
-          "opponent": "fc-groningen",
-          "isHome": false
-        },
-        {
-          "date": "2026-11-07",
-          "round": 12,
-          "probability": 0,
-          "cumulativeProbability": 0,
-          "opponent": "ado-den-haag",
-          "isHome": false
-        },
-        {
-          "date": "2026-11-22",
-          "round": 13,
-          "probability": 0,
-          "cumulativeProbability": 0,
-          "opponent": "az",
-          "isHome": true
-        },
-        {
-          "date": "2026-11-28",
-          "round": 14,
-          "probability": 0,
-          "cumulativeProbability": 0,
-          "opponent": "sc-cambuur-leeuwarden",
-          "isHome": false
-        },
-        {
-          "date": "2026-12-05",
-          "round": 15,
-          "probability": 0,
-          "cumulativeProbability": 0,
-          "opponent": "nec",
-          "isHome": true
         },
         {
           "date": "2027-02-06",
           "round": 16,
           "probability": 0,
           "cumulativeProbability": 0,
-          "opponent": "fc-twente-65",
-          "isHome": false
+          "opponent": "sparta-rotterdam",
+          "isHome": true
         },
         {
-          "date": "2026-12-19",
+          "date": "2026-12-20",
           "round": 17,
-          "probability": 0,
-          "cumulativeProbability": 0,
-          "opponent": "fortuna-sittard",
-          "isHome": false
-        },
-        {
-          "date": "2027-01-09",
-          "round": 18,
-          "probability": 0,
-          "cumulativeProbability": 0,
-          "opponent": "sbv-excelsior",
-          "isHome": true
-        },
-        {
-          "date": "2027-01-15",
-          "round": 19,
-          "probability": 0,
-          "cumulativeProbability": 0,
-          "opponent": "sc-heerenveen",
-          "isHome": false
-        },
-        {
-          "date": "2027-01-24",
-          "round": 20,
-          "probability": 0,
-          "cumulativeProbability": 0,
-          "opponent": "fc-groningen",
-          "isHome": true
-        },
-        {
-          "date": "2027-01-30",
-          "round": 21,
-          "probability": 0,
-          "cumulativeProbability": 0,
-          "opponent": "telstar-1963",
-          "isHome": true
-        },
-        {
-          "date": "2027-02-13",
-          "round": 22,
-          "probability": 0,
-          "cumulativeProbability": 0,
-          "opponent": "willem-ii-tilburg",
-          "isHome": false
-        },
-        {
-          "date": "2027-02-20",
-          "round": 23,
-          "probability": 0,
-          "cumulativeProbability": 0,
-          "opponent": "nec",
-          "isHome": false
-        },
-        {
-          "date": "2027-02-27",
-          "round": 24,
-          "probability": 0,
-          "cumulativeProbability": 0,
-          "opponent": "psv",
-          "isHome": true
-        },
-        {
-          "date": "2027-03-06",
-          "round": 25,
-          "probability": 0,
-          "cumulativeProbability": 0,
-          "opponent": "sc-cambuur-leeuwarden",
-          "isHome": true
-        },
-        {
-          "date": "2027-03-13",
-          "round": 26,
-          "probability": 0,
-          "cumulativeProbability": 0,
-          "opponent": "az",
-          "isHome": false
-        },
-        {
-          "date": "2027-03-20",
-          "round": 27,
-          "probability": 0,
-          "cumulativeProbability": 0,
-          "opponent": "fc-utrecht",
-          "isHome": false
-        },
-        {
-          "date": "2027-04-03",
-          "round": 28,
-          "probability": 0,
-          "cumulativeProbability": 0,
-          "opponent": "ado-den-haag",
-          "isHome": true
-        },
-        {
-          "date": "2027-04-10",
-          "round": 29,
-          "probability": 0,
-          "cumulativeProbability": 0,
-          "opponent": "go-ahead-eagles",
-          "isHome": true
-        },
-        {
-          "date": "2027-04-24",
-          "round": 30,
           "probability": 0,
           "cumulativeProbability": 0,
           "opponent": "feyenoord-rotterdam",
           "isHome": false
         },
         {
-          "date": "2027-05-01",
-          "round": 31,
-          "probability": 0,
-          "cumulativeProbability": 0,
-          "opponent": "fc-twente-65",
-          "isHome": true
-        },
-        {
-          "date": "2027-05-08",
-          "round": 32,
-          "probability": 0,
-          "cumulativeProbability": 0,
-          "opponent": "pec-zwolle",
-          "isHome": false
-        },
-        {
-          "date": "2027-05-16",
-          "round": 33,
-          "probability": 0,
-          "cumulativeProbability": 0,
-          "opponent": "afc-ajax",
-          "isHome": false
-        },
-        {
-          "date": "2027-05-23",
-          "round": 34,
-          "probability": 0,
-          "cumulativeProbability": 0,
-          "opponent": "fortuna-sittard",
-          "isHome": true
-        }
-      ],
-      "bestCaseDate": "2027-02-13",
-      "bestCaseRound": 22,
-      "expectedDate": null,
-      "neverChampionProbability": 1,
-      "neverChampionCount": 50000,
-      "positionProbabilities": {
-        "6": 0.00058,
-        "7": 0.0127,
-        "8": 0.0401,
-        "9": 0.08118,
-        "10": 0.1443,
-        "11": 0.2208,
-        "12": 0.25302,
-        "13": 0.15568,
-        "14": 0.06016,
-        "15": 0.02258,
-        "16": 0.0071,
-        "17": 0.00152,
-        "18": 0.00028
-      }
-    },
-    "telstar-1963": {
-      "teamId": "telstar-1963",
-      "teamName": "Telstar 1963",
-      "totalChampionshipProbability": 0,
-      "dateProbabilities": [
-        {
-          "date": "2026-09-15",
-          "round": 3,
-          "probability": 0,
-          "cumulativeProbability": 0,
-          "opponent": "vrij",
-          "isHome": false
-        },
-        {
-          "date": "2026-09-20",
-          "round": 7,
-          "probability": 0,
-          "cumulativeProbability": 0,
-          "opponent": "az",
-          "isHome": false
-        },
-        {
-          "date": "2026-10-11",
-          "round": 8,
-          "probability": 0,
-          "cumulativeProbability": 0,
-          "opponent": "ado-den-haag",
-          "isHome": true
-        },
-        {
-          "date": "2026-10-17",
-          "round": 9,
-          "probability": 0,
-          "cumulativeProbability": 0,
-          "opponent": "feyenoord-rotterdam",
-          "isHome": true
-        },
-        {
-          "date": "2026-10-23",
-          "round": 10,
-          "probability": 0,
-          "cumulativeProbability": 0,
-          "opponent": "go-ahead-eagles",
-          "isHome": false
-        },
-        {
-          "date": "2026-11-01",
-          "round": 11,
-          "probability": 0,
-          "cumulativeProbability": 0,
-          "opponent": "fc-utrecht",
-          "isHome": true
-        },
-        {
-          "date": "2026-11-07",
-          "round": 12,
-          "probability": 0,
-          "cumulativeProbability": 0,
-          "opponent": "fortuna-sittard",
-          "isHome": false
-        },
-        {
-          "date": "2026-11-21",
-          "round": 13,
-          "probability": 0,
-          "cumulativeProbability": 0,
-          "opponent": "pec-zwolle",
-          "isHome": true
-        },
-        {
-          "date": "2026-11-28",
-          "round": 14,
-          "probability": 0,
-          "cumulativeProbability": 0,
-          "opponent": "sbv-excelsior",
-          "isHome": false
-        },
-        {
-          "date": "2026-12-04",
-          "round": 15,
-          "probability": 0,
-          "cumulativeProbability": 0,
-          "opponent": "fc-groningen",
-          "isHome": true
-        },
-        {
-          "date": "2026-12-13",
-          "round": 16,
-          "probability": 0,
-          "cumulativeProbability": 0,
-          "opponent": "psv",
-          "isHome": false
-        },
-        {
-          "date": "2026-12-18",
-          "round": 17,
-          "probability": 0,
-          "cumulativeProbability": 0,
-          "opponent": "willem-ii-tilburg",
-          "isHome": true
-        },
-        {
-          "date": "2027-01-10",
+          "date": "2027-01-08",
           "round": 18,
           "probability": 0,
           "cumulativeProbability": 0,
-          "opponent": "ado-den-haag",
-          "isHome": false
+          "opponent": "fortuna-sittard",
+          "isHome": true
         },
         {
-          "date": "2027-01-16",
+          "date": "2027-01-17",
           "round": 19,
           "probability": 0,
           "cumulativeProbability": 0,
-          "opponent": "nec",
-          "isHome": true
+          "opponent": "fc-utrecht",
+          "isHome": false
         },
         {
           "date": "2027-01-23",
           "round": 20,
           "probability": 0,
           "cumulativeProbability": 0,
-          "opponent": "afc-ajax",
-          "isHome": false
+          "opponent": "sc-heerenveen",
+          "isHome": true
         },
         {
-          "date": "2027-01-30",
+          "date": "2027-01-31",
           "round": 21,
           "probability": 0,
           "cumulativeProbability": 0,
-          "opponent": "sparta-rotterdam",
-          "isHome": false
+          "opponent": "sc-cambuur-leeuwarden",
+          "isHome": true
         },
         {
           "date": "2027-02-13",
           "round": 22,
           "probability": 0,
           "cumulativeProbability": 0,
-          "opponent": "sc-heerenveen",
-          "isHome": true
+          "opponent": "psv",
+          "isHome": false
         },
         {
           "date": "2027-02-20",
           "round": 23,
           "probability": 0,
           "cumulativeProbability": 0,
-          "opponent": "feyenoord-rotterdam",
-          "isHome": false
+          "opponent": "sbv-excelsior",
+          "isHome": true
         },
         {
           "date": "2027-02-27",
           "round": 24,
           "probability": 0,
           "cumulativeProbability": 0,
-          "opponent": "go-ahead-eagles",
-          "isHome": true
+          "opponent": "ado-den-haag",
+          "isHome": false
         },
         {
           "date": "2027-03-06",
           "round": 25,
           "probability": 0,
           "cumulativeProbability": 0,
-          "opponent": "fc-groningen",
-          "isHome": false
+          "opponent": "az",
+          "isHome": true
         },
         {
           "date": "2027-03-13",
           "round": 26,
           "probability": 0,
           "cumulativeProbability": 0,
-          "opponent": "psv",
-          "isHome": true
+          "opponent": "willem-ii-tilburg",
+          "isHome": false
         },
         {
           "date": "2027-03-20",
           "round": 27,
           "probability": 0,
           "cumulativeProbability": 0,
-          "opponent": "fortuna-sittard",
+          "opponent": "go-ahead-eagles",
           "isHome": true
         },
         {
@@ -3273,7 +1210,7 @@
           "round": 28,
           "probability": 0,
           "cumulativeProbability": 0,
-          "opponent": "sc-cambuur-leeuwarden",
+          "opponent": "afc-ajax",
           "isHome": false
         },
         {
@@ -3281,68 +1218,65 @@
           "round": 29,
           "probability": 0,
           "cumulativeProbability": 0,
-          "opponent": "fc-twente-65",
-          "isHome": true
+          "opponent": "telstar-1963",
+          "isHome": false
         },
         {
           "date": "2027-04-24",
           "round": 30,
           "probability": 0,
           "cumulativeProbability": 0,
-          "opponent": "pec-zwolle",
-          "isHome": false
+          "opponent": "nec",
+          "isHome": true
         },
         {
           "date": "2027-05-01",
           "round": 31,
-          "probability": 0,
-          "cumulativeProbability": 0,
-          "opponent": "az",
-          "isHome": true
+          "probability": 0.00008,
+          "cumulativeProbability": 0.00008,
+          "opponent": "sparta-rotterdam",
+          "isHome": false
         },
         {
           "date": "2027-05-08",
           "round": 32,
-          "probability": 0,
-          "cumulativeProbability": 0,
-          "opponent": "willem-ii-tilburg",
-          "isHome": false
+          "probability": 0.00054,
+          "cumulativeProbability": 0.00062,
+          "opponent": "fc-groningen",
+          "isHome": true
         },
         {
           "date": "2027-05-16",
           "round": 33,
-          "probability": 0,
-          "cumulativeProbability": 0,
-          "opponent": "fc-utrecht",
-          "isHome": false
+          "probability": 0.0019,
+          "cumulativeProbability": 0.00252,
+          "opponent": "feyenoord-rotterdam",
+          "isHome": true
         },
         {
           "date": "2027-05-23",
           "round": 34,
-          "probability": 0,
-          "cumulativeProbability": 0,
-          "opponent": "sbv-excelsior",
-          "isHome": true
+          "probability": 0.00814,
+          "cumulativeProbability": 0.01066,
+          "opponent": "pec-zwolle",
+          "isHome": false
         }
       ],
-      "bestCaseDate": "2027-02-13",
-      "bestCaseRound": 22,
-      "expectedDate": null,
-      "neverChampionProbability": 1,
-      "neverChampionCount": 50000,
+      "bestCaseDate": "2027-02-06",
+      "bestCaseRound": 16,
+      "expectedDate": "2027-05-23",
+      "neverChampionProbability": 0.98934,
+      "neverChampionCount": 49467,
       "positionProbabilities": {
-        "7": 0.00008,
-        "8": 0.00044,
-        "9": 0.00134,
-        "10": 0.00594,
-        "11": 0.01854,
-        "12": 0.05414,
-        "13": 0.1404,
-        "14": 0.25748,
-        "15": 0.24956,
-        "16": 0.15442,
-        "17": 0.08246,
-        "18": 0.0352
+        "1": 0.01066,
+        "2": 0.04472,
+        "3": 0.1071,
+        "4": 0.24702,
+        "5": 0.40306,
+        "6": 0.1695,
+        "7": 0.01582,
+        "8": 0.00196,
+        "9": 0.00016
       }
     },
     "fc-utrecht": {
@@ -3589,24 +1523,277 @@
       "neverChampionProbability": 1,
       "neverChampionCount": 50000,
       "positionProbabilities": {
-        "6": 0.00006,
+        "6": 0.00002,
         "7": 0.00126,
-        "8": 0.0069,
-        "9": 0.0204,
-        "10": 0.05016,
-        "11": 0.10698,
-        "12": 0.1979,
-        "13": 0.30104,
-        "14": 0.17512,
-        "15": 0.09158,
-        "16": 0.03372,
-        "17": 0.01188,
-        "18": 0.003
+        "8": 0.0072,
+        "9": 0.02096,
+        "10": 0.05008,
+        "11": 0.10882,
+        "12": 0.1992,
+        "13": 0.29884,
+        "14": 0.17448,
+        "15": 0.08894,
+        "16": 0.03458,
+        "17": 0.01238,
+        "18": 0.00324
       }
     },
-    "sc-cambuur-leeuwarden": {
-      "teamId": "sc-cambuur-leeuwarden",
-      "teamName": "SC Cambuur-Leeuwarden",
+    "feyenoord-rotterdam": {
+      "teamId": "feyenoord-rotterdam",
+      "teamName": "Feyenoord Rotterdam",
+      "totalChampionshipProbability": 0.1266,
+      "dateProbabilities": [
+        {
+          "date": "2026-09-15",
+          "round": 3,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "vrij",
+          "isHome": false
+        },
+        {
+          "date": "2026-09-20",
+          "round": 7,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "fc-utrecht",
+          "isHome": true
+        },
+        {
+          "date": "2026-10-10",
+          "round": 8,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "az",
+          "isHome": true
+        },
+        {
+          "date": "2026-10-17",
+          "round": 9,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "telstar-1963",
+          "isHome": false
+        },
+        {
+          "date": "2026-10-25",
+          "round": 10,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "psv",
+          "isHome": false
+        },
+        {
+          "date": "2026-10-31",
+          "round": 11,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "fortuna-sittard",
+          "isHome": true
+        },
+        {
+          "date": "2026-11-08",
+          "round": 12,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "sc-heerenveen",
+          "isHome": false
+        },
+        {
+          "date": "2026-11-21",
+          "round": 13,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "sbv-excelsior",
+          "isHome": true
+        },
+        {
+          "date": "2026-11-29",
+          "round": 14,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "afc-ajax",
+          "isHome": true
+        },
+        {
+          "date": "2026-12-05",
+          "round": 15,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "willem-ii-tilburg",
+          "isHome": false
+        },
+        {
+          "date": "2026-12-13",
+          "round": 16,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "fc-groningen",
+          "isHome": false
+        },
+        {
+          "date": "2026-12-20",
+          "round": 17,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "fc-twente-65",
+          "isHome": true
+        },
+        {
+          "date": "2027-01-10",
+          "round": 18,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "psv",
+          "isHome": true
+        },
+        {
+          "date": "2027-01-16",
+          "round": 19,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "sbv-excelsior",
+          "isHome": false
+        },
+        {
+          "date": "2027-01-23",
+          "round": 20,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "pec-zwolle",
+          "isHome": true
+        },
+        {
+          "date": "2027-01-31",
+          "round": 21,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "az",
+          "isHome": false
+        },
+        {
+          "date": "2027-02-13",
+          "round": 22,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "nec",
+          "isHome": true
+        },
+        {
+          "date": "2027-02-20",
+          "round": 23,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "telstar-1963",
+          "isHome": true
+        },
+        {
+          "date": "2027-02-27",
+          "round": 24,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "afc-ajax",
+          "isHome": false
+        },
+        {
+          "date": "2027-03-06",
+          "round": 25,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "sc-heerenveen",
+          "isHome": true
+        },
+        {
+          "date": "2027-03-13",
+          "round": 26,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "go-ahead-eagles",
+          "isHome": false
+        },
+        {
+          "date": "2027-03-20",
+          "round": 27,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "sc-cambuur-leeuwarden",
+          "isHome": true
+        },
+        {
+          "date": "2027-04-03",
+          "round": 28,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "fortuna-sittard",
+          "isHome": false
+        },
+        {
+          "date": "2027-04-10",
+          "round": 29,
+          "probability": 0.00002,
+          "cumulativeProbability": 0.00002,
+          "opponent": "ado-den-haag",
+          "isHome": false
+        },
+        {
+          "date": "2027-04-24",
+          "round": 30,
+          "probability": 0.00074,
+          "cumulativeProbability": 0.00076,
+          "opponent": "sparta-rotterdam",
+          "isHome": true
+        },
+        {
+          "date": "2027-05-01",
+          "round": 31,
+          "probability": 0.00594,
+          "cumulativeProbability": 0.0067,
+          "opponent": "willem-ii-tilburg",
+          "isHome": true
+        },
+        {
+          "date": "2027-05-08",
+          "round": 32,
+          "probability": 0.02204,
+          "cumulativeProbability": 0.02874,
+          "opponent": "fc-utrecht",
+          "isHome": false
+        },
+        {
+          "date": "2027-05-16",
+          "round": 33,
+          "probability": 0.02204,
+          "cumulativeProbability": 0.050780000000000006,
+          "opponent": "fc-twente-65",
+          "isHome": false
+        },
+        {
+          "date": "2027-05-23",
+          "round": 34,
+          "probability": 0.07582,
+          "cumulativeProbability": 0.1266,
+          "opponent": "fc-groningen",
+          "isHome": true
+        }
+      ],
+      "bestCaseDate": "2027-01-31",
+      "bestCaseRound": 21,
+      "expectedDate": "2027-05-23",
+      "neverChampionProbability": 0.8734,
+      "neverChampionCount": 43670,
+      "positionProbabilities": {
+        "1": 0.13644,
+        "2": 0.3179,
+        "3": 0.30606,
+        "4": 0.16228,
+        "5": 0.0644,
+        "6": 0.01256,
+        "7": 0.00036
+      }
+    },
+    "fortuna-sittard": {
+      "teamId": "fortuna-sittard",
+      "teamName": "Fortuna Sittard",
       "totalChampionshipProbability": 0,
       "dateProbabilities": [
         {
@@ -3622,119 +1809,119 @@
           "round": 7,
           "probability": 0,
           "cumulativeProbability": 0,
-          "opponent": "ado-den-haag",
+          "opponent": "willem-ii-tilburg",
           "isHome": false
         },
         {
-          "date": "2026-10-11",
+          "date": "2026-10-10",
           "round": 8,
           "probability": 0,
           "cumulativeProbability": 0,
-          "opponent": "pec-zwolle",
-          "isHome": false
+          "opponent": "fc-twente-65",
+          "isHome": true
         },
         {
           "date": "2026-10-18",
           "round": 9,
           "probability": 0,
           "cumulativeProbability": 0,
-          "opponent": "az",
-          "isHome": true
+          "opponent": "nec",
+          "isHome": false
         },
         {
-          "date": "2026-10-24",
+          "date": "2026-10-25",
           "round": 10,
           "probability": 0,
           "cumulativeProbability": 0,
-          "opponent": "willem-ii-tilburg",
-          "isHome": false
+          "opponent": "sbv-excelsior",
+          "isHome": true
         },
         {
           "date": "2026-10-31",
           "round": 11,
           "probability": 0,
           "cumulativeProbability": 0,
-          "opponent": "go-ahead-eagles",
-          "isHome": true
+          "opponent": "feyenoord-rotterdam",
+          "isHome": false
         },
         {
-          "date": "2026-11-08",
+          "date": "2026-11-07",
           "round": 12,
           "probability": 0,
           "cumulativeProbability": 0,
-          "opponent": "psv",
+          "opponent": "telstar-1963",
           "isHome": true
         },
         {
-          "date": "2026-11-21",
+          "date": "2026-11-22",
           "round": 13,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "go-ahead-eagles",
+          "isHome": false
+        },
+        {
+          "date": "2026-11-29",
+          "round": 14,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "sc-heerenveen",
+          "isHome": true
+        },
+        {
+          "date": "2026-12-05",
+          "round": 15,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "pec-zwolle",
+          "isHome": true
+        },
+        {
+          "date": "2026-12-12",
+          "round": 16,
           "probability": 0,
           "cumulativeProbability": 0,
           "opponent": "fc-utrecht",
           "isHome": false
         },
         {
-          "date": "2026-11-28",
-          "round": 14,
+          "date": "2026-12-19",
+          "round": 17,
           "probability": 0,
           "cumulativeProbability": 0,
           "opponent": "sparta-rotterdam",
           "isHome": true
         },
         {
-          "date": "2026-12-06",
-          "round": 15,
-          "probability": 0,
-          "cumulativeProbability": 0,
-          "opponent": "sc-heerenveen",
-          "isHome": false
-        },
-        {
-          "date": "2026-12-13",
-          "round": 16,
-          "probability": 0,
-          "cumulativeProbability": 0,
-          "opponent": "afc-ajax",
-          "isHome": false
-        },
-        {
-          "date": "2026-12-20",
-          "round": 17,
-          "probability": 0,
-          "cumulativeProbability": 0,
-          "opponent": "fc-groningen",
-          "isHome": true
-        },
-        {
-          "date": "2027-01-10",
+          "date": "2027-01-08",
           "round": 18,
           "probability": 0,
           "cumulativeProbability": 0,
-          "opponent": "nec",
+          "opponent": "fc-twente-65",
           "isHome": false
         },
         {
-          "date": "2027-01-17",
+          "date": "2027-01-16",
           "round": 19,
           "probability": 0,
           "cumulativeProbability": 0,
-          "opponent": "willem-ii-tilburg",
+          "opponent": "psv",
           "isHome": true
         },
         {
-          "date": "2027-01-24",
+          "date": "2027-01-22",
           "round": 20,
           "probability": 0,
           "cumulativeProbability": 0,
-          "opponent": "go-ahead-eagles",
+          "opponent": "sbv-excelsior",
           "isHome": false
         },
         {
-          "date": "2027-01-31",
+          "date": "2027-01-30",
           "round": 21,
           "probability": 0,
           "cumulativeProbability": 0,
-          "opponent": "fc-twente-65",
+          "opponent": "pec-zwolle",
           "isHome": false
         },
         {
@@ -3742,7 +1929,7 @@
           "round": 22,
           "probability": 0,
           "cumulativeProbability": 0,
-          "opponent": "fc-utrecht",
+          "opponent": "ado-den-haag",
           "isHome": true
         },
         {
@@ -3750,7 +1937,7 @@
           "round": 23,
           "probability": 0,
           "cumulativeProbability": 0,
-          "opponent": "psv",
+          "opponent": "az",
           "isHome": false
         },
         {
@@ -3758,7 +1945,7 @@
           "round": 24,
           "probability": 0,
           "cumulativeProbability": 0,
-          "opponent": "pec-zwolle",
+          "opponent": "fc-utrecht",
           "isHome": true
         },
         {
@@ -3766,23 +1953,23 @@
           "round": 25,
           "probability": 0,
           "cumulativeProbability": 0,
-          "opponent": "sparta-rotterdam",
-          "isHome": false
+          "opponent": "nec",
+          "isHome": true
         },
         {
           "date": "2027-03-13",
           "round": 26,
           "probability": 0,
           "cumulativeProbability": 0,
-          "opponent": "ado-den-haag",
-          "isHome": true
+          "opponent": "sc-heerenveen",
+          "isHome": false
         },
         {
           "date": "2027-03-20",
           "round": 27,
           "probability": 0,
           "cumulativeProbability": 0,
-          "opponent": "feyenoord-rotterdam",
+          "opponent": "telstar-1963",
           "isHome": false
         },
         {
@@ -3790,7 +1977,7 @@
           "round": 28,
           "probability": 0,
           "cumulativeProbability": 0,
-          "opponent": "telstar-1963",
+          "opponent": "feyenoord-rotterdam",
           "isHome": true
         },
         {
@@ -3798,23 +1985,23 @@
           "round": 29,
           "probability": 0,
           "cumulativeProbability": 0,
-          "opponent": "fortuna-sittard",
-          "isHome": true
+          "opponent": "sc-cambuur-leeuwarden",
+          "isHome": false
         },
         {
           "date": "2027-04-24",
           "round": 30,
           "probability": 0,
           "cumulativeProbability": 0,
-          "opponent": "az",
-          "isHome": false
+          "opponent": "fc-groningen",
+          "isHome": true
         },
         {
           "date": "2027-05-01",
           "round": 31,
           "probability": 0,
           "cumulativeProbability": 0,
-          "opponent": "sbv-excelsior",
+          "opponent": "afc-ajax",
           "isHome": false
         },
         {
@@ -3822,7 +2009,7 @@
           "round": 32,
           "probability": 0,
           "cumulativeProbability": 0,
-          "opponent": "sc-heerenveen",
+          "opponent": "go-ahead-eagles",
           "isHome": true
         },
         {
@@ -3830,7 +2017,527 @@
           "round": 33,
           "probability": 0,
           "cumulativeProbability": 0,
+          "opponent": "willem-ii-tilburg",
+          "isHome": true
+        },
+        {
+          "date": "2027-05-23",
+          "round": 34,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "sparta-rotterdam",
+          "isHome": false
+        }
+      ],
+      "bestCaseDate": "2027-02-13",
+      "bestCaseRound": 22,
+      "expectedDate": null,
+      "neverChampionProbability": 1,
+      "neverChampionCount": 50000,
+      "positionProbabilities": {
+        "4": 0.00014,
+        "5": 0.0013,
+        "6": 0.01742,
+        "7": 0.15766,
+        "8": 0.26874,
+        "9": 0.23758,
+        "10": 0.16832,
+        "11": 0.08806,
+        "12": 0.04174,
+        "13": 0.01544,
+        "14": 0.0028,
+        "15": 0.00074,
+        "16": 0.00004,
+        "17": 0.00002
+      }
+    },
+    "go-ahead-eagles": {
+      "teamId": "go-ahead-eagles",
+      "teamName": "Go Ahead Eagles",
+      "totalChampionshipProbability": 0,
+      "dateProbabilities": [
+        {
+          "date": "2026-09-15",
+          "round": 3,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "vrij",
+          "isHome": false
+        },
+        {
+          "date": "2026-09-20",
+          "round": 7,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "nec",
+          "isHome": false
+        },
+        {
+          "date": "2026-10-10",
+          "round": 8,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "sparta-rotterdam",
+          "isHome": true
+        },
+        {
+          "date": "2026-10-18",
+          "round": 9,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "pec-zwolle",
+          "isHome": false
+        },
+        {
+          "date": "2026-10-23",
+          "round": 10,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "telstar-1963",
+          "isHome": true
+        },
+        {
+          "date": "2026-10-31",
+          "round": 11,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "sc-cambuur-leeuwarden",
+          "isHome": false
+        },
+        {
+          "date": "2026-11-07",
+          "round": 12,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "sbv-excelsior",
+          "isHome": false
+        },
+        {
+          "date": "2026-11-22",
+          "round": 13,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "fortuna-sittard",
+          "isHome": true
+        },
+        {
+          "date": "2026-11-28",
+          "round": 14,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "psv",
+          "isHome": false
+        },
+        {
+          "date": "2026-12-06",
+          "round": 15,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "fc-twente-65",
+          "isHome": true
+        },
+        {
+          "date": "2026-12-12",
+          "round": 16,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "sc-heerenveen",
+          "isHome": false
+        },
+        {
+          "date": "2026-12-20",
+          "round": 17,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "afc-ajax",
+          "isHome": true
+        },
+        {
+          "date": "2027-01-10",
+          "round": 18,
+          "probability": 0,
+          "cumulativeProbability": 0,
           "opponent": "fc-groningen",
+          "isHome": false
+        },
+        {
+          "date": "2027-01-17",
+          "round": 19,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "az",
+          "isHome": true
+        },
+        {
+          "date": "2027-01-24",
+          "round": 20,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "sc-cambuur-leeuwarden",
+          "isHome": true
+        },
+        {
+          "date": "2027-01-30",
+          "round": 21,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "ado-den-haag",
+          "isHome": false
+        },
+        {
+          "date": "2027-02-13",
+          "round": 22,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "pec-zwolle",
+          "isHome": true
+        },
+        {
+          "date": "2027-02-20",
+          "round": 23,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "afc-ajax",
+          "isHome": false
+        },
+        {
+          "date": "2027-02-27",
+          "round": 24,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "telstar-1963",
+          "isHome": false
+        },
+        {
+          "date": "2027-03-06",
+          "round": 25,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "sbv-excelsior",
+          "isHome": true
+        },
+        {
+          "date": "2027-03-13",
+          "round": 26,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "feyenoord-rotterdam",
+          "isHome": true
+        },
+        {
+          "date": "2027-03-20",
+          "round": 27,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "fc-twente-65",
+          "isHome": false
+        },
+        {
+          "date": "2027-04-03",
+          "round": 28,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "nec",
+          "isHome": true
+        },
+        {
+          "date": "2027-04-10",
+          "round": 29,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "sparta-rotterdam",
+          "isHome": false
+        },
+        {
+          "date": "2027-04-24",
+          "round": 30,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "fc-utrecht",
+          "isHome": true
+        },
+        {
+          "date": "2027-05-01",
+          "round": 31,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "psv",
+          "isHome": true
+        },
+        {
+          "date": "2027-05-08",
+          "round": 32,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "fortuna-sittard",
+          "isHome": false
+        },
+        {
+          "date": "2027-05-16",
+          "round": 33,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "sc-heerenveen",
+          "isHome": true
+        },
+        {
+          "date": "2027-05-23",
+          "round": 34,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "willem-ii-tilburg",
+          "isHome": false
+        }
+      ],
+      "bestCaseDate": "2027-02-13",
+      "bestCaseRound": 22,
+      "expectedDate": null,
+      "neverChampionProbability": 1,
+      "neverChampionCount": 50000,
+      "positionProbabilities": {
+        "2": 0.00006,
+        "3": 0.00032,
+        "4": 0.00162,
+        "5": 0.01226,
+        "6": 0.09402,
+        "7": 0.50452,
+        "8": 0.2121,
+        "9": 0.10188,
+        "10": 0.04676,
+        "11": 0.01876,
+        "12": 0.00614,
+        "13": 0.00122,
+        "14": 0.00026,
+        "15": 0.00008
+      }
+    },
+    "nec": {
+      "teamId": "nec",
+      "teamName": "NEC",
+      "totalChampionshipProbability": 0,
+      "dateProbabilities": [
+        {
+          "date": "2026-09-15",
+          "round": 3,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "vrij",
+          "isHome": false
+        },
+        {
+          "date": "2026-09-20",
+          "round": 7,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "go-ahead-eagles",
+          "isHome": true
+        },
+        {
+          "date": "2026-10-10",
+          "round": 8,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "afc-ajax",
+          "isHome": false
+        },
+        {
+          "date": "2026-10-18",
+          "round": 9,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "fortuna-sittard",
+          "isHome": true
+        },
+        {
+          "date": "2026-10-25",
+          "round": 10,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "fc-groningen",
+          "isHome": true
+        },
+        {
+          "date": "2026-10-31",
+          "round": 11,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "sc-heerenveen",
+          "isHome": false
+        },
+        {
+          "date": "2026-11-08",
+          "round": 12,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "fc-utrecht",
+          "isHome": false
+        },
+        {
+          "date": "2026-11-21",
+          "round": 13,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "psv",
+          "isHome": true
+        },
+        {
+          "date": "2026-11-29",
+          "round": 14,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "fc-twente-65",
+          "isHome": true
+        },
+        {
+          "date": "2026-12-05",
+          "round": 15,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "sparta-rotterdam",
+          "isHome": false
+        },
+        {
+          "date": "2026-12-13",
+          "round": 16,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "az",
+          "isHome": false
+        },
+        {
+          "date": "2026-12-20",
+          "round": 17,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "ado-den-haag",
+          "isHome": true
+        },
+        {
+          "date": "2027-01-10",
+          "round": 18,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "sc-cambuur-leeuwarden",
+          "isHome": true
+        },
+        {
+          "date": "2027-01-16",
+          "round": 19,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "telstar-1963",
+          "isHome": false
+        },
+        {
+          "date": "2027-01-24",
+          "round": 20,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "willem-ii-tilburg",
+          "isHome": true
+        },
+        {
+          "date": "2027-01-31",
+          "round": 21,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "fc-groningen",
+          "isHome": false
+        },
+        {
+          "date": "2027-02-13",
+          "round": 22,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "feyenoord-rotterdam",
+          "isHome": false
+        },
+        {
+          "date": "2027-02-20",
+          "round": 23,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "sparta-rotterdam",
+          "isHome": true
+        },
+        {
+          "date": "2027-02-27",
+          "round": 24,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "az",
+          "isHome": true
+        },
+        {
+          "date": "2027-03-06",
+          "round": 25,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "fortuna-sittard",
+          "isHome": false
+        },
+        {
+          "date": "2027-03-13",
+          "round": 26,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "sbv-excelsior",
+          "isHome": false
+        },
+        {
+          "date": "2027-03-20",
+          "round": 27,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "afc-ajax",
+          "isHome": true
+        },
+        {
+          "date": "2027-04-03",
+          "round": 28,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "go-ahead-eagles",
+          "isHome": false
+        },
+        {
+          "date": "2027-04-10",
+          "round": 29,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "sc-heerenveen",
+          "isHome": true
+        },
+        {
+          "date": "2027-04-24",
+          "round": 30,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "fc-twente-65",
+          "isHome": false
+        },
+        {
+          "date": "2027-05-01",
+          "round": 31,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "pec-zwolle",
+          "isHome": true
+        },
+        {
+          "date": "2027-05-08",
+          "round": 32,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "ado-den-haag",
+          "isHome": false
+        },
+        {
+          "date": "2027-05-16",
+          "round": 33,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "psv",
           "isHome": false
         },
         {
@@ -3838,28 +2545,29 @@
           "round": 34,
           "probability": 0,
           "cumulativeProbability": 0,
-          "opponent": "afc-ajax",
+          "opponent": "fc-utrecht",
           "isHome": true
         }
       ],
-      "bestCaseDate": "2027-02-20",
-      "bestCaseRound": 23,
+      "bestCaseDate": "2027-02-13",
+      "bestCaseRound": 22,
       "expectedDate": null,
       "neverChampionProbability": 1,
       "neverChampionCount": 50000,
       "positionProbabilities": {
-        "7": 0.00004,
-        "8": 0.00024,
-        "9": 0.0017,
-        "10": 0.00584,
-        "11": 0.02134,
-        "12": 0.05822,
-        "13": 0.13426,
-        "14": 0.26372,
-        "15": 0.26016,
-        "16": 0.14364,
-        "17": 0.07678,
-        "18": 0.03406
+        "5": 0.00014,
+        "6": 0.00386,
+        "7": 0.05816,
+        "8": 0.1427,
+        "9": 0.20756,
+        "10": 0.24178,
+        "11": 0.17746,
+        "12": 0.10464,
+        "13": 0.04696,
+        "14": 0.01306,
+        "15": 0.00322,
+        "16": 0.00038,
+        "17": 0.00008
       }
     },
     "pec-zwolle": {
@@ -4107,15 +2815,1560 @@
       "neverChampionCount": 50000,
       "positionProbabilities": {
         "9": 0.00002,
-        "10": 0.00026,
-        "11": 0.00162,
-        "12": 0.00646,
-        "13": 0.02186,
-        "14": 0.0699,
-        "15": 0.13796,
-        "16": 0.23336,
-        "17": 0.26964,
-        "18": 0.25892
+        "10": 0.0002,
+        "11": 0.00136,
+        "12": 0.00568,
+        "13": 0.02188,
+        "14": 0.06932,
+        "15": 0.13714,
+        "16": 0.2371,
+        "17": 0.26896,
+        "18": 0.25834
+      }
+    },
+    "psv": {
+      "teamId": "psv",
+      "teamName": "PSV",
+      "totalChampionshipProbability": 0.61146,
+      "dateProbabilities": [
+        {
+          "date": "2026-09-15",
+          "round": 3,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "vrij",
+          "isHome": false
+        },
+        {
+          "date": "2026-09-20",
+          "round": 7,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "fc-twente-65",
+          "isHome": false
+        },
+        {
+          "date": "2026-10-09",
+          "round": 8,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "sc-heerenveen",
+          "isHome": true
+        },
+        {
+          "date": "2026-10-17",
+          "round": 9,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "ado-den-haag",
+          "isHome": false
+        },
+        {
+          "date": "2026-10-25",
+          "round": 10,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "feyenoord-rotterdam",
+          "isHome": true
+        },
+        {
+          "date": "2026-10-31",
+          "round": 11,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "willem-ii-tilburg",
+          "isHome": true
+        },
+        {
+          "date": "2026-11-08",
+          "round": 12,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "sc-cambuur-leeuwarden",
+          "isHome": false
+        },
+        {
+          "date": "2026-11-21",
+          "round": 13,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "nec",
+          "isHome": false
+        },
+        {
+          "date": "2026-11-28",
+          "round": 14,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "go-ahead-eagles",
+          "isHome": true
+        },
+        {
+          "date": "2026-12-05",
+          "round": 15,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "az",
+          "isHome": false
+        },
+        {
+          "date": "2026-12-13",
+          "round": 16,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "telstar-1963",
+          "isHome": true
+        },
+        {
+          "date": "2026-12-20",
+          "round": 17,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "pec-zwolle",
+          "isHome": true
+        },
+        {
+          "date": "2027-01-10",
+          "round": 18,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "feyenoord-rotterdam",
+          "isHome": false
+        },
+        {
+          "date": "2027-01-16",
+          "round": 19,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "fortuna-sittard",
+          "isHome": false
+        },
+        {
+          "date": "2027-01-23",
+          "round": 20,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "ado-den-haag",
+          "isHome": true
+        },
+        {
+          "date": "2027-01-30",
+          "round": 21,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "willem-ii-tilburg",
+          "isHome": false
+        },
+        {
+          "date": "2027-02-13",
+          "round": 22,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "fc-twente-65",
+          "isHome": true
+        },
+        {
+          "date": "2027-02-20",
+          "round": 23,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "sc-cambuur-leeuwarden",
+          "isHome": true
+        },
+        {
+          "date": "2027-02-27",
+          "round": 24,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "sparta-rotterdam",
+          "isHome": false
+        },
+        {
+          "date": "2027-03-06",
+          "round": 25,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "fc-utrecht",
+          "isHome": true
+        },
+        {
+          "date": "2027-03-13",
+          "round": 26,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "telstar-1963",
+          "isHome": false
+        },
+        {
+          "date": "2027-03-20",
+          "round": 27,
+          "probability": 0.00004,
+          "cumulativeProbability": 0.00004,
+          "opponent": "fc-groningen",
+          "isHome": false
+        },
+        {
+          "date": "2027-04-03",
+          "round": 28,
+          "probability": 0.0018,
+          "cumulativeProbability": 0.00184,
+          "opponent": "az",
+          "isHome": true
+        },
+        {
+          "date": "2027-04-10",
+          "round": 29,
+          "probability": 0.01116,
+          "cumulativeProbability": 0.013,
+          "opponent": "pec-zwolle",
+          "isHome": false
+        },
+        {
+          "date": "2027-04-24",
+          "round": 30,
+          "probability": 0.035,
+          "cumulativeProbability": 0.048,
+          "opponent": "afc-ajax",
+          "isHome": true
+        },
+        {
+          "date": "2027-05-01",
+          "round": 31,
+          "probability": 0.0658,
+          "cumulativeProbability": 0.1138,
+          "opponent": "go-ahead-eagles",
+          "isHome": false
+        },
+        {
+          "date": "2027-05-08",
+          "round": 32,
+          "probability": 0.13306,
+          "cumulativeProbability": 0.24686000000000002,
+          "opponent": "sbv-excelsior",
+          "isHome": true
+        },
+        {
+          "date": "2027-05-16",
+          "round": 33,
+          "probability": 0.2078,
+          "cumulativeProbability": 0.45466000000000006,
+          "opponent": "nec",
+          "isHome": true
+        },
+        {
+          "date": "2027-05-23",
+          "round": 34,
+          "probability": 0.1568,
+          "cumulativeProbability": 0.6114600000000001,
+          "opponent": "sc-heerenveen",
+          "isHome": false
+        }
+      ],
+      "bestCaseDate": "2027-01-30",
+      "bestCaseRound": 21,
+      "expectedDate": "2027-05-16",
+      "neverChampionProbability": 0.38854,
+      "neverChampionCount": 19427,
+      "positionProbabilities": {
+        "1": 0.6669,
+        "2": 0.21838,
+        "3": 0.0847,
+        "4": 0.02424,
+        "5": 0.00534,
+        "6": 0.00044
+      }
+    },
+    "sbv-excelsior": {
+      "teamId": "sbv-excelsior",
+      "teamName": "SBV Excelsior",
+      "totalChampionshipProbability": 0.00042,
+      "dateProbabilities": [
+        {
+          "date": "2026-09-15",
+          "round": 3,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "vrij",
+          "isHome": false
+        },
+        {
+          "date": "2026-09-19",
+          "round": 7,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "afc-ajax",
+          "isHome": false
+        },
+        {
+          "date": "2026-10-11",
+          "round": 8,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "fc-groningen",
+          "isHome": true
+        },
+        {
+          "date": "2026-10-16",
+          "round": 9,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "sc-heerenveen",
+          "isHome": false
+        },
+        {
+          "date": "2026-10-25",
+          "round": 10,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "fortuna-sittard",
+          "isHome": false
+        },
+        {
+          "date": "2026-11-01",
+          "round": 11,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "fc-twente-65",
+          "isHome": true
+        },
+        {
+          "date": "2026-11-07",
+          "round": 12,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "go-ahead-eagles",
+          "isHome": true
+        },
+        {
+          "date": "2026-11-21",
+          "round": 13,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "feyenoord-rotterdam",
+          "isHome": false
+        },
+        {
+          "date": "2026-11-28",
+          "round": 14,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "telstar-1963",
+          "isHome": true
+        },
+        {
+          "date": "2026-12-06",
+          "round": 15,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "ado-den-haag",
+          "isHome": false
+        },
+        {
+          "date": "2026-12-12",
+          "round": 16,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "pec-zwolle",
+          "isHome": false
+        },
+        {
+          "date": "2026-12-19",
+          "round": 17,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "az",
+          "isHome": true
+        },
+        {
+          "date": "2027-01-09",
+          "round": 18,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "sparta-rotterdam",
+          "isHome": false
+        },
+        {
+          "date": "2027-01-16",
+          "round": 19,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "feyenoord-rotterdam",
+          "isHome": true
+        },
+        {
+          "date": "2027-01-22",
+          "round": 20,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "fortuna-sittard",
+          "isHome": true
+        },
+        {
+          "date": "2027-01-29",
+          "round": 21,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "fc-utrecht",
+          "isHome": false
+        },
+        {
+          "date": "2027-02-13",
+          "round": 22,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "afc-ajax",
+          "isHome": true
+        },
+        {
+          "date": "2027-02-20",
+          "round": 23,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "fc-twente-65",
+          "isHome": false
+        },
+        {
+          "date": "2027-02-27",
+          "round": 24,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "sc-heerenveen",
+          "isHome": true
+        },
+        {
+          "date": "2027-03-06",
+          "round": 25,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "go-ahead-eagles",
+          "isHome": false
+        },
+        {
+          "date": "2027-03-13",
+          "round": 26,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "nec",
+          "isHome": true
+        },
+        {
+          "date": "2027-03-20",
+          "round": 27,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "az",
+          "isHome": false
+        },
+        {
+          "date": "2027-04-03",
+          "round": 28,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "pec-zwolle",
+          "isHome": true
+        },
+        {
+          "date": "2027-04-10",
+          "round": 29,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "fc-groningen",
+          "isHome": false
+        },
+        {
+          "date": "2027-04-24",
+          "round": 30,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "willem-ii-tilburg",
+          "isHome": true
+        },
+        {
+          "date": "2027-05-01",
+          "round": 31,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "sc-cambuur-leeuwarden",
+          "isHome": true
+        },
+        {
+          "date": "2027-05-08",
+          "round": 32,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "psv",
+          "isHome": false
+        },
+        {
+          "date": "2027-05-16",
+          "round": 33,
+          "probability": 0.00012,
+          "cumulativeProbability": 0.00012,
+          "opponent": "ado-den-haag",
+          "isHome": true
+        },
+        {
+          "date": "2027-05-23",
+          "round": 34,
+          "probability": 0.0003,
+          "cumulativeProbability": 0.00041999999999999996,
+          "opponent": "telstar-1963",
+          "isHome": false
+        }
+      ],
+      "bestCaseDate": "2027-02-13",
+      "bestCaseRound": 22,
+      "expectedDate": "2027-05-23",
+      "neverChampionProbability": 0.99958,
+      "neverChampionCount": 49979,
+      "positionProbabilities": {
+        "1": 0.00042,
+        "2": 0.0039,
+        "3": 0.01942,
+        "4": 0.06666,
+        "5": 0.19646,
+        "6": 0.59048,
+        "7": 0.09944,
+        "8": 0.01836,
+        "9": 0.00394,
+        "10": 0.00072,
+        "11": 0.00016,
+        "12": 0.00004
+      }
+    },
+    "sc-cambuur-leeuwarden": {
+      "teamId": "sc-cambuur-leeuwarden",
+      "teamName": "SC Cambuur-Leeuwarden",
+      "totalChampionshipProbability": 0,
+      "dateProbabilities": [
+        {
+          "date": "2026-09-15",
+          "round": 3,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "vrij",
+          "isHome": false
+        },
+        {
+          "date": "2026-09-19",
+          "round": 7,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "ado-den-haag",
+          "isHome": false
+        },
+        {
+          "date": "2026-10-11",
+          "round": 8,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "pec-zwolle",
+          "isHome": false
+        },
+        {
+          "date": "2026-10-18",
+          "round": 9,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "az",
+          "isHome": true
+        },
+        {
+          "date": "2026-10-24",
+          "round": 10,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "willem-ii-tilburg",
+          "isHome": false
+        },
+        {
+          "date": "2026-10-31",
+          "round": 11,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "go-ahead-eagles",
+          "isHome": true
+        },
+        {
+          "date": "2026-11-08",
+          "round": 12,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "psv",
+          "isHome": true
+        },
+        {
+          "date": "2026-11-21",
+          "round": 13,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "fc-utrecht",
+          "isHome": false
+        },
+        {
+          "date": "2026-11-28",
+          "round": 14,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "sparta-rotterdam",
+          "isHome": true
+        },
+        {
+          "date": "2026-12-06",
+          "round": 15,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "sc-heerenveen",
+          "isHome": false
+        },
+        {
+          "date": "2026-12-13",
+          "round": 16,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "afc-ajax",
+          "isHome": false
+        },
+        {
+          "date": "2026-12-20",
+          "round": 17,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "fc-groningen",
+          "isHome": true
+        },
+        {
+          "date": "2027-01-10",
+          "round": 18,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "nec",
+          "isHome": false
+        },
+        {
+          "date": "2027-01-17",
+          "round": 19,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "willem-ii-tilburg",
+          "isHome": true
+        },
+        {
+          "date": "2027-01-24",
+          "round": 20,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "go-ahead-eagles",
+          "isHome": false
+        },
+        {
+          "date": "2027-01-31",
+          "round": 21,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "fc-twente-65",
+          "isHome": false
+        },
+        {
+          "date": "2027-02-13",
+          "round": 22,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "fc-utrecht",
+          "isHome": true
+        },
+        {
+          "date": "2027-02-20",
+          "round": 23,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "psv",
+          "isHome": false
+        },
+        {
+          "date": "2027-02-27",
+          "round": 24,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "pec-zwolle",
+          "isHome": true
+        },
+        {
+          "date": "2027-03-06",
+          "round": 25,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "sparta-rotterdam",
+          "isHome": false
+        },
+        {
+          "date": "2027-03-13",
+          "round": 26,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "ado-den-haag",
+          "isHome": true
+        },
+        {
+          "date": "2027-03-20",
+          "round": 27,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "feyenoord-rotterdam",
+          "isHome": false
+        },
+        {
+          "date": "2027-04-03",
+          "round": 28,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "telstar-1963",
+          "isHome": true
+        },
+        {
+          "date": "2027-04-10",
+          "round": 29,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "fortuna-sittard",
+          "isHome": true
+        },
+        {
+          "date": "2027-04-24",
+          "round": 30,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "az",
+          "isHome": false
+        },
+        {
+          "date": "2027-05-01",
+          "round": 31,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "sbv-excelsior",
+          "isHome": false
+        },
+        {
+          "date": "2027-05-08",
+          "round": 32,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "sc-heerenveen",
+          "isHome": true
+        },
+        {
+          "date": "2027-05-16",
+          "round": 33,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "fc-groningen",
+          "isHome": false
+        },
+        {
+          "date": "2027-05-23",
+          "round": 34,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "afc-ajax",
+          "isHome": true
+        }
+      ],
+      "bestCaseDate": "2027-02-20",
+      "bestCaseRound": 23,
+      "expectedDate": null,
+      "neverChampionProbability": 1,
+      "neverChampionCount": 50000,
+      "positionProbabilities": {
+        "7": 0.00004,
+        "8": 0.00022,
+        "9": 0.0016,
+        "10": 0.00642,
+        "11": 0.02196,
+        "12": 0.05826,
+        "13": 0.134,
+        "14": 0.25942,
+        "15": 0.26022,
+        "16": 0.15066,
+        "17": 0.0743,
+        "18": 0.0329
+      }
+    },
+    "sc-heerenveen": {
+      "teamId": "sc-heerenveen",
+      "teamName": "SC Heerenveen",
+      "totalChampionshipProbability": 0,
+      "dateProbabilities": [
+        {
+          "date": "2026-09-15",
+          "round": 3,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "vrij",
+          "isHome": false
+        },
+        {
+          "date": "2026-09-19",
+          "round": 7,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "sparta-rotterdam",
+          "isHome": false
+        },
+        {
+          "date": "2026-10-09",
+          "round": 8,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "psv",
+          "isHome": false
+        },
+        {
+          "date": "2026-10-16",
+          "round": 9,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "sbv-excelsior",
+          "isHome": true
+        },
+        {
+          "date": "2026-10-24",
+          "round": 10,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "ado-den-haag",
+          "isHome": false
+        },
+        {
+          "date": "2026-10-31",
+          "round": 11,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "nec",
+          "isHome": true
+        },
+        {
+          "date": "2026-11-08",
+          "round": 12,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "feyenoord-rotterdam",
+          "isHome": true
+        },
+        {
+          "date": "2026-11-21",
+          "round": 13,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "fc-groningen",
+          "isHome": false
+        },
+        {
+          "date": "2026-11-29",
+          "round": 14,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "fortuna-sittard",
+          "isHome": false
+        },
+        {
+          "date": "2026-12-06",
+          "round": 15,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "sc-cambuur-leeuwarden",
+          "isHome": true
+        },
+        {
+          "date": "2026-12-12",
+          "round": 16,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "go-ahead-eagles",
+          "isHome": true
+        },
+        {
+          "date": "2026-12-19",
+          "round": 17,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "fc-utrecht",
+          "isHome": false
+        },
+        {
+          "date": "2027-01-09",
+          "round": 18,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "az",
+          "isHome": false
+        },
+        {
+          "date": "2027-01-15",
+          "round": 19,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "sparta-rotterdam",
+          "isHome": true
+        },
+        {
+          "date": "2027-01-23",
+          "round": 20,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "fc-twente-65",
+          "isHome": false
+        },
+        {
+          "date": "2027-01-31",
+          "round": 21,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "afc-ajax",
+          "isHome": true
+        },
+        {
+          "date": "2027-02-13",
+          "round": 22,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "telstar-1963",
+          "isHome": false
+        },
+        {
+          "date": "2027-02-20",
+          "round": 23,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "willem-ii-tilburg",
+          "isHome": true
+        },
+        {
+          "date": "2027-02-27",
+          "round": 24,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "sbv-excelsior",
+          "isHome": false
+        },
+        {
+          "date": "2027-03-06",
+          "round": 25,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "feyenoord-rotterdam",
+          "isHome": false
+        },
+        {
+          "date": "2027-03-13",
+          "round": 26,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "fortuna-sittard",
+          "isHome": true
+        },
+        {
+          "date": "2027-03-20",
+          "round": 27,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "pec-zwolle",
+          "isHome": false
+        },
+        {
+          "date": "2027-04-03",
+          "round": 28,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "fc-groningen",
+          "isHome": true
+        },
+        {
+          "date": "2027-04-10",
+          "round": 29,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "nec",
+          "isHome": false
+        },
+        {
+          "date": "2027-04-24",
+          "round": 30,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "ado-den-haag",
+          "isHome": true
+        },
+        {
+          "date": "2027-05-01",
+          "round": 31,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "fc-utrecht",
+          "isHome": true
+        },
+        {
+          "date": "2027-05-08",
+          "round": 32,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "sc-cambuur-leeuwarden",
+          "isHome": false
+        },
+        {
+          "date": "2027-05-16",
+          "round": 33,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "go-ahead-eagles",
+          "isHome": false
+        },
+        {
+          "date": "2027-05-23",
+          "round": 34,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "psv",
+          "isHome": true
+        }
+      ],
+      "bestCaseDate": "2027-02-13",
+      "bestCaseRound": 22,
+      "expectedDate": null,
+      "neverChampionProbability": 1,
+      "neverChampionCount": 50000,
+      "positionProbabilities": {
+        "6": 0.00098,
+        "7": 0.01638,
+        "8": 0.0486,
+        "9": 0.09576,
+        "10": 0.16042,
+        "11": 0.24014,
+        "12": 0.21812,
+        "13": 0.13774,
+        "14": 0.05614,
+        "15": 0.01936,
+        "16": 0.00476,
+        "17": 0.0012,
+        "18": 0.0004
+      }
+    },
+    "sparta-rotterdam": {
+      "teamId": "sparta-rotterdam",
+      "teamName": "Sparta Rotterdam",
+      "totalChampionshipProbability": 0,
+      "dateProbabilities": [
+        {
+          "date": "2026-09-15",
+          "round": 3,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "vrij",
+          "isHome": false
+        },
+        {
+          "date": "2026-09-19",
+          "round": 7,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "sc-heerenveen",
+          "isHome": true
+        },
+        {
+          "date": "2026-10-10",
+          "round": 8,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "go-ahead-eagles",
+          "isHome": false
+        },
+        {
+          "date": "2026-10-17",
+          "round": 9,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "willem-ii-tilburg",
+          "isHome": true
+        },
+        {
+          "date": "2026-10-25",
+          "round": 10,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "afc-ajax",
+          "isHome": true
+        },
+        {
+          "date": "2026-11-01",
+          "round": 11,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "fc-groningen",
+          "isHome": false
+        },
+        {
+          "date": "2026-11-07",
+          "round": 12,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "ado-den-haag",
+          "isHome": false
+        },
+        {
+          "date": "2026-11-22",
+          "round": 13,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "az",
+          "isHome": true
+        },
+        {
+          "date": "2026-11-28",
+          "round": 14,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "sc-cambuur-leeuwarden",
+          "isHome": false
+        },
+        {
+          "date": "2026-12-05",
+          "round": 15,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "nec",
+          "isHome": true
+        },
+        {
+          "date": "2027-02-06",
+          "round": 16,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "fc-twente-65",
+          "isHome": false
+        },
+        {
+          "date": "2026-12-19",
+          "round": 17,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "fortuna-sittard",
+          "isHome": false
+        },
+        {
+          "date": "2027-01-09",
+          "round": 18,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "sbv-excelsior",
+          "isHome": true
+        },
+        {
+          "date": "2027-01-15",
+          "round": 19,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "sc-heerenveen",
+          "isHome": false
+        },
+        {
+          "date": "2027-01-24",
+          "round": 20,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "fc-groningen",
+          "isHome": true
+        },
+        {
+          "date": "2027-01-30",
+          "round": 21,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "telstar-1963",
+          "isHome": true
+        },
+        {
+          "date": "2027-02-13",
+          "round": 22,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "willem-ii-tilburg",
+          "isHome": false
+        },
+        {
+          "date": "2027-02-20",
+          "round": 23,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "nec",
+          "isHome": false
+        },
+        {
+          "date": "2027-02-27",
+          "round": 24,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "psv",
+          "isHome": true
+        },
+        {
+          "date": "2027-03-06",
+          "round": 25,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "sc-cambuur-leeuwarden",
+          "isHome": true
+        },
+        {
+          "date": "2027-03-13",
+          "round": 26,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "az",
+          "isHome": false
+        },
+        {
+          "date": "2027-03-20",
+          "round": 27,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "fc-utrecht",
+          "isHome": false
+        },
+        {
+          "date": "2027-04-03",
+          "round": 28,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "ado-den-haag",
+          "isHome": true
+        },
+        {
+          "date": "2027-04-10",
+          "round": 29,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "go-ahead-eagles",
+          "isHome": true
+        },
+        {
+          "date": "2027-04-24",
+          "round": 30,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "feyenoord-rotterdam",
+          "isHome": false
+        },
+        {
+          "date": "2027-05-01",
+          "round": 31,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "fc-twente-65",
+          "isHome": true
+        },
+        {
+          "date": "2027-05-08",
+          "round": 32,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "pec-zwolle",
+          "isHome": false
+        },
+        {
+          "date": "2027-05-16",
+          "round": 33,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "afc-ajax",
+          "isHome": false
+        },
+        {
+          "date": "2027-05-23",
+          "round": 34,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "fortuna-sittard",
+          "isHome": true
+        }
+      ],
+      "bestCaseDate": "2027-02-13",
+      "bestCaseRound": 22,
+      "expectedDate": null,
+      "neverChampionProbability": 1,
+      "neverChampionCount": 50000,
+      "positionProbabilities": {
+        "5": 0.00004,
+        "6": 0.00074,
+        "7": 0.01226,
+        "8": 0.0406,
+        "9": 0.08272,
+        "10": 0.14348,
+        "11": 0.22106,
+        "12": 0.25154,
+        "13": 0.1535,
+        "14": 0.06188,
+        "15": 0.02352,
+        "16": 0.00656,
+        "17": 0.0018,
+        "18": 0.0003
+      }
+    },
+    "telstar-1963": {
+      "teamId": "telstar-1963",
+      "teamName": "Telstar 1963",
+      "totalChampionshipProbability": 0,
+      "dateProbabilities": [
+        {
+          "date": "2026-09-15",
+          "round": 3,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "vrij",
+          "isHome": false
+        },
+        {
+          "date": "2026-09-20",
+          "round": 7,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "az",
+          "isHome": false
+        },
+        {
+          "date": "2026-10-11",
+          "round": 8,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "ado-den-haag",
+          "isHome": true
+        },
+        {
+          "date": "2026-10-17",
+          "round": 9,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "feyenoord-rotterdam",
+          "isHome": true
+        },
+        {
+          "date": "2026-10-23",
+          "round": 10,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "go-ahead-eagles",
+          "isHome": false
+        },
+        {
+          "date": "2026-11-01",
+          "round": 11,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "fc-utrecht",
+          "isHome": true
+        },
+        {
+          "date": "2026-11-07",
+          "round": 12,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "fortuna-sittard",
+          "isHome": false
+        },
+        {
+          "date": "2026-11-21",
+          "round": 13,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "pec-zwolle",
+          "isHome": true
+        },
+        {
+          "date": "2026-11-28",
+          "round": 14,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "sbv-excelsior",
+          "isHome": false
+        },
+        {
+          "date": "2026-12-04",
+          "round": 15,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "fc-groningen",
+          "isHome": true
+        },
+        {
+          "date": "2026-12-13",
+          "round": 16,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "psv",
+          "isHome": false
+        },
+        {
+          "date": "2026-12-18",
+          "round": 17,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "willem-ii-tilburg",
+          "isHome": true
+        },
+        {
+          "date": "2027-01-10",
+          "round": 18,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "ado-den-haag",
+          "isHome": false
+        },
+        {
+          "date": "2027-01-16",
+          "round": 19,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "nec",
+          "isHome": true
+        },
+        {
+          "date": "2027-01-23",
+          "round": 20,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "afc-ajax",
+          "isHome": false
+        },
+        {
+          "date": "2027-01-30",
+          "round": 21,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "sparta-rotterdam",
+          "isHome": false
+        },
+        {
+          "date": "2027-02-13",
+          "round": 22,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "sc-heerenveen",
+          "isHome": true
+        },
+        {
+          "date": "2027-02-20",
+          "round": 23,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "feyenoord-rotterdam",
+          "isHome": false
+        },
+        {
+          "date": "2027-02-27",
+          "round": 24,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "go-ahead-eagles",
+          "isHome": true
+        },
+        {
+          "date": "2027-03-06",
+          "round": 25,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "fc-groningen",
+          "isHome": false
+        },
+        {
+          "date": "2027-03-13",
+          "round": 26,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "psv",
+          "isHome": true
+        },
+        {
+          "date": "2027-03-20",
+          "round": 27,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "fortuna-sittard",
+          "isHome": true
+        },
+        {
+          "date": "2027-04-03",
+          "round": 28,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "sc-cambuur-leeuwarden",
+          "isHome": false
+        },
+        {
+          "date": "2027-04-10",
+          "round": 29,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "fc-twente-65",
+          "isHome": true
+        },
+        {
+          "date": "2027-04-24",
+          "round": 30,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "pec-zwolle",
+          "isHome": false
+        },
+        {
+          "date": "2027-05-01",
+          "round": 31,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "az",
+          "isHome": true
+        },
+        {
+          "date": "2027-05-08",
+          "round": 32,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "willem-ii-tilburg",
+          "isHome": false
+        },
+        {
+          "date": "2027-05-16",
+          "round": 33,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "fc-utrecht",
+          "isHome": false
+        },
+        {
+          "date": "2027-05-23",
+          "round": 34,
+          "probability": 0,
+          "cumulativeProbability": 0,
+          "opponent": "sbv-excelsior",
+          "isHome": true
+        }
+      ],
+      "bestCaseDate": "2027-02-13",
+      "bestCaseRound": 22,
+      "expectedDate": null,
+      "neverChampionProbability": 1,
+      "neverChampionCount": 50000,
+      "positionProbabilities": {
+        "7": 0.00004,
+        "8": 0.0004,
+        "9": 0.00128,
+        "10": 0.00584,
+        "11": 0.01864,
+        "12": 0.05552,
+        "13": 0.14262,
+        "14": 0.25982,
+        "15": 0.24844,
+        "16": 0.15288,
+        "17": 0.08006,
+        "18": 0.03446
       }
     },
     "willem-ii-tilburg": {
@@ -4362,271 +4615,15 @@
       "neverChampionProbability": 1,
       "neverChampionCount": 50000,
       "positionProbabilities": {
-        "10": 0.00016,
-        "11": 0.00084,
-        "12": 0.00316,
-        "13": 0.01386,
-        "14": 0.04832,
-        "15": 0.10608,
-        "16": 0.21336,
-        "17": 0.28236,
-        "18": 0.33186
-      }
-    },
-    "ado-den-haag": {
-      "teamId": "ado-den-haag",
-      "teamName": "ADO Den Haag",
-      "totalChampionshipProbability": 0,
-      "dateProbabilities": [
-        {
-          "date": "2026-09-15",
-          "round": 3,
-          "probability": 0,
-          "cumulativeProbability": 0,
-          "opponent": "vrij",
-          "isHome": false
-        },
-        {
-          "date": "2026-09-19",
-          "round": 7,
-          "probability": 0,
-          "cumulativeProbability": 0,
-          "opponent": "sc-cambuur-leeuwarden",
-          "isHome": true
-        },
-        {
-          "date": "2026-10-11",
-          "round": 8,
-          "probability": 0,
-          "cumulativeProbability": 0,
-          "opponent": "telstar-1963",
-          "isHome": false
-        },
-        {
-          "date": "2026-10-17",
-          "round": 9,
-          "probability": 0,
-          "cumulativeProbability": 0,
-          "opponent": "psv",
-          "isHome": true
-        },
-        {
-          "date": "2026-10-24",
-          "round": 10,
-          "probability": 0,
-          "cumulativeProbability": 0,
-          "opponent": "sc-heerenveen",
-          "isHome": true
-        },
-        {
-          "date": "2026-11-01",
-          "round": 11,
-          "probability": 0,
-          "cumulativeProbability": 0,
-          "opponent": "pec-zwolle",
-          "isHome": false
-        },
-        {
-          "date": "2026-11-07",
-          "round": 12,
-          "probability": 0,
-          "cumulativeProbability": 0,
-          "opponent": "sparta-rotterdam",
-          "isHome": true
-        },
-        {
-          "date": "2026-11-22",
-          "round": 13,
-          "probability": 0,
-          "cumulativeProbability": 0,
-          "opponent": "afc-ajax",
-          "isHome": false
-        },
-        {
-          "date": "2026-11-29",
-          "round": 14,
-          "probability": 0,
-          "cumulativeProbability": 0,
-          "opponent": "fc-utrecht",
-          "isHome": true
-        },
-        {
-          "date": "2026-12-06",
-          "round": 15,
-          "probability": 0,
-          "cumulativeProbability": 0,
-          "opponent": "sbv-excelsior",
-          "isHome": true
-        },
-        {
-          "date": "2026-12-13",
-          "round": 16,
-          "probability": 0,
-          "cumulativeProbability": 0,
-          "opponent": "willem-ii-tilburg",
-          "isHome": false
-        },
-        {
-          "date": "2026-12-20",
-          "round": 17,
-          "probability": 0,
-          "cumulativeProbability": 0,
-          "opponent": "nec",
-          "isHome": false
-        },
-        {
-          "date": "2027-01-10",
-          "round": 18,
-          "probability": 0,
-          "cumulativeProbability": 0,
-          "opponent": "telstar-1963",
-          "isHome": true
-        },
-        {
-          "date": "2027-01-16",
-          "round": 19,
-          "probability": 0,
-          "cumulativeProbability": 0,
-          "opponent": "pec-zwolle",
-          "isHome": true
-        },
-        {
-          "date": "2027-01-23",
-          "round": 20,
-          "probability": 0,
-          "cumulativeProbability": 0,
-          "opponent": "psv",
-          "isHome": false
-        },
-        {
-          "date": "2027-01-30",
-          "round": 21,
-          "probability": 0,
-          "cumulativeProbability": 0,
-          "opponent": "go-ahead-eagles",
-          "isHome": true
-        },
-        {
-          "date": "2027-02-13",
-          "round": 22,
-          "probability": 0,
-          "cumulativeProbability": 0,
-          "opponent": "fortuna-sittard",
-          "isHome": false
-        },
-        {
-          "date": "2027-02-20",
-          "round": 23,
-          "probability": 0,
-          "cumulativeProbability": 0,
-          "opponent": "fc-utrecht",
-          "isHome": false
-        },
-        {
-          "date": "2027-02-27",
-          "round": 24,
-          "probability": 0,
-          "cumulativeProbability": 0,
-          "opponent": "fc-twente-65",
-          "isHome": true
-        },
-        {
-          "date": "2027-03-06",
-          "round": 25,
-          "probability": 0,
-          "cumulativeProbability": 0,
-          "opponent": "afc-ajax",
-          "isHome": true
-        },
-        {
-          "date": "2027-03-13",
-          "round": 26,
-          "probability": 0,
-          "cumulativeProbability": 0,
-          "opponent": "sc-cambuur-leeuwarden",
-          "isHome": false
-        },
-        {
-          "date": "2027-03-20",
-          "round": 27,
-          "probability": 0,
-          "cumulativeProbability": 0,
-          "opponent": "willem-ii-tilburg",
-          "isHome": true
-        },
-        {
-          "date": "2027-04-03",
-          "round": 28,
-          "probability": 0,
-          "cumulativeProbability": 0,
-          "opponent": "sparta-rotterdam",
-          "isHome": false
-        },
-        {
-          "date": "2027-04-10",
-          "round": 29,
-          "probability": 0,
-          "cumulativeProbability": 0,
-          "opponent": "feyenoord-rotterdam",
-          "isHome": true
-        },
-        {
-          "date": "2027-04-24",
-          "round": 30,
-          "probability": 0,
-          "cumulativeProbability": 0,
-          "opponent": "sc-heerenveen",
-          "isHome": false
-        },
-        {
-          "date": "2027-05-01",
-          "round": 31,
-          "probability": 0,
-          "cumulativeProbability": 0,
-          "opponent": "fc-groningen",
-          "isHome": false
-        },
-        {
-          "date": "2027-05-08",
-          "round": 32,
-          "probability": 0,
-          "cumulativeProbability": 0,
-          "opponent": "nec",
-          "isHome": true
-        },
-        {
-          "date": "2027-05-16",
-          "round": 33,
-          "probability": 0,
-          "cumulativeProbability": 0,
-          "opponent": "sbv-excelsior",
-          "isHome": false
-        },
-        {
-          "date": "2027-05-23",
-          "round": 34,
-          "probability": 0,
-          "cumulativeProbability": 0,
-          "opponent": "az",
-          "isHome": true
-        }
-      ],
-      "bestCaseDate": "2027-02-20",
-      "bestCaseRound": 23,
-      "expectedDate": null,
-      "neverChampionProbability": 1,
-      "neverChampionCount": 50000,
-      "positionProbabilities": {
-        "9": 0.00002,
         "10": 0.0001,
-        "11": 0.00078,
-        "12": 0.00426,
-        "13": 0.01598,
-        "14": 0.05172,
-        "15": 0.1085,
-        "16": 0.20806,
-        "17": 0.27412,
-        "18": 0.33646
+        "11": 0.00058,
+        "12": 0.00386,
+        "13": 0.014,
+        "14": 0.04758,
+        "15": 0.1083,
+        "16": 0.21108,
+        "17": 0.28418,
+        "18": 0.33032
       }
     }
   },
@@ -4674,7 +4671,7 @@
         }
       ],
       "iterations": 50000,
-      "neverChampionCount": 19477
+      "neverChampionCount": 19427
     },
     "az": {
       "clubPoints": 16,
@@ -4718,7 +4715,7 @@
         }
       ],
       "iterations": 50000,
-      "neverChampionCount": 41822
+      "neverChampionCount": 41954
     },
     "feyenoord-rotterdam": {
       "clubPoints": 14,
@@ -4762,7 +4759,7 @@
         }
       ],
       "iterations": 50000,
-      "neverChampionCount": 43575
+      "neverChampionCount": 43670
     },
     "afc-ajax": {
       "clubPoints": 10,
@@ -4806,7 +4803,7 @@
         }
       ],
       "iterations": 50000,
-      "neverChampionCount": 48976
+      "neverChampionCount": 48904
     },
     "fc-twente-65": {
       "clubPoints": 13,
@@ -4850,7 +4847,7 @@
         }
       ],
       "iterations": 50000,
-      "neverChampionCount": 49519
+      "neverChampionCount": 49467
     },
     "sbv-excelsior": {
       "clubPoints": 10,
@@ -4894,7 +4891,139 @@
         }
       ],
       "iterations": 50000,
-      "neverChampionCount": 49980
+      "neverChampionCount": 49979
+    },
+    "ado-den-haag": {
+      "clubPoints": 1,
+      "clubPlayed": 6,
+      "clubRemaining": 28,
+      "rivals": [
+        {
+          "name": "PSV",
+          "points": 16,
+          "maxPoints": 100,
+          "gap": -15,
+          "winAllProb": 0.0003824735743638726
+        },
+        {
+          "name": "AZ",
+          "points": 16,
+          "maxPoints": 100,
+          "gap": -15,
+          "winAllProb": 0.000010611355349544077
+        },
+        {
+          "name": "Feyenoord Rotterdam",
+          "points": 14,
+          "maxPoints": 98,
+          "gap": -13,
+          "winAllProb": 0.00002345788960115473
+        },
+        {
+          "name": "FC Twente '65",
+          "points": 13,
+          "maxPoints": 97,
+          "gap": -12,
+          "winAllProb": 1.9192606531874815e-7
+        },
+        {
+          "name": "AFC Ajax",
+          "points": 10,
+          "maxPoints": 97,
+          "gap": -9,
+          "winAllProb": 9.544213023336047e-7
+        }
+      ],
+      "iterations": 50000,
+      "neverChampionCount": 50000
+    },
+    "fc-groningen": {
+      "clubPoints": 8,
+      "clubPlayed": 6,
+      "clubRemaining": 28,
+      "rivals": [
+        {
+          "name": "PSV",
+          "points": 16,
+          "maxPoints": 100,
+          "gap": -8,
+          "winAllProb": 0.0003824735743638726
+        },
+        {
+          "name": "AZ",
+          "points": 16,
+          "maxPoints": 100,
+          "gap": -8,
+          "winAllProb": 0.000010611355349544077
+        },
+        {
+          "name": "Feyenoord Rotterdam",
+          "points": 14,
+          "maxPoints": 98,
+          "gap": -6,
+          "winAllProb": 0.00002345788960115473
+        },
+        {
+          "name": "FC Twente '65",
+          "points": 13,
+          "maxPoints": 97,
+          "gap": -5,
+          "winAllProb": 1.9192606531874815e-7
+        },
+        {
+          "name": "AFC Ajax",
+          "points": 10,
+          "maxPoints": 97,
+          "gap": -2,
+          "winAllProb": 9.544213023336047e-7
+        }
+      ],
+      "iterations": 50000,
+      "neverChampionCount": 50000
+    },
+    "fc-utrecht": {
+      "clubPoints": 5,
+      "clubPlayed": 6,
+      "clubRemaining": 28,
+      "rivals": [
+        {
+          "name": "PSV",
+          "points": 16,
+          "maxPoints": 100,
+          "gap": -11,
+          "winAllProb": 0.0003824735743638726
+        },
+        {
+          "name": "AZ",
+          "points": 16,
+          "maxPoints": 100,
+          "gap": -11,
+          "winAllProb": 0.000010611355349544077
+        },
+        {
+          "name": "Feyenoord Rotterdam",
+          "points": 14,
+          "maxPoints": 98,
+          "gap": -9,
+          "winAllProb": 0.00002345788960115473
+        },
+        {
+          "name": "FC Twente '65",
+          "points": 13,
+          "maxPoints": 97,
+          "gap": -8,
+          "winAllProb": 1.9192606531874815e-7
+        },
+        {
+          "name": "AFC Ajax",
+          "points": 10,
+          "maxPoints": 97,
+          "gap": -5,
+          "winAllProb": 9.544213023336047e-7
+        }
+      ],
+      "iterations": 50000,
+      "neverChampionCount": 50000
     },
     "fortuna-sittard": {
       "clubPoints": 10,
@@ -4984,50 +5113,6 @@
       "iterations": 50000,
       "neverChampionCount": 50000
     },
-    "fc-groningen": {
-      "clubPoints": 8,
-      "clubPlayed": 6,
-      "clubRemaining": 28,
-      "rivals": [
-        {
-          "name": "PSV",
-          "points": 16,
-          "maxPoints": 100,
-          "gap": -8,
-          "winAllProb": 0.0003824735743638726
-        },
-        {
-          "name": "AZ",
-          "points": 16,
-          "maxPoints": 100,
-          "gap": -8,
-          "winAllProb": 0.000010611355349544077
-        },
-        {
-          "name": "Feyenoord Rotterdam",
-          "points": 14,
-          "maxPoints": 98,
-          "gap": -6,
-          "winAllProb": 0.00002345788960115473
-        },
-        {
-          "name": "FC Twente '65",
-          "points": 13,
-          "maxPoints": 97,
-          "gap": -5,
-          "winAllProb": 1.9192606531874815e-7
-        },
-        {
-          "name": "AFC Ajax",
-          "points": 10,
-          "maxPoints": 97,
-          "gap": -2,
-          "winAllProb": 9.544213023336047e-7
-        }
-      ],
-      "iterations": 50000,
-      "neverChampionCount": 50000
-    },
     "nec": {
       "clubPoints": 7,
       "clubPlayed": 6,
@@ -5066,6 +5151,94 @@
           "points": 10,
           "maxPoints": 97,
           "gap": -3,
+          "winAllProb": 9.544213023336047e-7
+        }
+      ],
+      "iterations": 50000,
+      "neverChampionCount": 50000
+    },
+    "pec-zwolle": {
+      "clubPoints": 4,
+      "clubPlayed": 6,
+      "clubRemaining": 28,
+      "rivals": [
+        {
+          "name": "PSV",
+          "points": 16,
+          "maxPoints": 100,
+          "gap": -12,
+          "winAllProb": 0.0003824735743638726
+        },
+        {
+          "name": "AZ",
+          "points": 16,
+          "maxPoints": 100,
+          "gap": -12,
+          "winAllProb": 0.000010611355349544077
+        },
+        {
+          "name": "Feyenoord Rotterdam",
+          "points": 14,
+          "maxPoints": 98,
+          "gap": -10,
+          "winAllProb": 0.00002345788960115473
+        },
+        {
+          "name": "FC Twente '65",
+          "points": 13,
+          "maxPoints": 97,
+          "gap": -9,
+          "winAllProb": 1.9192606531874815e-7
+        },
+        {
+          "name": "AFC Ajax",
+          "points": 10,
+          "maxPoints": 97,
+          "gap": -6,
+          "winAllProb": 9.544213023336047e-7
+        }
+      ],
+      "iterations": 50000,
+      "neverChampionCount": 50000
+    },
+    "sc-cambuur-leeuwarden": {
+      "clubPoints": 4,
+      "clubPlayed": 6,
+      "clubRemaining": 28,
+      "rivals": [
+        {
+          "name": "PSV",
+          "points": 16,
+          "maxPoints": 100,
+          "gap": -12,
+          "winAllProb": 0.0003824735743638726
+        },
+        {
+          "name": "AZ",
+          "points": 16,
+          "maxPoints": 100,
+          "gap": -12,
+          "winAllProb": 0.000010611355349544077
+        },
+        {
+          "name": "Feyenoord Rotterdam",
+          "points": 14,
+          "maxPoints": 98,
+          "gap": -10,
+          "winAllProb": 0.00002345788960115473
+        },
+        {
+          "name": "FC Twente '65",
+          "points": 13,
+          "maxPoints": 97,
+          "gap": -9,
+          "winAllProb": 1.9192606531874815e-7
+        },
+        {
+          "name": "AFC Ajax",
+          "points": 10,
+          "maxPoints": 97,
+          "gap": -6,
           "winAllProb": 9.544213023336047e-7
         }
       ],
@@ -5204,138 +5377,6 @@
       "iterations": 50000,
       "neverChampionCount": 50000
     },
-    "fc-utrecht": {
-      "clubPoints": 5,
-      "clubPlayed": 6,
-      "clubRemaining": 28,
-      "rivals": [
-        {
-          "name": "PSV",
-          "points": 16,
-          "maxPoints": 100,
-          "gap": -11,
-          "winAllProb": 0.0003824735743638726
-        },
-        {
-          "name": "AZ",
-          "points": 16,
-          "maxPoints": 100,
-          "gap": -11,
-          "winAllProb": 0.000010611355349544077
-        },
-        {
-          "name": "Feyenoord Rotterdam",
-          "points": 14,
-          "maxPoints": 98,
-          "gap": -9,
-          "winAllProb": 0.00002345788960115473
-        },
-        {
-          "name": "FC Twente '65",
-          "points": 13,
-          "maxPoints": 97,
-          "gap": -8,
-          "winAllProb": 1.9192606531874815e-7
-        },
-        {
-          "name": "AFC Ajax",
-          "points": 10,
-          "maxPoints": 97,
-          "gap": -5,
-          "winAllProb": 9.544213023336047e-7
-        }
-      ],
-      "iterations": 50000,
-      "neverChampionCount": 50000
-    },
-    "sc-cambuur-leeuwarden": {
-      "clubPoints": 4,
-      "clubPlayed": 6,
-      "clubRemaining": 28,
-      "rivals": [
-        {
-          "name": "PSV",
-          "points": 16,
-          "maxPoints": 100,
-          "gap": -12,
-          "winAllProb": 0.0003824735743638726
-        },
-        {
-          "name": "AZ",
-          "points": 16,
-          "maxPoints": 100,
-          "gap": -12,
-          "winAllProb": 0.000010611355349544077
-        },
-        {
-          "name": "Feyenoord Rotterdam",
-          "points": 14,
-          "maxPoints": 98,
-          "gap": -10,
-          "winAllProb": 0.00002345788960115473
-        },
-        {
-          "name": "FC Twente '65",
-          "points": 13,
-          "maxPoints": 97,
-          "gap": -9,
-          "winAllProb": 1.9192606531874815e-7
-        },
-        {
-          "name": "AFC Ajax",
-          "points": 10,
-          "maxPoints": 97,
-          "gap": -6,
-          "winAllProb": 9.544213023336047e-7
-        }
-      ],
-      "iterations": 50000,
-      "neverChampionCount": 50000
-    },
-    "pec-zwolle": {
-      "clubPoints": 4,
-      "clubPlayed": 6,
-      "clubRemaining": 28,
-      "rivals": [
-        {
-          "name": "PSV",
-          "points": 16,
-          "maxPoints": 100,
-          "gap": -12,
-          "winAllProb": 0.0003824735743638726
-        },
-        {
-          "name": "AZ",
-          "points": 16,
-          "maxPoints": 100,
-          "gap": -12,
-          "winAllProb": 0.000010611355349544077
-        },
-        {
-          "name": "Feyenoord Rotterdam",
-          "points": 14,
-          "maxPoints": 98,
-          "gap": -10,
-          "winAllProb": 0.00002345788960115473
-        },
-        {
-          "name": "FC Twente '65",
-          "points": 13,
-          "maxPoints": 97,
-          "gap": -9,
-          "winAllProb": 1.9192606531874815e-7
-        },
-        {
-          "name": "AFC Ajax",
-          "points": 10,
-          "maxPoints": 97,
-          "gap": -6,
-          "winAllProb": 9.544213023336047e-7
-        }
-      ],
-      "iterations": 50000,
-      "neverChampionCount": 50000
-    },
     "willem-ii-tilburg": {
       "clubPoints": 2,
       "clubPlayed": 5,
@@ -5374,50 +5415,6 @@
           "points": 10,
           "maxPoints": 97,
           "gap": -8,
-          "winAllProb": 9.544213023336047e-7
-        }
-      ],
-      "iterations": 50000,
-      "neverChampionCount": 50000
-    },
-    "ado-den-haag": {
-      "clubPoints": 1,
-      "clubPlayed": 6,
-      "clubRemaining": 28,
-      "rivals": [
-        {
-          "name": "PSV",
-          "points": 16,
-          "maxPoints": 100,
-          "gap": -15,
-          "winAllProb": 0.0003824735743638726
-        },
-        {
-          "name": "AZ",
-          "points": 16,
-          "maxPoints": 100,
-          "gap": -15,
-          "winAllProb": 0.000010611355349544077
-        },
-        {
-          "name": "Feyenoord Rotterdam",
-          "points": 14,
-          "maxPoints": 98,
-          "gap": -13,
-          "winAllProb": 0.00002345788960115473
-        },
-        {
-          "name": "FC Twente '65",
-          "points": 13,
-          "maxPoints": 97,
-          "gap": -12,
-          "winAllProb": 1.9192606531874815e-7
-        },
-        {
-          "name": "AFC Ajax",
-          "points": 10,
-          "maxPoints": 97,
-          "gap": -9,
           "winAllProb": 9.544213023336047e-7
         }
       ],
@@ -8429,5 +8426,14 @@
     }
   ],
   "fetchedAt": "2026-09-14T10:32:10.591Z",
-  "simulatedAt": "2026-09-14T10:33:15.660Z"
+  "runMetadata": {
+    "competitionId": "eredivisie",
+    "season": "2026/27",
+    "modelVersion": "current-probability-v1",
+    "standingsSnapshotId": "2026-09-14T10:32:10.591Z",
+    "fixturesSnapshotId": "2026-09-14T10:32:10.591Z",
+    "seed": 1,
+    "simulationCount": 50000
+  },
+  "simulatedAt": "2026-09-14T15:22:23.551Z"
 }

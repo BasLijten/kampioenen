@@ -10,9 +10,10 @@
 
 import { writeFileSync, readFileSync, mkdirSync } from "fs";
 import { join } from "path";
-import { runSimulation } from "../lib/simulation";
+import { createFixtureProbabilityModel, runPrediction } from "../lib/simulation";
 import { Team, Fixture } from "../lib/data";
 import { resolveLeague } from "../config/env";
+import { fallbackTeams, fallbackFixtures } from "../config/fallback/eredivisie";
 
 // Laad .env.local handmatig (tsx heeft geen Next.js env-loading)
 function loadEnv() {
@@ -33,8 +34,15 @@ function loadEnv() {
 loadEnv();
 
 const ITERATIONS = 50_000;
+const SEED = Number.parseInt(process.env.PREDICTION_SEED ?? "1", 10);
 
-function loadLeagueData(dataDir: string, leagueId: string): { teams: Team[]; fixtures: Fixture[]; fetchedAt: string | null } {
+function loadLeagueData(dataDir: string, leagueId: string): {
+  teams: Team[];
+  fixtures: Fixture[];
+  fetchedAt: string | null;
+  standingsSnapshotId: string;
+  fixturesSnapshotId: string;
+} {
   try {
     const raw = readFileSync(join(process.cwd(), dataDir, "standings.json"), "utf-8");
     const parsed = JSON.parse(raw);
@@ -42,14 +50,20 @@ function loadLeagueData(dataDir: string, leagueId: string): { teams: Team[]; fix
       teams: parsed.teams as Team[],
       fixtures: parsed.remainingFixtures as Fixture[],
       fetchedAt: parsed.fetchedAt ?? null,
+      standingsSnapshotId: parsed.standingsSnapshotId ?? parsed.fetchedAt ?? "unknown",
+      fixturesSnapshotId: parsed.fixturesSnapshotId ?? parsed.fetchedAt ?? "unknown",
     };
   } catch {
     if (leagueId === "eredivisie") {
       console.warn("standings.json niet gevonden -- eredivisie fallback data wordt gebruikt");
       console.warn("     Draai `npm run fetch-data` voor live data.");
-      // Dynamic import to avoid bundling fallback when not needed
-      const { fallbackTeams, fallbackFixtures } = require("../config/fallback/eredivisie");
-      return { teams: fallbackTeams, fixtures: fallbackFixtures, fetchedAt: null };
+      return {
+        teams: fallbackTeams,
+        fixtures: fallbackFixtures,
+        fetchedAt: null,
+        standingsSnapshotId: `fallback:${leagueId}:standings`,
+        fixturesSnapshotId: `fallback:${leagueId}:fixtures`,
+      };
     }
     throw new Error(`${dataDir}/standings.json niet gevonden. Draai eerst \`npm run fetch-data\`.`);
   }
@@ -57,7 +71,13 @@ function loadLeagueData(dataDir: string, leagueId: string): { teams: Team[]; fix
 
 function main() {
   const league = resolveLeague();
-  const { teams, fixtures, fetchedAt } = loadLeagueData(league.dataDir, league.id);
+  const {
+    teams,
+    fixtures,
+    fetchedAt,
+    standingsSnapshotId,
+    fixturesSnapshotId,
+  } = loadLeagueData(league.dataDir, league.id);
 
   console.log(`League: ${league.name} (${league.id})`);
   console.log(`Monte Carlo simulatie (${ITERATIONS.toLocaleString()} iteraties)...`);
@@ -67,7 +87,29 @@ function main() {
   }
 
   const start = Date.now();
-  const result = runSimulation(ITERATIONS, teams, fixtures, league.totalRounds);
+  const result = runPrediction({
+    competition: {
+      competitionId: league.id,
+      season: league.season,
+      totalRounds: league.totalRounds,
+      standingsSnapshotId,
+      fixturesSnapshotId,
+      teams,
+      fixtures: fixtures.map((fixture) => ({
+        id: fixture.id,
+        date: fixture.date,
+        round: fixture.round,
+        homeTeamId: fixture.homeTeam,
+        awayTeamId: fixture.awayTeam,
+      })),
+    },
+    probabilityModel: createFixtureProbabilityModel(fixtures),
+    config: {
+      iterations: ITERATIONS,
+      seed: SEED,
+      modelVersion: "current-probability-v1",
+    },
+  });
   const elapsed = ((Date.now() - start) / 1000).toFixed(1);
 
   // Show top clubs' championship probabilities
@@ -127,6 +169,7 @@ function main() {
     teams,
     fixtures,
     fetchedAt,
+    runMetadata: result.metadata,
     simulatedAt: new Date().toISOString(),
   };
   writeFileSync(
