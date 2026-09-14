@@ -2,19 +2,19 @@
  * npm run simulate
  *
  * Leest data/{league}/standings.json, voert de Monte Carlo simulatie uit
- * (50.000 iteraties) en slaat het resultaat op als data/{league}/simulation-results.json.
- *
- * Als het standings bestand niet bestaat en de league is eredivisie, wordt de
- * ingebakken fallback data gebruikt zodat `npm run build` altijd werkt.
+ * (100.000 seeded iteraties) en slaat het resultaat op als data/{league}/simulation-results.json.
  */
 
 import { writeFileSync, readFileSync, mkdirSync } from "fs";
 import { join } from "path";
-import { runSimulation } from "../lib/simulation";
+import { CLUB_ELO_PRODUCTION_MODEL_VERSION, runClubEloPrediction } from "../lib/production-prediction";
 import { createCompetitionRules } from "../lib/competition-rules";
-import { Team, Fixture } from "../lib/data";
+import type { Team, Fixture } from "../lib/data";
 import { resolveLeague } from "../config/env";
-import { fallbackFixtures, fallbackTeams } from "../config/fallback/eredivisie";
+import { FileClubEloSnapshotStore } from "../lib/clubelo-import";
+import { createCompetitionSnapshotIds } from "../lib/competition-snapshots";
+import type { ClubEloMappingDocument } from "../lib/clubelo-mapping";
+import type { CalibrationArtifactSet } from "../lib/clubelo-calibration";
 
 // Laad .env.local handmatig (tsx heeft geen Next.js env-loading)
 function loadEnv() {
@@ -34,41 +34,75 @@ function loadEnv() {
 
 loadEnv();
 
-const ITERATIONS = 50_000;
-
-function loadLeagueData(dataDir: string, leagueId: string): { teams: Team[]; fixtures: Fixture[]; fetchedAt: string | null } {
-  try {
-    const raw = readFileSync(join(process.cwd(), dataDir, "standings.json"), "utf-8");
-    const parsed = JSON.parse(raw);
-    return {
-      teams: parsed.teams as Team[],
-      fixtures: parsed.remainingFixtures as Fixture[],
-      fetchedAt: parsed.fetchedAt ?? null,
-    };
-  } catch {
-    if (leagueId === "eredivisie") {
-      console.warn("standings.json niet gevonden -- eredivisie fallback data wordt gebruikt");
-      console.warn("     Draai `npm run fetch-data` voor live data.");
-      return { teams: fallbackTeams, fixtures: fallbackFixtures, fetchedAt: null };
-    }
-    throw new Error(`${dataDir}/standings.json niet gevonden. Draai eerst \`npm run fetch-data\`.`);
-  }
+function positiveInteger(value: string | undefined, fallback: number): number {
+  if (value === undefined) return fallback;
+  const parsed = Number(value);
+  if (!Number.isInteger(parsed) || parsed <= 0) throw new Error("SIMULATION_ITERATIONS must be a positive integer");
+  return parsed;
 }
 
-function main() {
+function integerSeed(value: string | undefined, fallback: number): number {
+  if (value === undefined) return fallback;
+  const parsed = Number(value);
+  if (!Number.isInteger(parsed)) throw new Error("SIMULATION_SEED must be an integer");
+  return parsed;
+}
+
+function loadLeagueData(dataDir: string): { teams: Team[]; fixtures: Fixture[]; fetchedAt: string | null; standingsSnapshotId?: string; fixturesSnapshotId?: string } {
+  let raw: string;
+  try {
+    raw = readFileSync(join(process.cwd(), dataDir, "standings.json"), "utf-8");
+  } catch {
+    throw new Error(`${dataDir}/standings.json ontbreekt; voer eerst npm run fetch-data uit`);
+  }
+  const parsed = JSON.parse(raw);
+  return {
+    teams: parsed.teams as Team[],
+    fixtures: parsed.remainingFixtures as Fixture[],
+    fetchedAt: parsed.fetchedAt ?? null,
+    standingsSnapshotId: parsed.standingsSnapshotId,
+    fixturesSnapshotId: parsed.fixturesSnapshotId,
+  };
+}
+
+async function main() {
   const league = resolveLeague();
-  const { teams, fixtures, fetchedAt } = loadLeagueData(league.dataDir, league.id);
+  if (league.prediction.modelVersion !== CLUB_ELO_PRODUCTION_MODEL_VERSION) {
+    throw new Error(`Unsupported production prediction model ${league.prediction.modelVersion}`);
+  }
+  const { teams, fixtures, fetchedAt, standingsSnapshotId, fixturesSnapshotId } = loadLeagueData(league.dataDir);
+  const dataDir = join(process.cwd(), league.dataDir);
+  const snapshotIds = createCompetitionSnapshotIds(teams, fixtures);
+  const mapping = JSON.parse(readFileSync(join(dataDir, league.prediction.mappingFile), "utf8")) as ClubEloMappingDocument;
+  const calibration = JSON.parse(readFileSync(join(dataDir, league.prediction.calibrationFile), "utf8")) as CalibrationArtifactSet;
+  const runRound = Math.max(...teams.map((team) => team.played));
+  const snapshotStore = new FileClubEloSnapshotStore(join(dataDir, league.prediction.snapshotDirectory));
+  const snapshot = await snapshotStore.load(league.id, league.season, runRound);
+  if (!snapshot) throw new Error(`ClubElo snapshot ontbreekt voor ${league.id}/${league.season}/round-${runRound}`);
+  const iterations = positiveInteger(process.env.SIMULATION_ITERATIONS, league.prediction.iterations);
+  const seed = integerSeed(process.env.SIMULATION_SEED, league.prediction.seed);
 
   console.log(`League: ${league.name} (${league.id})`);
-  console.log(`Monte Carlo simulatie (${ITERATIONS.toLocaleString()} iteraties)...`);
+  console.log(`Monte Carlo simulatie (${iterations.toLocaleString()} iteraties, seed ${seed})...`);
   console.log(`   ${teams.length} teams, ${fixtures.length} resterende wedstrijden`);
   if (fetchedAt) {
     console.log(`   Data van: ${new Date(fetchedAt).toLocaleString(league.locale)}`);
   }
 
   const start = Date.now();
-  const result = runSimulation(ITERATIONS, teams, fixtures, league.totalRounds, {
+  const result = runClubEloPrediction({
+    teams,
+    fixtures,
+    totalRounds: league.totalRounds,
+    iterations,
+    seed,
+    competition: league.id,
+    season: league.season,
+    standingsSnapshotId: standingsSnapshotId ?? snapshotIds.standingsSnapshotId,
+    fixturesSnapshotId: fixturesSnapshotId ?? snapshotIds.fixturesSnapshotId,
+    inputs: { mapping, snapshot, calibration },
     rules: createCompetitionRules(league.competitionRules),
+    homeAdvantage: league.prediction.homeAdvantage,
   });
   const elapsed = ((Date.now() - start) / 1000).toFixed(1);
 
@@ -121,7 +155,6 @@ function main() {
     };
   }
 
-  const dataDir = join(process.cwd(), league.dataDir);
   mkdirSync(dataDir, { recursive: true });
   const output = {
     clubResults: result.clubResults,
@@ -132,9 +165,10 @@ function main() {
     seededTieBreakCount: result.seededTieBreakCount,
     explanation,
     teams,
-    fixtures,
+    fixtures: result.fixtures ?? fixtures,
     fetchedAt,
     simulatedAt: new Date().toISOString(),
+    metadata: result.metadata,
   };
   writeFileSync(
     join(dataDir, "simulation-results.json"),
@@ -143,4 +177,7 @@ function main() {
   console.log(`${league.dataDir}/simulation-results.json opgeslagen`);
 }
 
-main();
+main().catch((error) => {
+  console.error(error instanceof Error ? error.message : String(error));
+  process.exit(1);
+});

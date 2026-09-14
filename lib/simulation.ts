@@ -37,6 +37,7 @@ export interface LeagueSimulationResult {
   clubResults: Record<string, ClubSimulationResult>;
   iterations: number;
   metadata?: PredictionRunMetadata;
+  fixtures?: Fixture[];
   seed: number;
   rulesVersion: string;
   fixtureOrder: string[];
@@ -51,11 +52,41 @@ export interface PredictionRunMetadata {
   fixturesSnapshotId: string;
   seed: number;
   iterations: number;
+  configuration?: {
+    homeAdvantage: number;
+    rulesVersion: string;
+  };
+  calibration?: {
+    artifactId: string;
+    modelVersion: string;
+    version: string;
+    status: "provisional" | "calibrated";
+    provisional: boolean;
+    provisionalReasons: string[];
+  };
+  mapping?: {
+    artifactId: string;
+    generatorVersion: string;
+    coverage: { eligible: number; mapped: number; ratio: number; required: number };
+  };
+  snapshot?: {
+    id: string;
+    hash: string;
+    sourceRound: number;
+    freshness: "current" | "fallback";
+    reused: boolean;
+  };
+  coverage?: {
+    teams: number;
+    strengths: number;
+    fixtures: number;
+    calibratedFixtures: number;
+  };
 }
 
 export interface MatchProbabilityModel {
   version: string;
-  predict(fixture: Fixture, teams: readonly Team[]): Pick<Fixture, "homeWinProb" | "drawProb" | "awayWinProb">;
+  predict(fixture: Fixture, teams: readonly Team[]): Pick<Fixture, "homeWinProb" | "drawProb" | "awayWinProb"> & Partial<Pick<Fixture, "source">>;
 }
 
 export interface PredictionRunInput {
@@ -69,6 +100,9 @@ export interface PredictionRunInput {
   standingsSnapshotId: string;
   fixturesSnapshotId: string;
   model: MatchProbabilityModel;
+  rules?: CompetitionRules;
+  headToHead?: HeadToHeadData;
+  metadata?: Partial<PredictionRunMetadata>;
 }
 
 export interface ClubSimulationResult {
@@ -358,17 +392,18 @@ export function runPrediction(input: PredictionRunInput): LeagueSimulationResult
   const fixtures = input.fixtures.map((fixture) => ({
     ...fixture,
     ...input.model.predict(fixture, teams),
-  }));
+  })).sort((a, b) => a.date.localeCompare(b.date) || a.id.localeCompare(b.id));
   const result = runSimulation(
     input.iterations,
     teams,
     fixtures,
     input.totalRounds,
-    { seed: input.seed }
+    { seed: input.seed, rules: input.rules, headToHead: input.headToHead }
   );
 
   return {
     ...result,
+    fixtures,
     metadata: {
       modelVersion: input.model.version,
       competition: input.competition,
@@ -377,6 +412,7 @@ export function runPrediction(input: PredictionRunInput): LeagueSimulationResult
       fixturesSnapshotId: input.fixturesSnapshotId,
       seed: input.seed,
       iterations: input.iterations,
+      ...input.metadata,
     },
   };
 }

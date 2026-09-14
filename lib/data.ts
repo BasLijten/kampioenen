@@ -23,7 +23,7 @@ export interface Fixture {
   homeWinProb: number;
   drawProb: number;
   awayWinProb: number;
-  source: "api" | "poisson";
+  source: "api" | "poisson" | "clubelo";
   /** Optional conditional-score input used for official score tiebreakers. */
   homeGoalProbabilities?: GoalProbabilities;
   awayGoalProbabilities?: GoalProbabilities;

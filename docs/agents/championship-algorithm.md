@@ -9,8 +9,8 @@ Lees dit document vóór je de kampioensberekening, wedstrijdkansen, simulatie-o
 Volg de gegevens door deze pipeline:
 
 1. `scripts/fetch-data.ts` haalt actuele stand en resterende wedstrijden op.
-2. `lib/transform.ts` maakt daar `Team[]` en `Fixture[]` van en kiest per wedstrijd een kansmodel.
-3. `scripts/simulate.ts` leest `data/{league}/standings.json` en schrijft `data/{league}/simulation-results.json`.
+2. `scripts/fetch-data.ts` importeert voor dezelfde run een complete ClubElo-snapshot via de goedgekeurde mapping.
+3. `scripts/simulate.ts` leest `data/{league}/standings.json`, de mapping, kalibratie en lokale ClubElo-snapshot en schrijft `data/{league}/simulation-results.json`.
 4. `app/page.tsx` leest `simulation-results.json` tijdens de build en rendert statische HTML.
 
 De brondata in `data/` is een gegenereerde snapshot, geen nieuwe algoritmische bron. Controleer bij twijfel altijd `lib/simulation.ts`, `lib/poisson.ts`, `lib/transform.ts` en de fetchscripts.
@@ -29,12 +29,7 @@ Voor de Eredivisie is `totalRounds = 34`.
 
 ### Wedstrijdkansen
 
-Voor iedere fixture wordt precies één kansmodel gebruikt:
-
-- Als een bij de thuis-uitcombinatie passende BZZOIRO-prediction bestaat, worden de BZZOIRO-percentages gebruikt.
-- Anders worden de kansen berekend met het Poisson-model in `lib/poisson.ts`.
-
-De interne `Fixture.source`-waarde `"api"` betekent in de huidige pipeline dat de percentages uit BZZOIRO kwamen. De naam is historisch en betekent niet dat de actuele fetch uit API-Football kwam. `lib/api-football.ts` levert hier alleen compatibele types; de actieve fetchroute gebruikt `lib/football-data-org.ts` en `lib/bzzoiro.ts`.
+In productie wordt precies één kansmodel gebruikt: `elo-monte-carlo-v1`. De modelinput is de ClubElo-rating uit de lokale snapshot en de per-competitie kalibratie, met de general prior als fallback. ClubElo’s eigen toekomstige 1/X/2-voorspellingen worden niet gebruikt. De interne `Fixture.source`-waarde `"clubelo"` markeert deze output. `lib/poisson.ts` blijft beschikbaar voor legacy- en tussenopslagpaden, maar bepaalt geen production prediction.
 
 De Monte Carlo-sampling gebruikt een seeded generator en de drie opgeslagen kansen. Na de W/D/A-keuze wordt conditioneel een scorelijn uit de fixture-goalverdelingen (of een Poisson-verdeling op expected goals) getrokken. Die scorelijn kan de eerder gekozen uitslag niet wijzigen; zij is bedoeld voor score-tiebreakers.
 
@@ -85,7 +80,7 @@ concurrentMax < teamPoints
 
 Een gelijke stand betekent dus dat het team nog niet mathematisch kampioen is, tenzij de actuele en volledige geconfigureerde tiebreakers al een strikte volgorde vastleggen. De competitieconfiguratie bepaalt de versie, punten voor winst/gelijkspel/verlies en geordende tiebreakers. Een vereiste maar incomplete head-to-head-dataset blokkeert de run vóór simulatie.
 
-De standaardrun gebruikt 50.000 iteraties. De run gebruikt standaard seed `1` en accepteert een expliciete seed, zodat dezelfde snapshots, rules-version en fixturevolgorde dezelfde output opleveren.
+De standaard production run gebruikt 100.000 iteraties. De run gebruikt seed `1` en accepteert `SIMULATION_ITERATIONS` en `SIMULATION_SEED`, zodat dezelfde snapshots, rules-version, fixturevolgorde en seed dezelfde output opleveren.
 
 ## Uitkomsten
 
@@ -120,8 +115,8 @@ Dit is een analytisch scenario, geen geldige wedstrijdverdeling: een niet-doelte
 
 1. De best-case-berekening is analytisch: fixtures zonder het doelteam leveren geen punten op, maar verhogen wel `played`.
 2. `dateProbabilities` gebruikt de feitelijke kalenderdatum waarop na de volledige datumgroep de clinch vaststaat. `round` blijft een administratief rapportagelabel.
-3. Gebruik voor nieuwe uitleg de actuele bronnen `football-data.org`, BZZOIRO en Poisson. Verwijder verwijzingen naar API-Football als actuele predictionbron, tenzij de fetchpipeline eerst wordt gewijzigd.
-4. Als `data/{league}/standings.json` ontbreekt, gebruikt `scripts/simulate.ts` voor de Eredivisie de hardcoded fallback in `config/fallback/eredivisie.ts`. Die fallback bevat slechts zes teams en handmatige Poisson-kansen.
+3. Gebruik voor nieuwe uitleg de actuele bronnen `football-data.org`, ClubElo en de opgeslagen kalibratie. Verwijder verwijzingen naar BZZOIRO/API-Football als actuele predictionbron.
+4. De production pipeline gebruikt geen hardcoded fallback wanneer een ClubElo-mapping, kalibratie of snapshot ontbreekt; de run faalt expliciet vóór simulatie.
 
 ## Wijzigingsprocedure
 

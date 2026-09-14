@@ -1,3 +1,5 @@
+import { createHash } from "node:crypto";
+
 export const CLUB_ELO_MAPPING_GENERATOR_VERSION = "clubelo-mapping-v1";
 
 export type MappingScopeKind = "current" | "historical";
@@ -115,6 +117,7 @@ export interface MappingDiffEntry {
 
 export interface ClubEloMappingDocument {
   schemaVersion: 1;
+  artifactId?: string;
   generatorVersion: string;
   generatedAt: string;
   scope: MappingScope;
@@ -583,8 +586,11 @@ export function createClubEloMappingDocument(
     throw new Error("mapping document requires mappings from one scope");
   }
 
+  const artifactValue = JSON.stringify({ scope, mappings });
+  const artifactId = `clubelo-mapping-${createHash("sha256").update(artifactValue).digest("hex").slice(0, 16)}`;
   return {
     schemaVersion: 1,
+    artifactId,
     generatorVersion: mappings[0].generatorVersion,
     generatedAt,
     scope,

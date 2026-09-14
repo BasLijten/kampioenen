@@ -4,17 +4,20 @@ import type { ClubConfig } from "@/config/clubs";
 import type { LeagueClientConfig } from "@/config/env";
 import type { LocaleStrings } from "@/config/locales/nl";
 import { formatTemplate } from "@/config/env";
+import type { PredictionRunMetadata } from "@/lib/simulation";
 
 export default function Footer({
   simulatedAt,
   club,
   league,
   texts,
+  metadata,
 }: {
   simulatedAt: string;
   club: ClubConfig;
   league: LeagueClientConfig;
   texts: LocaleStrings;
+  metadata?: PredictionRunMetadata;
 }) {
   const date = new Date(simulatedAt).toLocaleString(league.locale, {
     day: "numeric",
@@ -51,6 +54,13 @@ export default function Footer({
       >
         {formatTemplate(texts.footerText, templateVars)}
       </p>
+      {metadata && (
+        <p style={{ marginTop: "0.75rem", fontSize: "0.7rem", color: "#444" }}>
+          {texts.predictionAttribution} · {metadata.calibration?.provisional ? texts.predictionProvisional : texts.predictionCalibrated}
+          {metadata.mapping ? ` · ${texts.predictionCoverage} ${(metadata.mapping.coverage.ratio * 100).toFixed(1)}%` : ""}
+          {metadata.snapshot ? ` · ${metadata.snapshot.freshness === "fallback" ? texts.predictionSnapshotFallback : texts.predictionSnapshotCurrent}` : ""}
+        </p>
+      )}
       <p
         style={{
           marginTop: "0.5rem",

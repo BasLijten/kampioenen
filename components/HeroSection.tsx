@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import type { ClubSimulationResult } from "@/lib/simulation";
+import type { ClubSimulationResult, PredictionRunMetadata } from "@/lib/simulation";
 import type { Explanation } from "@/app/page";
 import type { ClubConfig } from "@/config/clubs";
 import type { LeagueClientConfig } from "@/config/env";
@@ -17,8 +17,8 @@ function formatDate(dateStr: string, locale: string): string {
 
 function formatProbability(prob: number): string {
   const pct = prob * 100;
-  if (pct >= 99.995) return ">99.99%";
-  return `${pct.toFixed(2)}%`;
+  if (pct >= 99.95) return ">99.9%";
+  return `${pct.toFixed(1)}%`;
 }
 
 export default function HeroSection({
@@ -30,6 +30,7 @@ export default function HeroSection({
   league,
   texts,
   weather,
+  metadata,
 }: {
   result: ClubSimulationResult;
   explanation: Explanation;
@@ -39,6 +40,7 @@ export default function HeroSection({
   league: LeagueClientConfig;
   texts: LocaleStrings;
   weather: Record<string, WeatherData>;
+  metadata?: PredictionRunMetadata;
 }) {
   const [showExplanation, setShowExplanation] = useState(false);
 
@@ -401,6 +403,13 @@ export default function HeroSection({
             <p style={{ color: "#555", fontSize: "0.75rem", marginTop: "0.75rem" }}>
               {texts.explanationPredictionSource}
             </p>
+            {metadata && (
+              <p style={{ color: "#555", fontSize: "0.75rem", marginTop: "0.5rem" }}>
+                {metadata.calibration?.provisional ? texts.predictionProvisional : texts.predictionCalibrated}
+                {metadata.mapping ? ` · ${texts.predictionCoverage} ${(metadata.mapping.coverage.ratio * 100).toFixed(1)}%` : ""}
+                {metadata.snapshot ? ` · ${metadata.snapshot.freshness === "fallback" ? texts.predictionSnapshotFallback : texts.predictionSnapshotCurrent}` : ""}
+              </p>
+            )}
           </div>
         )}
 

@@ -1,6 +1,6 @@
 import { readFileSync } from "fs";
 import { join } from "path";
-import type { ClubSimulationResult } from "@/lib/simulation";
+import type { ClubSimulationResult, PredictionRunMetadata } from "@/lib/simulation";
 import type { Team, Fixture } from "@/lib/data";
 import { resolveConfig, formatTemplate, toClientLeague } from "@/config/env";
 import { loadWeather } from "@/lib/weather.server";
@@ -28,6 +28,7 @@ interface PageData {
   fixtures: Fixture[];
   fetchedAt: string | null;
   simulatedAt: string;
+  metadata?: PredictionRunMetadata;
 }
 
 const { league: leagueFull, club, texts } = resolveConfig();
@@ -51,8 +52,8 @@ function formatDateLocale(dateStr: string): string {
 
 function formatProbability(prob: number): string {
   const pct = prob * 100;
-  if (pct >= 99.995) return ">99,99%";
-  return `${pct.toFixed(2).replace(".", ",")}%`;
+  if (pct >= 99.95) return ">99,9%";
+  return `${pct.toFixed(1).replace(".", ",")}%`;
 }
 
 function buildFaqJsonLd(result: ClubSimulationResult) {
@@ -112,7 +113,7 @@ export default async function Home() {
   const data = loadData();
   const result = data.clubResults[club.id];
   const explanation = data.explanation[club.id];
-  const { teams, fixtures, fetchedAt, simulatedAt } = data;
+  const { teams, fixtures, fetchedAt, simulatedAt, metadata } = data;
 
   const weather = await loadWeather(
     club.id,
@@ -138,6 +139,7 @@ export default async function Home() {
         league={league}
         texts={texts}
         weather={weather}
+        metadata={metadata}
       />
       <BestCaseView
         bestCaseDate={result.bestCaseDate}
@@ -166,6 +168,7 @@ export default async function Home() {
       />
       <Footer
         simulatedAt={simulatedAt}
+        metadata={metadata}
         club={club}
         league={league}
         texts={texts}

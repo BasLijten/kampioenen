@@ -391,13 +391,13 @@ export class FileClubEloSnapshotStore implements ClubEloSnapshotStore {
     const path = this.pathFor(competitionId, season, sourceRound);
     try {
       const value = JSON.parse(await readFile(path, "utf8")) as ClubEloSnapshot;
-      return {
+      return freezeSnapshot({
         ...value,
         strengths: value.strengths.map((strength) => ({
           ...strength,
           measuredAt: toDate(String(strength.measuredAt)),
         })),
-      };
+      });
     } catch (error) {
       if ((error as NodeJS.ErrnoException).code === "ENOENT") return null;
       throw error;
@@ -471,6 +471,12 @@ function canonicalSnapshotValue(snapshot: Pick<ClubEloSnapshot, "competitionId" 
 
 function snapshotHash(snapshot: Pick<ClubEloSnapshot, "competitionId" | "season" | "sourceRound" | "fetchedAt" | "strengths">): string {
   return createHash("sha256").update(canonicalSnapshotValue(snapshot)).digest("hex");
+}
+
+export function calculateClubEloSnapshotHash(
+  snapshot: Pick<ClubEloSnapshot, "competitionId" | "season" | "sourceRound" | "fetchedAt" | "strengths">,
+): string {
+  return snapshotHash(snapshot);
 }
 
 function toDate(value: string | Date): Date {
