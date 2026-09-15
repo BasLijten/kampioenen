@@ -10,9 +10,10 @@
 
 import { writeFileSync, readFileSync, mkdirSync } from "fs";
 import { join } from "path";
-import { runSimulation } from "../lib/simulation";
+import { legacyPredictionInput, runPredictionRun } from "../lib/simulation";
 import { Team, Fixture } from "../lib/data";
 import { resolveLeague } from "../config/env";
+import { fallbackTeams, fallbackFixtures } from "../config/fallback/eredivisie";
 
 // Laad .env.local handmatig (tsx heeft geen Next.js env-loading)
 function loadEnv() {
@@ -33,6 +34,7 @@ function loadEnv() {
 loadEnv();
 
 const ITERATIONS = 50_000;
+const SEED = 1;
 
 function loadLeagueData(dataDir: string, leagueId: string): { teams: Team[]; fixtures: Fixture[]; fetchedAt: string | null } {
   try {
@@ -47,8 +49,6 @@ function loadLeagueData(dataDir: string, leagueId: string): { teams: Team[]; fix
     if (leagueId === "eredivisie") {
       console.warn("standings.json niet gevonden -- eredivisie fallback data wordt gebruikt");
       console.warn("     Draai `npm run fetch-data` voor live data.");
-      // Dynamic import to avoid bundling fallback when not needed
-      const { fallbackTeams, fallbackFixtures } = require("../config/fallback/eredivisie");
       return { teams: fallbackTeams, fixtures: fallbackFixtures, fetchedAt: null };
     }
     throw new Error(`${dataDir}/standings.json niet gevonden. Draai eerst \`npm run fetch-data\`.`);
@@ -67,7 +67,23 @@ function main() {
   }
 
   const start = Date.now();
-  const result = runSimulation(ITERATIONS, teams, fixtures, league.totalRounds);
+  const snapshotId = fetchedAt ?? `${league.id}-fallback`;
+  const result = runPredictionRun(
+    legacyPredictionInput(
+      ITERATIONS,
+      teams,
+      fixtures,
+      league.totalRounds,
+      {
+        modelVersion: "bzzoiro-poisson-v1",
+        competitionId: league.id,
+        season: league.season,
+        standingsSnapshotId: `standings-${snapshotId}`,
+        fixturesSnapshotId: `fixtures-${snapshotId}`,
+      },
+      SEED
+    )
+  );
   const elapsed = ((Date.now() - start) / 1000).toFixed(1);
 
   // Show top clubs' championship probabilities
@@ -127,6 +143,7 @@ function main() {
     teams,
     fixtures,
     fetchedAt,
+    predictionRun: result.metadata,
     simulatedAt: new Date().toISOString(),
   };
   writeFileSync(

@@ -105,7 +105,7 @@ UTR defense = (45/28) / 1.50 = 1.07
 ### Parameters
 
 - **50.000 iteraties** per simulatierun
-- Willekeurig per run (`Math.random()`, geen seed); alleen best-case is deterministisch
+- Seeded per run (standaard seed `1`); dezelfde genormaliseerde invoer produceert dezelfde uitkomst
 
 ### Wedstrijdsimulatie
 
@@ -155,5 +155,5 @@ isChampion(team) = voor elke andere team:
 | Bestand | Inhoud |
 |---------|--------|
 | `data/eredivisie/standings.json` | `{ teams, remainingFixtures, fetchedAt }` — gegenereerde snapshot van football-data.org + wedstrijdkansen |
-| `data/eredivisie/simulation-results.json` | `{ clubResults, teams, fixtures, fetchedAt, simulatedAt }` — MC-resultaten |
+| `data/eredivisie/simulation-results.json` | `{ clubResults, predictionRun, teams, fixtures, fetchedAt, simulatedAt }` — MC-resultaten en runmetadata |
 | `config/fallback/eredivisie.ts` | Hardcoded fallbackdata voor de Eredivisie |
