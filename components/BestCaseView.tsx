@@ -56,16 +56,15 @@ export default function BestCaseView({
   }
 
   // Simulate points accumulation in best case
-  let runningPoints = clubTeam.points;
-  const fixtureRows = clubFixtures.map((f) => {
-    runningPoints += 3;
+  const fixtureRows = clubFixtures.map((f, index) => {
+    const pointsAfter = clubTeam.points + (index + 1) * 3;
     const isChampionMatch = f.round === bestCaseRound;
     const opponent = f.homeTeam === club.id ? f.awayTeam : f.homeTeam;
     return {
       ...f,
       opponent: getTeamName(opponent),
       isHome: f.homeTeam === club.id,
-      pointsAfter: runningPoints,
+      pointsAfter,
       isChampionMatch,
     };
   });

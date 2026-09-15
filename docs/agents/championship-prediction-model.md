@@ -257,7 +257,7 @@ Voorbeeld: `elo-monte-carlo-v1`. Een prediction is reproduceerbaar wanneer dezel
 | Teamsterkte | Standings-doelpunten via Poisson-fallback | ClubElo-snapshot | Nieuwe importer en lokale rating-snapshots |
 | Wedstrijdkansen | Per fixture BZZOIRO, anders Poisson | Eén historisch gekalibreerde Elo-naar-W/D/A-mapping | Geen BZZOIRO-hard dependency in V1 |
 | Competitiedata | `football-data.org` | Providerabstractie, aanvankelijk dezelfde bron | Provider vervangbaar zonder engine-wijziging |
-| Simulaties | 50.000, `Math.random()` | 100.000 benchmark, seeded PRNG | Hogere stabiliteit en reproduceerbare runs |
+| Simulaties | 50.000, seeded PRNG met legacy probability source | 100.000 benchmark, seeded PRNG | Hogere stabiliteit en reproduceerbare runs |
 | Eindkampioen | Afgeleid uit een succesvolle strikte clinch-check | Eindrangschikking volgens volledige `CompetitionRules` | Kampioenskans en clinchkans worden gescheiden |
 | Eindstand | Punten, daarna oorspronkelijk doelsaldo; geen gesimuleerde goals | Expliciete competitie-tiebreakers | Vereist besluit over ontbrekende gesimuleerde doelpunten |
 | Clinchvolgorde | Kalenderdatum, met `totalRounds - played` | Werkelijke resterende fixtures en expliciete tie-breakregels | Uitgestelde wedstrijden worden correct behandeld |
