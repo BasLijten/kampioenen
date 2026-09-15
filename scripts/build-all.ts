@@ -36,7 +36,7 @@ function main() {
         cwd: process.cwd(),
       });
       console.log(`${club.shortName} build complete.`);
-    } catch (err) {
+    } catch {
       console.error(`${club.shortName} build FAILED.`);
       process.exit(1);
     }

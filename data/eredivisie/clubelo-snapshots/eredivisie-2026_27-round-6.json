@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 1,
+  "snapshotId": "clubelo-production-2026-09-14-round-6",
+  "snapshotHash": "4a3f526ff33d52c8bba0488a666eefc02f964e4da5266a55f214d40584b9648c",
+  "competitionId": "eredivisie",
+  "season": "2026/27",
+  "runRound": 6,
+  "sourceRound": 6,
+  "fetchedAt": "2026-09-14T10:32:10.591Z",
+  "freshness": "current",
+  "reused": false,
+  "strengths": [
+    { "teamId": "ado-den-haag", "elo": 1450, "source": "clubelo", "measuredAt": "2026-09-14T00:00:00.000Z" },
+    { "teamId": "afc-ajax", "elo": 1689, "source": "clubelo", "measuredAt": "2026-09-14T00:00:00.000Z" },
+    { "teamId": "az", "elo": 1693, "source": "clubelo", "measuredAt": "2026-09-14T00:00:00.000Z" },
+    { "teamId": "fc-groningen", "elo": 1510, "source": "clubelo", "measuredAt": "2026-09-14T00:00:00.000Z" },
+    { "teamId": "fc-twente-65", "elo": 1660, "source": "clubelo", "measuredAt": "2026-09-14T00:00:00.000Z" },
+    { "teamId": "fc-utrecht", "elo": 1581, "source": "clubelo", "measuredAt": "2026-09-14T00:00:00.000Z" },
+    { "teamId": "feyenoord-rotterdam", "elo": 1713, "source": "clubelo", "measuredAt": "2026-09-14T00:00:00.000Z" },
+    { "teamId": "fortuna-sittard", "elo": 1480, "source": "clubelo", "measuredAt": "2026-09-14T00:00:00.000Z" },
+    { "teamId": "go-ahead-eagles", "elo": 1500, "source": "clubelo", "measuredAt": "2026-09-14T00:00:00.000Z" },
+    { "teamId": "nec", "elo": 1591, "source": "clubelo", "measuredAt": "2026-09-14T00:00:00.000Z" },
+    { "teamId": "pec-zwolle", "elo": 1460, "source": "clubelo", "measuredAt": "2026-09-14T00:00:00.000Z" },
+    { "teamId": "psv", "elo": 1791, "source": "clubelo", "measuredAt": "2026-09-14T00:00:00.000Z" },
+    { "teamId": "sc-cambuur-leeuwarden", "elo": 1420, "source": "clubelo", "measuredAt": "2026-09-14T00:00:00.000Z" },
+    { "teamId": "sc-heerenveen", "elo": 1541, "source": "clubelo", "measuredAt": "2026-09-14T00:00:00.000Z" },
+    { "teamId": "sbv-excelsior", "elo": 1430, "source": "clubelo", "measuredAt": "2026-09-14T00:00:00.000Z" },
+    { "teamId": "sparta-rotterdam", "elo": 1530, "source": "clubelo", "measuredAt": "2026-09-14T00:00:00.000Z" },
+    { "teamId": "telstar-1963", "elo": 1380, "source": "clubelo", "measuredAt": "2026-09-14T00:00:00.000Z" },
+    { "teamId": "willem-ii-tilburg", "elo": 1470, "source": "clubelo", "measuredAt": "2026-09-14T00:00:00.000Z" }
+  ]
+}

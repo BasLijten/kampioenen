@@ -163,7 +163,8 @@ describe("documentation-only Vercel build gate", () => {
   it.each([
     [undefined, "missing previous revision"],
     ["", "first deployment"],
-  ])("fails open for a %s", (previousSha) => {
+  ] as Array<[string | undefined, string]>) ("fails open for a %s", (previousSha, description) => {
+    void description;
     const { directory, baseline } = createRepository();
     const current = changeAndCommit(directory, "docs/guide.md");
 

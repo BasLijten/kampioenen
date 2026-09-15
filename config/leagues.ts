@@ -10,6 +10,23 @@ export interface LeagueConfig {
   apiFootballSeason: number;
   bzzoiroLeagueFilter: (league: { api_id?: number; name?: string }) => boolean;
   dataDir: string;
+  competitionRules: {
+    version: string;
+    pointsForWin: number;
+    pointsForDraw: number;
+    pointsForLoss: number;
+    tiebreakers: ("goalDifference" | "goalsFor" | "headToHead")[];
+    requireUniqueRanking?: boolean;
+  };
+  prediction: {
+    modelVersion: "elo-monte-carlo-v1";
+    homeAdvantage: number;
+    iterations: number;
+    seed: number;
+    mappingFile: string;
+    calibrationFile: string;
+    snapshotDirectory: string;
+  };
 }
 
 /** Serializable subset of LeagueConfig safe for client components */
@@ -29,5 +46,21 @@ export const leagues: Record<string, LeagueConfig> = {
     bzzoiroLeagueFilter: (league) =>
       league.api_id === 88 || (league.name ?? "").toLowerCase().includes("eredivisie"),
     dataDir: "data/eredivisie",
+    competitionRules: {
+      version: "eredivisie-rules-v1",
+      pointsForWin: 3,
+      pointsForDraw: 1,
+      pointsForLoss: 0,
+      tiebreakers: ["goalDifference", "goalsFor"],
+    },
+    prediction: {
+      modelVersion: "elo-monte-carlo-v1",
+      homeAdvantage: 50,
+      iterations: 100_000,
+      seed: 1,
+      mappingFile: "clubelo-mapping.json",
+      calibrationFile: "clubelo-calibration.json",
+      snapshotDirectory: "clubelo-snapshots",
+    },
   },
 };

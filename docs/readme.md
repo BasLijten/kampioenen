@@ -13,6 +13,8 @@ De site is 100% statisch gegenereerd met Next.js. Er zijn geen client-side API-c
 ```
 scripts/fetch-data.ts → data/eredivisie/standings.json
                               ↓
+scripts/fetch-data.ts → data/eredivisie/clubelo-snapshots/*
+                              ↓
 scripts/simulate.ts   → data/eredivisie/simulation-results.json
                               ↓
 app/page.tsx (build)  → statische HTML
@@ -27,14 +29,15 @@ app/page.tsx (build)  → statische HTML
 - De actuele pagina gebruikt alle teams voor de simulatie en de eindpositievoorspelling; `StandingsTable` is geen onderdeel van de huidige `app/page.tsx`-rendering
 - Fallbackdata in `config/fallback/eredivisie.ts` bevat alleen zes teams met handmatige kansen
 
-## Prediction modellen
+## Production prediction model
 
-Elke fixture heeft een `source` veld dat aangeeft welk model de win/draw/loss kansen heeft bepaald:
+Elke production fixture heeft `source: "clubelo"`. Het model gebruikt een goedgekeurde mapping, één lokale ClubElo-snapshot en een per-competitie 50-Elo-bucketkalibratie met general prior:
 
-| Interne source | Wanneer | Actuele bron |
-|--------|---------|------|
-| `"api"` | Een passende prediction beschikbaar | BZZOIRO `/predictions/?upcoming=true` |
-| `"poisson"` | Geen API prediction beschikbaar, of bij fallback data | Berekend uit standings |
+| Input | Productiebron |
+|--------|---------|
+| Teamsterkte | Lokale ClubElo-snapshot |
+| W/D/A | Per-competitie kalibratie, general prior als fallback |
+| Competitiestand en fixtures | football-data.org snapshot |
 
 Per fixture wordt **precies een** model gebruikt — ze worden nooit gecombineerd.
 
@@ -104,8 +107,8 @@ UTR defense = (45/28) / 1.50 = 1.07
 
 ### Parameters
 
-- **50.000 iteraties** per simulatierun
-- Seeded per run (standaard seed `1`); dezelfde genormaliseerde invoer produceert dezelfde uitkomst
+- **100.000 iteraties** per production simulatierun
+- Seeded per run; dezelfde seed en fixturevolgorde leveren reproduceerbare resultaten op
 
 ### Wedstrijdsimulatie
 
@@ -117,13 +120,15 @@ if r < homeWinProb + draw → gelijkspel (+1 punt elk)
 anders                    → uitwinst (+3 punten uit)
 ```
 
+Daarna wordt conditioneel een scorelijn getrokken voor goals-for, goals-against en doelsaldo. Deze scorelijn kan de gekozen W/D/A-uitkomst niet veranderen en wordt gebruikt voor de geconfigureerde officiële tiebreakers.
+
 ### Kampioenschap check
 
 Na elke kalenderdatum wordt gecontroleerd of het doelteam wiskundig kampioen is:
 
 ```
 isChampion(team) = voor elke andere team:
-  maxPunten(team) = huidigePunten + (34 - gespeeld) × 3
+maxPunten(team) = huidigePunten + (daadwerkelijk resterende fixtures) × 3
   maxPunten(team) < psvPunten
 ```
 
@@ -132,13 +137,14 @@ isChampion(team) = voor elke andere team:
 - `totalChampionshipProbability` — fractie iteraties waarin PSV kampioen wordt
 - `dateProbabilities[]` — per speelronde: kans dat PSV precies die ronde kampioen wordt
 - `bestCaseDate/Round` — vroegst mogelijke kampioenschap (PSV wint alles, rivalen verliezen)
-- `neverChampionProbability` — fractie iteraties waarin PSV niet kampioen wordt
+- `neverChampionProbability` — fractie iteraties waarin PSV niet vóór het einde clincht
+- `noClinchProbability` — expliciete no-clinch-kans naast de uiteindelijke kampioenschapskans
 
 ## npm scripts
 
 | Script | Commando | Beschrijving |
 |--------|----------|-------------|
-| `fetch-data` | `npx tsx scripts/fetch-data.ts` | Haalt standings en wedstrijden (football-data.org) plus predictions (BZZOIRO) op → `data/eredivisie/standings.json` |
+| `fetch-data` | `npx tsx scripts/fetch-data.ts` | Haalt standings en wedstrijden van football-data.org op en importeert een complete ClubElo-snapshot via de goedgekeurde mapping |
 | `simulate` | `npx tsx scripts/simulate.ts` | Draait Monte Carlo simulatie → `data/eredivisie/simulation-results.json` |
 | `update-data` | `fetch-data` + `simulate` | Volledige data-refresh |
 | `build` | `prebuild` (simulate) + `next build` | Bouwt statische site met verse simulatieresultaten |
@@ -146,14 +152,17 @@ isChampion(team) = voor elke andere team:
 ### Data APIs
 
 - football-data.org: standings endpoint (`FOOTBALL_DATA_ORG_KEY` in `.env.local`)
-- BZZOIRO: predictions endpoint (`BZZOIRO_TOKEN` in `.env.local`)
-- League filter: Eredivisie (API league ID 88)
-- Predictions blijven best-effort (Poisson fallback als ze ontbreken)
+- ClubElo: team strength pages, imported into immutable local snapshots
+- League: Eredivisie (football-data.org competition code `DED`)
+- Production prediction runs fail closed when required mappings, calibration or snapshots are missing
 
 ## Data bestanden
 
 | Bestand | Inhoud |
 |---------|--------|
-| `data/eredivisie/standings.json` | `{ teams, remainingFixtures, fetchedAt }` — gegenereerde snapshot van football-data.org + wedstrijdkansen |
-| `data/eredivisie/simulation-results.json` | `{ clubResults, predictionRun, teams, fixtures, fetchedAt, simulatedAt }` — MC-resultaten en runmetadata |
+| `data/eredivisie/standings.json` | `{ teams, remainingFixtures, fetchedAt, standingsSnapshotId, fixturesSnapshotId }` — competitiesnapshot van football-data.org |
+| `data/eredivisie/clubelo-mapping.json` | Goedgekeurde, versioneerde current mappings |
+| `data/eredivisie/clubelo-calibration.json` | Versioneerde per-competitie kalibratie en general prior |
+| `data/eredivisie/clubelo-snapshots/` | Immutable ClubElo snapshots per competitie, seizoen en bronronde |
+| `data/eredivisie/simulation-results.json` | `{ clubResults, teams, fixtures, metadata, fetchedAt, simulatedAt }` — seeded MC-resultaten |
 | `config/fallback/eredivisie.ts` | Hardcoded fallbackdata voor de Eredivisie |

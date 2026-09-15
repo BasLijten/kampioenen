@@ -1,12 +1,18 @@
-import type {
-  CompetitionInput,
-  Fixture,
-  Match,
-  MatchProbability,
-  MatchProbabilityModel,
-  Team,
-} from "./data";
+import type { Fixture, Team } from "./data";
+import {
+  eredivisieRules,
+  type CompetitionRules,
+  type HeadToHeadData,
+  type SimulatedStanding,
+} from "./competition-rules";
 
+export interface SimulationOptions {
+  rules?: CompetitionRules;
+  seed?: number;
+  headToHead?: HeadToHeadData;
+}
+
+/** Backwards-compatible summary shape for callers that only need one result. */
 export interface SimulationResult {
   totalChampionshipProbability: number;
   dateProbabilities: DateProbability[];
@@ -30,6 +36,78 @@ export interface DateProbability {
 export interface LeagueSimulationResult {
   clubResults: Record<string, ClubSimulationResult>;
   iterations: number;
+  metadata?: PredictionRunMetadata;
+  fixtures?: Fixture[];
+  seed: number;
+  rulesVersion: string;
+  fixtureOrder: string[];
+  seededTieBreakCount: number;
+}
+
+export interface PredictionRunMetadata {
+  runId?: string;
+  createdAt?: string;
+  configurationHash?: string;
+  eloSnapshotId?: string;
+  promotionDecision?: "provisional" | "shadow" | "production";
+  modelVersion: string;
+  competition: string;
+  season: string;
+  standingsSnapshotId: string;
+  fixturesSnapshotId: string;
+  seed: number;
+  iterations: number;
+  configuration?: {
+    homeAdvantage: number;
+    rulesVersion: string;
+  };
+  calibration?: {
+    artifactId: string;
+    modelVersion: string;
+    version: string;
+    status: "provisional" | "calibrated";
+    provisional: boolean;
+    provisionalReasons: string[];
+  };
+  mapping?: {
+    artifactId: string;
+    generatorVersion: string;
+    coverage: { eligible: number; mapped: number; ratio: number; required: number };
+  };
+  snapshot?: {
+    id: string;
+    hash: string;
+    sourceRound: number;
+    freshness: "current" | "fallback";
+    reused: boolean;
+  };
+  coverage?: {
+    teams: number;
+    strengths: number;
+    fixtures: number;
+    calibratedFixtures: number;
+  };
+}
+
+export interface MatchProbabilityModel {
+  version: string;
+  predict(fixture: Fixture, teams: readonly Team[]): Pick<Fixture, "homeWinProb" | "drawProb" | "awayWinProb"> & Partial<Pick<Fixture, "source">>;
+}
+
+export interface PredictionRunInput {
+  teams: readonly Team[];
+  fixtures: readonly Fixture[];
+  totalRounds: number;
+  iterations: number;
+  seed: number;
+  competition: string;
+  season: string;
+  standingsSnapshotId: string;
+  fixturesSnapshotId: string;
+  model: MatchProbabilityModel;
+  rules?: CompetitionRules;
+  headToHead?: HeadToHeadData;
+  metadata?: Partial<PredictionRunMetadata>;
 }
 
 export interface ClubSimulationResult {
@@ -42,451 +120,304 @@ export interface ClubSimulationResult {
   expectedDate: string | null;
   neverChampionProbability: number;
   neverChampionCount: number;
+  noClinchProbability: number;
+  tieProbability: number;
   positionProbabilities: Record<number, number>;
+  simulatedGoalsFor: number;
+  simulatedGoalsAgainst: number;
+  simulatedGoalDifference: number;
 }
 
-export interface PredictionRunConfig {
-  modelVersion: string;
-  competitionId: string;
-  season: string;
-  standingsSnapshotId: string;
-  fixturesSnapshotId: string;
-  iterations: number;
-}
+const DEFAULT_SEED = 1;
+const DEFAULT_HOME_GOALS = 1.45;
+const DEFAULT_AWAY_GOALS = 1.15;
+const MAX_GOALS = 8;
+type MatchResult = "home" | "draw" | "away";
+type TeamState = SimulatedStanding & { name: string };
 
-export interface PredictionRunMetadata {
-  modelVersion: string;
-  competitionId: string;
-  season: string;
-  standingsSnapshotId: string;
-  fixturesSnapshotId: string;
-  iterations: number;
-  seed: number;
-}
-
-export type InjectedProbabilityModel = MatchProbabilityModel;
-
-export interface PredictionRunInput {
-  competition: CompetitionInput;
-  probabilityModel: InjectedProbabilityModel;
-  config: PredictionRunConfig;
-  seed: number;
-}
-
-export interface PredictionRunResult extends LeagueSimulationResult {
-  metadata: PredictionRunMetadata;
-}
-
-interface TeamState {
-  [teamId: string]: { points: number; played: number };
-}
-
-interface SimulationFixture extends Match {
-  homeWinProb: number;
-  drawProb: number;
-  awayWinProb: number;
-}
-
-export const DEFAULT_SIMULATION_SEED = 1;
-
-function stableFixtureOrder(a: Match, b: Match): number {
-  return (
-    a.date.localeCompare(b.date) ||
-    a.id.localeCompare(b.id) ||
-    a.round - b.round ||
-    a.homeTeam.localeCompare(b.homeTeam) ||
-    a.awayTeam.localeCompare(b.awayTeam)
-  );
-}
-
-function sortedTeams(teams: readonly Team[]): Team[] {
-  return [...teams].sort((a, b) => a.id.localeCompare(b.id));
-}
-
-function createSeededRandom(seed: number): () => number {
+function seededRandom(seed: number): () => number {
   let state = seed >>> 0;
-  if (state === 0) state = 0x6d2b79f5;
-
   return () => {
-    state ^= state << 13;
-    state ^= state >>> 17;
-    state ^= state << 5;
-    return (state >>> 0) / 0x1_0000_0000;
+    state += 0x6D2B79F5;
+    let value = state;
+    value = Math.imul(value ^ (value >>> 15), value | 1);
+    value ^= value + Math.imul(value ^ (value >>> 7), value | 61);
+    return ((value ^ (value >>> 14)) >>> 0) / 4294967296;
   };
 }
 
-function validateRunInput(input: PredictionRunInput): void {
-  const { competition, config, seed } = input;
-
-  if (!Number.isInteger(config.iterations) || config.iterations < 0) {
-    throw new Error("Prediction run iterations must be a non-negative integer");
-  }
-  if (!Number.isInteger(seed)) {
-    throw new Error("Prediction run seed must be an integer");
-  }
-  if (!Number.isInteger(competition.totalRounds) || competition.totalRounds < 0) {
-    throw new Error("Competition totalRounds must be a non-negative integer");
-  }
-
-  const teamIds = new Set<string>();
-  for (const team of competition.teams) {
-    if (teamIds.has(team.id)) throw new Error(`Duplicate team id: ${team.id}`);
-    teamIds.add(team.id);
-  }
-
-  const fixtureIds = new Set<string>();
-  for (const fixture of competition.remainingFixtures) {
-    if (fixtureIds.has(fixture.id)) throw new Error(`Duplicate fixture id: ${fixture.id}`);
-    fixtureIds.add(fixture.id);
-    if (!teamIds.has(fixture.homeTeam) || !teamIds.has(fixture.awayTeam)) {
-      throw new Error(`Fixture ${fixture.id} references an unknown team`);
-    }
-  }
+function sortedFixtures(fixtures: Fixture[]): Fixture[] {
+  return [...fixtures].sort((a, b) => a.date.localeCompare(b.date) || a.id.localeCompare(b.id));
 }
 
-function probabilityFor(
-  model: InjectedProbabilityModel,
-  match: Match
-): MatchProbability {
-  return model.predict(match);
-}
-
-function validateProbability(match: Match, probability: MatchProbability): void {
-  const values = [probability.home, probability.draw, probability.away];
-  if (
-    values.some((value) => !Number.isFinite(value) || value < 0 || value > 1) ||
-    Math.abs(values.reduce((sum, value) => sum + value, 0) - 1) > 1e-9
-  ) {
-    throw new Error(`Invalid match probabilities for fixture ${match.id}`);
-  }
-}
-
-function prepareFixtures(
-  competition: CompetitionInput,
-  probabilityModel: InjectedProbabilityModel
-): SimulationFixture[] {
-  return [...competition.remainingFixtures]
-    .sort(stableFixtureOrder)
-    .map((match) => {
-      const probability = probabilityFor(probabilityModel, match);
-      validateProbability(match, probability);
-      return {
-        ...match,
-        homeWinProb: probability.home,
-        drawProb: probability.draw,
-        awayWinProb: probability.away,
-      };
-    });
-}
-
-function simulateMatch(
-  fixture: SimulationFixture,
-  random: () => number
-): "home" | "draw" | "away" {
-  const rand = random();
-  if (rand < fixture.homeWinProb) return "home";
-  if (rand < fixture.homeWinProb + fixture.drawProb) return "draw";
-  return "away";
-}
-
-function isChampion(
-  teamId: string,
-  state: TeamState,
-  allTeams: readonly Team[],
-  totalRounds: number
-): boolean {
-  const myPoints = state[teamId].points;
-
-  for (const team of allTeams) {
-    if (team.id === teamId) continue;
-    const otherPoints = state[team.id].points;
-    const otherPlayed = state[team.id].played;
-    const otherRemaining = totalRounds - otherPlayed;
-    const otherMax = otherPoints + otherRemaining * 3;
-    if (otherMax >= myPoints) return false;
-  }
-  return true;
-}
-
-function ratio(count: number, iterations: number): number {
-  return iterations === 0 ? 0 : count / iterations;
-}
-
-function simulateLeague(
-  iterations: number,
-  teamsInput: readonly Team[],
-  remainingFixtures: readonly SimulationFixture[],
-  totalRounds: number,
-  seed: number
-): LeagueSimulationResult {
-  const teams = sortedTeams(teamsInput);
-  const fixtures = [...remainingFixtures].sort(stableFixtureOrder);
-  const rounds = [...new Set(fixtures.map((fixture) => fixture.round))].sort(
-    (a, b) => a - b
-  );
-  const allDates = [...new Set(fixtures.map((fixture) => fixture.date))].sort();
-  const fixturesByDate = new Map<string, SimulationFixture[]>();
-  const dateToRound = new Map<string, number>();
-
-  for (const date of allDates) fixturesByDate.set(date, []);
+function validateFixtures(teams: Team[], fixtures: Fixture[]): void {
+  const ids = new Set(teams.map((team) => team.id));
   for (const fixture of fixtures) {
-    fixturesByDate.get(fixture.date)!.push(fixture);
-    const currentRound = dateToRound.get(fixture.date);
-    if (currentRound === undefined || fixture.round < currentRound) {
-      dateToRound.set(fixture.date, fixture.round);
+    if (!ids.has(fixture.homeTeam) || !ids.has(fixture.awayTeam)) throw new Error(`Fixture ${fixture.id} references an unknown team`);
+    if (fixture.homeTeam === fixture.awayTeam) throw new Error(`Fixture ${fixture.id} has the same home and away team`);
+    if (fixture.homeWinProb < 0 || fixture.drawProb < 0 || fixture.awayWinProb < 0) throw new Error(`Fixture ${fixture.id} has a negative match probability`);
+    if (Math.abs(fixture.homeWinProb + fixture.drawProb + fixture.awayWinProb - 1) > 1e-8) throw new Error(`Fixture ${fixture.id} match probabilities must sum to 1`);
+  }
+}
+
+function poissonDistribution(lambda: number): number[] {
+  const result: number[] = [];
+  let probability = Math.exp(-Math.max(0, lambda));
+  for (let goals = 0; goals <= MAX_GOALS; goals++) {
+    if (goals > 0) probability *= Math.max(0, lambda) / goals;
+    result.push(probability);
+  }
+  const total = result.reduce((sum, value) => sum + value, 0);
+  return total ? result.map((value) => value / total) : [1];
+}
+
+function validGoalProbabilities(probabilities: number[] | undefined): number[] | null {
+  if (!probabilities?.length || probabilities.some((probability) => probability < 0 || !Number.isFinite(probability))) return null;
+  const total = probabilities.reduce((sum, probability) => sum + probability, 0);
+  return total > 0 ? probabilities.map((probability) => probability / total) : null;
+}
+
+type ScoreCandidate = { homeGoals: number; awayGoals: number; probability: number };
+type ScoreSampler = Record<MatchResult, ScoreCandidate[]>;
+
+function createScoreSampler(fixture: Fixture): ScoreSampler {
+  const homeProbabilities = validGoalProbabilities(fixture.homeGoalProbabilities) ?? poissonDistribution(fixture.expectedHomeGoals ?? DEFAULT_HOME_GOALS);
+  const awayProbabilities = validGoalProbabilities(fixture.awayGoalProbabilities) ?? poissonDistribution(fixture.expectedAwayGoals ?? DEFAULT_AWAY_GOALS);
+  const candidates: ScoreSampler = { home: [], draw: [], away: [] };
+  for (let homeGoals = 0; homeGoals < homeProbabilities.length; homeGoals++) {
+    for (let awayGoals = 0; awayGoals < awayProbabilities.length; awayGoals++) {
+      const outcome = homeGoals > awayGoals ? "home" : homeGoals === awayGoals ? "draw" : "away";
+      candidates[outcome].push({ homeGoals, awayGoals, probability: homeProbabilities[homeGoals] * awayProbabilities[awayGoals] });
     }
   }
+  return candidates;
+}
 
-  const championshipCounts: Record<string, Record<string, number>> = {};
-  const neverChampion: Record<string, number> = {};
-  const positionCounts: Record<string, Record<number, number>> = {};
-  for (const team of teams) {
-    championshipCounts[team.id] = {};
-    neverChampion[team.id] = 0;
-    positionCounts[team.id] = {};
+function scoreForResult(sampler: ScoreSampler, result: MatchResult, random: () => number): { homeGoals: number; awayGoals: number } {
+  const candidates = sampler[result];
+  const total = candidates.reduce((sum, candidate) => sum + candidate.probability, 0);
+  if (!total) return result === "home" ? { homeGoals: 1, awayGoals: 0 } : result === "away" ? { homeGoals: 0, awayGoals: 1 } : { homeGoals: 0, awayGoals: 0 };
+  let threshold = random() * total;
+  for (const candidate of candidates) {
+    threshold -= candidate.probability;
+    if (threshold < 0) return { homeGoals: candidate.homeGoals, awayGoals: candidate.awayGoals };
   }
+  const last = candidates[candidates.length - 1];
+  return { homeGoals: last.homeGoals, awayGoals: last.awayGoals };
+}
 
-  const random = createSeededRandom(seed);
+function createHeadToHead(data: HeadToHeadData | undefined, teamId: string): Record<string, { played: number; points: number; goalsFor: number; goalsAgainst: number }> | undefined {
+  if (!data) return undefined;
+  return Object.fromEntries(Object.entries(data[teamId] ?? {}).map(([opponent, stats]) => [opponent, { ...stats }]));
+}
 
-  for (let i = 0; i < iterations; i++) {
-    const state: TeamState = {};
-    for (const team of teams) {
-      state[team.id] = { points: team.points, played: team.played };
+function createState(teams: Team[], headToHead?: HeadToHeadData): Record<string, TeamState> {
+  return Object.fromEntries(teams.map((team) => [team.id, {
+    teamId: team.id, name: team.name, points: team.points, played: team.played,
+    goalsFor: team.goalsFor, goalsAgainst: team.goalsAgainst,
+    goalDifference: team.goalsFor - team.goalsAgainst,
+    headToHead: createHeadToHead(headToHead, team.id),
+  }]));
+}
+
+function sampleMatch(fixture: Fixture, sampler: ScoreSampler, random: () => number): { result: MatchResult; homeGoals: number; awayGoals: number } {
+  const value = random();
+  const result: MatchResult = value < fixture.homeWinProb ? "home" : value < fixture.homeWinProb + fixture.drawProb ? "draw" : "away";
+  return { result, ...scoreForResult(sampler, result, random) };
+}
+
+function updateHeadToHead(state: Record<string, TeamState>, fixture: Fixture, result: MatchResult, homeGoals: number, awayGoals: number, rules: CompetitionRules): void {
+  const home = state[fixture.homeTeam].headToHead?.[fixture.awayTeam];
+  const away = state[fixture.awayTeam].headToHead?.[fixture.homeTeam];
+  if (!home || !away) return;
+  home.played += 1; away.played += 1;
+  home.goalsFor += homeGoals; home.goalsAgainst += awayGoals;
+  away.goalsFor += awayGoals; away.goalsAgainst += homeGoals;
+  if (result === "home") { home.points += rules.pointsForWin; away.points += rules.pointsForLoss; }
+  else if (result === "draw") { home.points += rules.pointsForDraw; away.points += rules.pointsForDraw; }
+  else { home.points += rules.pointsForLoss; away.points += rules.pointsForWin; }
+}
+
+function applyMatch(state: Record<string, TeamState>, fixture: Fixture, result: MatchResult, homeGoals: number, awayGoals: number, rules: CompetitionRules): void {
+  const home = state[fixture.homeTeam];
+  const away = state[fixture.awayTeam];
+  home.played += 1; away.played += 1;
+  home.goalsFor += homeGoals; home.goalsAgainst += awayGoals;
+  away.goalsFor += awayGoals; away.goalsAgainst += homeGoals;
+  home.goalDifference = home.goalsFor - home.goalsAgainst; away.goalDifference = away.goalsFor - away.goalsAgainst;
+  if (result === "home") { home.points += rules.pointsForWin; away.points += rules.pointsForLoss; }
+  else if (result === "draw") { home.points += rules.pointsForDraw; away.points += rules.pointsForDraw; }
+  else { home.points += rules.pointsForLoss; away.points += rules.pointsForWin; }
+  updateHeadToHead(state, fixture, result, homeGoals, awayGoals, rules);
+}
+
+function currentStandings(state: Record<string, TeamState>): SimulatedStanding[] {
+  return Object.values(state).map((standing) => ({
+    teamId: standing.teamId,
+    points: standing.points,
+    played: standing.played,
+    goalsFor: standing.goalsFor,
+    goalsAgainst: standing.goalsAgainst,
+    goalDifference: standing.goalDifference,
+    headToHead: standing.headToHead,
+  }));
+}
+
+function fixtureDates(fixtures: Fixture[]): string[] {
+  return [...new Set(fixtures.map((fixture) => fixture.date))].sort();
+}
+
+function fixtureRound(fixtures: Fixture[], date: string): number {
+  const rounds = fixtures.filter((fixture) => fixture.date === date).map((fixture) => fixture.round);
+  return rounds.length ? Math.min(...rounds) : 0;
+}
+
+function resultDateRows(team: Team, fixtures: Fixture[], championshipCounts: Record<string, Record<string, number>>, iterations: number): DateProbability[] {
+  let cumulative = 0;
+  return fixtureDates(fixtures).map((date) => {
+    const teamFixture = fixtures.find((fixture) => fixture.date === date && (fixture.homeTeam === team.id || fixture.awayTeam === team.id));
+    const probability = (championshipCounts[team.id][date] ?? 0) / iterations;
+    cumulative += probability;
+    return {
+      date, round: fixtureRound(fixtures, date), probability, cumulativeProbability: cumulative,
+      opponent: teamFixture ? (teamFixture.homeTeam === team.id ? teamFixture.awayTeam : teamFixture.homeTeam) : "vrij",
+      isHome: teamFixture?.homeTeam === team.id,
+    };
+  });
+}
+
+export function runSimulation(iterations: number = 50000, teams: Team[] = [], remainingFixtures: Fixture[] = [], totalRounds: number = 34, options: SimulationOptions = {}): LeagueSimulationResult {
+  void totalRounds;
+  if (!Number.isInteger(iterations) || iterations <= 0) throw new Error("Simulation iterations must be a positive integer");
+  const rules = options.rules ?? eredivisieRules;
+  const fixtures = sortedFixtures(remainingFixtures);
+  validateFixtures(teams, fixtures);
+  rules.validate(teams, options.headToHead);
+  const seed = options.seed ?? DEFAULT_SEED;
+  const allDates = fixtureDates(fixtures);
+  const fixturesByDate = new Map(allDates.map((date) => [date, fixtures.filter((fixture) => fixture.date === date)]));
+  const futureFixturesByDate = new Map(allDates.map((date) => [date, fixtures.filter((fixture) => fixture.date > date)]));
+  const remainingCountsByDate = new Map(allDates.map((date) => {
+    const counts: Record<string, number> = Object.fromEntries(teams.map((team) => [team.id, 0]));
+    for (const fixture of fixtures) {
+      if (fixture.date > date) {
+        counts[fixture.homeTeam] += 1;
+        counts[fixture.awayTeam] += 1;
+      }
     }
+    return [date, counts] as const;
+  }));
+  const scoreSamplers = new Map(fixtures.map((fixture) => [fixture.id, createScoreSampler(fixture)]));
+  const championshipCounts: Record<string, Record<string, number>> = Object.fromEntries(teams.map((team) => [team.id, {}]));
+  const neverChampion: Record<string, number> = Object.fromEntries(teams.map((team) => [team.id, 0]));
+  const positionCounts: Record<string, Record<number, number>> = Object.fromEntries(teams.map((team) => [team.id, {}]));
+  const tieCounts: Record<string, number> = Object.fromEntries(teams.map((team) => [team.id, 0]));
+  const championCounts: Record<string, number> = Object.fromEntries(teams.map((team) => [team.id, 0]));
+  const goalSums: Record<string, { goalsFor: number; goalsAgainst: number }> = Object.fromEntries(teams.map((team) => [team.id, { goalsFor: 0, goalsAgainst: 0 }]));
+  let seededTieBreakCount = 0;
 
-    const championDate: Record<string, string | null> = {};
-    for (const team of teams) championDate[team.id] = null;
-
+  for (let iteration = 0; iteration < iterations; iteration++) {
+    const random = seededRandom((seed + iteration) >>> 0);
+    const state = createState(teams, options.headToHead);
+    const championDate: Record<string, string | null> = Object.fromEntries(teams.map((team) => [team.id, null]));
     for (const date of allDates) {
-      for (const fixture of fixturesByDate.get(date)!) {
-        const result = simulateMatch(fixture, random);
-        if (result === "home") {
-          state[fixture.homeTeam].points += 3;
-        } else if (result === "draw") {
-          state[fixture.homeTeam].points += 1;
-          state[fixture.awayTeam].points += 1;
-        } else {
-          state[fixture.awayTeam].points += 3;
-        }
-        state[fixture.homeTeam].played += 1;
-        state[fixture.awayTeam].played += 1;
+      for (const fixture of fixturesByDate.get(date) ?? []) {
+        const match = sampleMatch(fixture, scoreSamplers.get(fixture.id)!, random);
+        applyMatch(state, fixture, match.result, match.homeGoals, match.awayGoals, rules);
       }
-
+      const futureFixtures = futureFixturesByDate.get(date) ?? [];
+      const standings = currentStandings(state);
       for (const team of teams) {
-        if (
-          championDate[team.id] === null &&
-          isChampion(team.id, state, teams, totalRounds)
-        ) {
-          championDate[team.id] = date;
-        }
+        if (championDate[team.id] === null && rules.isChampionClinched(state[team.id], standings.filter((standing) => standing.teamId !== team.id), futureFixtures, remainingCountsByDate.get(date))) championDate[team.id] = date;
       }
     }
-
     for (const team of teams) {
-      const date = championDate[team.id];
-      if (date !== null) {
-        championshipCounts[team.id][date] =
-          (championshipCounts[team.id][date] || 0) + 1;
-      } else {
-        neverChampion[team.id]++;
-      }
+      const standing = state[team.id];
+      goalSums[team.id].goalsFor += standing.goalsFor; goalSums[team.id].goalsAgainst += standing.goalsAgainst;
+      if (championDate[team.id]) {
+        const date = championDate[team.id]!;
+        championshipCounts[team.id][date] = (championshipCounts[team.id][date] ?? 0) + 1;
+      } else neverChampion[team.id] += 1;
     }
-
-    const finalRanking = [...teams].sort((a, b) => {
-      const pointDifference = state[b.id].points - state[a.id].points;
-      if (pointDifference !== 0) return pointDifference;
-      const goalDifference =
-        b.goalsFor - b.goalsAgainst - (a.goalsFor - a.goalsAgainst);
-      if (goalDifference !== 0) return goalDifference;
-      return a.id.localeCompare(b.id);
-    });
-    finalRanking.forEach((team, index) => {
-      const position = index + 1;
-      positionCounts[team.id][position] =
-        (positionCounts[team.id][position] || 0) + 1;
-    });
+    const standings = currentStandings(state);
+    const unresolvedGroups = rules.rankStandings(standings);
+    const groups = rules.rankStandings(standings, random);
+    if (groups[0]?.standings.length === 1) championCounts[groups[0].standings[0].teamId] += 1;
+    if (!rules.config.requireUniqueRanking) {
+      for (const group of unresolvedGroups.filter((group) => group.tied)) for (const standing of group.standings) tieCounts[standing.teamId] += 1;
+    }
+    if (rules.config.requireUniqueRanking) {
+      seededTieBreakCount += unresolvedGroups.filter((group) => group.tied).reduce((count, group) => count + group.standings.length - 1, 0);
+    }
+    for (const group of groups) for (const standing of group.standings) positionCounts[standing.teamId][group.position] = (positionCounts[standing.teamId][group.position] ?? 0) + 1;
   }
 
   const clubResults: Record<string, ClubSimulationResult> = {};
-
   for (const team of teams) {
-    const totalChampion = iterations - neverChampion[team.id];
-    const totalProbability = ratio(totalChampion, iterations);
-    let cumulative = 0;
-
-    const dateProbabilities: DateProbability[] = rounds.map((round) => {
-      const roundDates = allDates.filter((date) => dateToRound.get(date) === round);
-      const teamFixture = fixtures.find(
-        (fixture) =>
-          fixture.round === round &&
-          (fixture.homeTeam === team.id || fixture.awayTeam === team.id)
-      );
-      const probability = ratio(
-        roundDates.reduce(
-          (count, date) => count + (championshipCounts[team.id][date] || 0),
-          0
-        ),
-        iterations
-      );
-      cumulative += probability;
-
-      return {
-        date: teamFixture?.date || roundDates[0],
-        round,
-        probability,
-        cumulativeProbability: cumulative,
-        opponent: teamFixture
-          ? teamFixture.homeTeam === team.id
-            ? teamFixture.awayTeam
-            : teamFixture.homeTeam
-          : "vrij",
-        isHome: teamFixture?.homeTeam === team.id,
-      };
-    });
-
-    let bestCaseDate: string | null = null;
-    let bestCaseRound: number | null = null;
-    const bestState: TeamState = {};
-    for (const currentTeam of teams) {
-      bestState[currentTeam.id] = {
-        points: currentTeam.points,
-        played: currentTeam.played,
-      };
-    }
-
-    for (const date of allDates) {
-      for (const fixture of fixturesByDate.get(date)!) {
-        const isTeamFixture =
-          fixture.homeTeam === team.id || fixture.awayTeam === team.id;
-        if (isTeamFixture) bestState[team.id].points += 3;
-        bestState[fixture.homeTeam].played += 1;
-        bestState[fixture.awayTeam].played += 1;
-      }
-      if (
-        bestCaseRound === null &&
-        isChampion(team.id, bestState, teams, totalRounds)
-      ) {
-        bestCaseDate = date;
-        bestCaseRound = dateToRound.get(date) ?? null;
-      }
-    }
-
-    let expectedDate: string | null = null;
-    if (totalProbability > 0) {
-      let highestProbability = 0;
-      for (const dateProbability of dateProbabilities) {
-        if (dateProbability.probability > highestProbability) {
-          highestProbability = dateProbability.probability;
-          expectedDate = dateProbability.date;
-        }
-      }
-    }
-
+    const dateProbabilities = resultDateRows(team, fixtures, championshipCounts, iterations);
+    const championshipProbability = championCounts[team.id] / iterations;
+    const expectedDate = championshipProbability > 0 ? dateProbabilities.reduce<DateProbability | null>((best, current) => current.probability > (best?.probability ?? 0) ? current : best, null)?.date ?? null : null;
     const positionProbabilities: Record<number, number> = {};
-    for (const [position, count] of Object.entries(positionCounts[team.id])) {
-      positionProbabilities[Number(position)] = ratio(count, iterations);
-    }
-
+    for (const [position, count] of Object.entries(positionCounts[team.id])) positionProbabilities[Number(position)] = count / iterations;
+    const goalsFor = goalSums[team.id].goalsFor / iterations;
+    const goalsAgainst = goalSums[team.id].goalsAgainst / iterations;
     clubResults[team.id] = {
-      teamId: team.id,
-      teamName: team.name,
-      totalChampionshipProbability: totalProbability,
-      dateProbabilities,
-      bestCaseDate,
-      bestCaseRound,
-      expectedDate,
-      neverChampionProbability: ratio(neverChampion[team.id], iterations),
-      neverChampionCount: neverChampion[team.id],
-      positionProbabilities,
+      teamId: team.id, teamName: team.name, totalChampionshipProbability: championshipProbability,
+      dateProbabilities, bestCaseDate: null, bestCaseRound: null, expectedDate,
+      neverChampionProbability: neverChampion[team.id] / iterations, neverChampionCount: neverChampion[team.id],
+      noClinchProbability: neverChampion[team.id] / iterations, tieProbability: tieCounts[team.id] / iterations,
+      positionProbabilities, simulatedGoalsFor: goalsFor, simulatedGoalsAgainst: goalsAgainst,
+      simulatedGoalDifference: goalsFor - goalsAgainst,
     };
   }
 
-  return { clubResults, iterations };
-}
-
-export function runPredictionRun(input: PredictionRunInput): PredictionRunResult {
-  validateRunInput(input);
-  const { competition, probabilityModel, config, seed } = input;
-  const fixtures = prepareFixtures(competition, probabilityModel);
-  const result = simulateLeague(
-    config.iterations,
-    competition.teams,
-    fixtures,
-    competition.totalRounds,
-    seed
-  );
-
-  const metadata: PredictionRunMetadata = {
-    modelVersion: config.modelVersion,
-    competitionId: config.competitionId,
-    season: config.season,
-    standingsSnapshotId: config.standingsSnapshotId,
-    fixturesSnapshotId: config.fixturesSnapshotId,
-    iterations: config.iterations,
-    seed,
-  };
-
-  return { ...result, metadata };
-}
-
-function legacyProbabilityModel(): MatchProbabilityModel {
-  return {
-    predict(match) {
-      const fixture = match as Fixture;
-      return {
-        home: fixture.homeWinProb,
-        draw: fixture.drawProb,
-        away: fixture.awayWinProb,
-      };
-    },
-  };
-}
-
-export function runSimulation(input: PredictionRunInput): PredictionRunResult;
-export function runSimulation(
-  iterations?: number,
-  teams?: Team[],
-  remainingFixtures?: Fixture[],
-  totalRounds?: number,
-  seed?: number
-): LeagueSimulationResult;
-export function runSimulation(
-  iterationsOrInput: number | PredictionRunInput = 50000,
-  teams: Team[] = [],
-  remainingFixtures: Fixture[] = [],
-  totalRounds = 34,
-  seed = DEFAULT_SIMULATION_SEED
-): LeagueSimulationResult | PredictionRunResult {
-  if (typeof iterationsOrInput !== "number") {
-    return runPredictionRun(iterationsOrInput);
+  for (const team of teams) {
+    const bestState = createState(teams, options.headToHead);
+    let bestCaseDate: string | null = null;
+    let bestCaseRound: number | null = null;
+    for (const date of allDates) {
+      for (const fixture of fixturesByDate.get(date) ?? []) {
+        const involvesTeam = fixture.homeTeam === team.id || fixture.awayTeam === team.id;
+        if (involvesTeam) applyMatch(bestState, fixture, fixture.homeTeam === team.id ? "home" : "away", fixture.homeTeam === team.id ? 1 : 0, fixture.awayTeam === team.id ? 1 : 0, rules);
+        else { bestState[fixture.homeTeam].played += 1; bestState[fixture.awayTeam].played += 1; }
+      }
+      if (bestCaseDate === null && rules.isChampionClinched(bestState[team.id], currentStandings(bestState).filter((standing) => standing.teamId !== team.id), futureFixturesByDate.get(date) ?? [], remainingCountsByDate.get(date))) {
+        bestCaseDate = date; bestCaseRound = fixtureRound(fixtures, date);
+      }
+    }
+    clubResults[team.id].bestCaseDate = bestCaseDate;
+    clubResults[team.id].bestCaseRound = bestCaseRound;
   }
 
-  if (!Number.isInteger(iterationsOrInput) || iterationsOrInput < 0) {
-    throw new Error("Simulation iterations must be a non-negative integer");
-  }
+  return { clubResults, iterations, seed, rulesVersion: rules.version, fixtureOrder: fixtures.map((fixture) => fixture.id), seededTieBreakCount };
+}
 
-  return simulateLeague(
-    iterationsOrInput,
+export function runPrediction(input: PredictionRunInput): LeagueSimulationResult {
+  const teams = [...input.teams].sort((a, b) => a.id.localeCompare(b.id));
+  const fixtures = input.fixtures.map((fixture) => ({
+    ...fixture,
+    ...input.model.predict(fixture, teams),
+  })).sort((a, b) => a.date.localeCompare(b.date) || a.id.localeCompare(b.id));
+  const result = runSimulation(
+    input.iterations,
     teams,
-    remainingFixtures,
-    totalRounds,
-    seed
+    fixtures,
+    input.totalRounds,
+    { seed: input.seed, rules: input.rules, headToHead: input.headToHead }
   );
-}
 
-/** Builds a new run input for the legacy Fixture probability fields. */
-export function legacyPredictionInput(
-  iterations: number,
-  teams: Team[],
-  remainingFixtures: Fixture[],
-  totalRounds: number,
-  config: Omit<PredictionRunConfig, "iterations">,
-  seed = DEFAULT_SIMULATION_SEED
-): PredictionRunInput {
   return {
-    competition: { teams, remainingFixtures, totalRounds },
-    probabilityModel: legacyProbabilityModel(),
-    config: { ...config, iterations },
-    seed,
+    ...result,
+    fixtures,
+    metadata: {
+      modelVersion: input.model.version,
+      competition: input.competition,
+      season: input.season,
+      standingsSnapshotId: input.standingsSnapshotId,
+      fixturesSnapshotId: input.fixturesSnapshotId,
+      seed: input.seed,
+      iterations: input.iterations,
+      ...input.metadata,
+    },
   };
 }
